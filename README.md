@@ -1,4 +1,14 @@
 # The Latent Cognition Trilogy
+
+------
+## Support
+
+If you find this work useful or relevant, you can support ongoing research here:
+
+👉 https://github.com/sponsors/paulohl
+
+------
+
 ### Formalizing Cognitive Hypotheses for Autonomous AI Architectures
 
 > "We are not merely building faster retrieval; we are defining the metric of the latent field."

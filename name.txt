@@ -1,0 +1,43 @@
+
+
+\tableofcontents
+
+% --------------------------------------------------
+% PROGRAM LAYER (CRITICAL)
+% --------------------------------------------------
+
+\chapter*{Series Preface}
+\input{preamble/series_preface}
+
+\chapter*{Note on the Research Program}
+\input{preamble/program_note}
+
+\chapter*{Conceptual Foundations}
+\input{preamble/conceptual_foundations}
+
+% --------------------------------------------------
+% MAIN BODY
+% --------------------------------------------------
+
+\mainmatter
+
+\part{Volume I: Memory Fields}
+\subfile{volumes/vol1_memory}
+
+\part{Volume II: Symbol Fields}
+\subfile{volumes/vol2_symbols}
+
+\part{Volume III: Routing Fields}
+\subfile{volumes/vol3_architectures}
+
+% --------------------------------------------------
+% BACK MATTER
+% --------------------------------------------------
+
+\backmatter
+
+\chapter*{Synthesis and Outlook}
+\input{preamble/synthesis}
+
+\bibliographystyle{plain}
+\bibliography{bib/trilogy_refs}

@@ -1,0 +1,78 @@
+\ProvidesPackage{trilogy_macros}
+
+% Core math
+\RequirePackage{amsmath, amssymb, amsthm, mathtools, bm}
+\RequirePackage{mathrsfs}
+\RequirePackage{xcolor}
+\RequirePackage{hyperref}
+\RequirePackage[nameinlink,noabbrev]{cleveref}
+
+% Operators
+\DeclareMathOperator{\softmax}{softmax}
+\DeclareMathOperator{\argmax}{argmax}
+\DeclareMathOperator{\KL}{KL}
+\DeclareMathOperator{\Ent}{H}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\sgn}{sgn}
+
+% Sets / spaces
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\latent}{\mathcal{L}}
+\newcommand{\memspace}{\mathcal{M}}
+\newcommand{\symspace}{\mathcal{S}}
+\newcommand{\routespace}{\mathcal{R}}
+\newcommand{\tokenspace}{\mathcal{T}}
+\newcommand{\expertspace}{\mathcal{E}}
+
+% Core objects
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\hstate}{\mathbf{h}}
+\newcommand{\zstate}{\mathbf{z}}
+\newcommand{\qvec}{\mathbf{q}}
+\newcommand{\kvec}{\mathbf{k}}
+\newcommand{\vvec}{\mathbf{v}}
+\newcommand{\mvec}{\mathbf{m}}
+\newcommand{\cvec}{\mathbf{c}}
+\newcommand{\rvec}{\mathbf{r}}
+\newcommand{\pvec}{\mathbf{p}}
+
+% Trilogy-specific maps
+\newcommand{\MemoryField}{\mathcal{M}}
+\newcommand{\SymbolField}{\mathcal{S}}
+\newcommand{\RoutingField}{\mathcal{R}}
+
+\newcommand{\memop}{\Phi_{\mathrm{mem}}}
+\newcommand{\symop}{\Phi_{\mathrm{sym}}}
+\newcommand{\routeop}{\Phi_{\mathrm{route}}}
+
+% Useful measures
+\newcommand{\energy}[1]{\mathcal{E}\!\left(#1\right)}
+\newcommand{\entropyof}[1]{\Ent\!\left(#1\right)}
+\newcommand{\capacity}[1]{\mathcal{C}\!\left(#1\right)}
+\newcommand{\loss}{\mathcal{L}}
+\newcommand{\reg}{\Omega}
+
+% Retrieval and routing
+\newcommand{\retrieve}[2]{\mathcal{T}_{\mathrm{ret}}\!\left(#1 \mid #2\right)}
+\newcommand{\route}[2]{\mathcal{G}\!\left(#1 \mid #2\right)}
+\newcommand{\symbolize}[1]{\mathcal{Q}\!\left(#1\right)}
+\newcommand{\decode}[1]{\mathcal{D}\!\left(#1\right)}
+
+% Theorem environments
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[chapter]
+
+% Naming shortcuts
+\newcommand{\DLI}{\textsc{DLI-LLM}}
+\newcommand{\CISI}{\textsc{CISI}}
+\newcommand{\HTCR}{\textsc{HTCR}}

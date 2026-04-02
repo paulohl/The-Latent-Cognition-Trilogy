@@ -1,0 +1,25 @@
+
+
+\section*{Core Constructs}
+
+The trilogy operates on a set of shared constructs that describe internal representations and computational organization in neural architectures.
+
+\textbf{Latent State.}
+A representation $\mathbf{h}_t \in \latent$ encoding the internal state of the model at step $t$.
+
+\textbf{Memory Field.}
+A structured collection $\MemoryField$ of latent representations accessible through differentiable retrieval.
+
+\textbf{Symbolic Representation.}
+A compressed encoding $s \in \symspace$ derived from latent states.
+
+\textbf{Routing Function.}
+A mapping $\route{\cdot}{\expertspace}$ that governs allocation of computation across specialized modules.
+
+\section*{Structural Relationship}
+
+The trilogy examines the interaction between these constructs across three stages:
+
+\[
+\MemoryField \;\Longrightarrow\; \SymbolField \;\Longrightarrow\; \RoutingField
+\]

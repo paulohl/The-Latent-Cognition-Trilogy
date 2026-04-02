@@ -1,28 +1,39 @@
-\documentclass{article}
+\documentclass[11pt,openany]{book}
+\usepackage{trilogy_macros}
+\usepackage{subfiles}
+\usepackage{xr-hyper}
 \usepackage{graphicx} % Required for inserting images
 % ... your packages ...
 \usepackage{orcidlink}
 \usepackage{authblk}
+
+\usepackage{lipsum}
+% --------------------------------------------------
+% FRONT MATTER
+% --------------------------------------------------
 \title{The Latent Cognitive Trilogy}
 \includeonly{volumes/vol1} % <--- 
-% \includeonly{Volumes/vol2} % <--- 
-% \includeonly{Volumes/vol3} % <--- 
+% \includeonly{volumes/vol2} % <--- 
+% \includeonly{volumes/vol3} % <--- 
 \author[]{Paulo Leocadio\,\orcidlinkc{0000-0002-4992-4541}}
 \affil[]{Zinnia Labs, Beoward, FL, United States}
 
 \begin{document}
 \date{March 2026}
 
-
-
-
 \maketitle
+
+\chapter*{Series Preface}
+\input{preamble/series_preface}
+
+\chapter*{Note on the Research Program}
+\input{preamble/program_note}
+
+\chapter*{Conceptual Foundations}
+\input{preamble/conceptual_foundations}
 
     \include{volumes/vol1}
     \include{volumes/vol2}
     \include{volumes/vol3}
+
 \end{document}
-
-
-
-

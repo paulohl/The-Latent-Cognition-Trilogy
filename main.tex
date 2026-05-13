@@ -6,8 +6,22 @@
 % ... your packages ...
 \usepackage{orcidlink}
 \usepackage{authblk}
-
 \usepackage{lipsum}
+\usepackage[shortlabels]{enumitem}
+\usepackage{fancyhdr}  % Permits header customization. See header section below.
+\fancypagestyle{plain}{
+    \lhead{}
+    \fancyhead[R]{\thepage}
+    \fancyhead[L]{}
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyfoot{}
+}
+
+\pagestyle{fancy}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot{}
 % --------------------------------------------------
 % FRONT MATTER
 % --------------------------------------------------
@@ -16,24 +30,32 @@
 % \includeonly{volumes/vol2} % <--- 
 % \includeonly{volumes/vol3} % <--- 
 \author[]{Paulo Leocadio\,\orcidlinkc{0000-0002-4992-4541}}
-\affil[]{Zinnia Labs, Beoward, FL, United States}
+\affil{Zinnia Labs, Beoward, FL, United States}
 
 \begin{document}
 \date{March 2026}
 
 \maketitle
 
+\clearpage
 \chapter*{Series Preface}
 \input{preamble/series_preface}
 
+\clearpage
 \chapter*{Note on the Research Program}
 \input{preamble/program_note}
 
+\thispagestyle{empty}
 \chapter*{Conceptual Foundations}
 \input{preamble/conceptual_foundations}
 
+    \clearpage
     \include{volumes/vol1}
+    
+    \clearpage
     \include{volumes/vol2}
+    
+    \cleardoublepage
     \include{volumes/vol3}
 
 \end{document}

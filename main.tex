@@ -3,12 +3,15 @@
 \usepackage{subfiles}
 \usepackage{xr-hyper}
 \usepackage{graphicx} % Required for inserting images
-% ... your packages ...
+% ... my packages ...
 \usepackage{orcidlink}
 \usepackage{authblk}
 \usepackage{lipsum}
 \usepackage[shortlabels]{enumitem}
 \usepackage{fancyhdr}  % Permits header customization. See header section below.
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{microtype}
 \fancypagestyle{plain}{
     \lhead{}
     \fancyhead[R]{\thepage}
@@ -22,13 +25,14 @@
 \fancyhead[L]{}
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot{}
+\setlength{\headheight}{13.59999pt}
 % --------------------------------------------------
 % FRONT MATTER
 % --------------------------------------------------
 \title{The Latent Cognitive Trilogy}
-\includeonly{volumes/vol1} % <--- 
-% \includeonly{volumes/vol2} % <--- 
-% \includeonly{volumes/vol3} % <--- 
+% \includeonly{volumes/vol1.tex} % <--- 
+% \includeonly{volumes/vol2.tex} % <--- 
+% \includeonly{volumes/vol3.tex} % <--- 
 \author[]{Paulo Leocadio\,\orcidlinkc{0000-0002-4992-4541}}
 \affil{Zinnia Labs, Beoward, FL, United States}
 
@@ -50,12 +54,12 @@
 \input{preamble/conceptual_foundations}
 
     \clearpage
-    \include{volumes/vol1}
+    \include{volumes/vol1.tex}
     
     \clearpage
-    \include{volumes/vol2}
+    \include{volumes/vol2.tex}
     
     \cleardoublepage
-    \include{volumes/vol3}
+    \include{volumes/vol3.tex}
 
 \end{document}

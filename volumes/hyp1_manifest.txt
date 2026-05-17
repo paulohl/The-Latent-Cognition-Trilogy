@@ -1,0 +1,11 @@
+Hypothesis 1 finished package
+
+Files:
+- Hypothesis1_Volume1_finished_MAIN_LATEX.tex : main LaTeX manuscript
+- Hypothesis1_references_finished.bib : BibTeX references
+
+Verification:
+Hypothesis1_Volume1_finished_MAIN_LATEX.tex: LaTeX document, ASCII text, with very long lines (740)
+Hypothesis1_references_finished.bib:         BibTeX text file, Unicode text, UTF-8 text, with very long lines (1647)
+42ef2b1ed5b7bba3535fd7119113083c0b1aac2caf827f59816a8880fb73bb2e  Hypothesis1_Volume1_finished_MAIN_LATEX.tex
+7519070bd965d4efe1811b9e80692ffbfd9aa00a743b12cd6475d6fecbd2e02b  Hypothesis1_references_finished.bib

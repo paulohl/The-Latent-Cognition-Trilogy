@@ -1,17 +1,120 @@
-\thispagestyle{empty} 
-
-\begin{center}
-    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
-    \rule{\textwidth}{0.4pt}\\[\baselineskip] 
+\begin{titlepage}
+    \thispagestyle{empty}
     
-    {\Huge \scshape Volume II: Symbol Fields} \\ [0.2in]
-    {\Large \itshape Curriculum-Induced Symbol Invention for Emergent Reasoning Primitives} \\
-
-    
-    \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
-    \rule{\textwidth}{1.6pt}\\[\baselineskip]
-\end{center}
-
+    \vfill
+    \begin{center}
+        \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+        \rule{\textwidth}{0.4pt}\par\vspace{\baselineskip}
+        {\Huge \scshape Volume II: Symbol Fields}\par\vspace{0.2in}
+        {\Large \itshape Curriculum-Induced Symbol Invention for Emergent Reasoning Primitives}\par\vspace{3.2pt}
+        \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+        \rule{\textwidth}{1.6pt}
+    \end{center}
+    \vfill
+\end{titlepage}
 
 \chapter*{Abstract}
+This article introduces \textit{Curriculum-Induced Symbol Invention} (CISI), a theoretical framework exploring the organic synthesis of discrete reasoning primitives within the intermediate pathways of Large Language Models (LLMs). Standard Transformer architectures suffer from representational passivity, absorbing tokens sequentially without compiling recurring computational sub-routines into invariant abstractions. We propose an architectural modification wherein hidden state trajectories are intercepted and compressed through an auxiliary, vector-quantized latent codebook layer during pre-training. Driven by an engineered curriculum of increasing task complexity and a strict informational bottleneck, the model is forced to coin, stabilize, and reuse its own internal tokens—effectively developing a private, domain-specific language (DSL) optimized for computational economy and symbolic execution. 
 
+Building upon the native, internalized memory substrate established in \textit{Volume I: Memory Fields}, this work shifts the focus from continuous storage to discrete abstraction. CISI treats symbol coining not as a post-hoc linguistic mapping, but as a structural survival mechanism for networks operating under intense transmission constraints. This work functions as an independent, self-contained specification and foundational design pattern, delineating explicit training stages, codebook optimization dynamics, semiographic translation probes, and formal empirical evaluation protocols for emergent machine semiotics.
+
+\noindent \textit{Keywords: Curriculum-Induced Symbol Invention (CISI); Latent Semiography; Vector Quantization; Information Bottleneck; Domain-Specific Languages; Machine Cognition; Structural Representation Learning; Automated Abstraction.}
+
+\vspace{2em}
+\hrule
+\vspace{2em}
+
+\chapter{Propositions and Falsification Canon}
+
+The validity of Curriculum-Induced Symbol Invention as a standalone cognitive engine rests upon explicit, predictable behavioral deviations from standard Transformer baselines. The following formal propositions establish the empirical boundaries of the architecture and dictate clear falsification parameters.
+
+\section*{Proposition 1: Symbolic Abstraction Efficiency}
+As structural curriculum complexity scales, an LLM computational graph constrained by a discrete intermediate vector-quantization bottleneck will demonstrate significantly greater cross-domain generalization and sample efficiency in out-of-distribution (OOD) reasoning tasks compared to standard continuous-state architectures of equivalent parameter density.
+
+\textbf{Falsification Condition:} If a continuous-state baseline matches or exceeds the CISI architecture on downstream multi-step reasoning evaluations when controlled for training token exposure and active parameter count, the claim that discrete intermediate symbol coining resolves structural compositionality is falsified.
+
+\section*{Proposition 2: Codebook Reuse and Structural Sparsity}
+The optimization trajectory of a bounded latent codebook operating under variable curriculum demands will favor the stabilization of a minimal, highly reusable set of primitive codewords over a strategy of continuous, uniform codebook resource expansion.
+
+\textbf{Falsification Condition:} If tracking codebook utilization profiles reveals a linear growth path proportional to task variation, or if the codebook selection entropy approaches maximum uniform distribution without distinct topological clustering, the hypothesis that the informational bottleneck forces symbolic compression is ungrounded.
+
+\section*{Proposition 3: Degradation under Bottleneck Deactivation}
+The deactivation or continuous relaxation of the intermediate quantization layer following curriculum exposure will result in a catastrophic degradation of out-of-distribution reasoning capabilities, while local in-distribution language modeling performance remains unaffected.
+
+\textbf{Falsification Condition:} If an operational CISI model maintains its advanced multi-step reasoning capabilities when the vector quantization layer is bypassed or replaced with an unconstrained linear projection, the symbolic utility of the discrete codebook is disproven.
+
+\chapter{The Informational Bottleneck and Vector Quantization}
+
+Let $h_t^{(\ell)} \in \mathbb{R}^{d}$ define the continuous hidden representation of a token at sequence position $t$ and intermediate layer $\ell$ within the standard Transformer forward pass. The CISI architecture systematically intercepts this trajectory, passing the continuous vector field through a discrete quantization bottleneck before it propagates to subsequent layers.
+
+\subsection{Vector Quantization Mechanics}
+We define an internal, learned discrete codebook dictionary $\mathcal{C} = \{e_1, e_2, \dots, e_K\}$, where each individual codeword vector $e_k \in \mathbb{R}^{d}$. The continuous latent state $h_t^{(\ell)}$ is mapped directly to its nearest symbolic primitive within the dictionary via a minimum Euclidean distance projection operator:
+
+\begin{equation}
+z_t^{(\ell)} = \operatorname{vquant}\left(h_t^{(\ell)}\right) = e_{\hat{k}}, \quad \text{where } \hat{k} = \arg\min_{k} \|h_t^{(\ell)} - e_k\|_2.
+\end{equation}
+
+The selected codebook index $\hat{k}$ serves as the discrete, organic latent symbol invented by the architecture to represent that particular continuous computational sub-manifold.
+
+\subsection{The Compression Objective}
+To enforce intense compression pressure and protect the network against representational collapse or passive passing-through of uncompressed tokens, an auxiliary decoder head $\mathcal{D}$ is introduced. This decoder is tasked with reconstructing the complete, high-dimensional continuous hidden state $h_t^{(\ell)}$ using exclusively the quantized discrete vector assignment $z_t^{(\ell)}$:
+
+\begin{equation}
+\mathcal{L}_{\text{comp}} = \| \mathcal{D}\left(z_t^{(\ell)}\right) - \operatorname{sg}[h_t^{(\ell)}] \|_2^2 + \beta \| \operatorname{sg}[h_t^{(\ell)}] - z_t^{(\ell)} \|_2^2,
+\end{equation}
+
+where $\operatorname{sg}[\cdot]$ represents the classic stop-gradient operator required to prevent unstable backward oscillations during joint optimization, and $\beta$ is a commitment hyperparameter regulating the alignment rate between continuous trajectories and codebook coordinates.
+
+\chapter{Staged Curriculum Design}
+
+The autonomous invention of logical primitives cannot successfully execute within unstructured, high-entropy text environments. It requires an evolutionary gradient. The CISI training framework utilizes a multi-tiered curriculum designed to systematically trigger symbol creation by varying operational complexity.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{0.20\linewidth}p{0.36\linewidth}p{0.36\linewidth}}
+\hline
+\textbf{Curriculum Stage} & \textbf{Operational Complexity} & \textbf{Expected Symbolic Emergence} \\
+\hline
+\textbf{Stage 1: Primitives} & Single-digit arithmetic, basic relational logic statements, atomic parsing scripts. & Coining of baseline primitives (e.g., latent equivalents to functional terms like "ADD", "COMPARE"). \\
+\textbf{Stage 2: Composition} & Compound functional routines, multi-hop dependencies, variable tracking loops. & Combination of Stage 1 codewords into complex, integrated computational blocks. \\
+\textbf{Stage 3: Integration} & Knowledge-intensive text, open-domain reasoning benchmarks (GSM8K, CommonsenseQA). & Synthesis of a robust, highly optimized internal Domain-Specific Language (DSL). \\
+\hline
+\end{tabular}
+\caption{The CISI Staged Training Curriculum Profile.}
+\label{tab:cisi-curriculum}
+\end{table}
+
+During Stage 1, a minimal partition of $10$ to $20$ active codewords suffices for error minimization. As the model transitions to Stage 2 and Stage 3, the codebook is permitted to expand under strict sparsity regularizers, forcing previous symbols to act as structural building blocks for higher-order reasoning routines.
+
+\chapter{Semiographic Projection and Interpretation}
+
+Once symbols stabilize within the intermediate codebook substrate, they must be rendered inspectable to ensure cognitive accountability and alignment. CISI avoids back-correcting the network via human prose; instead, it reads the machine's internal language directly.
+
+\subsection{Linear Probing and Linguistic Translation}
+We introduce a periodic probing schedule using linear classification models applied directly to index activation frequencies over standardized validation partitions:
+
+\begin{equation}
+P(T_m \mid e_{\hat{k}}) = \operatorname{softmax}\left(W_p e_{\hat{k}} + b_p\right),
+\end{equation}
+
+where $T_m$ represents a human-interpretable linguistic concept or operational token. This translation layer functions as a forensic tool, decoding raw latent cluster identifiers into legible intermediate reasoning trajectories, thereby exposing the inner paths of the machine's deductive logic.
+
+\chapter{Empirical Evaluation Protocol}
+
+To validate the theoretical assertions of Curriculum-Induced Symbol Invention, any experimental implementation must undergo a rigid, multi-layered forensic protocol consisting of four primary validation operations.
+
+\subsection{Zero-Shot Out-of-Distribution Evaluation}
+The primary benchmark of structural symbol creation is the model's ability to execute zero-shot transfers to entirely novel reasoning datasets. Following exposure to the staged curriculum, the CISI architecture must be evaluated on logic and relational datasets whose underlying semantic distributions share zero overlap with the training inputs. Performance metrics must be strictly compared against baseline Transformer models of identical parameter counts and token exposure.
+
+\subsection{Ablation of the Compression Interface}
+To prove that the discrete codebook is the active engine behind reasoning stability, developers must execute a structural ablation pass. By systematically disabling the compression layer post-training—or dynamically substituting the vector quantization operator with an unconstrained, continuous linear layer—the evaluator must track the exact delta in generalization performance. A corresponding drop in out-of-distribution accuracy confirms the operational necessity of the symbols.
+
+\subsection{Topological Clustering and Code-Reuse Metrics}
+The spatial distribution of the codebook must be mathematically evaluated using the localized Silhouette Coefficient ($S$) formalized in the canon of Volume I. Evaluators must verify that the continuous hidden states collapse into highly concentrated, discrete geometric regions surrounding active codebook centroids. Furthermore, the codebook utilization profile must manifest a Power Law distribution, confirming high code-reuse across disparate tasks.
+
+\subsection{Human Semiotic Mapping and Consistency Studies}
+Finally, the cognitive validity of the invented internal symbols must be tested through a blind human annotation study. Human evaluators are presented with isolated activation maps of specific codewords alongside their corresponding linguistic contexts decoded via the linear probing translation matrix. Annotators are tasked with mapping these active indices to precise English descriptions or operational rules. The degree of semantic agreement across annotators is quantified using Fleiss' Kappa ($\kappa$), verifying whether the machine's invented symbols correspond to stable, invariant concepts.
+
+% \bibliographystyle{plain}
+% \bibliography{references.bib}

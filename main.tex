@@ -12,6 +12,7 @@
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{microtype}
+\usepackage{bookmark} 
 \fancypagestyle{plain}{
     \lhead{}
     \fancyhead[R]{\thepage}
@@ -37,7 +38,6 @@
 \affil{Zinnia Labs, Beoward, FL, United States}
 
 \begin{document}
-\date{March 2026}
 
 \maketitle
 
@@ -49,17 +49,31 @@
 \chapter*{Note on the Research Program}
 \input{preamble/program_note}
 
+\clearpage
 \thispagestyle{empty}
 \chapter*{Conceptual Foundations}
 \input{preamble/conceptual_foundations}
 
-    \clearpage
-    \include{volumes/vol1.tex}
-    
-    \clearpage
-    \include{volumes/vol2.tex}
-    
-    \cleardoublepage
-    \include{volumes/vol3.tex}
+% ====================================================================
+% THE VOLUMES UNDER UMBRELLA ENGINE
+% ====================================================================
+\clearpage
+\include{volumes/vol1}
+
+\clearpage
+\include{volumes/vol2}
+
+\cleardoublepage
+\include{volumes/vol3}
+
+% ====================================================================
+% GLOBAL CONSOLIDATED BIBLIOGRAPHY
+% ====================================================================
+\clearpage
+\bibliographystyle{plain}
+\bibliography{master} % Compiles your master.bib database perfectly
 
 \end{document}
+
+
+

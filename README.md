@@ -5,7 +5,9 @@
 
 If you find this work useful or relevant, you can support ongoing research here:
 
-👉 https://github.com/sponsors/paulohl
+👉 https://github.com/sponsors/paulohl      
+<br>
+visit: ![research program architecture](config/README.md)
 
 ------
 

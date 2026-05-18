@@ -19,47 +19,53 @@ The three companion hypothesis papers serve a different function. They do not de
 Instead, they formulate testable or semi-formal theoretical extensions emerging from the same research program. 
 Their role is to preserve conceptual precision around claims that would otherwise overload the main Trilogy narrative.       
 
-00_frontmatter.tex
-01_introduction.tex
-02_research_program_architecture.tex   <--- CREATE THIS
-03_trilogy_part_i.tex
-04_trilogy_part_ii.tex
-05_trilogy_part_iii.tex
-06_conclusion.tex
-07_references.tex
+    00_frontmatter.tex
+    01_introduction.tex
+    02_research_program_architecture.tex 
+    03_trilogy_part_i.tex
+    04_trilogy_part_ii.tex
+    05_trilogy_part_iii.tex
+    06_conclusion.tex
+    07_references.tex
 
-companion_papers/
-  hypothesis_1.pdf
-  hypothesis_2.pdf
-  hypothesis_3.pdf
-  dli_llm_jaike.pdf         
+companion_papers/          
 
-Latent Cognition Research Program
-│
-├── Architectural Foundation
-│   └── Differentiable Latent Indexing in LLMs
-│       Toward Native Retrieval as a Cognitive Function
-│
-├── Main Sequence
-│   ├── Trilogy Paper I
-│   ├── Trilogy Paper II
-│   └── Trilogy Paper III
-│
-├── Companion Hypothesis Papers
-│   ├── Hypothesis 1
-│   ├── Hypothesis 2
-│   └── Hypothesis 3
-│
-└── Future Extensions
-    ├── Conscious AI / Conscience paper
-    ├── Cybersecurity autonomy paper
-    └── Health sciences / bounded decision systems paper      
+     hypothesis_1.pdf       
+     hypothesis_2.pdf       
+     hypothesis_3.pdf        
+     dli_llm_jaike.pdf          
+
+ 
+Latent Cognition Research Program      
+│      
+├── Architectural Foundation       
+│   └── Differentiable Latent Indexing in LLMs       
+│       Toward Native Retrieval as a Cognitive Function      
+│       
+├── Main Sequence       
+│   ├── Trilogy Paper I       
+│   ├── Trilogy Paper II      
+│   └── Trilogy Paper III      
+│      
+├── Companion Hypothesis Papers       
+│   ├── Hypothesis 1      
+│   ├── Hypothesis 2      
+│   └── Hypothesis 3       
+│       
+└── Future Extensions       
+    ├── Conscious AI / Conscience paper       
+    ├── Cybersecurity autonomy paper       
+    └── Health sciences / bounded decision systems paper         
+
+    
 
 
-| Work         | Role             | Status              | Relationship to Trilogy            |
-|:-------------|:-----------------:---------------------|:-----------------------------------|
-| DLI-LLM / JAIKE paper	Architectural foundation	Submitted	Defines native retrieval architecture
-| Hypothesis 1	Companion hypothesis	Draft/final	Extends claim A
-| Hypothesis 2	Companion hypothesis	Draft/final	Extends claim B
-| Hypothesis 3	Companion hypothesis	Draft/final	Extends claim C
-| Latent Cognition Trilogy	Main sequence	In development | Central theoretical program
+| Work                          | Role                         | Status              | Relationship to Trilogy               |
+|:------------------------------|:-----------------------------|:--------------------|:--------------------------------------|
+| DLI-LLM / JAIKE paper         |	Architectural foundation     | Submitted	         | Defines native retrieval architecture |
+| Hypothesis 1                  |	Companion hypothesis         | Draft/final	       | Extends claim A                       |
+| Hypothesis 2                  |	Companion hypothesis         | Draft/final	       | Extends claim B                       |
+| Hypothesis 3                  | Companion hypothesis         | Draft/final	       | Extends claim C                       |
+| Latent Cognition Trilogy      |	Main sequence	In development | Central             | theoretical program                   |      
+
+

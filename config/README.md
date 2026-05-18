@@ -37,7 +37,7 @@ latent-cognition-trilogy/
 ├── companion_works/        
 │   ├── architectural_foundation/             
 │   │   ├── dli_llm_jaike.pdf            
-│   │   ├── dli_llm_jaike.tex
+│   │   ├── dli_llm_jaike.tex           
 │   │   └── dli_llm_annotation.md         
 │   │          
 │   ├── hypotheses/             

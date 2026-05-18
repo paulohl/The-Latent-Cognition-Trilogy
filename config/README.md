@@ -18,6 +18,70 @@ and representational access become native architectural functions rather than ex
 The three companion hypothesis papers serve a different function. They do not define the base architecture. 
 Instead, they formulate testable or semi-formal theoretical extensions emerging from the same research program. 
 Their role is to preserve conceptual precision around claims that would otherwise overload the main Trilogy narrative.       
+<br>
+latent-cognition-trilogy/      
+│      
+├── main.tex      
+├── references.bib      
+│      
+├── sections/       
+│   ├── 00_frontmatter.tex           
+│   ├── 01_introduction.tex          
+│   ├── 02_canonical_structure.tex            
+│   ├── 03_trilogy_overview.tex             
+│   ├── 04_paper_i.tex           
+│   ├── 05_paper_ii.tex          
+│   ├── 06_paper_iii.tex           
+│   ├── 07_conclusion.tex            
+│             
+├── companion_works/        
+│   ├── architectural_foundation/             
+│   │   ├── dli_llm_jaike.pdf            
+│   │   ├── dli_llm_jaike.tex
+│   │   └── dli_llm_annotation.md         
+│   │          
+│   ├── hypotheses/             
+│   │   ├── hypothesis_1/           
+│   │   │   ├── hypothesis_1.tex          
+│   │   │   ├── hypothesis_1.pdf          
+│   │   │   └── hypothesis_1_annotation.md         
+│   │   │         
+│   │   ├── hypothesis_2/           
+│   │   │   ├── hypothesis_2.tex          
+│   │   │   ├── hypothesis_2.pdf         
+│   │   │   └── hypothesis_2_annotation.md          
+│   │   │             
+│   │   └── hypothesis_3/               
+│   │       ├── hypothesis_3.tex           
+│   │       ├── hypothesis_3.pdf          
+│   │       └── hypothesis_3_annotation.md            
+│           
+├── canon/           
+│   ├── CANON.md         
+│   ├── WORKS_REGISTER.md            
+│   ├── TERMINOLOGY.md            
+│   ├── OPEN_QUESTIONS.md            
+│   └── SUBMISSION_STATUS.md            
+│                
+├── figures/             
+│   ├── trilogy_map.pdf              
+│   └── research_program_architecture.pdf          
+│            
+└── archive/         
+    ├── previous_versions/                 
+    └── notes/               
+    
+
+| Folder	       | Purpose                                                                           |
+| :----------------|:----------------------------------------------------------------------------------|
+| sections/	       | What the Trilogy PDF actually compiles                                            |
+| companion_works/ | Separate papers that belong to the universe but are not swallowed by the Trilogy  |
+| canon/	       | The research-program memory, map, status, terminology, and interpretation rules   |
+| figures/	       | Diagrams used in the Trilogy                                                      |
+| archive/	       | Old versions, abandoned notes, drafts                                             |
+
+
+
 
     00_frontmatter.tex
     01_introduction.tex

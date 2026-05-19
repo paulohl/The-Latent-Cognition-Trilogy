@@ -8,7 +8,7 @@
 \usepackage{authblk}
 \usepackage{lipsum}
 \usepackage[shortlabels]{enumitem}
-\usepackage{fancyhdr}  % Permits header customization. See header section below.
+\usepackage{fancyhdr}  % Permits header customization. See the header section below.
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{microtype}
@@ -31,9 +31,9 @@
 % FRONT MATTER
 % --------------------------------------------------
 \title{The Latent Cognitive Trilogy}
-% \includeonly{volumes/vol1.tex} % <--- 
-% \includeonly{volumes/vol2.tex} % <--- 
-% \includeonly{volumes/vol3.tex} % <--- 
+% \includeonly{sections/vol1.tex} % <--- 
+% \includeonly{sections/vol2.tex} % <--- 
+% \includeonly{sections/vol3.tex} % <--- 
 \author[]{Paulo Leocadio\,\orcidlinkc{0000-0002-4992-4541}}
 \affil{Zinnia Labs, Beoward, FL, United States}
 
@@ -43,16 +43,16 @@
 
 \clearpage
 \chapter*{Series Preface}
-\input{preamble/series_preface}
+\input{sections/frontmatter/00_series_preface}
 
 \clearpage
 \chapter*{Note on the Research Program}
-\input{preamble/program_note}
+\input{sections/frontmatter/01_program_note}
 
 \clearpage
 \thispagestyle{empty}
 \chapter*{Conceptual Foundations}
-\input{preamble/conceptual_foundations}
+\input{sections/frontmatter/03_conceptual_foundations}
 
 
 
@@ -60,13 +60,13 @@
 % THE VOLUMES UNDER UMBRELLA ENGINE
 % ====================================================================
 \clearpage
-\include{volumes/vol1}
+\include{sections/02_vol1}
 
 \clearpage
-\include{volumes/vol2}
+\include{sections/03_vol2}
 
 \cleardoublepage
-\include{volumes/vol3}
+\include{sections/04_vol3}
 
 % ====================================================================
 % GLOBAL CONSOLIDATED BIBLIOGRAPHY

@@ -60,6 +60,7 @@ latent-cognition-trilogy/
 │   ├── 07_paper_iii.tex                   
 │   └── 08_conclusion.tex                  
 │                  
-├── main.tex
-└── references.bib
+├── main.tex                         
+└── references.bib                   
+
                      

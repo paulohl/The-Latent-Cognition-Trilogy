@@ -16,9 +16,15 @@
 \chapter*{Abstract}
 This article introduces \textit{Hierarchical Topic-Conditioned Routing} (HTCR), an architectural framework designed to resolve token-level dispersion and expert cache locality bottlenecks within sparse Mixture-of-Experts (MoE) language models. Standard MoE architectures process routing protocols independently for each token, ignoring document-level semantic patterns and structural context. This token-isolated approach causes extreme expert jitter, limits sequence-level cache reuse, and complicates distributed hardware scaling. We propose a two-tier routing mechanism: a macroscopic document-router dynamically assigns local context segments ($N$ tokens) to a specialized, restricted pool of $m$ experts; subsequently, a microscopic token-router dispatches individual tokens exclusively within that pre-allocated shortlist. 
 
-Building upon the memory substrates of \textit{Volume I} and the symbolic abstractions of \textit{Volume II}, HTCR closes the trilogy by defining the dynamic macroscale routing infrastructure of the network. This work serves as an independent reference design pattern, detailing the mathematical mechanics of two-stage dispatch, structural load-balancing metrics, training stability regularizers, and empirical validation protocols for distributed cognitive architectures.
+Building upon the memory substrates of \textit{Volume I} and the symbolic abstractions of \textit{Volume II}, HTCR concludes the trilogy by defining the network's dynamic macroscale routing infrastructure. This work serves as an independent reference design pattern, detailing the mathematical mechanics of two-stage dispatch, structural load-balancing metrics, training stability regularizers, and empirical validation protocols for distributed cognitive architectures.
 
 \noindent \textit{Keywords: Hierarchical Topic-Conditioned Routing (HTCR); Mixture-of-Experts (MoE); Cache Locality; Distributed Inference; Expert Jitter; Token Dispatch; Structural Regularization.}
+
+\section*{Position within the Research Program}
+
+This manuscript is a companion hypothesis paper within the broader Latent Cognition research program. It is not part of the main Trilogy sequence. Instead, it formalizes a specific theoretical claim that supports and constrains the central argument developed across the Trilogy.
+
+The architectural foundation for the research program is developed separately in \textit{Differentiable Latent Indexing in LLMs: Toward Native Retrieval as a Cognitive Function}, which frames retrieval as a native differentiable function rather than as an external augmentation layer. The present hypothesis should therefore be read as a satellite formalization within that broader architecture.
 
 \vspace{2em}
 \hrule
@@ -26,10 +32,10 @@ Building upon the memory substrates of \textit{Volume I} and the symbolic abstra
 
 \chapter{Propositions and Falsification Canon}
 
-The architectural deployment of Hierarchical Topic-Conditioned Routing rests upon verifiable, predictable behavioral variances against flat token-routed MoE baselines (such as standard Mixtral or GShard configurations).
+The architectural deployment of Hierarchical Topic-Conditioned Routing rests on verifiable, predictable behavioral differences relative to flat token-routed MoE baselines (such as standard Mixtral or GShard configurations).
 
 \section*{Proposition 1: Topological Cache Locality and Throughput}
-By constraining individual token execution trajectories to a segment-bounded expert shortlist, the HTCR framework will demonstrate a significant reduction in inter-device KV-cache communication volume and yield higher token processing throughput under long-context sequence execution.
+By constraining individual token execution trajectories to a segment-bounded expert shortlist, the HTCR framework will demonstrate a significant reduction in inter-device KV cache communication volume and yield higher token-processing throughput during long-context sequence execution.
 
 \textbf{Falsification Condition:} If an HTCR model manifests equivalent or higher inter-node communication latency and lower generation throughput compared to an unconstrained token-MoE baseline when evaluated on continuous context lengths exceeding $32\text{k}$ tokens, the utility of segment-level clustering is falsified.
 
@@ -81,16 +87,16 @@ where $\bar{G}_{\text{doc}}$ is the average macro-routing distribution across th
 To validate the scalability and efficiency claims of the HTCR architecture, tracking scripts must execute four foundational forensic operations against equivalent baseline setups.
 
 \subsection{Distributed Throughput and Communication Profiles}
-The system must be evaluated on a distributed compute cluster across multiple GPU nodes. Scaling metrics must explicitly monitor the cross-device data volume transferred via standard \texttt{All-to-All} communication primitives. HTCR must demonstrate a significant reduction in communication overhead and near-linear text generation throughput scaling as context window lengths increase.
+The system must be evaluated on a distributed compute cluster across multiple GPU nodes. Scaling metrics must explicitly monitor the cross-device data volume transferred via standard \texttt{All-to-All} communication primitives. HTCR must demonstrate a significant reduction in communication overhead and near-linear scaling of text-generation throughput as context window lengths increase.
 
 \subsection{Annealing Path and Capacity Ablations}
-Evaluators must isolate the performance changes triggered by the schedule of the shortlist constraint parameter $m$. Systematic comparative training runs must trace the delta between a static un-annealed baseline and a dynamic scheduling path to map out the explicit convergence characteristics of the dual routers.
+Evaluators must isolate the performance changes triggered by the schedule of the shortlist constraint parameter $m$. Systematic comparative training runs must trace the delta between a static, unannealed baseline and a dynamic scheduling path to map out the explicit convergence characteristics of the dual routers.
 
 \subsection{Expert Activation Entropy and Balancing Verification}
-The long-term distribution profiles of the expert array must be audited using standard structural allocation tracking. The load distribution profile must approximate a uniform target, proving that the balancing penalty effectively prevents hardware starvation without degrading perplexity metrics on standard benchmarks like MMLU and GSM8K.
+The long-term distribution profiles of the expert array must be audited using standard structural allocation tracking. The load distribution profile must approximate a uniform target, demonstrating that the balancing penalty effectively prevents hardware starvation without degrading perplexity metrics on standard benchmarks such as MMLU and GSM8K.
 
 \subsection{Cache Locality and Memory Footprint Mapping}
-Finally, hardware trackers must register real-time L2/L3 cache hit-rates and high-bandwidth memory usage metrics during processing blocks. The HTCR architecture must achieve significant cache retention benefits, showing that document-level conditioning prevents standard expert cache eviction loops.
+Finally, hardware trackers must register real-time L2/L3 cache hit-rates and high-bandwidth memory usage metrics during processing blocks. The HTCR architecture must achieve significant cache-retention benefits, demonstrating that document-level conditioning prevents standard expert cache-eviction loops.
 
 % \bibliographystyle{plain}
 % \bibliography{master}

@@ -49,11 +49,11 @@ latent-cognition-trilogy/
 │   └── research_program_architecture.pdf                
 │                    
 ├── sections/                
-│   │  ├── frontmatter/                   
-│   │  ├── 00_frontmatter.tex            
-│   │  ├── 01_introduction.tex              
-│   │  ├── 02_canonical_structure.tex                  
-│   │  └── 03_conceptual_foundations.tex              
+│   │  └── frontmatter/                   
+│   │      │── 00_frontmatter.tex            
+│   │      ├── 01_introduction.tex              
+│   │      ├── 02_canonical_structure.tex                  
+│   │      └── 03_conceptual_foundations.tex              
 │   ├── 04_trilogy_overview.tex                 
 │   ├── 05_paper_i.tex              
 │   ├── 06_paper_ii.tex              

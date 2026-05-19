@@ -15,12 +15,18 @@ latent-cognition-trilogy/
 │                  
 ├── companion_works/                          
 │   ├── architectural_foundation/                        
-│   │   ├── media/                                       
-│   │   │   └── figures_from_non_published_JAIKEv3.6.png             
-│   │   ├── submission_record/                       
-│   │   │   └── jaike_submission_record_docsv3.5.pdf               
-│   │   ├── ref/                           
-│   │   │   └── for_tex-converted_non_submittedv3.6.xml             
+│   │   ├── media/           
+│   │   │   ├── DOI_logo.png                 
+│   │   │   ├── image1.png
+│   │   │   ├── image2.png
+│   │   │   ├── image3.png 
+│   │   │   ├── image4.png 
+│   │   │   └── ORCID.png   
+│   │   ├── submission_record/
+│   │   │   ├── for_tex-converted_non_submittedv3.6.xml            
+│   │   │   ├── ScholarOne_Manuscripts_sunmission.pdf        
+│   │   │   └── proof_hi.pdf               
+│   │   │    
 │   │   ├── non_submitteddli_llm_jaikev3.6.tex               
 │   │   ├── dli_llm_jaike_v3_5_submitted.pdf                
 │   │   ├── dli_llm_jaike_v3_6_internal.tex                    

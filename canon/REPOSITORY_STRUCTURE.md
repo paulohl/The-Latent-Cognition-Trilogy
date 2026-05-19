@@ -10,19 +10,20 @@ latent-cognition-trilogy/
 │   ├── WORKS_REGISTER.md            
 │   ├── TERMINOLOGY.md               
 │   ├── OPEN_QUESTIONS.md           
-│   └── README.md             
+│   ├── SUBMISSION_STATUS.md
+│   └── README.md
 │                  
 ├── companion_works/                          
 │   ├── architectural_foundation/                        
 │   │   ├── media/                                       
-│   │   │   └── figures_from_non_published_JAIKEv3.6.png                  
-│   │   ├── proof/                       
-│   │   │   └── JAIKE_acceptance_docsv3.5.pdf               
+│   │   │   └── figures_from_non_published_JAIKEv3.6.png             
+│   │   ├── submission_record/                       
+│   │   │   └── jaike_submission_record_docsv3.5.pdf               
 │   │   ├── ref/                           
 │   │   │   └── for_tex-converted_non_submittedv3.6.xml             
 │   │   ├── non_submitteddli_llm_jaikev3.6.tex               
-│   │   ├── dli_llm_jaike(submitted)v3.5.pdf                
-│   │   ├── dli_llm_jaike(non-submitted)v3.6.tex                    
+│   │   ├── dli_llm_jaike_v3_5_submitted.pdf                
+│   │   ├── dli_llm_jaike_v3_6_internal.tex                    
 │   │   └── dli_llm_annotation.md                   
 │   │                     
 │   └── hypotheses/               
@@ -51,7 +52,7 @@ latent-cognition-trilogy/
 ├── sections/                
 │   │  └── frontmatter/                   
 │   │      │── 00_frontmatter.tex            
-│   │      ├── 01_introduction.tex              
+│   │      ├── 01_program_note.tex              
 │   │      ├── 02_canonical_structure.tex                  
 │   │      └── 03_conceptual_foundations.tex              
 │   ├── 04_trilogy_overview.tex                 

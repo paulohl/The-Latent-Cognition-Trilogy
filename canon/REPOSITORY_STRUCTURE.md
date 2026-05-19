@@ -1,7 +1,7 @@
 
 latent-cognition-trilogy/           
 │           
-└── archive/            
+├── archive/            
 │   ├── previous_versions/            
 │   └── notes/           
 │           

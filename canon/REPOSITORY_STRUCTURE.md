@@ -25,21 +25,22 @@ latent-cognition-trilogy/
 │   │   ├── dli_llm_jaike(non-submitted)v3.6.tex                    
 │   │   └── dli_llm_annotation.md                   
 │   │                     
-│   ├── hypotheses/               
-│   │   ├── hypothesis_1/                     
-│   │   │   ├── hypothesis_1.tex                    
-│   │   │   ├── hypothesis_1.pdf                    
-│   │   │   └── hypothesis_1_annotation.md                  
-│   │   │                         
-│   │   ├── hypothesis_2/                     
-│   │   │   ├── hypothesis_2.tex                    
-│   │   │   ├── hypothesis_2.pdf                  
-│   │   │   └── hypothesis_2_annotation.md                     
-│   │   │                        
-│   │   └── hypothesis_3/              
-│   │       ├── hypothesis_3.tex              
-│   │       ├── hypothesis_3.pdf               
-│   │       └── hypothesis_3_annotation.md                       
+│   └── hypotheses/               
+│       ├── hypothesis_1/                     
+│       │   ├── hypothesis_1.tex                    
+│       │   ├── hypothesis_1.pdf                    
+│       │   └── hypothesis_1_annotation.md                  
+│       │                         
+│       ├── hypothesis_2/                     
+│       │   ├── hypothesis_2.tex                    
+│       │   ├── hypothesis_2.pdf                  
+│       │   └── hypothesis_2_annotation.md                     
+│       │                        
+│       └── hypothesis_3/              
+│           ├── hypothesis_3.tex              
+│           ├── hypothesis_3.pdf               
+│           └── hypothesis_3_annotation.md                       
+│                         
 ├── figures/                  
 │   ├── figure1.png                      
 │   ├── ...               

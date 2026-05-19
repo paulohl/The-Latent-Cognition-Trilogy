@@ -10,8 +10,8 @@ latent-cognition-trilogy/
 │   ├── WORKS_REGISTER.md            
 │   ├── TERMINOLOGY.md               
 │   ├── OPEN_QUESTIONS.md           
-│   ├── SUBMISSION_STATUS.md
-│   └── README.md
+│   ├── SUBMISSION_STATUS.md              
+│   └── README.md                  
 │                  
 ├── companion_works/                          
 │   ├── architectural_foundation/                        

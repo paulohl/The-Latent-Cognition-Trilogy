@@ -35,7 +35,7 @@ The manuscript now compiles as a coherent book-like structure rather than as thr
 
 ### Remaining Actions
 
-- Add stronger Volume II Introduction.
+- Add a stronger Volume II Introduction.
 - Add problem-space section: continuous representation to symbolic stability.
 - Add related work.
 - Add expected failure modes.
@@ -57,3 +57,23 @@ The manuscript now compiles as a coherent book-like structure rather than as thr
 - Add failure modes.
 - Add discussion and conclusion.
 - Expand references for GShard, Switch Transformer, GLaM, Expert Choice Routing, Mixtral, and vLLM/PagedAttention.
+
+
+`text Pass 2 — Volume II      
+Strengthening STATUS: COMPLETE,       
+
+compile check      
+ 
+- no missing citation warnings
+- no 4.0.1 section numbering
+- no duplicated Transition to Volume III
+- no repeated conclusion wording
+- no overlong table overflow
+
+
+
+
+
+
+
+

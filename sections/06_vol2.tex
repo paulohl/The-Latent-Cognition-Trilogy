@@ -1,38 +1,81 @@
-\begin{titlepage}
-    \thispagestyle{empty}
-    
-    \vfill
-    \begin{center}
-        \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
-        \rule{\textwidth}{0.4pt}\par\vspace{\baselineskip}
-        {\Huge \scshape Volume II: Symbol Fields}\par\vspace{0.2in}
-        {\Large \itshape Curriculum-Induced Symbol Invention for Emergent Reasoning Primitives}\par\vspace{3.2pt}
-        \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
-        \rule{\textwidth}{1.6pt}
-    \end{center}
-    \vfill
-\end{titlepage}
-
+\volumetitlepage
+{Volume II: Symbol Fields}
+{Curriculum-Induced Symbol Invention for Emergent Reasoning Primitives}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------------------------
 \chapter*{Abstract}
-This article introduces \textit{Curriculum-Induced Symbol Invention} (CISI), a theoretical framework exploring the organic synthesis of discrete reasoning primitives within the intermediate pathways of Large Language Models (LLMs). Standard Transformer architectures suffer from representational passivity, absorbing tokens sequentially without compiling recurring computational sub-routines into invariant abstractions. We propose an architectural modification in which hidden state trajectories are intercepted and compressed via an auxiliary vector-quantized latent codebook layer during pre-training. Driven by an engineered curriculum of increasing task complexity and a strict informational bottleneck, the model is forced to coin, stabilize, and reuse its own internal tokens—effectively developing a private, domain-specific language (DSL) optimized for computational economy and symbolic execution. 
 
-Building upon the native, internalized memory substrate established in \textit{Volume I: Memory Fields}, this work shifts the focus from continuous storage to discrete abstraction. CISI treats symbol coining not as a post hoc linguistic mapping but as a structural survival mechanism for networks operating under intense transmission constraints. This work functions as an independent, self-contained specification and foundational design pattern, delineating explicit training stages, codebook optimization dynamics, semiographic translation probes, and formal empirical evaluation protocols for emergent machine semiotics.
+This article introduces \textit{Curriculum-Induced Symbol Invention} (CISI), a theoretical framework for examining how discrete reasoning primitives may emerge within the intermediate representational pathways of Large Language Models (LLMs). Standard Transformer architectures operate primarily over continuous hidden states, and while these states may support complex behavior, the mechanisms by which recurring computational patterns stabilize into reusable abstractions remain only partially formalized. CISI proposes an architectural modification in which hidden-state trajectories are intercepted and compressed through an auxiliary vector-quantized latent codebook layer during pre-training.
+
+Driven by a staged curriculum of increasing task complexity and an informational bottleneck, the model is pressured to stabilize and reuse internal codewords that function as compact computational primitives. In this sense, CISI treats symbol formation not as a post hoc linguistic mapping, but as a structural response to compression, reuse, and representational economy.
+
+Building upon the internalized memory substrate established in \textit{Volume I: Memory Fields}, this work shifts the focus from continuous storage and retrieval to discrete abstraction. It provides a self-contained theoretical specification, including training stages, codebook optimization dynamics, semiographic translation probes, formal propositions, falsification conditions, and empirical evaluation protocols for the study of semiotics.
 
 \noindent \textit{Keywords: Curriculum-Induced Symbol Invention (CISI); Latent Semiography; Vector Quantization; Information Bottleneck; Domain-Specific Languages; Machine Cognition; Structural Representation Learning; Automated Abstraction.}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%==========================================
 \section*{Position within the Research Program}
 
-This manuscript is a companion hypothesis paper within the broader Latent Cognition research program. It is not part of the main Trilogy sequence. Instead, it formalizes a specific theoretical claim that supports and constrains the central argument developed across the Trilogy.
+This manuscript constitutes \textbf{Volume} II of \textit{The Latent Cognition Trilogy}. It develops the symbolic abstraction layer of the broader research program by formalizing \textit{Curriculum-Induced Symbol Invention} (CISI) as a candidate mechanism through which compressed latent representations may acquire symbolic stability.
 
-The architectural foundation for the research program is developed separately in \textit{Differentiable Latent Indexing in LLMs: Toward Native Retrieval as a Cognitive Function}, which frames retrieval as a native differentiable function rather than as an external augmentation layer. The present hypothesis should therefore be read as a satellite formalization within that broader architecture.
+Volume I, \textit{Memory Fields}, established the memory layer of the Trilogy by treating retrieval as a native operation over latent representational structure. \textbf{Volume II} shifts the focus from memory access to symbolic compression. Its central claim is that, under curriculum pressure and representational bottlenecks, neural systems may stabilize reusable internal primitives that function as machine-generated symbolic structures.
+
+The architectural foundation for the broader program remains \textit{Differentiable Latent Indexing in LLMs: Toward Native Retrieval as a Cognitive Function}. That work supplies the retrieval-native substrate. The present volume extends the sequence by asking how retrieved, compressed, and reused latent structures may become symbolically stable.
+
+Accordingly, \textbf{Volume II} should not be read as a companion hypothesis paper. It is the second movement of the Trilogy. The companion hypothesis papers occupy a separate role: they isolate supporting claims without replacing the main sequence.
+
+\chapter{Symbol Fields and Curriculum-Induced Symbol Invention}
+\section{Introduction}
+Volume II of \textit{The Latent Cognition Trilogy} examines the transition from latent memory to symbolic stabilization. Volume I established memory as a structured field of retrievable latent representations. The present volume asks a different question: under what conditions can compressed internal representations acquire sufficient stability, reusability, and functional specificity to serve as symbolic primitives within a neural architecture?
+The central construct introduced here is \textit{Curriculum-Induced Symbol Invention} (CISI). CISI proposes that symbolic structure need not be imposed externally through hand-coded rules, symbolic grammars, or explicit logical systems. Instead, symbolic-like structures may emerge when a model is forced to solve increasingly complex tasks through a constrained intermediate representational bottleneck. Under such conditions, recurring computational patterns may be compressed into reusable latent codewords that function as internal abstractions.
+The argument is not that large language models already possess explicit symbolic languages in the classical sense. Nor does CISI claim that vector quantization alone produces reasoning. The claim is narrower: a discrete intermediate codebook, trained under curriculum pressure and evaluated through stability, reuse, and transfer diagnostics, may provide a mechanism for studying how latent representations become symbolically organized.
+Rather than viewing token tracking as an optimization task, Volume II addresses the classic Symbol Grounding Problem (Harnad, 1990) by observing sign evolution under physical architectural constraints. By forcing continuous states through a discrete vector-quantized bottleneck (van den Oord et al., 2017) governed by the Information Bottleneck Principle (Tishby et al., 2000), the network cannot remain passive. It must construct an explicit internal sign paradigm, validating the triadic semiotic structures hypothesized by Peirce (1931)
+\section{Problem Space: From Continuous Representation to Symbolic Stability}
+Transformer-based language models operate over high-dimensional continuous hidden states. These states support complex linguistic and reasoning behaviors, but their internal organization often remains difficult to characterize. A hidden state may simultaneously encode context, syntax, semantic associations, task-relevant features, and transient computational dynamics. This expressive richness creates a problem for symbolic interpretation: the model may behave as though it has reusable abstractions without exposing clear internal units corresponding to those abstractions.
+Classical symbolic systems rely on discrete, composable, and reusable primitives. Neural systems, by contrast, distribute information across continuous representations. The challenge is therefore not simply to recover symbols from neural states, but to determine whether neural architectures can be pressured to form stable intermediate structures that play a symbol-like role without abandoning differentiable learning.
+CISI addresses this problem by introducing three constraints. First, the model is trained under a staged curriculum that progressively increases compositional complexity. Second, an intermediate vector-quantized bottleneck prevents all information from passing through unconstrained continuous channels. Third, diagnostic probes evaluate whether discrete codewords become stable, reusable, and predictive of downstream reasoning operations.
+Within this framework, symbolic stability is defined operationally rather than metaphysically. A latent codeword becomes symbolically relevant only if it satisfies three conditions: it is selected repeatedly across related contexts, it contributes measurably to task performance, and its functional role remains sufficiently stable across curriculum stages and out-of-distribution evaluations.
+\section{Contributions}
+This volume contributes the following elements:
+\begin{enumerate}
+    \item a theoretical framework for studying symbolic stabilization under curriculum pressure and representational compression;
+    \item a vector-quantized bottleneck mechanism for forcing intermediate latent states into discrete reusable codewords;
+    \item a full CISI training objective that combines language modeling, vector quantization, commitment, entropy regulation, reuse pressure, and symbolic stability;
+    \item diagnostic metrics for codebook utilization, reuse concentration, symbolic drift, and codeword stability;
+    \item a staged curriculum design intended to induce primitive, compositional, and integrative symbolic behavior;
+    \item a semiographic probing framework for translating latent codeword activations into interpretable operational roles; and
+    \item a set of failure modes and falsification conditions for distinguishing genuine symbolic stabilization from arbitrary discretization.
+\end{enumerate}
+\section{Overview of the Volume}
+The remainder of this volume proceeds as follows. The next chapter defines the core propositions and falsification conditions for CISI. The following chapter develops the informational bottleneck and vector quantization mechanism. Subsequent chapters introduce the full CISI objective, codebook diagnostics, staged curriculum design, semiographic interpretation, failure modes, empirical evaluation protocols, and the relationship between symbolic stabilization and the routing mechanisms developed in Volume III.
+
+\chapter{Related Work}
+\section{Discrete Latent Representations}
+CISI is closely related to research on discrete latent representation learning. Vector-quantized latent models demonstrate that continuous inputs can be mapped into learned discrete codebooks while preserving differentiability through surrogate gradient mechanisms \cite{VanDenOord2017}. This provides an important precedent for the CISI bottleneck: the architecture does not merely compress representations, but forces them to pass through a finite set of reusable latent units.
+However, CISI differs from standard vector-quantized representation learning in its intended role. The codebook is not treated only as a compression device or generative modeling component. It is treated as a candidate substrate for symbolic stabilization, where codeword reuse, curriculum exposure, and downstream reasoning performance jointly determine whether a codeword has acquired functional symbolic value.
+\section{Information Bottleneck and Compression}
+The information bottleneck framework provides a theoretical basis for treating compression as a mechanism for extracting task-relevant structure \cite{Tishby2000}. In CISI, the bottleneck is not only informational but semiotic: it pressures the model to preserve useful computational distinctions while discarding irrelevant representational variation. A successful CISI codebook should therefore retain information needed for reasoning while reducing dependence on unconstrained continuous state propagation.
+This distinction is important because not all compression is symbolic. A representation may be compressed while remaining uninterpretable, unstable, or task-specific. CISI therefore requires additional diagnostics for reuse, stability, and transfer beyond reconstruction error alone.
+\section{Curriculum Learning and Compositional Generalization}
+Curriculum learning suggests that training order can shape the acquisition of increasingly complex behaviors \cite{Bengio2009}. CISI adopts this principle by exposing the model to progressively structured tasks: primitive operations, compositional routines, and integrative reasoning contexts. The curriculum is not merely a training convenience. It functions as the developmental pressure under which reusable internal codewords may become stabilized.
+This connects CISI to the broader problem of compositional generalization. Studies of systematic generalization show that neural models may struggle to transfer learned operations compositionally when training distributions do not force reusable abstractions \cite{Lake2018}. CISI addresses this limitation by treating compositional transfer as a test of whether latent codewords have become functionally reusable rather than locally memorized.
+\section{Emergent Communication and Latent Semiotics}
+Research on emergent communication shows that agents can develop task-specific signaling systems under pressure for coordination and efficiency \cite{Foerster2016}. CISI adapts this insight to the internal dynamics of a single model. Instead of agents communicating with one another, intermediate layers communicate through a constrained latent codebook. The resulting codewords may be interpreted as a form of internal semiography: a machine-generated representational scheme optimized for task performance rather than human readability.
+This analogy must be used carefully. CISI does not assume that codewords are linguistic symbols. It treats them as operational primitives whose symbolic status must be earned through stability, reuse, transfer, and interpretability tests.
+\section{Probing and Interpretability}
+The interpretability of internal representations remains an open challenge in large language models. Probing studies attempt to identify what linguistic, semantic, or structural information is encoded in learned representations \cite{Rogers2020}. CISI extends this approach by making the intermediate representational substrate partially discrete. This may improve inspectability, but it also introduces a risk: discrete codewords can invite overinterpretation.
+For this reason, CISI does not equate probe labels with symbol meaning. A codeword is not considered symbolic simply because a probe can attach a human-readable label to it. The label must remain stable across contexts, correspond to measurable functional effects, and survive ablation tests that demonstrate its contribution to downstream reasoning.
+
+
 
 \vspace{2em}
 \hrule
 \vspace{2em}
 
-\chapter{Propositions and Falsification Canon}
+\chapter{Propositions and Falsification Conditions}
 
-The validity of Curriculum-Induced Symbol Invention as a standalone cognitive engine rests upon explicit, predictable behavioral deviations from standard Transformer baselines. The following formal propositions establish the empirical boundaries of the architecture and dictate clear falsification parameters.
+The validity of Curriculum-Induced Symbol Invention as a theoretical mechanism rests upon explicit, predictable behavioral deviations from standard Transformer baselines. The following formal propositions establish the empirical boundaries of the architecture and dictate clear falsification parameters.
 
 \section*{Proposition 1: Symbolic Abstraction Efficiency}
 As structural curriculum complexity scales, an LLM computational graph constrained by a discrete intermediate vector-quantization bottleneck will demonstrate significantly greater cross-domain generalization and sample efficiency on out-of-distribution (OOD) reasoning tasks than standard continuous-state architectures with equivalent parameter density.
@@ -40,7 +83,7 @@ As structural curriculum complexity scales, an LLM computational graph constrain
 \textbf{Falsification Condition:} If a continuous-state baseline matches or exceeds the CISI architecture on downstream multi-step reasoning evaluations when controlled for training token exposure and active parameter count, the claim that discrete intermediate symbol coining resolves structural compositionality is falsified.
 
 \section*{Proposition 2: Codebook Reuse and Structural Sparsity}
-The optimization trajectory of a bounded latent codebook operating under variable curriculum demands will favor stabilizing a minimal, highly reusable set of primitive codewords over a strategy of continuous, uniform codebook resource expansion.
+The optimization trajectory of a bounded latent codebook operating under variable curriculum demands will favor stabilizing a minimal, highly reusable set of primitive codewords over a strategy of continuous, uniform expansion of codebook resources.
 
 \textbf{Falsification Condition:} If tracking codebook utilization profiles reveals a linear growth path proportional to task variation, or if the codebook selection entropy approaches maximum uniform distribution without distinct topological clustering, the hypothesis that the informational bottleneck forces symbolic compression is ungrounded.
 
@@ -53,7 +96,7 @@ The deactivation or continuous relaxation of the intermediate quantization layer
 
 Let $h_t^{(\ell)} \in \mathbb{R}^{d}$ define the continuous hidden representation of a token at sequence position $t$ and intermediate layer $\ell$ within the standard Transformer forward pass. The CISI architecture systematically intercepts this trajectory, passing the continuous vector field through a discrete quantization bottleneck before it propagates to subsequent layers.
 
-\subsection{Vector Quantization Mechanics}
+\section{Vector Quantization Mechanics}
 We define an internal, learned discrete codebook dictionary $\mathcal{C} = \{e_1, e_2, \dots, e_K\}$, where each individual codeword vector $e_k \in \mathbb{R}^{d}$. The continuous latent state $h_t^{(\ell)}$ is mapped directly to its nearest symbolic primitive within the dictionary via a minimum Euclidean distance projection operator:
 
 \begin{equation}
@@ -62,7 +105,7 @@ z_t^{(\ell)} = \operatorname{vquant}\left(h_t^{(\ell)}\right) = e_{\hat{k}}, \qu
 
 The selected codebook index $\hat{k}$ serves as the discrete, organic latent symbol invented by the architecture to represent that particular continuous computational sub-manifold.
 
-\subsection{The Compression Objective}
+\section{The Compression Objective}
 To enforce intense compression pressure and protect the network against representational collapse or passive passing-through of uncompressed tokens, an auxiliary decoder head $\mathcal{D}$ is introduced. This decoder is tasked with reconstructing the complete, high-dimensional continuous hidden state $h_t^{(\ell)}$ using the quantized discrete vector assignment $z_t^{(\ell)}$:
 
 \begin{equation}
@@ -70,6 +113,59 @@ To enforce intense compression pressure and protect the network against represen
 \end{equation}
 
 where $\operatorname{sg}[\cdot]$ represents the classic stop-gradient operator required to prevent unstable backward oscillations during joint optimization, and $\beta$ is a commitment hyperparameter regulating the alignment rate between continuous trajectories and codebook coordinates.
+
+\section{Full CISI Training Objective}
+
+The vector-quantized bottleneck alone does not define the full CISI training process. It specifies how continuous hidden states are discretized, but the broader architecture requires an objective that jointly optimizes language modeling, codebook commitment, symbolic reuse, sparsity, and stability under curriculum pressure. A conceptual CISI objective can be written as:
+
+\begin{equation}
+\mathcal{L}_{CISI}
+=
+\mathcal{L}_{LM}
++
+\lambda_q \mathcal{L}_{VQ}
++
+\lambda_c \mathcal{L}_{commit}
++
+\lambda_e \mathcal{L}_{entropy}
++
+\lambda_r \mathcal{L}_{reuse}
++
+\lambda_s \mathcal{L}_{stability}.
+\end{equation}
+
+Here, $\mathcal{L}_{LM}$ denotes the standard language modeling objective. The term $\mathcal{L}_{VQ}$ captures reconstruction error through the vector-quantized bottleneck, while $\mathcal{L}_{commit}$ encourages continuous hidden states to remain close to their assigned codebook vectors. The entropy term $\mathcal{L}_{entropy}$ regulates the distribution of codeword usage, preventing uncontrolled uniform expansion or premature collapse into a small number of dominant codes. The reuse term $\mathcal{L}_{reuse}$ encourages frequently useful codewords to persist across related tasks, while $\mathcal{L}_{stability}$ penalizes excessive drift in codeword meaning across curriculum stages.
+
+The purpose of this objective is not merely to discretize hidden states. Its purpose is to create pressure for reusable symbolic structure. Under this formulation, a codeword becomes symbolically meaningful only if it is repeatedly selected, functionally useful, stable across related contexts, and predictive of downstream reasoning behavior.
+
+\section{Codebook Diagnostics and Symbolic Stability}
+
+The emergence of symbolic structure cannot be inferred from codebook discreteness alone. A vector-quantized layer may produce discrete indices without producing meaningful symbolic primitives. CISI therefore requires diagnostic criteria for distinguishing genuine symbolic stabilization from arbitrary quantization.
+
+Let $p(e_k)$ denote the empirical activation frequency of codeword $e_k$ over a validation corpus. Codebook utilization entropy may be defined as:
+
+\begin{equation}
+H(\mathcal{C}) = - \sum_{k=1}^{K} p(e_k)\log p(e_k).
+\end{equation}
+
+A maximally uniform distribution may indicate insufficient specialization, while extreme concentration may indicate codebook collapse. Symbolic stabilization is expected to occur in an intermediate regime where a subset of codewords becomes highly reusable without eliminating functional diversity.
+
+A reuse concentration score can be expressed as:
+
+\begin{equation}
+R(\mathcal{C}) = \sum_{k=1}^{K} p(e_k)^2.
+\end{equation}
+
+Higher values of $R(\mathcal{C})$ indicate repeated reliance on a smaller set of codewords, but this metric must be interpreted jointly with task performance and out-of-distribution generalization. Reuse alone is not sufficient evidence of symbolic structure; the reused codewords must also correspond to stable computational roles.
+
+To evaluate stability across curriculum stages, let $p_t(e_k)$ and $p_{t+1}(e_k)$ denote codeword activation distributions at successive stages. A symbolic drift measure may be written as:
+
+\begin{equation}
+D_{symbol}(t,t+1) =
+D_{KL}\left(p_t(e_k) \parallel p_{t+1}(e_k)\right).
+\end{equation}
+
+A stable symbolic codebook should exhibit decreasing drift after curriculum convergence, while still preserving enough plasticity to adapt to higher-order compositional tasks.
 
 \chapter{Staged Curriculum Design}
 
@@ -106,21 +202,58 @@ P(T_m \mid e_{\hat{k}}) = \operatorname{softmax}\left(W_p e_{\hat{k}} + b_p\righ
 
 where $T_m$ represents a human-interpretable linguistic concept or operational token. This translation layer functions as a forensic tool, decoding raw latent cluster identifiers into legible intermediate reasoning trajectories, thereby exposing the inner paths of the machine's deductive logic.
 
+\chapter{Expected Failure Modes}
+CISI is a theoretical mechanism, not a guaranteed path to symbolic reasoning. Its value depends on whether the proposed bottleneck and curriculum pressures produce stable, reusable, and functionally relevant codewords. Several failure modes must therefore be considered explicitly.
+\section{Codebook Collapse}
+The most direct failure mode is codebook collapse. In this case, the model relies on a small number of dominant codewords regardless of task variation. Although such collapse may appear efficient, it would indicate that the bottleneck has failed to preserve meaningful distinctions among computational operations. Collapse can be detected through low codebook entropy, high reuse concentration, and degraded out-of-distribution performance.
+\section{Symbol Fragmentation}
+The opposite failure mode is symbol fragmentation. Here, the model creates too many context-specific codewords, preventing reusable abstractions from forming. Fragmentation may yield high reconstruction accuracy while failing to support compositional transfer. A fragmented codebook behaves like a lookup table rather than a symbolic substrate.
+\section{Pseudo-Symbol Formation}
+A third failure mode is pseudo-symbol formation. The model may produce discrete codewords that appear stable under probing but do not causally contribute to reasoning performance. This failure can occur when probe classifiers identify superficial correlations rather than functional computational roles. Ablation tests are therefore necessary to determine whether codewords are operationally necessary.
+\section{Curriculum Overfitting}
+CISI depends on staged curriculum pressure. If the curriculum is too narrow, the model may invent codewords that are useful only for the training sequence and fail under distributional shift. Such overfitting would weaken the claim that the codebook captures reusable abstractions. The evaluation protocol must therefore include out-of-distribution and compositional transfer tasks.
+\section{Probe-Induced Overinterpretation}
+Semiographic projection introduces an interpretive risk. Human-readable labels assigned to codewords may suggest more structure than the model actually possesses. A codeword labeled as \textit{COMPARE}, for example, may not correspond to a stable comparison operation across contexts. CISI therefore treats probe labels as hypotheses, not explanations.
+\section{Brittle Symbolic Transfer}
+A CISI model may show improved performance on structured reasoning tasks while remaining brittle under mixed-domain, noisy, or adversarial inputs. This would suggest that symbolic stabilization has occurred only within a narrow operational regime. A robust symbolic field should preserve useful abstraction without becoming rigid or domain-bound.
+
+
 \chapter{Empirical Evaluation Protocol}
 
 To validate the theoretical assertions of Curriculum-Induced Symbol Invention, any experimental implementation must undergo a rigorous, multi-layered forensic protocol comprising four primary validation operations.
 
-\subsection{Zero-Shot Out-of-Distribution Evaluation}
+\section{Zero-Shot Out-of-Distribution Evaluation}
 The primary benchmark for structural symbol creation is the model's ability to perform zero-shot transfer to entirely novel reasoning datasets. Following exposure to the staged curriculum, the CISI architecture must be evaluated on logic and relational datasets whose underlying semantic distributions share zero overlap with the training inputs. Performance metrics must be compared strictly against baseline Transformer models with identical parameter counts and token exposure.
 
-\subsection{Ablation of the Compression Interface}
+\section{Ablation of the Compression Interface}
 To prove that the discrete codebook is the active engine behind reasoning stability, developers must execute a structural ablation pass. By systematically disabling the compression layer post-training—or dynamically substituting the vector quantization operator with an unconstrained, continuous linear layer—the evaluator must track the exact delta in generalization performance. A corresponding drop in out-of-distribution accuracy confirms the operational necessity of the symbols.
 
-\subsection{Topological Clustering and Code-Reuse Metrics}
+\section{Topological Clustering and Code-Reuse Metrics}
 The spatial distribution of the codebook must be mathematically evaluated using the localized Silhouette Coefficient ($S$) formalized in the canon of Volume I. Evaluators must verify that the continuous hidden states collapse into highly concentrated, discrete geometric regions surrounding active codebook centroids. Furthermore, the codebook utilization profile must exhibit a Power Law distribution, confirming high code reuse across disparate tasks.
 
-\subsection{Human Semiotic Mapping and Consistency Studies}
+\section{Human Semiotic Mapping and Consistency Studies}
 Finally, the cognitive validity of the invented internal symbols must be tested through a blind human annotation study. Human evaluators are presented with isolated activation maps for specific codewords, alongside their corresponding linguistic contexts, decoded via the linear-probing translation matrix. Annotators are tasked with mapping these active indices to precise English descriptions or operational rules. The degree of semantic agreement among annotators is quantified using Fleiss' Kappa ($\kappa$), which verifies whether the machine's invented symbols correspond to stable, invariant concepts.
+
+\chapter{Discussion}
+\section{Cognitive Interpretation}
+CISI reframes symbolic abstraction as a possible consequence of representational compression under structured training pressure. In this view, symbols are not assumed to be externally supplied units. They are treated as stabilized internal codes that emerge when the model must preserve reusable computational structure through a constrained channel.
+This interpretation occupies a middle ground between continuous representation learning and classical symbolic reasoning. CISI does not reject distributed neural representation, but it argues that some forms of reasoning may require intermediate structures that are more stable, reusable, and inspectable than ordinary hidden states. The codebook provides one possible mechanism for producing such structures.
+\section{Relation to Volume I}
+Volume I established the memory layer of the Trilogy by treating retrieval as a native operation over latent representational fields. Volume II extends that argument by asking how retrieved or compressed latent structures may become symbolically stable. Memory supplies access to latent structure; symbolic stabilization supplies reusable abstraction.
+The relation between DLI and CISI is therefore sequential but not strictly causal. A system may implement latent memory without symbolic stabilization, and it may implement a symbolic bottleneck without DLI. Within the Trilogy, however, the two mechanisms are treated as complementary layers of a broader latent cognitive architecture.
+\section{Interpretability and Accountability}
+The partial discreteness of CISI may improve interpretability by creating identifiable intermediate units. However, discreteness alone does not guarantee transparency. A codeword may be stable but uninterpretable, interpretable but non-causal, or causal only within narrow contexts. For this reason, CISI requires multiple forms of evidence: probing, ablation, transfer testing, entropy analysis, and human annotation.
+This layered interpretability strategy is central to the framework. It prevents the model's invented codebook from being romanticized as a private language unless its operational role can be demonstrated.
+\section{Limits of the Framework}
+CISI does not prove that neural models can invent symbols in the strong philosophical sense. It defines a testable architectural pathway for studying symbol-like stabilization. The framework remains theoretical until implemented and compared against continuous-state baselines, vector-quantized controls, and curriculum-free alternatives.
+The strongest version of CISI would be supported only if discrete codewords improve systematic generalization, remain stable across curriculum stages, survive ablation tests, and correspond to interpretable computational roles. Without such evidence, the framework should be treated as a useful compression architecture rather than a theory of machine symbol formation.
+\chapter{Conclusion}
+Volume II has developed \textit{Curriculum-Induced Symbol Invention} as the symbolic abstraction layer of \textit{The Latent Cognition Trilogy}. Its central claim is that symbolic stability may arise when continuous latent representations are forced through a discrete bottleneck under curriculum pressure and then reused across increasingly complex tasks.
+The proposed framework does not equate discretization with symbolism. Instead, it defines symbolic relevance in terms of stability, reuse, functional contribution, and transfer. A codeword becomes symbolically meaningful only when it behaves as a reusable computational primitive rather than as an arbitrary index in a learned codebook.
+CISI therefore contributes a theoretical bridge between latent memory and architectural routing. Volume I described how memory may be treated as an internal field of retrievable representations. Volume II has examined how such representations may become compressed into reusable abstractions. Volume III extends the sequence by asking how memory fields and symbol fields can be coordinated through hierarchical routing mechanisms across distributed neural architectures.
+\section{Transition to Volume III}
+Volume I establishes the memory layer of the Trilogy. Volume II examines how compressed latent states may acquire symbolic stability. Volume III will then analyze how memory and symbolic structures may be coordinated through hierarchical routing.
+
 
 % \bibliographystyle{plain}
 % \bibliography{references.bib}

@@ -1,89 +1,133 @@
 \documentclass[11pt,openany]{book}
+
+\PassOptionsToPackage{hidelinks}{hyperref}
+% ====================================================================
+% PACKAGES AND PROJECT MACROS
+% ====================================================================
+\usepackage[document]{ragged2e}
+
 \usepackage{trilogy_macros}
 \usepackage{subfiles}
-\usepackage{xr-hyper}
-\usepackage{graphicx} % Required for inserting images
-% ... my packages ...
+
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
 \usepackage{orcidlink}
 \usepackage{authblk}
 \usepackage{lipsum}
 \usepackage[shortlabels]{enumitem}
-\usepackage{fancyhdr}  % Permits header customization. See the header section below.
+
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{microtype}
-\usepackage{bookmark} 
+
+% External references, only needed if you use \externaldocument
+\usepackage{xr-hyper}
+
+% Hyperlinks and PDF bookmarks
+% \usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+
+% Page style
+\usepackage{fancyhdr}
+
 \fancypagestyle{plain}{
-    \lhead{}
+    \fancyhf{}
     \fancyhead[R]{\thepage}
-    \fancyhead[L]{}
     \renewcommand{\headrulewidth}{0pt}
-    \fancyfoot{}
 }
 
 \pagestyle{fancy}
+\fancyhf{}
 \fancyhead[R]{\thepage}
-\fancyhead[L]{}
 \renewcommand{\headrulewidth}{0pt}
-\fancyfoot{}
-\setlength{\headheight}{13.59999pt}
-% --------------------------------------------------
-% FRONT MATTER
-% --------------------------------------------------
-\title{The Latent Cognitive Trilogy}
-% \includeonly{sections/vol1.tex} % <--- 
-% \includeonly{sections/vol2.tex} % <--- 
-% \includeonly{sections/vol3.tex} % <--- 
-\author[]{Paulo Leocadio\,\orcidlinkc{0000-0002-4992-4541}}
-\affil{Zinnia Labs, Beoward, FL, United States}
+\setlength{\headheight}{13.6pt}
+
+% ====================================================================
+% FRONT MATTER METADATA
+% ====================================================================
+
+\title{The Latent Cognition Trilogy}
+
+\author[1]{Paulo Leocadio\,\orcidlink{0000-0002-4992-4541}}
+\affil[1]{Zinnia Labs, Broward County, FL, United States}
+
+\date{}
+
+% =================================================
+% HELPER COMMANDS
+% =================================================
+
+\newcommand{\frontchapter}[1]{%
+    \cleardoublepage
+    \phantomsection
+    \chapter*{#1}
+    \addcontentsline{toc}{chapter}{#1}
+    \markboth{#1}{}
+}
+
+% ==================================================
+% DOCUMENT
+% ==================================================
 
 \begin{document}
 
+\frontmatter
+
 \maketitle
 
-\clearpage
-\chapter*{Series Preface}
+\cleardoublepage
+\tableofcontents
+
+% ===================================================
+% FRONTMATTER / CANONICAL ORIENTATION
+% ===================================================
+
+\frontchapter{Series Preface}
 \input{sections/frontmatter/00_series_preface}
 
-\clearpage
-\chapter*{Note on the Research Program}
+\frontchapter{Note on the Research Program}
 \input{sections/frontmatter/01_program_note}
 
-\clearpage
-\chapter*{Research Program Structure}
+\frontchapter{Canonical Structure of the Research Program}
 \input{sections/frontmatter/02_canonical_structure}
 
-\clearpage
-\thispagestyle{empty}
-\chapter*{Conceptual Foundations}
+\frontchapter{Conceptual Foundations}
 \input{sections/frontmatter/03_conceptual_foundations}
 
-% ====================================================================
-% THE VOLUMES UNDER UMBRELLA ENGINE
-% ====================================================================
-\clearpage
-\include{sections/01_trilogy_introduction}
+% ===================================================
+% MAIN MATTER: THE TRILOGY UNDER THE UMBRELLA ENGINE
+% ===================================================
 
-\clearpage
-\include{sections/02_vol1}
+\mainmatter
 
-\clearpage
-\include{sections/03_vol2}
+\include{sections/04_trilogy_overview}
 
-\clearpage
-\include{sections/04_vol3}
+\include{sections/05_vol1}
+
+\include{sections/06_vol2}
+
+\include{sections/07_vol3}
+
+% \include{sections/08_conclusion}
+
+% ==================================================
+% BACK MATTER
+% ==================================================
+
+\backmatter
+
+\include{sections/08_conclusion}
+
+% ===================================================
+% GLOBAL CONSOLIDATED BIBLIOGRAPHY
+% ===================================================
 
 \cleardoublepage
-\input{sections/05_conclusion}
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
 
-% ====================================================================
-% GLOBAL CONSOLIDATED BIBLIOGRAPHY
-% ====================================================================
-\clearpage
 \bibliographystyle{plain}
-\bibliography{master} % Compiles your master.bib database perfectly
+\bibliography{master}
 
 \end{document}
-
-
-

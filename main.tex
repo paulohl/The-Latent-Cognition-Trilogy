@@ -1,14 +1,23 @@
 \documentclass[11pt,openany]{book}
 
-\PassOptionsToPackage{hidelinks}{hyperref}
-% ====================================================================
-% PACKAGES AND PROJECT MACROS
-% ====================================================================
-\usepackage[document]{ragged2e}
+% =======================================================
+% 1. PRE-CORE STRUCTURAL EXTENSIONS (CRITICAL ORDER)
+% =======================================================
+\usepackage{xr-hyper} 
 
-\usepackage{trilogy_macros}
-\usepackage{subfiles}
+% Pass options globally before packages load
+\PassOptionsToPackage{hidelinks,colorlinks=false}{hyperref}
+\PassOptionsToPackage{document}{ragged2e} % Pass the document-wide alignment option safely here
 
+% =======================================================
+% 2. THE CUSTOM TRILOGY CORE
+% =======================================================
+\usepackage{trilogy_macros} 
+\usepackage{subfiles}       
+
+% =======================================================
+% 3. STANDARD SCHOLARLY PACKAGES
+% =======================================================
 \usepackage{graphicx}
 \graphicspath{{figures/}}
 
@@ -19,16 +28,21 @@
 
 \usepackage{algorithm}
 \usepackage{algorithmic}
-\usepackage{microtype}
+\usepackage{microtype} 
 
-% External references, only needed if you use \externaldocument
-\usepackage{xr-hyper}
+% Loading ragged2e down here allows TeX Live 2025's core array environments 
+% to register their definitions first, neutralizing the warning.
+\usepackage{ragged2e} 
 
-% Hyperlinks and PDF bookmarks
-% \usepackage[hidelinks]{hyperref}
-\usepackage{bookmark}
+% =======================================================
+% 4. HYPERREF AND METADATA EXTENSIONS
+% =======================================================
+\usepackage{hyperref}
+\usepackage{bookmark} % Dynamically manages and optimizes PDF outline entries without choking
 
-% Page style
+% =======================================================
+% 5. TYPOGRAPHIC AND PAGE LAYOUT CONFIGURATION
+% =======================================================
 \usepackage{fancyhdr}
 
 \fancypagestyle{plain}{
@@ -43,10 +57,9 @@
 \renewcommand{\headrulewidth}{0pt}
 \setlength{\headheight}{13.6pt}
 
-% ====================================================================
+% ========================================================
 % FRONT MATTER METADATA
-% ====================================================================
-
+% ========================================================
 \title{The Latent Cognition Trilogy}
 
 \author[1]{Paulo Leocadio\,\orcidlink{0000-0002-4992-4541}}
@@ -55,9 +68,8 @@
 \date{}
 
 % =================================================
-% HELPER COMMANDS
+% HELPER COMMANDS FOR CANONICAL ALIGNMENT
 % =================================================
-
 \newcommand{\frontchapter}[1]{%
     \cleardoublepage
     \phantomsection
@@ -67,22 +79,19 @@
 }
 
 % ==================================================
-% DOCUMENT
+% DOCUMENT EXECUTION ENGINE
 % ==================================================
-
 \begin{document}
 
 \frontmatter
-
 \maketitle
 
 \cleardoublepage
 \tableofcontents
 
 % ===================================================
-% FRONTMATTER / CANONICAL ORIENTATION
+% FRONTMATTER: CANONICAL ORIENTATION
 % ===================================================
-
 \frontchapter{Series Preface}
 \input{sections/frontmatter/00_series_preface}
 
@@ -96,33 +105,29 @@
 \input{sections/frontmatter/03_conceptual_foundations}
 
 % ===================================================
-% MAIN MATTER: THE TRILOGY UNDER THE UMBRELLA ENGINE
+% MAIN MATTER: THE TRILOGY CORE VOLUMES
 % ===================================================
-
 \mainmatter
 
 \include{sections/04_trilogy_overview}
 
-\include{sections/05_vol1}
+\include{sections/05_vol1} % Volume I: Memory Fields (DLI)
 
-\include{sections/06_vol2}
+\include{sections/06_vol2} % Volume II: Symbolic Evolution
 
-\include{sections/07_vol3}
-
-% \include{sections/08_conclusion}
+\include{sections/07_vol3} % Volume III: Latent Routing
 
 % ==================================================
-% BACK MATTER
+% BACK MATTER: EVIDENTIARY SPECIFICATIONS
 % ==================================================
-
 \backmatter
 
-\include{sections/08_conclusion}
+\include{sections/08_conclusion}         % Global Epilogue
+\include{sections/09_appendix_manifesto} % Technical Appendix (Incident Response/Action Gatekeeper)
 
 % ===================================================
 % GLOBAL CONSOLIDATED BIBLIOGRAPHY
 % ===================================================
-
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliography}

@@ -1,19 +1,10 @@
-\begin{titlepage}
-    \thispagestyle{empty}
-    
-    \vfill
-    \begin{center}
-        \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
-        \rule{\textwidth}{0.4pt}\par\vspace{\baselineskip}
-        {\Huge \scshape Volume I: Memory Fields}\par\vspace{0.2in}
-        {\Large \itshape Differentiable Latent Indexing inside Large Language Models}\par\vspace{3.2pt}
-        \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
-        \rule{\textwidth}{1.6pt}
-    \end{center}
-    \vfill
-\end{titlepage}
-
-\chapter*{Abstract}
+\volumetitlepage
+{Volume I: Memory Fields}
+{Differentiable Latent Indexing inside Large Language Models}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%=============================================
+\chapter*{Volume I Abstract}
+\addcontentsline{toc}{chapter}{Volume I Abstract}
 This article proposes \textit{Differentiable Latent Indexing} (DLI), a theoretical framework that recontextualizes memory retrieval not as an external utility appended to a language model, but as a native, differentiable function inside the computational pathway of Large Language Models (LLMs). By treating the latent space as a structured information field, the article derives formal retrieval operators that integrate memory access directly into the model's forward pass.
 
 The central claim is that the conventional separation between storage and processing introduces architectural inefficiencies that limit the development of autonomous and cognitively organized AI systems. In current retrieval-augmented designs, the model, retriever, embedding store, and generator often remain operationally coupled but mathematically discontinuous. DLI instead proposes a shared latent memory substrate in which retrieval, routing, and representation learning are jointly optimized.
@@ -24,15 +15,17 @@ This work is presented as a conceptual research article. It does not claim empir
 
 \section*{Position within the Research Program}
 
-This manuscript is a companion hypothesis paper within the broader Latent Cognition research program. It is not part of the main Trilogy sequence. Instead, it formalizes a specific theoretical claim that supports and constrains the central argument developed across the Trilogy.
+This manuscript constitutes Volume I of \textit{The Latent Cognition Trilogy}. It develops the memory layer of the broader research program by formalizing Differentiable Latent Indexing (DLI) as a candidate mechanism for retrieval-native cognition inside Transformer-based systems.
 
-The architectural foundation for the research program is developed separately in \textit{Differentiable Latent Indexing in LLMs: Toward Native Retrieval as a Cognitive Function}, which frames retrieval as a native differentiable function rather than as an external augmentation layer. The present hypothesis should therefore be read as a satellite formalization within that broader architecture.
+The closely related manuscript \textit{Differentiable Latent Indexing in LLMs: Toward Native Retrieval as a Cognitive Function}, submitted to the \textit{Journal of Artificial Intelligence and Knowledge Engineering}, provides the formal architectural foundation for this volume. The present text adapts and extends that foundation within the larger Trilogy sequence, where memory, symbolic stabilization, and hierarchical routing are treated as interdependent layers of latent cognition.
+
+Accordingly, Volume I should not be read as a companion hypothesis paper. It is the opening movement of the Trilogy. The companion hypothesis papers occupy a separate position: they isolate specific claims that support, constrain, or extend the main sequence without replacing it.
 
 \vspace{2em}
 \hrule
 \vspace{2em}
 
-\chapter{Propositions}
+\chapter{Memory Fields and Differentiable Latent Indexing}
 
 \section*{Proposition 1: Retrieval Efficiency Gain}
 If DLI provides a meaningful internal memory mechanism, models augmented with DLI should demonstrate improved performance on tasks requiring long-range dependency resolution compared with baseline transformers of equivalent parameter count.
@@ -56,9 +49,12 @@ Repeated retrieval operations should introduce measurable drift in latent state 
 \textbf{Falsification condition:} If no measurable deviation from baseline forward-pass dynamics is observed, the proposed retrieval interaction is not functionally distinct.
 
 \section*{Introduction}
-The present work inaugurates a trilogy of conceptual research articles that together outline a research trajectory centered on latent cognition in artificial systems. This first article formalizes \textit{Differentiable Latent Indexing} (DLI) as a native retrieval mechanism inside Transformer-based language models. The article does not report experimental results; rather, it formalizes, elaborates, and critically develops a hypothesis into a coherent architectural framework. In this sense, the work belongs to a theoretical tradition in which formal models precede experimental construction.
 
-The paper extends the Differentiable Latent Indexing inside Large Language Models (DLI-LLM) hypothesis by positioning it as an architectural paradigm for retrieval inside Transformer computation. The second article in this series will examine \textit{Curriculum-Induced Symbol Invention} (CISI) as a mechanism for emergent reasoning primitives. The third article will synthesize both threads into a broader account of how memory and symbols may be integrated in artificial cognition. Together, these papers aim to establish a conceptual lineage for AI systems that treats memory, routing, representation, and control as interdependent components of machine cognition.
+The present volume inaugurates \textit{The Latent Cognition Trilogy}, a sequence of conceptual research works centered on latent cognition in artificial systems. Volume I formalizes \textit{Differentiable Latent Indexing} (DLI) as a native retrieval mechanism inside Transformer-based language models. It does not report experimental results; rather, it formalizes, elaborates, and critically develops a theoretical architecture in which memory retrieval becomes part of the model's differentiable computational pathway.
+
+The paper extends the \textbf{Differentiable Latent Indexing inside Large Language Models (DLI-LLM)} hypothesis by positioning it as an architectural paradigm for retrieval inside Transformer computation. 
+
+\textbf{Volume II} examines the conditions under which compressed latent representations acquire symbolic stability under curriculum, compression, and structural constraint. \textbf{Volume III} extends the sequence by analyzing hierarchical routing as a mechanism of architectural coordination across specialized computational components. Together, these papers aim to establish a conceptual lineage for AI systems that treats memory, routing, representation, and control as interdependent components of machine cognition.
 
 This article was developed in response to a hypothesis generated by the Academia.edu AI-assisted scientific modeling platform. The original hypothesis proposed a learnable, differentiable memory-retrieval mechanism embedded directly within Transformer layers. Rather than treating that hypothesis as a fixed endpoint, the present paper treats it as a conceptual seed: a starting point for examining the architectural, cognitive, mathematical, and safety implications of internalized retrieval.
 

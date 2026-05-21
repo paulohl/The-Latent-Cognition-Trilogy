@@ -1,25 +1,27 @@
-
-
 \section*{Core Constructs}
 
-The trilogy operates on a set of shared constructs that describe internal representations and computational organization in neural architectures.
+The Trilogy operates on a set of shared constructs that describe internal representations and computational organization in neural architectures. These constructs are not intended to form a closed ontology. They provide a working vocabulary for examining how memory, symbolic stabilization, and routing may interact within latent computational systems.
 
 \textbf{Latent State.}
-A representation $\mathbf{h}_t \in \latent$ encoding the internal state of the model at step $t$.
+A latent state is represented as $\mathbf{h}_t \in \latent$, encoding the internal condition of the model at computational step $t$. It is not treated merely as an intermediate activation, but as a structured representational state through which information, context, and transformation history may be partially expressed.
 
 \textbf{Memory Field.}
-A structured collection $\MemoryField$ of latent representations accessible through differentiable retrieval.
+A memory field, denoted $\MemoryField$, refers to a structured collection of latent representations accessible through differentiable retrieval. Within the Trilogy, the memory field provides the conceptual basis for treating retrieval as an internal representational operation rather than as an external lookup procedure.
 
 \textbf{Symbolic Representation.}
-A compressed encoding $s \in \symspace$ derived from latent states.
+A symbolic representation is denoted as $s \in \symspace$ and refers to a compressed or stabilized encoding derived from latent states. The term does not imply classical symbolic manipulation in the strict sense. Rather, it designates a representational condition in which compressed latent structures acquire sufficient stability to support abstraction, reuse, and interpretation.
 
 \textbf{Routing Function.}
-A mapping $\route{\cdot}{\expertspace}$ that governs allocation of computation across specialized modules.
+A routing function, denoted $\route{\cdot}{\expertspace}$, governs the allocation of computation across specialized modules, experts, or representational pathways. In this framework, routing is treated not only as an efficiency mechanism, but as a structural principle through which large-scale architectures maintain coherence across distributed computation.
 
 \section*{Structural Relationship}
 
-The trilogy examines the interaction between these constructs across three stages:
+The Trilogy examines the interaction between these constructs across three stages:
 
 \[
 \MemoryField \;\Longrightarrow\; \SymbolField \;\Longrightarrow\; \RoutingField
 \]
+
+This progression should not be interpreted as a strict causal chain. Rather, it represents the analytical sequence adopted by the Trilogy. The first stage examines how latent memory may be structured and retrieved. The second stage considers how compressed representations may acquire symbolic stability. The third stage analyzes how routing mechanisms coordinate computation across specialized structures.
+
+The shared hypothesis across the Trilogy is that these constructs are not independent engineering conveniences. They may represent interdependent layers of a broader latent cognitive architecture: memory supplies retrievable structure, symbolic stabilization supplies abstraction, and routing supplies coordinated computational organization.

@@ -1,45 +1,125 @@
-\begin{titlepage}
-    \thispagestyle{empty}
-    
-    \vfill
-    \begin{center}
-        \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
-        \rule{\textwidth}{0.4pt}\par\vspace{\baselineskip}
-        {\Huge \scshape Volume III: Routing Fields}\par\vspace{0.2in}
-        {\Large \itshape Hierarchical Topic-Conditioned Routing for Mixture-of-Expert Language Models}\par\vspace{3.2pt}
-        \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
-        \rule{\textwidth}{1.6pt}
-    \end{center}
-    \vfill
-\end{titlepage}
+\volumetitlepage
+{Volume III: Routing Fields}
+{Hierarchical Topic-Conditioned Routing for Mixture-of-Expert Language Models}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%======================================
 \chapter*{Abstract}
-This article introduces \textit{Hierarchical Topic-Conditioned Routing} (HTCR), an architectural framework designed to resolve token-level dispersion and expert cache locality bottlenecks within sparse Mixture-of-Experts (MoE) language models. Standard MoE architectures process routing protocols independently for each token, ignoring document-level semantic patterns and structural context. This token-isolated approach causes extreme expert jitter, limits sequence-level cache reuse, and complicates distributed hardware scaling. We propose a two-tier routing mechanism: a macroscopic document-router dynamically assigns local context segments ($N$ tokens) to a specialized, restricted pool of $m$ experts; subsequently, a microscopic token-router dispatches individual tokens exclusively within that pre-allocated shortlist. 
 
-Building upon the memory substrates of \textit{Volume I} and the symbolic abstractions of \textit{Volume II}, HTCR concludes the trilogy by defining the network's dynamic macroscale routing infrastructure. This work serves as an independent reference design pattern, detailing the mathematical mechanics of two-stage dispatch, structural load-balancing metrics, training stability regularizers, and empirical validation protocols for distributed cognitive architectures.
+This article introduces \textit{Hierarchical Topic-Conditioned Routing} (HTCR), an architectural framework for examining how routing mechanisms may improve coherence, cache locality, and computational organization within sparse Mixture-of-Experts (MoE) language models. Standard MoE architectures frequently rely on token-level routing decisions, which can fragment sequence-level structure and increase volatility in expert assignment during long-context inference. This token-local routing pattern may contribute to expert jitter, reduced cache reuse, and increased communication overhead in distributed execution environments.
+
+HTCR proposes a two-tier routing mechanism. First, a macroscopic document- or segment-level router assigns local context segments of $N$ tokens to a restricted pool of $m$ candidate experts. Second, a microscopic token-level router dispatches individual tokens exclusively within that pre-allocated expert shortlist. This hierarchy is intended to preserve local semantic coherence while reducing unnecessary expert dispersion during long-sequence processing.
+
+Building upon the memory substrates of \textit{Volume I: Memory Fields} and the symbolic abstractions of \textit{Volume II: Symbol Fields}, HTCR concludes the Trilogy by defining a dynamic macroscale routing infrastructure for distributed latent computation. This work provides a theoretical reference design, including mathematical mechanics for two-stage dispatch, structural load-balancing metrics, training stability regularizers, and empirical validation protocols for routing-aware neural architectures.
 
 \noindent \textit{Keywords: Hierarchical Topic-Conditioned Routing (HTCR); Mixture-of-Experts (MoE); Cache Locality; Distributed Inference; Expert Jitter; Token Dispatch; Structural Regularization.}
 
+\chapter{Routing Fields and Hierarchical Topic-Conditioned Routing}
+
+\section{Introduction}
+
+Volume III of \textit{The Latent Cognition Trilogy} examines the architectural coordination layer of latent cognition. Volume I developed memory as a field of retrievable latent representations. Volume II examined how compressed latent states may acquire symbolic stability under curriculum and bottleneck pressure. Volume III addresses the next structural question: how can memory fields and symbol fields be coordinated across large-scale neural architectures whose computation is distributed across specialized components?
+
+The central construct introduced here is \textit{Hierarchical Topic-Conditioned Routing} (HTCR). HTCR proposes that routing should not be treated only as a token-local dispatch mechanism or a hardware efficiency optimization. Instead, routing may be understood as a structural principle through which computation is allocated, constrained, and stabilized across expert modules. In this framing, routing becomes the architectural mechanism that determines where latent information is processed, which expert pathways are activated, and how coherence is preserved across long sequences.
+
+Standard sparse Mixture-of-Experts (MoE) systems often route tokens independently. This design allows conditional computation at scale, but it can fragment sequence-level structure, increase expert assignment volatility, and create communication patterns that are difficult to optimize in distributed inference. HTCR introduces a two-stage routing process: first, a segment-level router identifies a restricted expert pool for a local context region; second, a token-level router dispatches individual tokens only within that constrained pool.
+
+The purpose of this volume is not to claim that HTCR has been empirically validated. Rather, it develops a theoretical and systems-oriented framework for evaluating whether hierarchical routing can reduce expert jitter, improve cache locality, stabilize load balancing, and preserve semantic coherence across long-context computation.
+
+Standard mixture-of-expert models scale parameters by introducing structural disorder, optimizing gating functions at an isolated token level (Shazeer et al., 2017). This introduces token jitter and shatters context continuity. Grounded in Herbert Simon’s formulation of nearly-decomposable complex systems (Simon, 1996), we introduce Hierarchical Topic-Conditioned Routing (HTCR). By structuring expert allocation into a macro-scale context partition and a micro-scale token dispatch, we implement a stable multi-tier cognitive layout that mirrors the macro/micro cognitive constraints established in classical cognitive theory (Miller, 1956; Sun, 2004).
+
+\section{Problem Space: Token-Level Routing and Architectural Fragmentation}
+
+Sparse MoE models increase model capacity by activating only a subset of expert parameters for each token. This provides an attractive scaling strategy: the total parameter count may grow substantially while the active computation per token remains bounded. However, token-level routing also introduces a coordination problem. If each token independently selects experts, adjacent tokens in a semantically coherent passage may be dispatched to unstable or widely dispersed expert sets.
+
+This token-local routing pattern can produce several difficulties. First, expert assignment may fluctuate rapidly across neighboring tokens, creating what this volume refers to as \textit{expert jitter}. Second, distributed execution may require expensive all-to-all communication when tokens in the same sequence are routed to experts located across different hardware partitions. Third, cache reuse may be weakened when expert activation patterns change too frequently across local context windows.
+
+HTCR addresses these issues by adding a macroscopic routing stage before token-level dispatch. Instead of allowing every token to select from the full expert pool independently, the segment-level router selects a bounded shortlist of candidate experts for a local context segment. Token-level routing then proceeds within that shortlist. The hypothesis is that this hierarchical constraint may preserve semantic locality while reducing unnecessary routing dispersion.
+
+Within the broader Trilogy, this problem has cognitive significance. Memory and symbolic abstraction are not sufficient unless the architecture can coordinate where and how they are processed. Routing therefore becomes the mechanism through which latent cognition is operationally organized across distributed computation.
+
+\section{Contributions}
+
+This volume contributes the following elements:
+
+\begin{enumerate}
+    \item a theoretical framework for interpreting routing as architectural coordination rather than only conditional computation;
+    \item a two-stage HTCR mechanism combining macroscopic segment routing with microscopic token dispatch;
+    \item formal metrics for expert jitter, shortlist stability, routing entropy, load balancing, and communication cost;
+    \item a cache-locality analysis for long-context MoE inference;
+    \item an empirical evaluation protocol for comparing HTCR against flat token-routed MoE baselines;
+    \item a failure-mode taxonomy for hierarchical routing architectures; and
+    \item a synthesis of routing as the third layer of the Trilogy's memory--symbol--routing sequence.
+\end{enumerate}
+
+\section{Overview of the Volume}
+
+The remainder of this volume proceeds as follows. The next chapter situates HTCR within related work on sparse MoE architectures, token routing, load balancing, expert choice mechanisms, and long-context inference. Subsequent chapters define the propositions and falsification conditions, formalize the dual-stage routing mechanism, introduce stability and locality metrics, specify structural regularization terms, define expected failure modes, and outline empirical validation protocols.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%================================================
 \section*{Position within the Research Program}
 
-This manuscript is a companion hypothesis paper within the broader Latent Cognition research program. It is not part of the main Trilogy sequence. Instead, it formalizes a specific theoretical claim that supports and constrains the central argument developed across the Trilogy.
+This manuscript constitutes \textbf{Volume III} of \textit{The Latent Cognition Trilogy}. It develops the routing and architectural coordination layer of the broader research program by formalizing \textit{Hierarchical Topic-Conditioned Routing} (HTCR) as a candidate mechanism for organizing distributed computation across specialized model components.
 
-The architectural foundation for the research program is developed separately in \textit{Differentiable Latent Indexing in LLMs: Toward Native Retrieval as a Cognitive Function}, which frames retrieval as a native differentiable function rather than as an external augmentation layer. The present hypothesis should therefore be read as a satellite formalization within that broader architecture.
+\textbf{Volume I}, \textit{Memory Fields}, established the memory layer of the Trilogy by treating retrieval as a native operation over latent representational structure. \textbf{Volume II}, \textit{Symbol Fields}, examined the conditions under which compressed latent representations may acquire symbolic stability. Volume III extends this sequence by asking how memory and symbolic structures may be coordinated across large-scale architectures through hierarchical routing mechanisms.
+
+The architectural foundation for the broader program remains \textit{Differentiable Latent Indexing in LLMs: Toward Native Retrieval as a Cognitive Function}. That work supplies the retrieval-native substrate from which the Trilogy begins. The present volume completes the main sequence by shifting attention from memory and symbolic abstraction to the coordination of computation across expert modules, routing pathways, and distributed inference structures.
+
+Accordingly, \textbf{Volume III} should not be read as a companion hypothesis paper. It is the third movement of the Trilogy. The companion hypothesis papers occupy a separate role: they isolate supporting claims without replacing the main sequence.
+
+\chapter{Related Work}
+
+\section{Sparse Mixture-of-Experts Models}
+
+Sparse Mixture-of-Experts architectures provide the immediate technical context for HTCR. Sparsely-Gated MoE introduced the use of trainable gating networks to route inputs to a sparse subset of expert feed-forward networks, enabling large increases in model capacity without activating all parameters for every input \cite{Shazeer2017}. GShard extended this direction by combining conditional computation with automatic sharding, making large-scale sparse expert models more practical in distributed settings \cite{Lepikhin2020}.
+
+HTCR builds on this lineage but shifts the focus from capacity scaling to routing coherence. The central question is not simply whether sparse experts can increase model size efficiently, but whether routing can preserve sequence-level structure and reduce expert volatility during long-context processing.
+
+\section{Routing Simplification and Load Balancing}
+
+Switch Transformer simplified MoE routing by selecting a single expert per token and introduced techniques for improving stability and reducing communication overhead \cite{Fedus2022}. ST-MoE further examined stability and transferability in sparse expert models, emphasizing the practical difficulty of training sparse systems that remain reliable across tasks \cite{Zoph2022}.
+
+These works motivate HTCR's concern with balancing. A routing mechanism must avoid expert starvation, token dropping, and pathological concentration of traffic into a small number of experts. HTCR therefore includes macro-level entropy regularization and load-balancing penalties, but adds a further constraint: balancing should occur without destroying local semantic coherence.
+
+\section{Large-Scale Sparse Language Models}
+
+GLaM demonstrated that sparsely activated MoE language models can scale model capacity while reducing training and inference cost relative to dense alternatives \cite{Du2022}. Mixtral later provided a modern sparse MoE language model in which each token is routed to a small subset of experts at each layer \cite{Jiang2024}. These systems show the practical relevance of sparse expert routing for language modeling at scale.
+
+HTCR differs from these systems by introducing segment-conditioned expert shortlists. Rather than allowing every token to route against the full expert pool independently, HTCR constrains token-level routing through a local context-conditioned expert set.
+
+\section{Alternative Routing Mechanisms}
+
+Expert Choice Routing reverses the usual token-choice pattern by allowing experts to select tokens rather than requiring each token to select a fixed number of experts \cite{Zhou2022}. This approach directly addresses load imbalance and expert underutilization. HTCR is compatible with this broader design space because it also challenges unconstrained token-local routing, but it does so through hierarchical context conditioning rather than expert-side token selection.
+
+The relevance of Expert Choice Routing for HTCR is conceptual as much as technical: routing policy is not a fixed implementation detail. It is an architectural design axis that can alter training dynamics, load distribution, specialization, and inference behavior.
+
+\section{Distributed MoE Training and Hardware Efficiency}
+
+Efficient sparse training requires alignment between routing dynamics and hardware execution. MegaBlocks reformulates MoE computation using block-sparse operations to avoid token dropping and reduce the mismatch between dynamic routing and GPU efficiency \cite{Gale2023}. This line of work shows that routing is not only a modeling question; it is also a systems problem involving memory layout, communication, batching, and kernel efficiency.
+
+HTCR extends this systems concern to long-context inference. If semantically related tokens can be routed through a more stable local expert pool, the resulting execution pattern may improve cache locality and reduce unnecessary all-to-all expert movement.
+
+\section{Long-Context Inference and KV-Cache Locality}
+
+Long-context inference introduces significant memory-management pressure because key--value cache size grows with sequence length. PagedAttention and vLLM address this problem by managing KV cache through paged memory structures, improving serving throughput and reducing memory waste \cite{Kwon2023}. Although HTCR does not replace cache-management systems, it targets an adjacent problem: the instability of expert activation patterns that can reduce locality in sparse expert inference.
+
+The connection is therefore structural. KV-cache systems manage memory efficiently once computation is scheduled. HTCR attempts to make the computation schedule itself more locality-preserving by reducing expert dispersion within semantically coherent segments.
 
 \vspace{2em}
 \hrule
 \vspace{2em}
 
-\chapter{Propositions and Falsification Canon}
+\chapter{Propositions and Falsification Conditions}
 
-The architectural deployment of Hierarchical Topic-Conditioned Routing rests on verifiable, predictable behavioral differences relative to flat token-routed MoE baselines (such as standard Mixtral or GShard configurations).
+The validity of Hierarchical Topic-Conditioned Routing as a theoretical routing mechanism rests on verifiable behavioral differences relative to flat token-routed MoE baselines (such as standard Mixtral or GShard configurations).
 
 \section*{Proposition 1: Topological Cache Locality and Throughput}
 By constraining individual token execution trajectories to a segment-bounded expert shortlist, the HTCR framework will demonstrate a significant reduction in inter-device KV cache communication volume and yield higher token-processing throughput during long-context sequence execution.
 
 \textbf{Falsification Condition:} If an HTCR model manifests equivalent or higher inter-node communication latency and lower generation throughput compared to an unconstrained token-MoE baseline when evaluated on continuous context lengths exceeding $32\text{k}$ tokens, the utility of segment-level clustering is falsified.
 
-\section*{Proposition 2: Optimization Stability and Balances}
+\section*{Proposition 2: Optimization Stability and Load Balancing}
 The combination of macro-level entropy regularizers and token-level gates will stabilize expert assignment trajectories, preventing severe expert starvation and balancing computational loads across distributed hardware partitions without sacrificing modeling capacity.
 
 \textbf{Falsification Condition:} If tracking routing distributions during large-scale pre-training reveals persistent structural load imbalances, or if token-drop ratios match flat gating methods under maximum hardware throughput limits, the optimization balancing claims are ungrounded.
@@ -64,13 +144,149 @@ G_{\text{doc}}(s_j) = \operatorname{softmax}\left(W_2 \cdot \operatorname{GeLU}\
 The top-$m$ indices matching the highest activation values in $G_{\text{doc}}(s_j)$ are extracted to define the restricted active expert shortlist $\mathcal{M}_j = \{i_1, i_2, \dots, i_m\}$ for the duration of segment $S_j$.
 
 \subsection{Stage 2: Microscopic Token Dispatch}
-For each individual token representation $h_t^{(\ell)}$ residing within segment $S_j$, the local token-router $\mathcal{R}_{\text{tok}}$ evaluates gating scores *exclusively* against the experts preserved in the shortlist $\mathcal{M}_j$:
+For each individual token representation $h_t^{(\ell)}$ residing within segment $S_j$, the local token-router $\mathcal{R}_{\text{tok}}$ evaluates gating scores \textit{exclusively} against the experts preserved in the shortlist $\mathcal{M}_j$:
 
 \begin{equation}
 G_{\text{tok}}\left(h_t^{(\ell)}\right) = \operatorname{softmax}\left( \left\{ w_k^{\top} h_t^{(\ell)} \;\middle|\; k \in \mathcal{M}_j \right\} \right).
 \end{equation}
 
 Individual tokens are then dispatched to the top-$k$ experts selected strictly from this local dictionary. Gradients flow end-to-end through both routing layers simultaneously via continuous backpropagation paths.
+
+\section{Routing Stability and Expert Locality Metrics}
+
+The central claim of HTCR is not merely that routing occurs in two stages. Its claim is that hierarchical routing should produce measurably more stable expert assignment patterns than unconstrained token-level routing. This requires explicit metrics for routing stability, expert dispersion, and local semantic coherence.
+
+Let $\mathcal{M}_j$ denote the expert shortlist assigned to segment $S_j$. A simple shortlist stability score between adjacent segments can be defined as the Jaccard overlap:
+
+\begin{equation}
+\rho_j =
+\frac{|\mathcal{M}_j \cap \mathcal{M}_{j+1}|}
+{|\mathcal{M}_j \cup \mathcal{M}_{j+1}|}.
+\end{equation}
+
+High values of $\rho_j$ indicate that adjacent segments preserve similar expert pools, while low values indicate abrupt routing shifts. In long-context processing, moderate stability is desirable: the routing pattern should remain coherent across semantically continuous segments while still adapting when the topic or task structure changes.
+
+Expert jitter can be defined as the complement of average shortlist stability:
+
+\begin{equation}
+J_{\text{expert}} =
+1 -
+\frac{1}{J-1}
+\sum_{j=1}^{J-1}
+\rho_j.
+\end{equation}
+
+A successful HTCR model should reduce $J_{\text{expert}}$ relative to a flat token-routed MoE baseline, particularly on long documents with locally coherent semantic structure.
+
+\section{Routing Entropy and Load Distribution}
+
+Let $p_e$ denote the empirical probability that expert $e$ is selected by the macroscopic segment router across a batch or validation corpus. Macro-routing entropy can be defined as:
+
+\begin{equation}
+H_{\text{doc}} =
+-\sum_{e=1}^{E} p_e \log p_e.
+\end{equation}
+
+Very low entropy indicates routing collapse, where the segment router repeatedly selects a small number of experts. Very high entropy may indicate insufficient specialization, where the router fails to form meaningful associations between segment structure and expert allocation. HTCR therefore seeks a controlled intermediate regime: enough diversity to prevent starvation, but enough structure to support specialization and locality.
+
+Load deviation from a uniform target can be measured as:
+
+\begin{equation}
+\Delta_{\text{load}} =
+D_{KL}\left(\bar{G}_{\text{doc}} \parallel \mathcal{U}\right),
+\end{equation}
+
+where $\bar{G}_{\text{doc}}$ is the average macro-routing distribution and $\mathcal{U}$ is a uniform distribution over the expert pool. This term also appears in the regularization objective and functions as a diagnostic measure during evaluation.
+
+\section{Communication Cost Model}
+
+In distributed MoE inference, routing decisions induce communication costs when tokens are dispatched to experts located on different devices. Let $c(e_a,e_b)$ denote the communication cost associated with moving activation or cache-relevant information between device partitions associated with experts $e_a$ and $e_b$. For a flat token-routed MoE baseline, the communication cost over a segment may be approximated as:
+
+\begin{equation}
+\mathcal{C}_{\text{flat}}(S_j)
+=
+\sum_{t \in S_j}
+\sum_{e \in \mathcal{E}_t}
+c(d_t, d_e),
+\end{equation}
+
+where $\mathcal{E}_t$ denotes the expert set selected for token $t$, $d_t$ denotes the current device location of the token representation, and $d_e$ denotes the device hosting expert $e$.
+
+Under HTCR, token routing is constrained to the segment shortlist $\mathcal{M}_j$, producing:
+
+\begin{equation}
+\mathcal{C}_{\text{HTCR}}(S_j)
+=
+\sum_{t \in S_j}
+\sum_{e \in \mathcal{E}_t \cap \mathcal{M}_j}
+c(d_t, d_e).
+\end{equation}
+
+The expected systems advantage of HTCR can be expressed as:
+
+\begin{equation}
+\Delta_{\text{comm}}
+=
+\mathbb{E}_{S_j}
+\left[
+\mathcal{C}_{\text{flat}}(S_j)
+-
+\mathcal{C}_{\text{HTCR}}(S_j)
+\right].
+\end{equation}
+
+A positive $\Delta_{\text{comm}}$ indicates that hierarchical routing reduces communication pressure relative to unconstrained token-level dispatch.
+
+\section{Cache Locality Objective}
+
+HTCR can also be evaluated through a cache-locality objective. Let $A_t$ denote the expert activation set for token $t$. For adjacent tokens within a segment, local expert continuity can be defined as:
+
+\begin{equation}
+L_{\text{cache}}(S_j)
+=
+\frac{1}{N-1}
+\sum_{t=1}^{N-1}
+\frac{|A_t \cap A_{t+1}|}
+{|A_t \cup A_{t+1}|}.
+\end{equation}
+
+Higher values of $L_{\text{cache}}$ indicate that neighboring tokens reuse similar expert pathways, increasing the likelihood of improved cache behavior and reduced expert-switching overhead. This metric does not replace hardware-level cache profiling, but it provides a model-level proxy for routing locality.
+
+\chapter{Algorithmic Specification}
+
+To operationalize HTCR, Algorithm~\ref{alg:htcr-loop} defines a single hierarchical routing step for one segment within one MoE layer.
+
+\begin{center}
+\fbox{%
+\begin{minipage}{0.92\linewidth}
+\textbf{Algorithm 2}: Hierarchical Topic-Conditioned Routing Loop\label{alg:htcr-loop}
+
+\textbf{Input:} segment hidden states $H_j^{(\ell-1)} = \{h_t^{(\ell-1)}\}_{t=1}^{N}$, expert pool $\mathcal{E}$, document router $\mathcal{R}_{doc}$, token router $\mathcal{R}_{tok}$, shortlist size $m$, token top-$k$ value.
+
+\textbf{Output:} routed expert assignments for all tokens in segment $S_j$.
+
+\begin{enumerate}
+    \item Compute segment summary:
+    \[
+    s_j \leftarrow \frac{1}{N}\sum_{t=1}^{N} h_t^{(\ell-1)}.
+    \]
+    \item Compute macro-routing distribution:
+    \[
+    G_{\text{doc}}(s_j) \leftarrow \mathcal{R}_{doc}(s_j).
+    \]
+    \item Select segment expert shortlist:
+    \[
+    \mathcal{M}_j \leftarrow \operatorname{TopM}(G_{\text{doc}}(s_j),m).
+    \]
+    \item For each token $t \in S_j$, compute token routing scores only over $\mathcal{M}_j$.
+    \item Select top-$k$ experts for each token from $\mathcal{M}_j$.
+    \item Dispatch token representations to selected experts.
+    \item Aggregate expert outputs and return routed segment representations.
+\end{enumerate}
+\end{minipage}}
+\end{center}
+
+This procedure differs from flat token-level MoE routing by constraining the local search space before token dispatch. The document router establishes a coarse semantic prior over expert selection, while the token router preserves fine-grained flexibility inside that prior.
 
 \chapter{Structural Regularization and Starvation Prevention}
 
@@ -81,6 +297,66 @@ To prevent the macroscopic document-router from collapsing into a biased state w
 \end{equation}
 
 where $\bar{G}_{\text{doc}}$ is the average macro-routing distribution across the training batch, $\mathcal{U}$ represents a uniform distribution over the expert pool $E$, and hyperparameters $\lambda_1, \lambda_2$ govern the structural smoothing constraints. The shortlist ceiling parameter $m$ is dynamically annealed throughout training, starting wide to maximize early discovery and tightening progressively to optimize final execution speed.
+
+\section{Full HTCR Training Objective}
+
+The balancing penalty alone does not define the full HTCR training process. A complete conceptual objective must account for task performance, macro-router entropy, load balancing, cache locality, and excessive routing volatility. A general HTCR objective can be written as:
+
+\begin{equation}
+\mathcal{L}_{HTCR}
+=
+\mathcal{L}_{task}
++
+\lambda_b \mathcal{L}_{balance}
++
+\lambda_h \mathcal{L}_{entropy}
++
+\lambda_j \mathcal{L}_{jitter}
++
+\lambda_l \mathcal{L}_{locality}.
+\end{equation}
+
+Here, $\mathcal{L}_{task}$ is the standard language modeling or downstream task objective. The term $\mathcal{L}_{balance}$ penalizes expert starvation or excessive load concentration. The entropy term $\mathcal{L}_{entropy}$ regulates the macro-router's selection profile. The jitter penalty $\mathcal{L}_{jitter}$ discourages unnecessary expert-set volatility across adjacent segments, while $\mathcal{L}_{locality}$ rewards stable expert reuse within semantically coherent regions.
+
+The objective should not force all neighboring segments to use the same experts. Such rigidity would prevent adaptation to topic shifts. Instead, the goal is controlled continuity: stable routing when the local semantic structure is stable, and flexible rerouting when the segment content changes.
+
+\section{Shortlist Annealing}
+
+The shortlist ceiling parameter $m$ may be dynamically annealed during training. Early in training, a larger value of $m$ allows the model to explore a broader region of the expert pool. As training progresses, $m$ can be reduced to encourage sharper specialization and lower communication overhead.
+
+This annealing schedule creates a trade-off between exploration and locality. If $m$ remains too large, HTCR degenerates toward flat token routing. If $m$ becomes too small too early, the model may overcommit to unstable expert assignments and prevent useful specialization from emerging. The annealing path must therefore be treated as a tunable systems parameter rather than a fixed architectural constant.
+
+\chapter{Expected Failure Modes}
+
+HTCR is a theoretical routing mechanism. Its value depends on whether hierarchical routing improves coherence, locality, and load balance without reducing modeling capacity. Several failure modes must therefore be evaluated explicitly.
+
+\section{Topic Collapse}
+
+The macroscopic segment router may collapse into selecting the same small expert subset for many unrelated segments. This would reduce communication volatility but destroy specialization. Topic collapse can be detected through low macro-routing entropy, poor expert diversity, and degraded performance on heterogeneous documents.
+
+\section{Routing Inertia}
+
+The opposite failure mode is excessive routing inertia. In this case, the segment router continues using the same expert shortlist even after the semantic structure of the document changes. Routing inertia may improve cache locality while harming adaptation. This failure is especially likely in documents with abrupt topic shifts, code-switching, multi-domain reasoning, or mixed-format inputs.
+
+\section{Segment-Boundary Error}
+
+HTCR depends on segment partitioning. If segment boundaries cut across coherent semantic units, the macro-router may assign inappropriate expert pools. Boundary errors may occur in long documents where topic transitions do not align with fixed token windows. Adaptive segmentation may therefore be required in future implementations.
+
+\section{Expert Starvation}
+
+Despite balancing penalties, some experts may remain undertrained if the segment router repeatedly excludes them from shortlists. Expert starvation can reduce the effective capacity of the model and may produce brittle specialization. Evaluation must track not only token-level load but also macro-level shortlist inclusion frequency.
+
+\section{Over-Specialized Experts}
+
+HTCR may encourage experts to specialize too narrowly around segment categories. Such over-specialization may improve local performance while weakening generalization. This failure can be detected when expert-specific performance becomes highly domain-bound and transfer across related tasks declines.
+
+\section{Communication Overhead from Macro-Routing}
+
+The additional document-router stage may introduce overhead that outweighs the savings from reduced token-level dispersion. This would falsify the systems-efficiency motivation for HTCR. A fair evaluation must therefore include end-to-end latency, throughput, memory movement, and scheduling overhead, not only theoretical communication counts.
+
+\section{Reduced Flexibility under Mixed-Topic Contexts}
+
+A restricted expert shortlist may be inappropriate for segments containing multiple simultaneous reasoning modes. For example, a single passage may combine code, mathematical reasoning, factual recall, and dialogue. If $m$ is too small, the shortlist may exclude experts needed for secondary but important operations. This failure motivates adaptive shortlist sizing.
 
 \chapter{Empirical Evaluation Protocol}
 
@@ -97,6 +373,56 @@ The long-term distribution profiles of the expert array must be audited using st
 
 \subsection{Cache Locality and Memory Footprint Mapping}
 Finally, hardware trackers must register real-time L2/L3 cache hit-rates and high-bandwidth memory usage metrics during processing blocks. The HTCR architecture must achieve significant cache-retention benefits, demonstrating that document-level conditioning prevents standard expert cache-eviction loops.
+
+\chapter{Discussion}
+
+\section{Routing as Architectural Coordination}
+
+HTCR reframes routing as a mechanism of architectural coordination. In sparse expert systems, routing is often discussed in terms of efficiency: which experts should be activated, how loads should be balanced, and how computation can be distributed. These concerns remain central, but the Trilogy adds a broader interpretation. Routing determines how latent memory, symbolic abstraction, and specialized computation are organized across the model.
+
+From this perspective, routing is not merely a dispatcher. It is a structural interface between representation and computation. A routing mechanism determines which parts of the architecture are allowed to participate in processing a given context, which pathways remain inactive, and how continuity is preserved across long sequences.
+
+\section{Relation to Volume I and Volume II}
+
+Volume I introduced memory fields as structured latent spaces accessible through differentiable retrieval. Volume II introduced symbol fields as compressed latent structures that may stabilize into reusable computational primitives. Volume III completes the sequence by examining how these structures may be coordinated across expert modules and distributed pathways.
+
+The relation among the three volumes is therefore layered. Memory supplies retrievable structure. Symbolic stabilization supplies reusable abstraction. Routing supplies allocation and coordination. None of these mechanisms is sufficient alone. A system with memory but no routing may retrieve relevant information without coordinating computation effectively. A system with symbolic abstractions but no routing may lack a mechanism for deploying those abstractions across specialized components. HTCR addresses this third layer.
+
+\section{Systems Interpretation}
+
+HTCR also has a practical systems interpretation. Sparse MoE models are not only mathematical architectures; they are executed on distributed hardware. Expert assignment determines communication patterns, memory access, cache behavior, and scheduling pressure. A routing policy that appears adequate at the level of model quality may become inefficient or unstable at the level of deployment.
+
+The two-stage design of HTCR attempts to align semantic locality with systems locality. If a local context segment is semantically coherent, then constraining its expert pool may reduce unnecessary dispatch dispersion. This does not guarantee improved performance, but it defines a measurable hypothesis connecting model structure to hardware behavior.
+
+\section{Interpretability and Accountability}
+
+Routing decisions can become a form of interpretability evidence. If certain expert pools are repeatedly selected for identifiable segment types, the macro-router may reveal a coarse map of architectural specialization. However, this evidence must be interpreted carefully. Expert selection does not automatically imply semantic understanding, and routing patterns may reflect dataset artifacts, optimization biases, or hardware constraints.
+
+For this reason, HTCR requires multiple diagnostic layers: expert utilization profiles, routing entropy, shortlist stability, cache-locality metrics, ablation studies, and human inspection of segment-to-expert associations. Routing accountability depends on correlating these diagnostics with task performance and failure behavior.
+
+\section{Limits of the Framework}
+
+HTCR remains a theoretical reference design. It does not prove that hierarchical routing will outperform flat token-level routing in all settings. Its expected advantages are conditional: long contexts, semantically coherent segments, distributed expert placement, and meaningful expert specialization. In short contexts or highly mixed inputs, the hierarchy may provide little benefit or even reduce flexibility.
+
+The framework should therefore be evaluated as a structured hypothesis. Its value lies in making routing coherence, expert jitter, and cache locality measurable rather than implicit.
+
+\chapter{Conclusion}
+
+Volume III has developed \textit{Hierarchical Topic-Conditioned Routing} as the routing and architectural coordination layer of \textit{The Latent Cognition Trilogy}. Its central claim is that routing should be analyzed not only as an efficiency mechanism, but as a structural principle for organizing computation across specialized neural components.
+
+HTCR proposes a two-stage routing process in which a macroscopic segment router selects a constrained expert shortlist and a microscopic token router performs local dispatch within that shortlist. This design is intended to reduce expert jitter, improve cache locality, stabilize load distribution, and preserve semantic coherence across long-context processing.
+
+The framework defines falsifiable propositions, formal routing metrics, a communication-cost model, a cache-locality proxy, training regularizers, expected failure modes, and empirical evaluation requirements. It does not claim empirical validation. Rather, it specifies what such validation would require.
+
+Within the Trilogy, Volume III completes the analytical progression from memory to symbol to routing:
+
+\[
+\MemoryField \;\Longrightarrow\; \SymbolField \;\Longrightarrow\; \RoutingField
+\]
+
+Volume I established retrieval-native memory as the first layer of latent cognition. Volume II examined symbolic stabilization under compression and curriculum pressure. Volume III has argued that these structures require architectural coordination through routing if they are to operate coherently at scale.
+
+The broader implication is that cognition-like behavior in artificial systems should not be attributed to scale alone. It may depend on how memory is structured, how abstractions stabilize, and how computation is routed across the architecture.
 
 % \bibliographystyle{plain}
 % \bibliography{master}

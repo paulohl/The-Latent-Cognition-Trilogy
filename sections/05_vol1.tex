@@ -1,8 +1,31 @@
-\volumetitlepage
+%--- Title Page ---
+\volumetitlepagewithfig
 {Volume I: Memory Fields}
 {Differentiable Latent Indexing inside Large Language Models}
+
+\vspace*{1cm} % space between title and figures - you control it
+
+\begin{figure}[H] % needs \usepackage{float}
+\centering
+\begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth,height=0.6\textheight,keepaspectratio]{figures/image-vol1-covera.jpeg}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth,height=0.6\textheight,keepaspectratio]{figures/image-vol1-coverb.jpeg}
+\end{minipage}
+\end{figure}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%=============================================
+%==================================
+% remove \vfill - that's what's pushing to next page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%==================================
+\newpage % force next content to start on new page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%==================================
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Volume I Abstract}
 This article proposes \textit{Differentiable Latent Indexing} (DLI), a theoretical framework that recontextualizes memory retrieval not as an external utility appended to a language model, but as a native, differentiable function inside the computational pathway of Large Language Models (LLMs). By treating the latent space as a structured information field, the article derives formal retrieval operators that integrate memory access directly into the model's forward pass.

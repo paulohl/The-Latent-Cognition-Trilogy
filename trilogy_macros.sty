@@ -89,10 +89,30 @@
         \rule{\textwidth}{0.4pt}\par\vspace{\baselineskip}
         {\Huge \scshape #1}\par\vspace{0.2in}
         {\Large \itshape #2}\par\vspace{3.2pt}
-        \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+        \rule{\textwidth}{0.4pt}\vspace*{-
+ \baselineskip}\vspace{3.2pt}
         \rule{\textwidth}{1.6pt}
     \end{center}
     \vspace*{\fill}
     
     \clearpage
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\volumetitlepagewithfig}[2]{%
+    \clearpage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{#1}
+    \thispagestyle{empty}
+
+    \vspace*{0.08\textheight} % top margin - adjust 0.05 to 0.12 to taste
+    \begin{center}
+        \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+        \rule{\textwidth}{0.4pt}\par\vspace{\baselineskip}
+        {\Huge \scshape #1}\par\vspace{0.2in}
+        {\Large \itshape #2}\par\vspace{3.2pt}
+        \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+        \rule{\textwidth}{1.6pt}
+    \end{center}
+    % NO \vspace*{\fill} HERE - that's the key
+    % NO \clearpage HERE - you control the page break
 }

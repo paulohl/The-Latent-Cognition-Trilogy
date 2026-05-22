@@ -128,7 +128,7 @@ The combination of macro-level entropy regularizers and token-level gates will s
 
 Let a long-context sequence be partitioned into discrete segments $S_j$ containing $N$ sequential tokens, where the input token matrix is defined as $X \in \mathbb{R}^{N \times d}$. 
 
-\subsection{Stage 1: Macroscopic Segment Routing}
+\section{Stage 1: Macroscopic Segment Routing}
 Before token-level evaluation begins, the local hidden representations from the previous layer are aggregated into a unified segment-level summary vector $s_j \in \mathbb{R}^{d}$ via strategic mean-pooling across the spatial dimension:
 
 \begin{equation}
@@ -143,7 +143,7 @@ G_{\text{doc}}(s_j) = \operatorname{softmax}\left(W_2 \cdot \operatorname{GeLU}\
 
 The top-$m$ indices matching the highest activation values in $G_{\text{doc}}(s_j)$ are extracted to define the restricted active expert shortlist $\mathcal{M}_j = \{i_1, i_2, \dots, i_m\}$ for the duration of segment $S_j$.
 
-\subsection{Stage 2: Microscopic Token Dispatch}
+\section{Stage 2: Microscopic Token Dispatch}
 For each individual token representation $h_t^{(\ell)}$ residing within segment $S_j$, the local token-router $\mathcal{R}_{\text{tok}}$ evaluates gating scores \textit{exclusively} against the experts preserved in the shortlist $\mathcal{M}_j$:
 
 \begin{equation}
@@ -362,16 +362,16 @@ A restricted expert shortlist may be inappropriate for segments containing multi
 
 To validate the scalability and efficiency claims of the HTCR architecture, tracking scripts must execute four foundational forensic operations against equivalent baseline setups.
 
-\subsection{Distributed Throughput and Communication Profiles}
+\section{Distributed Throughput and Communication Profiles}
 The system must be evaluated on a distributed compute cluster across multiple GPU nodes. Scaling metrics must explicitly monitor the cross-device data volume transferred via standard \texttt{All-to-All} communication primitives. HTCR must demonstrate a significant reduction in communication overhead and near-linear scaling of text-generation throughput as context window lengths increase.
 
-\subsection{Annealing Path and Capacity Ablations}
+\section{Annealing Path and Capacity Ablations}
 Evaluators must isolate the performance changes triggered by the schedule of the shortlist constraint parameter $m$. Systematic comparative training runs must trace the delta between a static, unannealed baseline and a dynamic scheduling path to map out the explicit convergence characteristics of the dual routers.
 
-\subsection{Expert Activation Entropy and Balancing Verification}
+\section{Expert Activation Entropy and Balancing Verification}
 The long-term distribution profiles of the expert array must be audited using standard structural allocation tracking. The load distribution profile must approximate a uniform target, demonstrating that the balancing penalty effectively prevents hardware starvation without degrading perplexity metrics on standard benchmarks such as MMLU and GSM8K.
 
-\subsection{Cache Locality and Memory Footprint Mapping}
+\section{Cache Locality and Memory Footprint Mapping}
 Finally, hardware trackers must register real-time L2/L3 cache hit-rates and high-bandwidth memory usage metrics during processing blocks. The HTCR architecture must achieve significant cache-retention benefits, demonstrating that document-level conditioning prevents standard expert cache-eviction loops.
 
 \chapter{Discussion}

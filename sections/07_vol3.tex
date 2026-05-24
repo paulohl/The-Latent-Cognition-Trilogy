@@ -97,7 +97,7 @@ HTCR builds on this lineage but shifts the focus from capacity scaling to routin
 
 \section{Routing Simplification and Load Balancing}
 
-Switch Transformer simplified MoE routing by selecting a single expert per token and introduced techniques for improving stability and reducing communication overhead \cite{Fedus2022}. ST-MoE further examined stability and transferability in sparse expert models, emphasizing the practical difficulty of training sparse systems that remain reliable across tasks \cite{Zoph2022}.
+Switch Transformer simplified MoE routing by selecting a single expert per token and introduced techniques for improving stability and reducing communication overhead \cite{Fe2022}. ST-MoE further examined stability and transferability in sparse expert models, emphasizing the practical difficulty of training sparse systems that remain reliable across tasks \cite{Zoph2022}.
 
 These works motivate HTCR's concern with balancing. A routing mechanism must avoid expert starvation, token dropping, and pathological concentration of traffic into a small number of experts. HTCR therefore includes macro-level entropy regularization and load-balancing penalties, but adds a further constraint: balancing should occur without destroying local semantic coherence.
 
@@ -131,7 +131,7 @@ The connection is therefore structural. KV-cache systems manage memory efficient
 
 \chapter{Propositions and Falsification Conditions}
 
-The validity of Hierarchical Topic-Conditioned Routing as a theoretical routing mechanism rests on verifiable behavioral differences relative to flat token-routed MoE baselines (such as standard Mixtral or GShard configurations).
+The validity of Hierarchical Topic-Conditioned Routing as a theoretical routing mechanism rests on verifiable behavioral differences relative to flat token-routed MoE baselines (such as standard Mixtral or GShard configurations) \cite{Lepikhin2021}.
 
 \section*{Proposition 1: Topological Cache Locality and Throughput}
 By constraining individual token execution trajectories to a segment-bounded expert shortlist, the HTCR framework will demonstrate a significant reduction in inter-device KV cache communication volume and yield higher token-processing throughput during long-context sequence execution.

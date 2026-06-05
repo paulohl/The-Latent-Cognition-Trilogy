@@ -26,6 +26,12 @@
 \newpage % force next content to start on new page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %==================================
+% \vspace{2em}
+% \hrule
+% \vspace{2em}
+% \part{Memory Fields}
+% \chapter{Differentiable Latent Indexing inside Large Language Models}
+
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 This article proposes \textit{Differentiable Latent Indexing} (DLI), a theoretical framework that recontextualizes memory retrieval not as an external utility appended to a language model, but as a native, differentiable function inside the computational pathway of Large Language Models (LLMs). By treating the latent space as a structured information field, the article derives formal retrieval operators that integrate memory access directly into the model's forward pass.
@@ -44,11 +50,6 @@ The closely related manuscript \textit{Differentiable Latent Indexing in LLMs: T
 
 Accordingly, Volume I should not be read as a companion hypothesis paper. It is the opening movement of the Trilogy. The companion hypothesis papers occupy a separate position: they isolate specific claims that support, constrain, or extend the main sequence without replacing it.
 
-\vspace{2em}
-\hrule
-\vspace{2em}
-
-\chapter{Memory Fields and Differentiable Latent Indexing}
 
 \section*{Proposition 1: Retrieval Efficiency Gain}
 If DLI provides a meaningful internal memory mechanism, models augmented with DLI should demonstrate improved performance on tasks requiring long-range dependency resolution compared with baseline transformers of equivalent parameter count.
@@ -337,7 +338,7 @@ A conceptual DLI training objective can be written as:
 where $\mathcal{L}_{LM}$ is the standard language modeling loss, $\mathcal{L}_{sparse}$ regularizes retrieval selectivity by penalizing the entropy of the allocation profile $\alpha$, $\mathcal{L}_{memory}$ regulates memory coherence or redundancy, and $\mathcal{L}_{gate}$ discourages uncontrolled reliance on retrieved values. The exact form of these terms is an empirical design question, but the formulation clarifies where future implementations may intervene.
 
 \subsection{Gradient Flow and Optimization Continuity}
-Because the sparse selection operator $\operatorname{TopK}(\cdot)$ introduces a non-differentiable boundary, gradient continuity through the retrieval pathway is maintained via the soft-max weighting allocation across the chosen partition. The partial derivative of the fused representation $\tilde{h}_t^{(\ell)}$ with respect to the memory keys $k_i^{(\ell)}$ propagates directly through the similarity scaling:
+Because the sparse selection operator $\operatorname{TopK}(\cdot)$ introduces a non-differentiable boundary, gradient continuity along the retrieval pathway is maintained via softmax weighting across the chosen partition. The partial derivative of the fused representation $\tilde{h}_t^{(\ell)}$ with respect to the memory keys $k_i^{(\ell)}$ propagates directly through the similarity scaling:
 
 \begin{equation}
 \frac{\partial \tilde{h}_t^{(\ell)}}{\partial k_i^{(\ell)}} = g_t^{(\ell)} \odot v_i^{(\ell)} \left( \frac{\partial \alpha_i^{(\ell)}}{\partial s_i^{(\ell)}} \right) \left( \frac{q_t^{(\ell)}}{\sqrt{d_k}} \right).
@@ -353,31 +354,27 @@ This formalizes a continuous, uninterrupted backward pass from downstream langua
     \caption{Gradient pathways in Differentiable Latent Indexing. Query projection, similarity computation, sparse retrieval weighting, routed memory integration, and gated fusion remain within the differentiable computation graph, allowing latent memory to co-evolve with Transformer parameters.}
     \label{fig:gradient-pathways}
 \end{figure}
+\begin{algorithm}[H] 
+    \caption{Differentiable Latent Indexing Loop}
+    \label{alg:dli-loop}
 
-\section{Algorithmic Specification and Implementation Blueprint}
-To operationalize the retrieval mechanism described above, Algorithm~\ref{alg:dli-loop} specifies a single DLI retrieval step within one Transformer layer.
+    \smallskip
+    \textbf{Input:} hidden state $h_t^{(\ell)}$, latent memory $M^{(\ell)} = \{(k_i^{(\ell)}, v_i^{(\ell)})\}_{i=1}^{N}$, parameters $W_q^{(\ell)}$, $W_g^{(\ell)}$, top-$k$ value, temperature $\tau$.
+    
+    \textbf{Output:} fused representation $\tilde{h}_t^{(\ell)}$.
+    \smallskip
 
-\begin{center}
-\fbox{%
-\begin{minipage}{0.92\linewidth}
-\textbf{Algorithm 1}: Differentiable Latent Indexing Loop\label{alg:dli-loop}
-
-\textbf{Input:} hidden state $h_t^{(\ell)}$, latent memory $M^{(\ell)} = \{(k_i^{(\ell)}, v_i^{(\ell)})\}_{i=1}^{N}$, parameters $W_q^{(\ell)}$, $W_g^{(\ell)}$, top-$k$ value, temperature $\tau$.
-
-\textbf{Output:} fused representation $\tilde{h}_t^{(\ell)}$.
-
-\begin{enumerate}
-    \item Compute retrieval query: $q_t^{(\ell)} \leftarrow W_q^{(\ell)}h_t^{(\ell)} + b_q^{(\ell)}$.
-    \item Compute similarity scores: $s_i^{(\ell)} \leftarrow q_t^{(\ell)} \cdot k_i^{(\ell)} / \sqrt{d_k}$.
-    \item Select top-$k$ memory slots according to $s_i^{(\ell)}$.
-    \item Compute retrieval weights: $\alpha^{(\ell)} \leftarrow \operatorname{softmax}(s^{(\ell)}/\tau)$ over selected slots.
-    \item Retrieve latent value: $r_t^{(\ell)} \leftarrow \sum_i \alpha_i^{(\ell)}v_i^{(\ell)}$.
-    \item Compute routing gate: $g_t^{(\ell)} \leftarrow \sigma(W_g^{(\ell)}[h_t^{(\ell)} \parallel r_t^{(\ell)}] + b_g^{(\ell)})$.
-    \item Fuse retrieved memory with hidden state: $\tilde{h}_t^{(\ell)} \leftarrow \operatorname{LayerNorm}(h_t^{(\ell)} + g_t^{(\ell)} \odot r_t^{(\ell)})$.
-    \item Return $\tilde{h}_t^{(\ell)}$.
-\end{enumerate}
-\end{minipage}}
-\end{center}
+    \begin{enumerate}
+        \item Compute retrieval query: $q_t^{(\ell)} \leftarrow W_q^{(\ell)}h_t^{(\ell)} + b_q^{(\ell)}$.
+        \item Compute similarity scores: $s_i^{(\ell)} \leftarrow q_t^{(\ell)} \cdot k_i^{(\ell)} / \sqrt{d_k}$.
+        \item Select top-$k$ memory slots according to $s_i^{(\ell)}$.
+        \item Compute retrieval weights: $\alpha^{(\ell)} \leftarrow \operatorname{softmax}(s^{(\ell)}/\tau)$ over selected slots.
+        \item Retrieve latent value: $r_t^{(\ell)} \leftarrow \sum_i \alpha_i^{(\ell)}v_i^{(\ell)}$.
+        \item Compute routing gate: $g_t^{(\ell)} \leftarrow \sigma(W_g^{(\ell)}[h_t^{(\ell)} \parallel r_t^{(\ell)}] + b_g^{(\ell)})$.
+        \item Fuse retrieved memory with hidden state: $\tilde{h}_t^{(\ell)} \leftarrow \operatorname{LayerNorm}(h_t^{(\ell)} + g_t^{(\ell)} \odot r_t^{(\ell)})$.
+        \item Return $\tilde{h}_t^{(\ell)}$.
+    \end{enumerate}
+\end{algorithm}
 
 Although this paper is theoretical, an implementable DLI prototype would require four design stages.
 

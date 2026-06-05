@@ -1,23 +1,31 @@
 \documentclass[11pt,openany]{book}
 
-% =======================================================
+% ======================================================
 % 1. PRE-CORE STRUCTURAL EXTENSIONS (CRITICAL ORDER)
-% =======================================================
+% ======================================================
 \usepackage{xr-hyper} 
 
-% Pass options globally before packages load
-\PassOptionsToPackage{hidelinks,colorlinks=false}{hyperref}
-\PassOptionsToPackage{document}{ragged2e} % Pass the document-wide alignment option safely here
+% ======================================================
+% 2. HYPERREF AND METADATA EXTENSIONS
+% ======================================================
 
-% =======================================================
-% 2. THE CUSTOM TRILOGY CORE
-% =======================================================
+\PassOptionsToPackage{unicode,hidelinks,colorlinks=false}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\urlstyle{same} % disable monospaced font for URLs
+
+% ======================================================
+% 3. THE CUSTOM TRILOGY CORE
+% ======================================================
+
 \usepackage{trilogy_macros} 
 \usepackage{subfiles}       
 
-% =======================================================
-% 3. STANDARD SCHOLARLY PACKAGES
-% =======================================================
+% ======================================================
+% 4. STANDARD SCHOLARLY PACKAGES
+% ======================================================
+
 \usepackage{graphicx}
 \graphicspath{{figures/}}
 
@@ -28,21 +36,17 @@
 
 \usepackage{algorithm}
 \usepackage{algorithmic}
+
 \usepackage{microtype} 
+\UseMicrotypeSet[protrusion]{basicmath} 
 
-% Loading ragged2e down here allows TeX Live 2025's core array environments 
-% to register their definitions first, neutralizing the warning.
-\usepackage{ragged2e} 
+\PassOptionsToPackage{document}{ragged2e} 
+\usepackage{ragged2e}
 
-% ================================================
-% 4. HYPERREF AND METADATA EXTENSIONS
-% ================================================
-\usepackage{hyperref}
-\usepackage{bookmark} % Dynamically manages and optimizes PDF outline entries without choking
-
-% ================================================
+% ======================================================
 % 5. TYPOGRAPHIC AND PAGE LAYOUT CONFIGURATION
-% ================================================
+% ======================================================
+
 \usepackage{fancyhdr}
 
 \fancypagestyle{plain}{
@@ -57,15 +61,85 @@
 \renewcommand{\headrulewidth}{0pt}
 \setlength{\headheight}{13.6pt}
 
-% ================================================
-% 6. TIKZ
-% ================================================
+% ======================================================
+% 6. PROLOGUE
+% ======================================================
+% Options for packages loaded elsewhere
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc}                   % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+
+% ====================================================== 
+% PANDOC COMPATIBILITY LAYER
+% (retained for Word->LaTeX interoperability)
+% ====================================================== 
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp}         % provide euro and other symbols
+\else                           % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\usepackage{tabularx}               % <- gives you tabularx environment
+
+\makesavenoteenv{longtable}
+
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+% ======================================================
+% 7. TIKZ
+% ======================================================
+
 \usepackage{float} % in preamble
 \usepackage{tikz} % if you use tikz later
 
-% =================================================
+% ======================================================
 % FRONT MATTER METADATA
-% =================================================
+% ======================================================
+
 \title{The Latent Cognition Trilogy}
 
 \author[1]{Paulo Leocadio\,\orcidlink{0000-0002-4992-4541}}
@@ -73,9 +147,10 @@
 
 \date{}
 
-% =================================================
+% ======================================================
 % HELPER COMMANDS FOR CANONICAL ALIGNMENT
-% =================================================
+% ======================================================
+
 \newcommand{\frontchapter}[1]{%
     \cleardoublepage
     \phantomsection
@@ -84,60 +159,79 @@
     \markboth{#1}{}
 }
 
-% ==================================================
+% ====================================================== 
 % DOCUMENT EXECUTION ENGINE
-% ==================================================
+% ====================================================== 
+
 \begin{document}
 
 \frontmatter
 \maketitle
 
+% Structural Cover Elements (Unnumbered Pages)
+\frontchapter{Book Title}
+\input{sections/frontmatter/00_title-page}
+
 \cleardoublepage
+
 \tableofcontents
 \listoffigures
-% ======================================
+
+\cleardoublepage
+% ======================================================
 % FRONTMATTER: CANONICAL ORIENTATION
-% ======================================
-\frontchapter{Series Preface}
+% ======================================================
+
+\pagenumbering{roman} % Enforces Roman numerals starting here (i, ii, iii...)
+
+\frontchapter{Preface}
 \input{sections/frontmatter/00_series_preface}
+
+\frontchapter{Prologue}
+\input{sections/frontmatter/00_series-prologue}
 
 \frontchapter{Note on the Research Program}
 \input{sections/frontmatter/01_program_note}
 
-\frontchapter{Canonical Structure of the Research Program}
+\frontchapter{Canonical Structure of the Research Program} 
 \input{sections/frontmatter/02_canonical_structure}
 
-\frontchapter{Conceptual Foundations}
+\frontchapter{Conceptual Foundations} 
 \input{sections/frontmatter/03_conceptual_foundations}
 
-%=======================================
+% Fix: Force continuity so it does NOT reset to 'i'
+\clearpage 
+\frontchapter{Introduction to the Trilogy} 
+\input{sections/04_trilogy_overview}
+
+%======================================================
 % MAIN MATTER: THE TRILOGY CORE VOLUMES
-%=======================================
-\mainmatter
+%======================================================
 
-\include{sections/04_trilogy_overview}
+\clearpage
+\mainmatter % Properly switches layout and resets counter to Arabic (1, 2, 3...)
 
-\include{sections/05_vol1} % Volume I: Memory Fields (DLI)
+\include{sections/05_vol1} % Volume I: Memory Fields (DLI) -> Starts at Page 1
 
 \include{sections/06_vol2} % Volume II: Symbolic Evolution
 
 \include{sections/07_vol3} % Volume III: Latent Routing
 
-% =====================================
+% ======================================================
 % BACK MATTER: EVIDENTIARY SPECIFICATIONS
-% =====================================
+% ======================================================
+
 \backmatter
 
-\include{sections/backmatter/08_conclusion }         
-% Global Epilogue
-\include{sections/backmatter/09_appendix_manifesto} 
-% Technical Appendix (Incident Response/Action Gatekeeper)
-\include{sections/backmatter/10_hyp1_manifest.txt} 
-% Technical 
+\include{sections/backmatter/08_conclusion}         % Global Epilogue
+\include{sections/backmatter/09_appendix_manifesto} % Technical Appendix IR
+\include{sections/backmatter/10_hyp1_manifest}      % Technical Manifest
+\include{sections/backmatter/11_appendix-exploring} % Technical Exploring
 
-% =======================================
+% ======================================================
 % GLOBAL CONSOLIDATED BIBLIOGRAPHY
-% =======================================
+% ======================================================
+
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliography}

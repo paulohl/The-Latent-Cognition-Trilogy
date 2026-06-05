@@ -1,5 +1,20 @@
 # The Latent Cognition Trilogy
 
+
+The-Latent-Cognition-Trilogy/       
+│       
+├── README.md      
+├── BUILD.md        
+├── CHANGELOG.md     
+├── VERSION      
+│     
+├── main.tex     
+├── trilogy_macros.sty     
+│      
+├── sections/      
+├── figures/      
+└── bibliography/      
+
 ------
 ## Support
 

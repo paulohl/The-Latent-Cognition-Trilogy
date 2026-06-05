@@ -93,13 +93,13 @@ Accordingly, \textbf{Volume III} should not be read as a companion hypothesis pa
 
 Sparse Mixture-of-Experts architectures provide the immediate technical context for HTCR. Sparsely-Gated MoE introduced the use of trainable gating networks to route inputs to a sparse subset of expert feed-forward networks, enabling large increases in model capacity without activating all parameters for every input \cite{Shazeer2017}. GShard extended this direction by combining conditional computation with automatic sharding, making large-scale sparse expert models more practical in distributed settings \cite{Lepikhin2020}.
 
-HTCR builds on this lineage but shifts the focus from capacity scaling to routing coherence. The central question is not simply whether sparse experts can increase model size efficiently, but whether routing can preserve sequence-level structure and reduce expert volatility during long-context processing.
+HTCR builds on this lineage but shifts the focus from capacity scaling to routing coherence. The central question is not simply whether sparse experts can efficiently increase model size, but whether routing can preserve sequence-level structure and reduce expert volatility during long-context processing.
 
 \section{Routing Simplification and Load Balancing}
 
-Switch Transformer simplified MoE routing by selecting a single expert per token and introduced techniques for improving stability and reducing communication overhead \cite{Fe2022}. ST-MoE further examined stability and transferability in sparse expert models, emphasizing the practical difficulty of training sparse systems that remain reliable across tasks \cite{Zoph2022}.
+Switch Transformer simplified MoE routing by selecting a single expert per token and introduced techniques to improve stability and reduce communication overhead \cite{Fedus2022}. ST-MoE further examined stability and transferability in sparse expert models, emphasizing the practical difficulty of training sparse systems that remain reliable across tasks \cite{Zoph2022}.
 
-These works motivate HTCR's concern with balancing. A routing mechanism must avoid expert starvation, token dropping, and pathological concentration of traffic into a small number of experts. HTCR therefore includes macro-level entropy regularization and load-balancing penalties, but adds a further constraint: balancing should occur without destroying local semantic coherence.
+These works motivate HTCR's concern with balancing. A routing mechanism must avoid expert starvation, token dropping, and pathological concentration of traffic into a small number of experts. HTCR, therefore, includes macro-level entropy regularization and load-balancing penalties, but adds a further constraint: balancing should occur without destroying local semantic coherence.
 
 \section{Large-Scale Sparse Language Models}
 
@@ -273,37 +273,38 @@ Higher values of $L_{\text{cache}}$ indicate that neighboring tokens reuse simil
 
 \chapter{Algorithmic Specification}
 
-To operationalize HTCR, Algorithm~\ref{alg:htcr-loop} defines a single hierarchical routing step for one segment within one MoE layer.
+To operationalize HTCR, Algorithm ~\ref{alg:htcr-loop} defines a single hierarchical routing step for a single segment within a single MoE layer.
 
-\begin{center}
-\fbox{%
-\begin{minipage}{0.92\linewidth}
-\textbf{Algorithm 2}: Hierarchical Topic-Conditioned Routing Loop\label{alg:htcr-loop}
+\begin{algorithm}[H] 
+    \caption{Hierarchical Topic-Conditioned Routing Loop}
+    \label{alg:htcr-loop}
 
-\textbf{Input:} segment hidden states $H_j^{(\ell-1)} = \{h_t^{(\ell-1)}\}_{t=1}^{N}$, expert pool $\mathcal{E}$, document router $\mathcal{R}_{doc}$, token router $\mathcal{R}_{tok}$, shortlist size $m$, token top-$k$ value.
+    \smallskip
+    \textbf{Input:} segment hidden states $H_j^{(\ell-1)} = \{h_t^{(\ell-1)}\}_{t=1}^{N}$, expert pool $\mathcal{E}$, document router $\mathcal{R}_{doc}$, token router $\mathcal{R}_{tok}$, shortlist size $m$, token top-$k$ value.
+    
+    \textbf{Output:} routed expert assignments for all tokens in segment $S_j$.
+    \smallskip
 
-\textbf{Output:} routed expert assignments for all tokens in segment $S_j$.
+    \begin{enumerate}
+        \item Compute segment summary:
+        \[
+        s_j \leftarrow \frac{1}{N}\sum_{t=1}^{N} h_t^{(\ell-1)}.
+        \]
+        \item Compute macro-routing distribution:
+        \[
+        G_{\text{doc}}(s_j) \leftarrow \mathcal{R}_{doc}(s_j).
+        \]
+        \item Select segment expert shortlist:
+        \[
+        \mathcal{M}_j \leftarrow \operatorname{TopM}(G_{\text{doc}}(s_j),m).
+        \]
+        \item For each token $t \in S_j$, compute token routing scores only over $\mathcal{M}_j$.
+        \item Select top-$k$ experts for each token from $\mathcal{M}_j$.
+        \item Dispatch token representations to selected experts.
+        \item Aggregate expert outputs and return routed segment representations.
+    \end{enumerate}
+\end{algorithm}
 
-\begin{enumerate}
-    \item Compute segment summary:
-    \[
-    s_j \leftarrow \frac{1}{N}\sum_{t=1}^{N} h_t^{(\ell-1)}.
-    \]
-    \item Compute macro-routing distribution:
-    \[
-    G_{\text{doc}}(s_j) \leftarrow \mathcal{R}_{doc}(s_j).
-    \]
-    \item Select segment expert shortlist:
-    \[
-    \mathcal{M}_j \leftarrow \operatorname{TopM}(G_{\text{doc}}(s_j),m).
-    \]
-    \item For each token $t \in S_j$, compute token routing scores only over $\mathcal{M}_j$.
-    \item Select top-$k$ experts for each token from $\mathcal{M}_j$.
-    \item Dispatch token representations to selected experts.
-    \item Aggregate expert outputs and return routed segment representations.
-\end{enumerate}
-\end{minipage}}
-\end{center}
 
 This procedure differs from flat token-level MoE routing by constraining the local search space before token dispatch. The document router establishes a coarse semantic prior over expert selection, while the token router preserves fine-grained flexibility inside that prior.
 

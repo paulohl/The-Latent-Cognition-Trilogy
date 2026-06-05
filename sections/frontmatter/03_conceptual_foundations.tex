@@ -3,19 +3,19 @@
 The Trilogy operates on a set of shared constructs that describe internal representations and computational organization in neural architectures. These constructs are not intended to form a closed ontology. They provide a working vocabulary for examining how memory, symbolic stabilization, and routing may interact within latent computational systems.
 
 \textbf{Latent State.}
-A latent state is represented as $\mathbf{h}_t \in \latent$, encoding the internal condition of the model at computational step $t$. It is not treated merely as an intermediate activation, but as a structured representational state through which information, context, and transformation history may be partially expressed.
+A latent state is represented by $\mathbf{h}_t \in \latent$, encoding the model's internal state at computational step $t$. It is not treated merely as an intermediate activation, but as a structured representational state through which information, context, and transformation history may be partially expressed.
 
 \textbf{Memory Field.}
-A memory field, denoted $\MemoryField$, refers to a structured collection of latent representations accessible through differentiable retrieval. Within the Trilogy, the memory field provides the conceptual basis for treating retrieval as an internal representational operation rather than as an external lookup procedure.
+A memory field, denoted $\MemoryField$, is a structured collection of latent representations that are accessible via differentiable retrieval. Within the Trilogy, the memory field provides the conceptual basis for treating retrieval as an internal representational operation rather than as an external lookup procedure.
 
 \textbf{Symbolic Representation.}
 A symbolic representation is denoted as $s \in \symspace$ and refers to a compressed or stabilized encoding derived from latent states. The term does not imply classical symbolic manipulation in the strict sense. Rather, it designates a representational condition in which compressed latent structures acquire sufficient stability to support abstraction, reuse, and interpretation.
 
 \textbf{Routing Function.}
-A routing function, denoted $\route{\cdot}{\expertspace}$, governs the allocation of computation across specialized modules, experts, or representational pathways. In this framework, routing is treated not only as an efficiency mechanism, but as a structural principle through which large-scale architectures maintain coherence across distributed computation.
+A routing function, denoted $\route{\cdot}{\expertspace}$, governs the allocation of computation across specialized modules, experts, or representational pathways. In this framework, routing is treated not only as an efficiency mechanism but as a structural principle through which large-scale architectures maintain coherence across distributed computation.
 
 \section*{Structural Relationship}
-
+\phantomsection
 The Trilogy examines the interaction between these constructs as a coupled latent operator field analyzed across three primary architectural dimensions:
 
 \[
@@ -25,12 +25,11 @@ The Trilogy examines the interaction between these constructs as a coupled laten
 This progression should not be interpreted as a strict causal chain. Rather, it represents the analytical sequence adopted by the Trilogy. The first stage examines how latent memory may be structured and retrieved. The second stage considers how compressed representations may acquire symbolic stability. The third stage analyzes how routing mechanisms coordinate computation across specialized structures.
 
 The shared hypothesis across the Trilogy is that these constructs are not independent engineering conveniences. They may represent interdependent layers of a broader latent cognitive architecture: memory supplies retrievable structure, symbolic stabilization supplies abstraction, and routing supplies coordinated computational organization.
-
 % ==========
 
 % ========================================
 \section*{Operator Coupling Conditions}
-
+\phantomsection
 The preceding sections introduced memory, symbolic stabilization, and routing as distinct analytical constructs. However, the Latent Cognition Trilogy does not treat these operators as isolated architectural conveniences nor as strictly sequential processing stages. The central hypothesis of the Trilogy is that latent cognition emerges from the continuous interaction of retrieval, abstraction, and computational coordination within a unified operator space.
 
 Contemporary neural architectures frequently separate these mechanisms into disconnected engineering layers. Retrieval is treated as an external augmentation pipeline, symbolic behavior is interpreted post hoc as an emergent property of scale, and routing is optimized primarily as a systems-efficiency mechanism. This separation introduces discontinuities between memory access, abstraction formation, and distributed computation. The Trilogy instead proposes that these mechanisms become behaviorally inseparable once embedded inside a shared latent computational substrate.
@@ -51,8 +50,6 @@ M \Rightarrow S \Rightarrow R
 
 should therefore not be interpreted as a unidirectional pipeline. It represents the analytical order through which the Trilogy isolates each layer for examination. In operational systems, these operators interact recursively and continuously.
 
-The recursive interaction among the three primary operators is illustrated in \textbf{Figure}~\ref{fig:operator_coupling}.
-
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.88\linewidth]{figures/figure_01.png}
@@ -62,8 +59,8 @@ The recursive interaction among the three primary operators is illustrated in \t
 \end{figure}
 
 \subsection*{Memory-to-Symbol Coupling}
-
-The first coupling condition concerns the interaction between latent retrieval and symbolic stabilization. Symbolic representations are not assumed to emerge independently of memory organization. Instead, the retrieval dynamics generated by \(M\) condition which latent structures become repeatedly compressed, reused, and stabilized within the symbolic operator space \(S\).
+\phantomsection
+The first coupling condition concerns the interaction between latent retrieval and symbolic stabilization. Symbolic representations are not assumed to emerge independently of memory organization. Instead, the retrieval dynamics generated by \(M\) condition, in which latent structures become repeatedly compressed, reused, and stabilized within the symbolic operator space \(S\).
 
 Let \(h_t\) denote the latent state at computational step \(t\). Symbolic projection may then be conditioned on retrieved latent structure:
 
@@ -71,12 +68,14 @@ Let \(h_t\) denote the latent state at computational step \(t\). Symbolic projec
 S_t = \Pi_S(M(h_t))
 \]
 
-where \(\Pi_S\) denotes the symbolic projection operator mapping retrieved latent trajectories into compressed symbolic representations.
+where \(\Pi_S\) denotes the symbolic projection operator that maps retrieved latent trajectories to compressed symbolic representations.
 
-Under this formulation, symbolic stabilization depends not only on compression pressure, but also on the continuity and recurrence properties of the latent memory field itself.
+The recursive interaction among the three primary operators is illustrated in \textbf{Figure}~\ref{fig:operator_coupling}.
+
+Under this formulation, symbolic stabilization depends not only on compression pressure but also on the continuity and recurrence properties of the latent memory field itself.
 
 \subsection*{Symbol-to-Routing Coupling}
-
+\phantomsection
 The second coupling condition concerns the relationship between symbolic stabilization and routing coordination. In the Trilogy framework, routing decisions are not governed exclusively by token-local activations or hardware scheduling constraints. Stabilized symbolic structures constrain which computational pathways become preferentially activated across distributed expert systems.
 
 Routing allocation may therefore be conditioned on symbolic state trajectories:
@@ -90,7 +89,7 @@ where \(G(\cdot)\) denotes the routing function over stabilized symbolic represe
 This formulation implies that expert selection is partially determined by emergent symbolic organization rather than solely by local token statistics. Symbolic stabilization thereby functions as an intermediate coordination layer between latent representation and distributed computation.
 
 \subsection*{Routing-to-Memory Coupling}
-
+\phantomsection
 The third coupling condition concerns the feedback relationship between routing and memory accessibility. Once computation is distributed across constrained expert pathways, the routing topology itself influences which latent memory structures remain visible or computationally reachable during subsequent inference steps.
 
 The latent memory operator may therefore be conditioned on routing topology:
@@ -102,8 +101,8 @@ M_{t+1} = M(h_t \mid R_t)
 Under this formulation, routing is not merely downstream execution control. It partially shapes the future informational geometry of the latent memory field by constraining locality, accessibility, and expert-conditioned retrieval trajectories.
 
 \subsection*{Coupled Operator Stability}
-
-The Trilogy therefore hypothesizes that latent cognition depends not on isolated operator performance, but on the stability of the coupled operator field itself. Formally, the interaction among operators is non-degenerate only if the partial dependencies among them remain non-zero:
+\phantomsection
+The Trilogy, therefore, hypothesizes that latent cognition depends not on isolated operator performance but on the stability of the coupled operator field itself. Formally, the interaction among operators is non-degenerate only if the partial dependencies among them remain non-zero:
 
 \[
 \frac{\partial S}{\partial M} \neq 0
@@ -117,16 +116,7 @@ The Trilogy therefore hypothesizes that latent cognition depends not on isolated
 \frac{\partial M}{\partial R} \neq 0
 \]
 
-These coupling conditions are intended as falsifiable architectural
-constraints rather than as assumptions of guaranteed integration. If
-future empirical analysis shows that retrieved memory states do not
-measurably influence symbolic codeword selection, or that routing
-shortlists do not constrain symbolic or memory access patterns, then the
-Trilogy reduces to three adjacent mechanisms rather than a coupled
-operator field. In this sense, the coupling hypothesis is explicitly
-testable: the framework stands only if measurable dependencies among
-\(M\), \(S\), and \(R\) can be observed under bounded implementation
-conditions.
+These coupling conditions are intended as falsifiable architectural constraints rather than as assumptions of guaranteed integration. If future empirical analysis shows that retrieved memory states do not measurably influence symbolic codeword selection, or that routing shortlists do not constrain symbolic or memory access patterns, then the Trilogy reduces to three adjacent mechanisms rather than a coupled operator field. In this sense, the coupling hypothesis is explicitly testable: the framework stands only if measurable dependencies among \(M\), \(S\), and \(R\) can be observed under bounded implementation conditions.
 
 These conditions express the central architectural claim of the Trilogy: memory, abstraction, and routing are not independent optimization layers. They form an interacting latent operator field whose internal coordination determines the stability of large-scale cognitive behavior.
 
@@ -142,28 +132,15 @@ The Trilogy therefore proposes that cognition-like behavior in artificial system
 
 \section*{Scaling and Complexity Boundaries}
 
-The Latent Cognition Trilogy proposes a coupled operator architecture
-linking latent memory, symbolic stabilization, and hierarchical routing.
-However, the framework does not claim that these mechanisms eliminate
-all computational scaling constraints. Rather, the Trilogy hypothesizes
-that coordinated operator coupling may reduce several structural
-inefficiencies introduced by fragmented retrieval, unconstrained routing,
-and unstable representational reuse in contemporary architectures.
+The Latent Cognition Trilogy proposes a coupled-operator architecture that links latent memory, symbolic stabilization, and hierarchical routing. However, the framework does not claim that these mechanisms eliminate all computational scaling constraints. Rather, the Trilogy hypothesizes that coordinated operator coupling may reduce several structural inefficiencies introduced by fragmented retrieval, unconstrained routing, and unstable representational reuse in contemporary architectures.
 
-Accordingly, the complexity claims presented throughout the Trilogy
-must be interpreted as bounded architectural hypotheses rather than
-universal asymptotic guarantees.
+Accordingly, the complexity claims presented throughout the Trilogy must be interpreted as bounded architectural hypotheses rather than universal asymptotic guarantees.
 
 \subsection*{Memory Scaling Constraints}
 
-The Differentiable Latent Indexing framework developed in Volume I
-depends upon a bounded latent retrieval substrate. Although the
-memory operator \(M\) is formulated as a continuous differentiable
-field, practical implementations necessarily operate over finite
-latent repositories with constrained retrieval budgets.
+The Differentiable Latent Indexing framework developed in \textbf{Volume I} depends upon a bounded latent retrieval substrate. Although the memory operator \(M\) is formulated as a continuous differentiable field, practical implementations necessarily operate over finite latent repositories with constrained retrieval budgets.
 
-The retrieval complexity therefore depends on several interacting
-factors:
+The retrieval complexity, therefore, depends on several interacting factors:
 
 \begin{itemize}
     \item latent memory cardinality \(N\),
@@ -174,25 +151,15 @@ factors:
     \item and hardware memory bandwidth.
 \end{itemize}
 
-The Trilogy does not claim that retrieval becomes literally constant-time
-under arbitrary scaling conditions. Instead, the framework predicts that
-bounded latent indexing and locality-aware retrieval may asymptotically
-flatten retrieval overhead relative to conventional externally mediated
-retrieval systems.
+The Trilogy does not claim that retrieval becomes literally constant-time under arbitrary scaling conditions. Instead, the framework predicts that bounded latent indexing and locality-aware retrieval may asymptotically flatten retrieval overhead relative to conventional externally mediated retrieval systems.
 
-Consequently, the \(O(1)\) locality claims introduced earlier should
-be interpreted as locality-preserving operational targets achievable
-only under constrained retrieval geometries and bounded approximation
-conditions.
+Consequently, the \(O(1)\) locality claims introduced earlier should be interpreted as locality-preserving operational targets achievable only under constrained retrieval geometries and bounded approximation conditions.
 
 \subsection*{Symbolic Compression Constraints}
 
-The CISI framework developed in Volume II depends upon the stability
-of the intermediate vector-quantized codebook. The symbolic operator
-\(S\) cannot scale indefinitely without introducing fragmentation,
-collapse, or excessive representational sparsity.
+The CISI framework developed in Volume II depends upon the stability of the intermediate vector-quantized codebook. The symbolic operator \(S\) cannot scale indefinitely without introducing fragmentation, collapse, or excessive representational sparsity.
 
-The effective symbolic complexity therefore depends on:
+The effective symbolic complexity, therefore, depends on:
 
 \begin{itemize}
     \item codebook cardinality \(K\),
@@ -202,24 +169,16 @@ The effective symbolic complexity therefore depends on:
     \item and bottleneck compression pressure.
 \end{itemize}
 
-If the symbolic vocabulary expands proportionally with task diversity,
-the framework degenerates into a discretized lookup substrate rather
-than a reusable symbolic field. Conversely, excessive compression may
-produce unstable abstractions incapable of supporting compositional
-generalization.
+If the symbolic vocabulary expands in proportion to task diversity, the framework degenerates into a discretized lookup substrate rather than a reusable symbolic field. Conversely, excessive compression may
+produce unstable abstractions incapable of supporting compositional generalization.
 
-The Trilogy therefore assumes an intermediate stability regime in
-which symbolic reuse increases sublinearly relative to task-space
-growth.
+The Trilogy therefore assumes an intermediate stability regime in which symbolic reuse increases sublinearly relative to task-space growth.
 
 \subsection*{Routing and Communication Constraints}
 
-The HTCR framework developed in Volume III introduces additional
-hierarchical routing constraints intended to reduce expert jitter
-and communication volatility in distributed sparse architectures.
+The HTCR framework, developed in Volume III, introduces additional hierarchical routing constraints to reduce expert jitter and communication volatility in distributed sparse architectures.
 
-However, routing locality remains bounded by several systems-level
-parameters:
+However, routing locality remains bounded by several systems-level parameters:
 
 \begin{itemize}
     \item segment size \(N\),
@@ -230,22 +189,15 @@ parameters:
     \item and semantic continuity across segments.
 \end{itemize}
 
-The Trilogy therefore does not claim that hierarchical routing
-eliminates communication overhead entirely. Rather, it hypothesizes
-that constrained shortlist routing may reduce unnecessary expert
-dispersion under long-context inference conditions.
+The Trilogy, therefore, does not claim that hierarchical routing entirely eliminates communication overhead. Rather, it hypothesizes that constrained shortlist routing may reduce unnecessary dispersion of experts under long-context inference conditions.
 
-In highly heterogeneous or rapidly shifting semantic contexts,
-hierarchical locality may weaken or collapse entirely.
+In highly heterogeneous or rapidly shifting semantic contexts, hierarchical locality may weaken or collapse entirely.
 
 \subsection*{Coupled Operator Complexity}
 
-The most important scaling property of the Trilogy concerns the
-interaction among operators rather than the isolated complexity
-of any individual mechanism.
+The most important scaling property of the Trilogy concerns the interaction among operators rather than the isolated complexity of any individual mechanism.
 
-The total operational complexity of the coupled operator system
-may be approximated as:
+The total operational complexity of the coupled operator system may be approximated as:
 
 \[
 \mathcal{C}_{total}
@@ -259,17 +211,4 @@ may be approximated as:
 \mathcal{C}_{coupling}
 \]
 
-where \(\mathcal{C}_{M}\),
-\(\mathcal{C}_{S}\),
-and \(\mathcal{C}_{R}\)
-represent the independent costs of memory retrieval, symbolic
-compression, and routing coordination respectively, while
-\(\mathcal{C}_{coupling}\)
-captures the additional synchronization and dependency costs
-introduced by recursive operator interaction.
-
-The Trilogy therefore rejects the assumption that cognitive
-organization can emerge from isolated scaling of a single
-architectural dimension. Instead, it proposes that future
-large-scale systems must optimize the stability of the coupled
-operator field itself.
+where \(\mathcal{C}_{M}\),  \(\mathcal{C}_{S}\), and \(\mathcal{C}_{R}\)  represent the independent costs of memory retrieval, symbolic compression, and routing coordination, respectively, while  \(\mathcal{C}_{coupling}\)  captures the additional synchronization and dependency costs introduced by recursive operator interactions.

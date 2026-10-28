@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "comparison": "All seven source fields, all paragraph/sentence texts and support indices match for all 100 records after schema normalization.",
+  "records": 100,
+  "crosscheck_url": "https://datasets-server.huggingface.co/rows?dataset=hotpotqa/hotpot_qa&config=distractor&split=validation&offset=0&length=100",
+  "crosscheck_revision": "Unpinned live dataset-service response; source sample SHA-256 recorded separately.",
+  "source_sha256": "05e20dc9b1597c615df2e0132e74e2c7b49ddd5305d226a2de1fd5dc203c7da4"
+}

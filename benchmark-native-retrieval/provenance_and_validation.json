@@ -1,0 +1,41 @@
+{
+  "dataset": "HotpotQA",
+  "authors": "Zhilin Yang, Peng Qi, Saizheng Zhang, Yoshua Bengio, William W. Cohen, Ruslan Salakhutdinov, Christopher D. Manning",
+  "official_site": "https://hotpotqa.github.io/",
+  "official_source": "http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_dev_distractor_v1.json",
+  "download_url": "https://huggingface.co/datasets/namlh2004/hotpotqa/resolve/7e54db4656209750ff487f6fdf8e39a66dba136b/hotpot_dev_distractor_v1.json",
+  "mirror_revision": "7e54db4656209750ff487f6fdf8e39a66dba136b",
+  "mirror_note": "Third-party mirror; byte identity to unavailable official download not verified. Official schema and license verified.",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "sampling": "First n complete records in source array, without label-based filtering; nonrandom convenience sample",
+  "n": 100,
+  "bytes_streamed": null,
+  "question_type_counts": {
+    "comparison": 21,
+    "bridge": 79
+  },
+  "difficulty_counts": {
+    "hard": 100
+  },
+  "context_size_counts": {
+    "10": 99,
+    "2": 1
+  },
+  "paragraphs": 992,
+  "support_facts": 243,
+  "status": "passed",
+  "checks": [
+    "unique question IDs",
+    "1-10 distinct-title paragraphs per example; source context sizes preserved",
+    "every supporting title resolves",
+    "every zero-based sentence index is in range",
+    "answer and source sentence text preserved",
+    "no gold labels used in retrieval rankings"
+  ],
+  "sha256": {
+    "hotpotqa_source_sample.json": "05e20dc9b1597c615df2e0132e74e2c7b49ddd5305d226a2de1fd5dc203c7da4",
+    "hotpotqa_episodes.jsonl": "7f160bdb7dbc35743d3dc21834dcee2d5c089b3da470352dd0b45b20372641d6",
+    "hotpotqa_schema.json": "36f424913e027b567499be54b9b672b40ce27c7b76016101da6f3061cc398904",
+    "retrieval_scores.csv": "5385e625ccd9429791f68555346354df7610f64641105338f35b7c2c205ee6a9"
+  }
+}

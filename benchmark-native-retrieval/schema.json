@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:dli-native-retrieval:v1",
+  "title": "DLI Native Retrieval Diagnostic v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "split",
+    "world_id",
+    "pair_id",
+    "scenario",
+    "query",
+    "local_context",
+    "as_of",
+    "memory",
+    "labels",
+    "provenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "split": {
+      "enum": [
+        "train",
+        "dev",
+        "test"
+      ]
+    },
+    "world_id": {
+      "type": "string"
+    },
+    "pair_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "scenario": {
+      "enum": [
+        "single_hop",
+        "paraphrase",
+        "two_hop",
+        "redundancy",
+        "poisoning",
+        "update",
+        "unanswerable",
+        "local_only",
+        "saturation",
+        "counterfactual"
+      ]
+    },
+    "query": {
+      "type": "string"
+    },
+    "local_context": {
+      "type": "string"
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date"
+    },
+    "memory": {
+      "type": "array",
+      "minItems": 32,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "text",
+          "source",
+          "effective_date"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "source": {
+            "enum": [
+              "registry",
+              "untrusted"
+            ]
+          },
+          "effective_date": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "labels": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "answer",
+        "answerable",
+        "retrieval_required",
+        "hop_count",
+        "acceptable_evidence_sets",
+        "reason"
+      ],
+      "properties": {
+        "answer": {
+          "type": "string"
+        },
+        "answerable": {
+          "type": "boolean"
+        },
+        "retrieval_required": {
+          "type": "boolean"
+        },
+        "hop_count": {
+          "enum": [
+            0,
+            1,
+            2
+          ]
+        },
+        "acceptable_evidence_sets": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          }
+        },
+        "reason": {
+          "enum": [
+            "missing_evidence",
+            "local_context",
+            "memory_evidence"
+          ]
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "generator_version",
+        "seed"
+      ],
+      "properties": {
+        "kind": {
+          "const": "synthetic"
+        },
+        "generator_version": {
+          "const": "1.0"
+        },
+        "seed": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

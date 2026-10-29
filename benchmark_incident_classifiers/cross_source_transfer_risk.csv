@@ -1,0 +1,11 @@
+seed,hypothetical_train_source,hypothetical_test_source,matched_source_pairs,test_records_with_source_training_match,raw_exact_pairs
+17,phishing_text,sms_proxy,8,8,1
+17,sms_proxy,phishing_text,5,4,1
+29,phishing_text,sms_proxy,3,3,3
+29,sms_proxy,phishing_text,6,4,2
+43,phishing_text,sms_proxy,10,10,5
+43,sms_proxy,phishing_text,4,3,3
+61,phishing_text,sms_proxy,8,8,2
+61,sms_proxy,phishing_text,3,2,2
+83,phishing_text,sms_proxy,4,4,2
+83,sms_proxy,phishing_text,5,4,2

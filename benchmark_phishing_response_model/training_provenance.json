@@ -1,0 +1,88 @@
+{
+  "started_utc": "2026-10-29T02:53:36.109461+00:00",
+  "model": "distilbert/distilbert-base-uncased",
+  "device": "cpu",
+  "threads": 4,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "sources": [
+    "Nazario",
+    "MixedEmail"
+  ],
+  "epochs": 3,
+  "learning_rate": 5e-05,
+  "weight_decay": 0.01,
+  "effective_batch": 16,
+  "microbatch": 2,
+  "gradient_accumulation_steps": 8,
+  "eval_microbatch": 4,
+  "max_tokens": 512,
+  "character_cap": 6000,
+  "group_by_length": true,
+  "padding": "dynamic",
+  "attention": "sdpa",
+  "precision": "float32",
+  "save_selection": "fixed final epoch; no test-based model or threshold selection",
+  "versions": {
+    "torch": "2.6.0+cpu",
+    "transformers": "4.49.0",
+    "accelerate": "1.4.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "statsmodels": "0.15.0"
+  },
+  "original_data_provenance": {
+    "seed_list": [
+      42,
+      43,
+      44
+    ],
+    "sample_cap": 1600,
+    "input_character_cap": 6000,
+    "versions": {
+      "python": "3.12.3",
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "sklearn": "1.9.1",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "statsmodels": "0.15.0"
+    },
+    "datasets": {
+      "Nazario": {
+        "raw_rows": 3065,
+        "valid_unique_rows": 3050,
+        "removed_invalid_duplicate_or_conflict": 15,
+        "conflicting_hashes": 0,
+        "file_sha256": "afef69828165619ced6661ca14a95444a1db82c7b25ae9c2619bbbb108844a44",
+        "url": "https://ndownloader.figshare.com/files/43931442",
+        "after_cross_release_dedup": 3050,
+        "class_counts": {
+          "1": 1552,
+          "0": 1498
+        }
+      },
+      "MixedEmail": {
+        "raw_rows": 18650,
+        "valid_unique_rows": 17460,
+        "removed_invalid_duplicate_or_conflict": 1190,
+        "conflicting_hashes": 0,
+        "file_sha256": "18ef4fff1acb8986f0ab01e83ede6025420c829656af5a377560fce17e153b97",
+        "url": "https://huggingface.co/datasets/zefang-liu/phishing-email-dataset/resolve/main/Phishing_Email.csv?download=true",
+        "after_cross_release_dedup": 17460,
+        "class_counts": {
+          "0": 10964,
+          "1": 6496
+        }
+      }
+    },
+    "cross_release_shared_hashes_removed": 0
+  },
+  "split_manifest_sha256": "618ace305c267666573a7adeeb4395d0944588004d0965cd630704e49c83d7d0",
+  "resolved_model_commit": "12040accade4e8a0f71eabdb258fecc2e7e948be"
+}

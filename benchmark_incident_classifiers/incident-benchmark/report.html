@@ -1,0 +1,502 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Incident classifier baseline audit</title><style>
+body{font:16px/1.55 system-ui,sans-serif;color:#203047;max-width:1180px;margin:40px auto;padding:0 24px}h1{font-size:36px;line-height:1.15}h2{margin-top:36px;color:#102944}.tag{color:#496a82;font-weight:700;letter-spacing:.08em;font-size:12px}.notice{background:#fff2da;border-left:5px solid #d28b16;padding:18px 22px}.result{background:#eaf4ef;padding:18px 22px}table{border-collapse:collapse;font-size:12px;width:100%;margin:15px 0}td,th{text-align:left;padding:8px;border-bottom:1px solid #ddd;vertical-align:top}th{background:#eef3f8}img{width:100%}code{background:#eef3f8;padding:2px 4px}a{color:#14699b}.scroll{overflow:auto}li{margin:8px 0}</style></head><body>
+<div class="tag">REPRODUCIBLE PILOT • 28 OCTOBER 2026 • CPU BASELINES</div>
+<h1>Which inexpensive text classifiers should DistilBERT beat?</h1><!-- residual-leakage:start --><div class="notice"><b>Residual leakage audit:</b> all saved grouped splits pass their ≥.90 boundary check; broader similarities and shared prefixes were audited separately. <a href="residual-leakage/report.html">Read the residual audit</a>. This does not establish verified campaign separation.</div><!-- residual-leakage:end --><!-- grouped-repeat:start --><div class="notice"><b>Five grouped splits completed:</b> <a href="grouped-repeat/report.html">Read the repeated grouped evaluation</a>. This report below is the earlier snapshot; new results include 288 fresh evaluations and the verified seed-17 reference.</div><!-- grouped-repeat:end --><!-- grouped-rerun:start --><div class="notice"><b>29 October grouped-split rerun completed:</b> all six baselines evaluated on the saved template-disjoint splits for all four conditions. <a href="grouped-rerun/report.html">Read the grouped comparison</a>. Original scores below are unchanged; inferred components are not verified campaigns.</div><!-- grouped-rerun:end -->
+<div class="notice"><b>Scope correction.</b> The paper's proposed classifier is fine-tuned <b>DistilBERT</b> using Hugging Face <b>Transformers</b>, not a diffusion classifier. This audit executes six lightweight baselines, not the paper's trained model. It does <b>not</b> establish transformer superiority, reproduce the private case study, or measure incident response time.</div>
+<!-- leakage-audit:start --><div class="notice"><b>29 October leakage audit:</b> seed-17 test records with a ≥.90 normalized-template training neighbor: phishing_text: 7/200; sms_proxy: 21/200; synthetic_incidents: 200/200. 36 cross-source near-matching pairs include 13 identical-text pairs; the public datasets are not fully independent. Original scores remain random-split results, not verified new-campaign results. <a href="leakage-audit/audit.html">Read the leakage audit</a>. No verified campaign IDs are available. A subsequent grouped baseline rerun is linked above.</div><!-- leakage-audit:end -->
+<h2>What ran</h2><p>360 fitted/evaluated configurations: 3 datasets × 6 methods × 4 conditions × 5 stratified 75/25 splits. Each final dataset has 800 records (400/class), with 600 training and 200 test records per split. Input is capped at the first 2,000 characters for all methods to bound this CPU pilot. Public source files were downloaded; the synthetic set was generated with known binary labels. All numbers below come from executed predictions.</p>
+<div class="result"><b>Clean-data leaders.</b> phishing_text: char_SVM macro-F1 0.947 (split SD 0.012). sms_proxy: char_SVM macro-F1 0.967 (split SD 0.013). synthetic_incidents: word_SVM macro-F1 1.000 (split SD 0.000).</div>
+<h2>1 · Method recovered from the paper</h2>
+<p>Worked from the synced <b>35-page full text</b>, matching title and author Paulo Leocadio, not just its abstract. The file bears Authorea DOI <a href="https://doi.org/10.22541/au.177446759.98281679/v1">10.22541/au.177446759.98281679/v1</a> (2026), while its title-page citation identifies the requested 2025 PRE-PRINT v2 and <a href="https://doi.org/10.13140/RG.2.2.20780.58240">ResearchGate DOI</a>. Treat this as the available later-hosted version, not a verified byte-identical 2025 original. Web searches located Authorea and ResearchGate, but both full-text HTTP fetches returned 403.</p>
+<p>Sections 4.1–4.5 (pp. 8–14) choose <code>distilbert-base-uncased</code>, sequence-classification heads, three training epochs, learning rate 5×10⁻⁵, batch 16, weight decay .01 and up to 512 tokens. The stated data include ~5,000 private SIEM alerts, ~2,000 incident descriptions and 10,000 balanced emails; no underlying records or trained weights are supplied in the inspected materials. The paper specifies 80/10/10 splits in prose but demonstrates a 90/10 training/test example. Here all baselines use the same prespecified 75/25 split, no test-driven tuning.</p>
+<p>The paper considers BERT, RoBERTa and SecureBERT alternatives and compares with rules/manual workflows. We add common low-cost text reference methods: majority, keyword rules, TF-IDF multinomial Naive Bayes, logistic regression, word linear SVM and character linear SVM. These additions are our benchmark design, not claimed implementations from the paper. Official <a href="https://huggingface.co/docs/diffusers/index">Diffusers documentation</a> describes generative diffusion workflows; the paper's own listing imports <code>transformers</code>.</p>
+<p>Related author context checked: <i>Differentiable Latent Indexing in LLMs</i> (2026), abstract and opening full-text sections, explicitly says it does not claim empirical validation; <i>Large Language Models: Machine Learning Down to Earth</i> (2023), abstract. Neither supplies incident labels/checkpoints, so neither was used to fill missing experiments.</p>
+<h2>2 · Data and leakage controls</h2><p>The audit below reports source counts and the initial sample pool; the executed final grid uses 800 records per dataset.</p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>dataset</th>
+      <th>source_rows</th>
+      <th>after_dedup</th>
+      <th>sampled</th>
+      <th>conflicting_groups</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>phishing_text</td>
+      <td>20137</td>
+      <td>19560</td>
+      <td>3200</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>5574</td>
+      <td>5139</td>
+      <td>2222</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<ul><li><b>Phishing-labelled text</b> — <a href="https://huggingface.co/datasets/ealvaradob/phishing-dataset">ealvaradob/phishing-dataset</a>, texts.json, label 1=phishing. 400 samples per class in the final bounded pilot, drawn from an initial stratified pool after deduplication. The repository card declares Apache-2.0 and cites email/SMS sources; constituent rights and per-record provenance remain unaudited. Do not describe it as a verified pure phishing-email benchmark. Text source/style and thread leakage are possible.</li>
+<li><b>SMS proxy</b> — <a href="https://archive.ics.uci.edu/dataset/228/sms+spam+collection">UCI SMS Spam Collection</a>, CC BY 4.0. Spam is not phishing. The initial pool retained 1,600 ham plus 622 spam after deduplication; the final pilot samples 400 per class. Its balanced class mix is not deployment prevalence. Actual parsed source rows: 5,574.</li>
+<li><b>Synthetic incident diagnostic</b> — 800 descriptions sampled from a 3,200-description generator, benign events versus malicious events, approximately 25% event negation. Ground truth follows the confirmed/ruled-out event category; random host IDs, usernames and priorities are nuisance features. The same small event vocabulary occurs in train/test deliberately: this tests negation composition, not unseen incident generalization. No natural-language validity is claimed.</li>
+<li><b>Leakage limits</b> — before sampling real data, collapse whitespace/case and normalize URLs and standalone numbers to identify duplicate groups; discard conflicting-label groups and keep one record per group. Vectorizers fit training only. This blocks those canonical exact duplicates before the character cap, <b>not</b> all near-duplicates, identical capped prefixes, campaign, author, organization or chronological leakage. Datasets are evaluated separately, never pooled or treated as independent replications of the same population.</li></ul>
+<h2>3 · Clean leaderboard</h2><p>Mean macro-F1 and sample SD across five overlapping repeated splits; SD is descriptive, not a confidence interval. Recall is positive-class sensitivity. FPR is FP/(FP+TN), not 1−precision. Training time includes vectorization; prediction time includes vectorization and is batch-amortized milliseconds per record.</p><div class="scroll"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>dataset</th>
+      <th>model</th>
+      <th>macro_f1_mean</th>
+      <th>macro_f1_sd</th>
+      <th>recall</th>
+      <th>fpr</th>
+      <th>fit_seconds</th>
+      <th>inference_ms_per_item</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>phishing_text</td>
+      <td>char_SVM</td>
+      <td>0.9470</td>
+      <td>0.0115</td>
+      <td>0.9620</td>
+      <td>0.0680</td>
+      <td>2.0139</td>
+      <td>1.8370</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>word_NB</td>
+      <td>0.9360</td>
+      <td>0.0119</td>
+      <td>0.9260</td>
+      <td>0.0540</td>
+      <td>0.3372</td>
+      <td>0.2050</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>word_SVM</td>
+      <td>0.9330</td>
+      <td>0.0149</td>
+      <td>0.9320</td>
+      <td>0.0660</td>
+      <td>0.3666</td>
+      <td>0.2173</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>word_LR</td>
+      <td>0.9220</td>
+      <td>0.0131</td>
+      <td>0.9340</td>
+      <td>0.0900</td>
+      <td>0.3901</td>
+      <td>0.2188</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>keyword_rules</td>
+      <td>0.5848</td>
+      <td>0.0136</td>
+      <td>0.3560</td>
+      <td>0.1320</td>
+      <td>0.0000</td>
+      <td>0.0807</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>majority</td>
+      <td>0.3333</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0863</td>
+      <td>0.0940</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>char_SVM</td>
+      <td>0.9670</td>
+      <td>0.0126</td>
+      <td>0.9420</td>
+      <td>0.0080</td>
+      <td>0.2631</td>
+      <td>0.1867</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>word_SVM</td>
+      <td>0.9550</td>
+      <td>0.0035</td>
+      <td>0.9380</td>
+      <td>0.0280</td>
+      <td>0.0392</td>
+      <td>0.0320</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>word_LR</td>
+      <td>0.9530</td>
+      <td>0.0091</td>
+      <td>0.9320</td>
+      <td>0.0260</td>
+      <td>0.0366</td>
+      <td>0.0291</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>word_NB</td>
+      <td>0.9319</td>
+      <td>0.0193</td>
+      <td>0.8980</td>
+      <td>0.0340</td>
+      <td>0.0355</td>
+      <td>0.0340</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>keyword_rules</td>
+      <td>0.4514</td>
+      <td>0.0287</td>
+      <td>0.1180</td>
+      <td>0.0020</td>
+      <td>0.0000</td>
+      <td>0.0095</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>majority</td>
+      <td>0.3333</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0178</td>
+      <td>0.0174</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>word_SVM</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>0.0233</td>
+      <td>0.0251</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>word_LR</td>
+      <td>0.9439</td>
+      <td>0.0211</td>
+      <td>0.9240</td>
+      <td>0.0360</td>
+      <td>0.0260</td>
+      <td>0.0277</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>char_SVM</td>
+      <td>0.9410</td>
+      <td>0.0261</td>
+      <td>0.9500</td>
+      <td>0.0680</td>
+      <td>0.1245</td>
+      <td>0.1783</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>word_NB</td>
+      <td>0.7449</td>
+      <td>0.0278</td>
+      <td>0.7400</td>
+      <td>0.2500</td>
+      <td>0.0225</td>
+      <td>0.0243</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>keyword_rules</td>
+      <td>0.7359</td>
+      <td>0.0263</td>
+      <td>0.7400</td>
+      <td>0.2680</td>
+      <td>0.0000</td>
+      <td>0.0083</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>majority</td>
+      <td>0.3333</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0104</td>
+      <td>0.0146</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2>4 · Difficulty and noise grid</h2><img src="benchmark.png" alt="Macro F1 across four settings">
+<p>Clean training and clean test; 20% of test whitespace tokens have one character replaced by '*'; test text truncated to the first 40 words; or exactly 15% of training labels flipped without changing test truth. Clean fitted models are reused for the two test-only corruptions; models are refit for training-label noise. Fit times for those reused models report the original clean fit cost. No threshold tuning. Hyperparameters: word TF-IDF 1–2 grams, min_df=2, max_features=18,000; char TF-IDF 3–5 grams, min_df=2, max_features=22,000; sublinear term frequency; NB α=1, LR/SVM C=1. Word and character models differ in both representation and feature cap. The keyword rule flags any of password, verify, urgent, click, account or the synthetic malicious event phrases; it has no learned parameters. It is a transparent diagnostic rule, not a production mail filter.</p>
+<h2>5 · Statistical comparisons</h2>
+<p>Prespecified reference: word SVM. Inferential comparisons use only seed 17, avoiding treatment of overlapping repeat splits as independent samples. Exact two-sided McNemar tests compare <b>paired correctness/accuracy</b>, not macro-F1. Holm adjustment covers all 60 comparisons (3 datasets × 4 settings × 5 alternatives). Macro-F1 differences have separate pointwise 95% percentile intervals from 300 class-stratified paired bootstrap draws; these exploratory intervals are not multiplicity-adjusted and assume independent test records. Corruption settings reuse test records and are not independent replications.</p>
+<p>Character SVM minus word SVM on public sets:</p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>dataset</th>
+      <th>setting</th>
+      <th>macro_f1_delta</th>
+      <th>ci_low</th>
+      <th>ci_high</th>
+      <th>holm_p</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>phishing_text</td>
+      <td>clean</td>
+      <td>0.0150</td>
+      <td>0.0000</td>
+      <td>0.0350</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>train_noise15</td>
+      <td>-0.0000</td>
+      <td>-0.0278</td>
+      <td>0.0252</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>truncate40</td>
+      <td>0.0101</td>
+      <td>-0.0249</td>
+      <td>0.0503</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>typos20</td>
+      <td>0.0300</td>
+      <td>-0.0000</td>
+      <td>0.0551</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>clean</td>
+      <td>0.0250</td>
+      <td>0.0050</td>
+      <td>0.0452</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>train_noise15</td>
+      <td>0.0750</td>
+      <td>0.0350</td>
+      <td>0.1202</td>
+      <td>0.0189</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>truncate40</td>
+      <td>0.0250</td>
+      <td>0.0050</td>
+      <td>0.0527</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>typos20</td>
+      <td>0.0250</td>
+      <td>0.0050</td>
+      <td>0.0453</td>
+      <td>1.0000</td>
+    </tr>
+  </tbody>
+</table>
+<p><b>Observed clean public-data comparison:</b> character SVM ranks higher on mean macro-F1, but its seed-17 accuracy difference from word SVM is not significant after Holm adjustment on either public set (adjusted p=1.000). Synthetic negation errors differ (character versus word SVM adjusted p≈0.000111), under the synthetic generator only.</p><p>Do not infer equivalence from a non-significant test, or use these tests to claim a model beats DistilBERT. Benchmark population validity is limited by source/template correlation.</p>
+<h2>6 · Failure cases</h2><p><b>Measured synthetic failure pattern:</b> word SVM reached mean macro-F1 1.000 on the deliberately shared event vocabulary, versus 0.941 for character SVM. On the clean seed-17 split, all 19 character-SVM errors contained 'ruled out'; word SVM made no errors. Thus the public-text leader was not the best method for this negation diagnostic. This is not evidence of general incident-understanding ability.</p><p>Full seed-17 word/character SVM errors are in failure_cases.csv inside the reproducibility bundle. Excerpts are truncated and HTML-escaped here; do not visit links in source messages. Labels below are dataset annotations, not independently adjudicated truth.</p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>dataset</th>
+      <th>model</th>
+      <th>label</th>
+      <th>prediction</th>
+      <th>excerpt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>phishing_text</td>
+      <td>word_SVM</td>
+      <td>0</td>
+      <td>1</td>
+      <td>holiday safety reminder holiday safety reminder the holiday season can mean an increased risk of fires and a higher potential for criminal activity due to people taking advantage of convenient downtown shopping and because of the increased number of special events and office parties . we would like to pass along a few safety and security tips from the city of houston fire department and the houston police department . ? please do not prop open st</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>word_SVM</td>
+      <td>1</td>
+      <td>0</td>
+      <td>Rate Revsng soon.Xperience Beachside Living.Supertch Holiday Village.Xpandabl Villas at Yamuna XprswaySize 1575/2200 sf@27 lac onwrdsCall: 9999060692</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>word_SVM</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SPECIAL ALERT&lt;!--li.MsoNormal{mso-style-parent:"";margin-bottom:.0001pt;font-size:12.0pt;font-family:"Times New Roman";margin-left:0in;margin-right:0in;margin-top:0in}.contenttd{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:11px;color:#333333}#content{position:absolute;width:385px;z-index:1;left:0;top:0}--&gt;THE WALL STREET WEEKLYStock Pick of The Day: China Xin Network Media Corp.Â  (OTC BB:CXIN)Â Â OPINION:Â Â Â Â  BUYSYMBOL:Â Â Â  CXI</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>word_SVM</td>
+      <td>1</td>
+      <td>0</td>
+      <td>Dear Voucher Holder 2 claim your 1st class airport lounge passes when using Your holiday voucher call 08704439680. When booking quote 1st class x 2</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>word_SVM</td>
+      <td>1</td>
+      <td>0</td>
+      <td>For sale - arsenal dartboard. Good condition but no doubles or trebles!</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>word_SVM</td>
+      <td>0</td>
+      <td>1</td>
+      <td>Ryder unsold.now gibbs.</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Error counts on the primary split</h3><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>dataset</th>
+      <th>setting</th>
+      <th>model</th>
+      <th>errors</th>
+      <th>false_positives</th>
+      <th>false_negatives</th>
+      <th>negation_errors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>phishing_text</td>
+      <td>clean</td>
+      <td>char_SVM</td>
+      <td>7</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>clean</td>
+      <td>word_SVM</td>
+      <td>10</td>
+      <td>5</td>
+      <td>5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>typos20</td>
+      <td>char_SVM</td>
+      <td>6</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>typos20</td>
+      <td>word_SVM</td>
+      <td>12</td>
+      <td>4</td>
+      <td>8</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>clean</td>
+      <td>char_SVM</td>
+      <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>clean</td>
+      <td>word_SVM</td>
+      <td>8</td>
+      <td>2</td>
+      <td>6</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>typos20</td>
+      <td>char_SVM</td>
+      <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>typos20</td>
+      <td>word_SVM</td>
+      <td>8</td>
+      <td>1</td>
+      <td>7</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>clean</td>
+      <td>char_SVM</td>
+      <td>19</td>
+      <td>8</td>
+      <td>11</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>typos20</td>
+      <td>char_SVM</td>
+      <td>28</td>
+      <td>11</td>
+      <td>17</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>typos20</td>
+      <td>word_SVM</td>
+      <td>29</td>
+      <td>17</td>
+      <td>12</td>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table>
+<p><b>Interpretation.</b> Inspect benign messages flagged by credential/action words for costly false positives, and missed malicious messages for absent/obfuscated cues. Synthetic 'ruled out' cases expose whether a classifier handles negation rather than keyword presence; this task intentionally makes that shortcut unreliable. These are candidate mechanisms for manual review, not causally established explanations of every public-data error. Source mixing and label mistakes can also produce apparent failures.</p>
+<h2>7 · What this does—and does not—support</h2><ul>
+<li>It supplies measured CPU reference points and a stress-test harness for the paper's text-classification component.</li>
+<li>The source paper reports precision .90, recall .85 and F1 .87 (p.11), with case-study timing and manual-baseline assumptions (pp.17–18). Those are <b>not rerun results</b> and are not ranked against this pilot's different data. Its p.11 statement connecting 90% precision to 10% FPR conflates different denominators.</li>
+<li>No trained DistilBERT, BERT, RoBERTa or SecureBERT was evaluated. A separately marked optional DistilBERT training script is included but <b>not executed or empirically verified</b>; downloading pretrained weights and CPU fine-tuning were outside this quick run. There is no fabricated transformer score.</li>
+<li>No SOC action was taken. No manual analyst comparison, NER evaluation, workflow efficacy, MTTR reduction or safe-autoclosure conclusion is supported by text-only classifications.</li>
+<li>Timing is single-container CPU wall-clock; inference is median of three warmed batch runs. It is not per-request service latency or comparable to the paper's Tesla T4 timing. No memory benchmark was run.</li></ul>
+<h2>Reproduce and extend</h2><p>Unzip <b>reproducibility.zip</b> into a local directory. It contains executable scripts, a frozen prepared data sample, all prediction-level outputs and a run manifest. In an environment with the listed baseline packages run <code>OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 benchmark.py</code>, then <code>python3 make_report.py</code>. No network is required with the frozen sample. The optional <code>train_distilbert.py</code> requires torch and transformers in your own environment, uses the same split/corruption functions and 3 fixed epochs without test-set selection. It writes separate prediction files; it does not silently add unrun rows to this leaderboard. Extend all five seeds and compare paired predictions before updating conclusions.</p>
+<p>Version manifest: Python 3.12.3, scikit-learn 1.9.1, numpy 2.5.4, scipy 1.18.1; seeds [17, 29, 43, 61, 83]. Prepared sample SHA-256: <code>5cc45c25d7cb8dfb566169443ab054f642b599c8399b4379ff4f52c83ea3a5bb</code>.</p>
+</body></html>

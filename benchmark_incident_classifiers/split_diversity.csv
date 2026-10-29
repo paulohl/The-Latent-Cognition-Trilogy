@@ -1,0 +1,4 @@
+dataset,n_seed_labels,n_distinct_test_sets,unique_records_tested,record_coverage_fraction,unique_groups_tested,record_jaccard_min,record_jaccard_max,test_groups_min,test_groups_max,test_records_min,test_records_max
+phishing_text,5,5,603,0.75375,596,0.12994350282485875,0.20481927710843373,195,196,200,200
+sms_proxy,5,5,588,0.735,551,0.13314447592067988,0.1834319526627219,186,186,200,200
+synthetic_incidents,5,4,238,0.2975,8,0.680672268907563,1.0,6,6,200,200

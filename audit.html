@@ -1,0 +1,483 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Campaign and template leakage audit</title><style>body{font:16px/1.55 system-ui;color:#203047;max-width:1180px;margin:36px auto;padding:0 24px}h1{font-size:32px}table{font-size:12px;border-collapse:collapse;width:100%}th,td{padding:8px;text-align:left;border-bottom:1px solid #d5dde5;vertical-align:top}th{background:#eef3f8}.notice{padding:18px;background:#fff1d8;border-left:5px solid #c78b25}.scroll{overflow:auto}h2{margin-top:32px}</style>
+<h1>Campaign and template leakage: frozen incident benchmark</h1><!-- grouped-repeat:start --><div class="notice"><b>Five grouped splits completed:</b> <a href="../grouped-repeat/report.html">Read the repeated grouped evaluation</a>. This report below is the earlier snapshot; new results include 288 fresh evaluations and the verified seed-17 reference.</div><!-- grouped-repeat:end --><!-- grouped-rerun:start --><div class="notice"><b>29 October grouped-split rerun completed:</b> all six baselines evaluated on the saved template-disjoint splits for all four conditions. <a href="../grouped-rerun/report.html">Read the grouped comparison</a>. Original scores below are unchanged; inferred components are not verified campaigns.</div><!-- grouped-rerun:end --><p>29 October 2026 · Audit only · Original scores and data unchanged</p>
+<div class="notice"><b>Campaign-separated evaluation is not established.</b> The frozen data have text, labels and generated record IDs, but no verified campaign IDs, timestamps or thread IDs. This audit measures shared-text/template exposure; its inferred components are <b>not verified campaigns</b>. It does not adjudicate phishing versus generic spam labels.</div>
+<h2>Primary result: exact original seed-17 split</h2><p>Each dataset has 600 training and 200 held-out records. The seed-17 held-out ID sets were checked against the original saved predictions; the frozen file SHA-256 matches the original run manifest. Counts below refer to test records, not independent campaigns.</p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>dataset</th>
+      <th>n_test</th>
+      <th>test_with_input_exact_in_train</th>
+      <th>test_with_prior_canonical_in_train</th>
+      <th>test_with_normalized_template_in_train</th>
+      <th>test_with_prefix40_in_train</th>
+      <th>test_with_near_train</th>
+      <th>test_in_component_seen_in_train</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>phishing_text</td>
+      <td>200</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>7</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>200</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>21</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>200</td>
+      <td>0</td>
+      <td>0</td>
+      <td>198</td>
+      <td>0</td>
+      <td>200</td>
+      <td>200</td>
+    </tr>
+  </tbody>
+</table>
+<p><b>How to read it:</b> input_exact is equality of the actual 2,000-character capped text. prior_canonical repeats the original URL/number/whitespace normalizer on that capped text. normalized_template additionally replaces emails, embedded digits and long hashes and removes punctuation. prefix40 is an identical lowercased first-40-word prefix; it is a partial-copy flag, not equality of full training input. near_train means at least one training text with normalized character cosine ≥.90 and the length constraints below. Components may include transitive chains even when a particular test record has no direct ≥.90 training neighbor.</p>
+<h2>Threshold sensitivity across all five original splits</h2><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>dataset</th>
+      <th>threshold</th>
+      <th>mean_near_fraction</th>
+      <th>min_near_count</th>
+      <th>max_near_count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>phishing_text</td>
+      <td>0.850</td>
+      <td>0.033</td>
+      <td>5</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>0.900</td>
+      <td>0.026</td>
+      <td>3</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>0.950</td>
+      <td>0.017</td>
+      <td>2</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>0.850</td>
+      <td>0.120</td>
+      <td>19</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>0.900</td>
+      <td>0.093</td>
+      <td>16</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>0.950</td>
+      <td>0.062</td>
+      <td>11</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>0.850</td>
+      <td>1.000</td>
+      <td>200</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>0.900</td>
+      <td>1.000</td>
+      <td>200</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>0.950</td>
+      <td>0.991</td>
+      <td>197</td>
+      <td>200</td>
+    </tr>
+  </tbody>
+</table><p>Repeated splits overlap. These ranges and means are descriptive, not independent replications or confidence intervals. Thresholds .85/.90/.95 are audit sensitivity choices, not validated campaign boundaries.</p>
+<h2>Dataset structure</h2><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>dataset</th>
+      <th>n</th>
+      <th>input_duplicate_records</th>
+      <th>canonical_duplicate_records</th>
+      <th>normalized_template_groups</th>
+      <th>records_in_repeated_templates</th>
+      <th>near90_components</th>
+      <th>largest_near90_component</th>
+      <th>near90_mixed_label_components</th>
+      <th>candidate_pairs85</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>phishing_text</td>
+      <td>800</td>
+      <td>0</td>
+      <td>0</td>
+      <td>800</td>
+      <td>0</td>
+      <td>785</td>
+      <td>4</td>
+      <td>0</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>800</td>
+      <td>0</td>
+      <td>0</td>
+      <td>788</td>
+      <td>24</td>
+      <td>745</td>
+      <td>7</td>
+      <td>0</td>
+      <td>98</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>800</td>
+      <td>0</td>
+      <td>0</td>
+      <td>72</td>
+      <td>800</td>
+      <td>27</td>
+      <td>62</td>
+      <td>0</td>
+      <td>16836</td>
+    </tr>
+  </tbody>
+</table>
+<p>Synthetic incidents deliberately reuse a small vocabulary and grammar across splits. Shared templates here are a generator-design feature: high scores on this task cannot be interpreted as generalization to new incident narratives. Random host IDs/usernames do not create independent semantic templates. Mixed-label components warn that lexical similarity is not equivalent to shared ground truth, especially for negation.</p>
+<h2>Candidate near-duplicate evidence</h2><p>Public-source examples are ranked by similarity, not manually confirmed as campaigns. URLs and email addresses are redacted; excerpts may hide differences later in the text. Shared boilerplate or quotation can yield a high score without indicating the same campaign.</p><div class="scroll"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>dataset</th>
+      <th>similarity</th>
+      <th>label_a</th>
+      <th>label_b</th>
+      <th>same_normalized_template</th>
+      <th>excerpt_a</th>
+      <th>excerpt_b</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>sms_proxy</td>
+      <td>1.000</td>
+      <td>1</td>
+      <td>1</td>
+      <td>True</td>
+      <td>PRIVATE! Your 2003 Account Statement for shows 800 un-redeemed S. I. M. points. Call 08715203694 Identifier Code: 40533 Expires 31/10/04</td>
+      <td>PRIVATE! Your 2003 Account Statement for shows 800 un-redeemed S.I.M. points. Call 08718738001 Identifier Code: 49557 Expires 26/11/04</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>1.000</td>
+      <td>1</td>
+      <td>1</td>
+      <td>True</td>
+      <td>Win the newest “Harry Potter and the Order of the Phoenix (Book 5) reply HARRY, answer 5 questions - chance to be the first among readers!</td>
+      <td>Win the newest Harry Potter and the Order of the Phoenix (Book 5) reply HARRY, answer 5 questions - chance to be the first among readers!</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>1.000</td>
+      <td>1</td>
+      <td>1</td>
+      <td>True</td>
+      <td>PRIVATE! Your 2003 Account Statement for 07753741225 shows 800 un-redeemed S. I. M. points. Call 08715203677 Identifier Code: 42478 Expires 24/10/04</td>
+      <td>PRIVATE! Your 2003 Account Statement for 07815296484 shows 800 un-redeemed S.I.M. points. Call 08718738001 Identifier Code 41782 Expires 18/11/04</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>1.000</td>
+      <td>1</td>
+      <td>1</td>
+      <td>True</td>
+      <td>Camera - You are awarded a SiPix Digital Camera! call 09061221066 fromm landline. Delivery within 28 days</td>
+      <td>Camera - You are awarded a SiPix Digital Camera! call 09061221066 fromm landline. Delivery within 28 days.</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>0.998</td>
+      <td>1</td>
+      <td>1</td>
+      <td>False</td>
+      <td>save 70 percent on super viagra 246644 save 70 percent on super viagra and increase sex drive . most places charge $ 22 . 95 , we charge only $ 4 . 95 . what is regalis ( super viagra ) ? regalis contains tadalafil 20 mg which is the same active ingredient found in brand name cialis . it has been pr</td>
+      <td>save 70 percent on super viagra 245932 save 70 percent on super viagra and increase sex drive . most places charge $ 22 . 95 , we charge only $ 4 . 95 . what is regalis ( super viagra ) ? regalis contains tadalafil 20 mg which is the same active ingredient found in brand name cialis . it has been pr</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>0.985</td>
+      <td>1</td>
+      <td>1</td>
+      <td>False</td>
+      <td>Dear lsb36 ,YOUR INTERNET USAGE IS BEING TRACKED\nYou have no privacy protection.\nWill your BOSS, WIFE or KIDS find out?DOWNLOAD EZ INTERNET PRIVACY SOFTWARE+++++++++++++++++++++++++++++++++++++++++++\nYou're in Serious Trouble - It's a Proven Fact!\nDeleting "Internet Cache and History" will NOT prote</td>
+      <td>Dear Computer User jm8675309 ,YOUR INTERNET USAGE IS BEING TRACKED\nYou have no privacy protection.\nWill your BOSS, WIFE or KIDS find out?DOWNLOAD EZ INTERNET PRIVACY SOFTWARE+++++++++++++++++++++++++++++++++++++++++++\nYou're in Serious Trouble - It's a Proven Fact!\nDeleting "Internet Cache and Histo</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>0.976</td>
+      <td>1</td>
+      <td>1</td>
+      <td>False</td>
+      <td>save your money buy getting this thing here you have not tried cialls yet ? than you cannot even imagine what it is like to be a real man in bed ! the thing is that a great errrectlon is provided for you exactly when you want . ciails has a iot of advantaqes over viaqra - the effect iasts 36 hours !</td>
+      <td>save your money buy getting this thing here you have not tried cialls yet ? than you cannot even imagine what it is like to be a real man in bed ! the thing is that a great errrectlon is provided for you exactly when you want . ciails has a iot of advantaqes over viaqra - the effect lasts 36 hours !</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>0.974</td>
+      <td>1</td>
+      <td>1</td>
+      <td>False</td>
+      <td>save your money buy getting this thing here you have not tried cialls yet ? than you cannot even imagine what it is like to be a real man in bed ! the thing is that a great errrectlon is provided for you exactly when you want . ciaiis has a iot of advantaqes over viagra - the effect iasts 36 hours !</td>
+      <td>save your money buy getting this thing here you have not tried cialls yet ? than you cannot even imagine what it is like to be a real man in bed ! the thing is that a great errrectlon is provided for you exactly when you want . ciails has a iot of advantaqes over viaqra - the effect iasts 36 hours !</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2>Cross-dataset contamination</h2><p><b>36 candidate public-source pairs</b> meet ≥.90 similarity in a separately fitted shared representation with the same length constraints. Labels mean phishing in one corpus and spam in the SMS proxy, so even equal numeric labels are not equivalent tasks. These pairs do not leak between models trained separately, but they weaken any claim that the public datasets are wholly independent evidence.</p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>dataset_a</th>
+      <th>id_a</th>
+      <th>label_a</th>
+      <th>dataset_b</th>
+      <th>id_b</th>
+      <th>label_b</th>
+      <th>similarity</th>
+      <th>normalized_equal</th>
+      <th>excerpt_a</th>
+      <th>excerpt_b</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>phishing_text</td>
+      <td>3a22643cea71cd04</td>
+      <td>0</td>
+      <td>sms_proxy</td>
+      <td>49a5a5691d8a3d5e</td>
+      <td>0</td>
+      <td>1.000</td>
+      <td>True</td>
+      <td>Dont flatter yourself... Tell that man of mine two pints of carlin in ten minutes please....</td>
+      <td>Dont flatter yourself... Tell that man of mine two pints of carlin in ten minutes please....</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>d92715d63dc5335e</td>
+      <td>0</td>
+      <td>sms_proxy</td>
+      <td>d0127a7c3fe09460</td>
+      <td>0</td>
+      <td>1.000</td>
+      <td>True</td>
+      <td>Don't fret. I'll buy the ovulation test strips and send them to you. You wont get them til like march. Can you send me your postal address.u'll be alright.Okay.</td>
+      <td>Don't fret. I'll buy the ovulation test strips and send them to you. You wont get them til like march. Can you send me your postal address.u'll be alright.Okay.</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>85cfee8297bf11b1</td>
+      <td>0</td>
+      <td>sms_proxy</td>
+      <td>571f45b7d89621c6</td>
+      <td>0</td>
+      <td>1.000</td>
+      <td>True</td>
+      <td>Try to do something dear. You read something for exams</td>
+      <td>Try to do something dear. You read something for exams</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>0a745a221536be30</td>
+      <td>0</td>
+      <td>sms_proxy</td>
+      <td>ebba6ee03cbd495a</td>
+      <td>0</td>
+      <td>1.000</td>
+      <td>True</td>
+      <td>I just cooked a rather nice salmon a la you</td>
+      <td>I just cooked a rather nice salmon a la you</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>d1398e5c1f4af0f5</td>
+      <td>1</td>
+      <td>sms_proxy</td>
+      <td>5a8cc84566d6f9e1</td>
+      <td>1</td>
+      <td>0.963</td>
+      <td>False</td>
+      <td>URGENT! This is the 2nd attempt to contact U!U have WON £1000CALL 09071512432 b4 300603t&amp;csBCM4235WC1N3XX.callcost150ppmmobilesvary. max£7. 50</td>
+      <td>+449071512431 URGENT! This is the 2nd attempt to contact U!U have WON £1250 CALL 09071512433 b4 050703 T&amp;CsBCM4235WC1N3XX. callcost 150ppm mobilesvary. max£7. 50</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>d1398e5c1f4af0f5</td>
+      <td>1</td>
+      <td>sms_proxy</td>
+      <td>544c43c5bb382159</td>
+      <td>1</td>
+      <td>0.971</td>
+      <td>False</td>
+      <td>URGENT! This is the 2nd attempt to contact U!U have WON £1000CALL 09071512432 b4 300603t&amp;csBCM4235WC1N3XX.callcost150ppmmobilesvary. max£7. 50</td>
+      <td>RGENT! This is the 2nd attempt to contact U!U have WON £1250 CALL 09071512433 b4 050703 T&amp;CsBCM4235WC1N3XX. callcost 150ppm mobilesvary. max£7. 50</td>
+    </tr>
+  </tbody>
+</table>
+<p><b>Content overlap confirmed:</b> the 36 candidate pairs involve 28 phishing-labelled-corpus records and 36 SMS-proxy records; 13 pairs have byte-identical text strings and 23 have identical slot-normalized text. Identical text is source-content overlap, not proof of a shared malicious campaign. Examples include ordinary personal SMS messages and premium-rate prize promotions; positive numeric labels do not by themselves establish phishing-only ground truth.</p><h2>Do exposed test records look easier?</h2><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>dataset</th>
+      <th>model</th>
+      <th>near90</th>
+      <th>n_test</th>
+      <th>accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>phishing_text</td>
+      <td>char_SVM</td>
+      <td>False</td>
+      <td>193</td>
+      <td>0.964</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>char_SVM</td>
+      <td>True</td>
+      <td>7</td>
+      <td>1.000</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>word_SVM</td>
+      <td>False</td>
+      <td>193</td>
+      <td>0.948</td>
+    </tr>
+    <tr>
+      <td>phishing_text</td>
+      <td>word_SVM</td>
+      <td>True</td>
+      <td>7</td>
+      <td>1.000</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>char_SVM</td>
+      <td>False</td>
+      <td>179</td>
+      <td>0.983</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>char_SVM</td>
+      <td>True</td>
+      <td>21</td>
+      <td>1.000</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>word_SVM</td>
+      <td>False</td>
+      <td>179</td>
+      <td>0.955</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>word_SVM</td>
+      <td>True</td>
+      <td>21</td>
+      <td>1.000</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>char_SVM</td>
+      <td>True</td>
+      <td>200</td>
+      <td>0.905</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>word_SVM</td>
+      <td>True</td>
+      <td>200</td>
+      <td>1.000</td>
+    </tr>
+  </tbody>
+</table><p>These are clean seed-17 accuracies partitioned by direct ≥.90 neighbor exposure. Exposure is correlated with text type and class; this is <b>not a causal estimate</b> of score inflation. Removing exposed test rows after training does not produce a valid leakage-corrected leaderboard. No hypothesis test or corrected performance claim is made here.</p>
+<h2>Candidate repair (exported before the linked rerun)</h2><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>dataset</th>
+      <th>n_train</th>
+      <th>n_test</th>
+      <th>train_positives</th>
+      <th>test_positives</th>
+      <th>cross_split_near90_pairs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>phishing_text</td>
+      <td>600</td>
+      <td>200</td>
+      <td>300</td>
+      <td>100</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>sms_proxy</td>
+      <td>600</td>
+      <td>200</td>
+      <td>300</td>
+      <td>100</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>synthetic_incidents</td>
+      <td>600</td>
+      <td>200</td>
+      <td>300</td>
+      <td>100</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>The exported split manifest includes both the exact original seed-17 splits and candidate whole-component splits at .90. Four shuffled StratifiedGroupKFold folds are constructed; the fold closest to a 25% test fraction and balanced test labels is chosen without consulting model scores. Every row is assigned exactly once and no qualifying ≥.90 edge crosses the candidate split. Counts and class balance differ from the original 600/200 design; some giant components may make a balanced split impossible. Component disjointness is necessary for this proxy, not proof of campaign separation.</p>
+<h2>Recommended interpretation and next experiment</h2><ul><li><b>Keep the original leaderboard as within-source random-split performance</b>, not new-campaign performance. Preserve it rather than silently replacing its meaning. Original row-level bootstrap intervals and McNemar tests do not account for template clustering and are exploratory, not campaign-level inference.</li><li><b>Rerun baselines and DistilBERT on the same grouped split manifest</b>, with a separately grouped validation set if tuning. Report class counts and group counts; use group-aware uncertainty, not row-independent bootstrap alone.</li><li><b>Obtain genuine campaign/thread/source/date metadata</b> for a campaign or temporal holdout. Known shared parent-source datasets must be treated as overlapping evidence.</li><li><b>Review positive-label semantics</b> before a phishing-only claim. Template grouping does not transform generic spam into phishing ground truth.</li><li><b>Do not use synthetic template success as deployment evidence.</b> Add genuinely held-out generator grammars and events before claiming out-of-template transfer.</li></ul>
+<h2>Method and reproducibility</h2><p>All 2,400 frozen records were audited; no new data were downloaded. Case, URLs, emails, long hashes and numbers are normalized as explicit slots; non-letter punctuation is removed. L2-normalized character 4–5-gram TF-IDF uses sublinear TF and at most 30,000 features per dataset. Cosine edges are accepted only when both normalized texts have ≥40 characters and the shorter/longer normalized-length ratio is ≥.5. This detector can miss paraphrased campaigns, multilingual variants and shared quoted fragments below threshold; it can overmerge common boilerplate. Audit features intentionally see all texts, which is acceptable for detecting overlap but must not be reused as trained classifier features.</p>
+<p>Sample SHA-256: 5cc45c25d7cb8dfb566169443ab054f642b599c8399b4379ff4f52c83ea3a5bb. Source columns: text, label, dataset, group, id. The archive includes audit code, frozen data, split-level counts, all candidate pairs, per-test nearest matches, candidate splits and metadata. Original model training and the separate running DistilBERT sweep were not modified.</p></html>

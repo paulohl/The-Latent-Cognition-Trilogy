@@ -1,0 +1,279 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PhishIR synthetic plus public-email extension v1",
+  "description": "One JSONL record. Synthetic records unchanged; public records email-only with unknown response/entity/campaign truth.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/synthetic"
+    },
+    {
+      "$ref": "#/$defs/public"
+    }
+  ],
+  "$defs": {
+    "synthetic": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "PhishIR-Synthetic v1 record",
+      "description": "One synthetic email plus a single endpoint-context snapshot, not an independent real-world incident. Gold fields must not be model inputs.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "split",
+        "family_id",
+        "pair_id",
+        "provenance",
+        "email_text",
+        "text",
+        "phishing_label",
+        "endpoint_state",
+        "correlated_compromise",
+        "response_label",
+        "entities",
+        "observable",
+        "annotation_basis"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique record identifier. Metadata only; excludes from model features."
+        },
+        "split": {
+          "enum": [
+            "train",
+            "validation",
+            "test"
+          ],
+          "description": "Fixed 800/100/100 split; disjoint lure families and matched pairs."
+        },
+        "family_id": {
+          "type": "string",
+          "description": "Gold scenario-family metadata for leakage checks, not an input."
+        },
+        "pair_id": {
+          "type": "string",
+          "description": "Matched benign/phishing pair; stays in the same split. Not a model input."
+        },
+        "provenance": {
+          "const": "synthetic_template_v1"
+        },
+        "email_text": {
+          "type": "string",
+          "description": "Only permitted input for phishing classification: subject, sender domain and body."
+        },
+        "text": {
+          "type": "string",
+          "description": "Email plus endpoint narrative. Input for extraction and response evaluation. All entity offsets index this field."
+        },
+        "phishing_label": {
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ],
+          "description": "Gold: 1 = malicious social-engineering request; 0 = authorized benign workflow. Endpoint compromise alone does not make an email phishing."
+        },
+        "endpoint_state": {
+          "enum": [
+            "none",
+            "benign",
+            "correlated",
+            "different_host",
+            "stale"
+          ],
+          "description": "Gold scenario metadata, never an input."
+        },
+        "correlated_compromise": {
+          "type": "boolean",
+          "description": "Gold containment eligibility for the EMAIL host, based on malicious endpoint evidence on the same host within 60 minutes. Does not prove email caused compromise."
+        },
+        "response_label": {
+          "enum": [
+            "no_disruptive_action",
+            "purge_email_review",
+            "analyst_review",
+            "contain_host_review_identity"
+          ],
+          "description": "Gold benchmark policy, not production authorization. Host isolation and identity handling require organizational approval."
+        },
+        "entities": {
+          "type": "array",
+          "description": "Gold exact non-overlapping observable spans. These are not verdicts of maliciousness. URL contains its domain; no nested DOMAIN span.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "start",
+              "end",
+              "type",
+              "text"
+            ],
+            "properties": {
+              "start": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Zero-based Unicode character index, inclusive."
+              },
+              "end": {
+                "type": "integer",
+                "minimum": 1,
+                "description": "Exclusive Unicode character index."
+              },
+              "type": {
+                "enum": [
+                  "URL",
+                  "DOMAIN",
+                  "IPV4",
+                  "SHA256"
+                ]
+              },
+              "text": {
+                "type": "string",
+                "description": "Must equal record.text[start:end]; preserve defanging."
+              }
+            }
+          }
+        },
+        "observable": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Permitted response inputs; synthetic event metadata, not gold labels.",
+          "required": [
+            "recipient_id",
+            "email_host",
+            "endpoint_host",
+            "minutes_after_email"
+          ],
+          "properties": {
+            "recipient_id": {
+              "type": "string"
+            },
+            "email_host": {
+              "type": "string"
+            },
+            "endpoint_host": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "minutes_after_email": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "description": "Relative event time in minutes; null when no endpoint event is available."
+            }
+          }
+        },
+        "annotation_basis": {
+          "type": "string",
+          "description": "Truth originates from scenario construction, not analyst adjudication."
+        }
+      }
+    },
+    "public": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "split",
+        "provenance",
+        "email_text",
+        "phishing_label",
+        "source",
+        "source_record_index",
+        "source_url",
+        "source_label",
+        "source_record_sha256",
+        "template_group_id",
+        "campaign_id",
+        "realism",
+        "annotation_basis",
+        "endpoint_state",
+        "correlated_compromise",
+        "response_label",
+        "entities",
+        "transformations"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "split": {
+          "const": "public_holdout"
+        },
+        "provenance": {
+          "const": "public_source_labeled"
+        },
+        "email_text": {
+          "type": "string",
+          "description": "Only permitted classification feature; transformed subject and body. Other fields are metadata/gold."
+        },
+        "phishing_label": {
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ],
+          "description": "Source-provided phishing membership or non-spam proxy, not independent expert truth."
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "Nazario_2021",
+            "Enron_curated_label0"
+          ]
+        },
+        "source_record_index": {
+          "type": "integer",
+          "description": "Zero-based original mbox message order or CSV data-row index, not sampled-row order."
+        },
+        "source_url": {
+          "type": "string"
+        },
+        "source_label": {
+          "type": "string"
+        },
+        "source_record_sha256": {
+          "type": "string",
+          "description": "Checksum of reserialized parsed MIME message or sorted-key CSV row JSON; full source hashes are in source_manifest.json."
+        },
+        "template_group_id": {
+          "type": "string",
+          "description": "Inferred normalized/near-duplicate component; NOT a verified campaign identifier."
+        },
+        "campaign_id": {
+          "type": "null",
+          "description": "Unavailable for public emails; null does not mean negative, benign, no action, or no entities."
+        },
+        "realism": {
+          "type": "string"
+        },
+        "annotation_basis": {
+          "type": "string"
+        },
+        "endpoint_state": {
+          "type": "null",
+          "description": "Unavailable for public emails; null does not mean negative, benign, no action, or no entities."
+        },
+        "correlated_compromise": {
+          "type": "null",
+          "description": "Unavailable for public emails; null does not mean negative, benign, no action, or no entities."
+        },
+        "response_label": {
+          "type": "null",
+          "description": "Unavailable for public emails; null does not mean negative, benign, no action, or no entities."
+        },
+        "entities": {
+          "type": "null",
+          "description": "Unavailable for public emails; null does not mean negative, benign, no action, or no entities."
+        },
+        "transformations": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "not_completed_no_scores",
+  "updated_utc": "2026-10-29T04:44:34.505569+00:00",
+  "full_finetuning_on_this_dataset": "not_started",
+  "frozen_diagnostic": "stopped_without_classifier_or_metrics",
+  "frozen_records_encoded": 60,
+  "frozen_records_required": 1100,
+  "reason": "Shared four-core CPU, no CUDA; substantial competing full-fine-tuning workload. New diagnostic worker deliberately stopped; unrelated sweep left untouched.",
+  "runner_validation": "Python AST parse and --help only; full training and scoring have not been executed.",
+  "distilbert_metrics": null
+}

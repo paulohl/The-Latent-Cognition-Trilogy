@@ -1,0 +1,3969 @@
+id,split,provenance,email_text,phishing_label,source,source_record_index,source_url,source_label,source_record_sha256,template_group_id,campaign_id,realism,annotation_basis,endpoint_state,correlated_compromise,response_label,entities,transformations
+public-00084f0626b6e4a1,public_holdout,public_source_labeled,"Subject: deadlines - 2000 customer meeting
+daren ,
+below , i have attached the information that i initially sent out to the
+managers .
+if you would please forward me your customer and employee trip designation
+as well as
+their addresses as soon as possible i would really appreciate it .
+again , i am sorry for the mistake in not including you in this email . i
+assure you it will not
+happen again . and please let me know if there is anything i can do to help
+you .
+- heather
+- - - - - - - - - - - - - - - - - - - - - - forwarded by heather choate / hou / ect on 05 / 17 / 2000
+04 : 30 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+heather choate
+04 / 19 / 2000 10 : 29 pm
+[HEADER REMOVED]
+terry / hou / ect @ ect , tricia bowen / hou / ect @ ect , victor lamadrid / hou / ect @ ect ,
+suzanne christiansen / hou / ect @ ect , pat clynes / corp / enron @ enron
+[HEADER REMOVED]
+superty / hou / ect @ ect , reyna cabrera / hou / ect @ ect , cora
+pendergrass / corp / enron @ enron , maria garza / hou / ect @ ect , sabrae
+zajac / hou / ect @ ect
+subject : deadlines - 2000 customer meeting
+the planning has begun for our 2000 customer appreciation meeting . this
+year ' s trip
+has been scheduled at the doncesar in st . pete ' s beach , fl
+( www . doncesar . com )
+on july 7 - 9 and august 4 - 6 . we will be having fun in the sun with a luau
+theme this
+year .
+our activities will include golf , fishing , parasailing , waverunners and
+spa . we are
+also looking into a few others ( i will notify you all of any updates ) .
+note : this year our customer ' s will be responsible for their own airfare and
+their
+transportation to / from the airport .
+our deadlines are as follows :
+may 8 , 2000 guest list due !
+( this process should include a phone call before hand to
+determine the customers interest , so we can expedite the
+invitation process . )
+may 15 , 2000 generic invitation mail - out ( july and august customer trip )
+june 1 , 2000 employee list by trip due !
+june 16 , 2000 customer / employee rsvp ' s and activity selections due !
+attached below is also a spreadsheet i will be using to consolidate all of
+our information , if you would like to use it as well .
+- guest list . xls
+please let me know if you have any questions or ideas that arise , we welcome
+any feedback !
+thank you ,
+heather choate , x 33278",0,Enron_curated_label0,2255,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,4f5432a54ceb8f565022076cb20823bcc8fe33568246a0fb65974cbc886ca425,proxy-066c7b64e9fb6b4c,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-000cfdb1e33fd9a6,public_holdout,public_source_labeled,"Subject: this is hillarious !
+take a minute and call ( [NUMBER REDACTED] and listen to the greeting of the brown
+& williamson tobacco company . at the point where you are asked to select an
+extension , hang up .
+david heineke
+[EMAIL REDACTED]",0,Enron_curated_label0,1692,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,225aaa40642688a49618ad16edeb15166735fff6dc9aae4983b2773592878aaa,proxy-3f2fb0e1e092b9c0,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-00371c33106971f6,public_holdout,public_source_labeled,"Subject: 2000 plan allocations and january allocations
+please read brian ' s memo below . we spoke briefly about this yesterday in the
+staff meeting . i have copied each of you on a memo earlier today where i
+have provide the 2000 plan allocations . please note that we were not making
+changes to the plan , only breaking the gas asset group into smaller buckets .
+any chnages which have been made since the budget was approved are not
+reflected on the allocation sheet . rather they are reflected on the 1 / 00
+allocations , and they will require explanations each month as all variances
+from plan do . this includes new rc ' s which have set up , etc .
+i need each of you to review the 2000 plan allocations as i submitted them
+earlier today , and provide an accurate allocation of your rc for 1 / 00 . what
+has your group spent their time on in 1 / 00 ? ? ? please be aware that we could
+receive questions from the commercial teams , so document your logic . some
+things to consider :
+project sally - allocate to gas network development
+project hurricane - allocate to ? ? ? ? - ( i have a call into jim coffey )
+denver business - allocate to rocky mountain asset originations
+if you have some other activities and your not sure where to allocate them ,
+either call me , jackie nelson or jim coffey .
+one other thing to note : the network trading group will be further broken
+down into 2 groups : trading ( tom martin and jim schwieger ) and
+transportation ( ed gottlob ) . although the attached worksheet does not
+include this breakdown , please include it in yours .
+i would like you allocations back to me no later than thursday , 1 / 20 @
+3 : 00 pm . thanks .
+- - - - - - - - - - - - - - - - - - - - - - forwarded by brenda f herod / hou / ect on 01 / 19 / 2000
+05 : 36 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+brian heinrich
+01 / 14 / 2000 05 : 07 pm
+[HEADER REMOVED]
+harrison / hou / ect @ ect , brenda f herod / hou / ect @ ect , bob shults / hou / ect @ ect ,
+sheila glover / hou / ect @ ect , scott pleus / hou / ect @ ect , d todd hall / hou / ect @ ect ,
+mary solmonson / hou / ect @ ect , stephen p schwarz / hou / ect @ ect
+[HEADER REMOVED]
+subject : 2000 plan allocations and january allocations
+the attached files contain the allocation percentages for 2000 plan , january
+2000 actuals and a description of the new assets teams .
+please update the 2000 plan file to reflect the following changes to the
+assets team . the assets team is now broken out into the following "" groups ""
+which are described in the attached word document :
+rc # team name rc owner
+the 2000 plan file now has columns for the above teams , please take the
+percentage that was previously allocatated to assets ( which is in the
+executive column ) and reallocate it among all of the teams except rocky
+mountain asset originations that you support . i have already inserted the
+new percentages to be used for rocky mountain , which are based on a portion
+of the upstream origination allocation that was determined by the assets
+group . consequently i have changed the allocation percentage for upstream
+origination . i have also protected all of the cells except the ones you need
+to change to avoid confusion .
+i also need you to update the percentages to be used for january 2000
+actuals . i have added the new rc ' s that we have set up since plan has been
+complete , so please make sure you have each rc 100 % allocated .
+i will need the updated plan percentages returned to me by noon wednesday
+january 19 th , and the updated january 2000 percentages returned to me by end
+of day friday january 21 st .
+thanks for your help in getting these updated .
+brian",0,Enron_curated_label0,1102,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,d1ffaca02b716a19ef07922a8b39b226fdf596304a0f88eef58d4deaa380bcb2,proxy-11e7ec33cdb878df,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-00483ef34b9a85a6,public_holdout,public_source_labeled,"Subject: fw : first delivery - rodessa operating co .
+daren ,
+please read this memo and the one dated 2 / 21 / 01 from vance . he told me all
+new production should be entered at ifhsc . the deal in question is 634075 .
+do you want it changed to gas daily ? please advise . thanks .
+bob
+- - - - - - - - - - - - - - - - - - - - - - forwarded by robert cotten / hou / ect on 03 / 21 / 2001 11 : 02
+am - - - - - - - - - - - - - - - - - - - - - - - - - - -
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+reinhardt / enron @ enronxgate , susan smith / enron @ enronxgate , melissa
+graves / enron @ enronxgate , cynthia hakemack / hou / ect @ ect
+subject : fw : first delivery - rodessa operating co .
+tom / bob ,
+the following production is now on - line and a ticket should be created and
+entered into sitara based on the following :
+counterparty meter volumes price period global no .
+hesco gathering co . , llc 9876 85 mmbtu / d 100 % gd less $ 0 . 17 3 / 13 - 3 / 31
+96057368
+fyi , susan will create and submit a committed reserves firm ticket for the
+remaining term of the deal beginning with the month of april . additionally ,
+this is a producer svcs . deal and should be tracked in the im wellhead
+portfolio . . . attached to the gathering contract .
+thanks ,
+vlt
+x 3 - 6353
+- - - - - original message - - - - -
+[HEADER REMOVED]
+sent : monday , march 19 , 2001 12 : 14 pm
+[HEADER REMOVED]
+howard ; hesse , lisa ; hlavaty , nathan ; wayne e lightfoot / hou / ect @ enron ; mckay ,
+james ; smith , mary ; schneider , steve hpl ; melissa graves / hou / ect @ enron ;
+walters , michael ; zivley , jill ; johnson , mary jo ; wynne , rita ; allen , lauri ;
+jones , cheryl ; hansen , reid ; giron , darron ; winfree , o ' neal ; susan
+smith / hou / ect @ enron ; bryan , gary ; hanks , gary ; donald p
+reinhardt / hou / ect @ enron ; vance l taylor / hou / ect @ enron ; baumbach , david ;
+cotten , robert ; riley , brian ; austin , jeff ; hakemack , cynthia ; kenne , dawn ;
+csikos , lisa ; fosdick , j r ; rodriguez , carlos ; gomes , stephanie ; clynes , pat ;
+acton , tom ; walker , robert ; weissman , george ; harris , joanne ; sweeney ,
+christy ; tisdale , earl ; farmer , daren
+subject : first delivery - rodessa operating co .
+see attached letter",0,Enron_curated_label0,875,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,e57d00bee099578f217bb28bce38af5dbc06b892f4f9a716726891f8399bed5a,proxy-5d5aeae9cfc35630,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-00ae5ef2221317f9,public_holdout,public_source_labeled,"Subject: feb 2000 intercompany accrual variances
+below is a list of sitara deals that had volume variances or where one side
+( purchase / sale ) did not get accrued for the feb 2000 accrual . my goal
+here is to bring this to everyone attention and second to see if there is a
+solution . i am taking a simplistic approach here in that since
+intercompany sitara deals are the same that the nominations on both sides
+should match on the month end accruals . if i am wrong on this assumption
+or if there is a system limitation i am free to suggestions , ideas or
+resolutions . please feel free to give me a call .
+hplc selling to ena . production month febo 0 ( accrual ) :
+volume variance :
+sitara : meter / point volume amount
+156071 hpl / 0980391 vol var of 24 , 167 mmbtu
+midt / 0988743
+missing on purchase side ( ena )
+sitara : meter / point volume amount
+160579 hpl / [NUMBER REDACTED] , 272 mmbtu $ 1 , 599 , 402 . 29
+161541 hpl / [NUMBER REDACTED] , 576 mmbtu $ 278 , 296 . 18
+166459 hgpl / [NUMBER REDACTED] , 000 mmbtu $ 75 , 000 . 00
+201810 hpl / [NUMBER REDACTED] , 000 mmbtu $ 129 , 500 . 00
+201839 hpl / [NUMBER REDACTED] , 000 mmbtu $ 51 , 800 . 00
+202672 lone / [NUMBER REDACTED] , 417 mmbtu $ 58 , 274 . 16
+280083 hpl / [NUMBER REDACTED] , 292 mmbtu $ 1 , 518 , 225 . 09
+total 1 , 395 , 689 mmbtu $ 3 , 710 , 497 . 72
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+mission : proactively identify and resolve intercompany volume issues
+upstream .
+first goal : tying intercompany volumes on the monthly accruals .
+second goal : tying intercompany volumes on actuals .
+third goal : minimizing analyse time saving $ $ $ $ .
+thanks
+gregg lenart
+texas gas settlements
+3 - 6921",0,Enron_curated_label0,1255,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,27f8dc0622dd3f308789a66bda27de132afc338c50519d32826306ae41e67514,proxy-7f0c2f242fa37b90,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-00bb388e1e4e0b43,public_holdout,public_source_labeled,"Subject: re : deal 156071 feb 00
+daren ,
+there are only two deals on pgev pipeline : deal # 156071 - valid 02 / 01 / 00 -
+02 / 29 / 00 , and deal # 208083 - valid for 02 / 01 / 00 - 02 / 06 / 00 . should there be
+another deal for days 7 - 29 ? ? thanks
+thu
+daren j farmer
+03 / 23 / 2000 11 : 19 am
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : deal 156071 feb 00
+the actuals should be allocated to the new ticket which has been nom ' d ,
+tracked . and balanced .
+d
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : deal 156071 feb 00
+daren ,
+this is one of the deals which you told me to zero out . unfortunately , i do
+not allocate pgev . also , sherlyn has actualized pgev and she has the
+support from the pipeline for the 1746918 volume . please let me know if i
+had missed something in our conversation . thanks
+thu",0,Enron_curated_label0,1331,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,406451187ba3cef46d9af7e9b4fab8bb56f919666ea117f1f7848d8cc4687207,proxy-3ff616805e8de3d4,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-00c204406631645b,public_holdout,public_source_labeled,"Subject: revision # 1 - enron / hpl actuals for august 3 , 2000
+the issue on this day has been resolved .
+ami
+- - - - - - - - - - - - - - - - - - - - - - forwarded by ami chokshi / corp / enron on 08 / 09 / 2000
+05 : 49 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+"" melissa jones "" on 08 / 09 / 2000 03 : 52 : 29 pm
+[HEADER REMOVED]
+[EMAIL REDACTED] , [EMAIL REDACTED] , [EMAIL REDACTED] ,
+[EMAIL REDACTED] , [EMAIL REDACTED] , [EMAIL REDACTED]
+[HEADER REMOVED]
+subject : revision # 1 - enron / hpl actuals for august 3 , 2000
+teco tap 88 . 542 / hpl iferc ; 20 . 000 / enron",0,Enron_curated_label0,274,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,c7290e42803df6144773b0cbd457180f63ce84d808ce52e1d644eed4b2ce84cb,proxy-71fed91692714e2a,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-00cceb06b6294566,public_holdout,public_source_labeled,"Subject: re : more unmetered gas loss
+- - - - - - - - - - - - - - - - - - - - - - forwarded by becky pitre / hou / ect on 06 / 05 / 2000 12 : 09
+pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+troy klussmann 05 / 15 / 2000 11 : 28 am
+[HEADER REMOVED]
+[HEADER REMOVED]
+carter / hou / ect @ ect , alexia o pearce / hou / ect @ ect , jim coffey / hou / ect @ ect
+subject : re : more unmetered gas loss
+steve ,
+two questions :
+1 ) . does the answer below suffice for our needs ?
+and
+2 ) . if yes , and with pat ' s answer in mind , would this be a cost that would
+go to your group first , then to ed as o & m , or would it go directly to ed ?
+i am not sure who has the ability to control these cost more directly , you or
+ed ?
+thanks ,
+troy
+- - - - - - - - - - - - - - - - - - - - - - forwarded by troy klussmann / hou / ect on 05 / 15 / 2000
+10 : 42 am - - - - - - - - - - - - - - - - - - - - - - - - - - -
+pat flavin @ enron
+05 / 15 / 2000 09 : 46 am
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : more unmetered gas loss
+becky ,
+in reviewing the spread the minimal volumes being reported are associated
+with the gas that supplies instrumentation on the pipeline , i . e . pressure and
+flow controllers , actuators , valve positioners , gas quality sampling and
+monitoring equipment , etc .
+becky pitre @ ect
+05 / 15 / 2000 08 : 41 am
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : more unmetered gas loss
+pat , troy klussman was wanting to know when you would have something on the
+gas loss request below . thanks . becky
+- - - - - - - - - - - - - - - - - - - - - - forwarded by becky pitre / hou / ect on 05 / 15 / 2000 08 : 39
+am - - - - - - - - - - - - - - - - - - - - - - - - - - -
+becky pitre
+05 / 10 / 2000 09 : 14 am
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : more unmetered gas loss
+pat , attached is a file for unmetered gas loss for february 2000 . you have
+already answered my questions regarding meters 0980805 , 0980877 and 0980803 .
+after meeting with steve schneider it was decided to take a closer look at
+gas loss . steve would like explanations for all gas loss in feb . 2000 . the
+attached file should help you . all volumes in blue need an explanation . let
+me know if there is anything you need from me or if there is anything i can
+do . thank you . becky",0,Enron_curated_label0,2310,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,d1f2a5ca2afede798318e50b1cfe69860944083b965619acd17dc0c6a9f34843,proxy-f87edb1755901be9,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-00e4c8e5b693bc11,public_holdout,public_source_labeled,"Subject: training for sabrae
+i would like to set up half day training sessions for sabrae zajac starting
+next week .
+i would like her to spend time with volume management , transportation , gas
+control , and
+trading support on her first week . please let me know if you or your group
+is available for this and the best time / day .
+this starts next week , monday april 10 th . thanks , pat 35578",0,Enron_curated_label0,2167,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,9d00873cebe5b02a8a88b7729ea92ce269b8bc7a7ccf98655d6d6e82bff94ece,proxy-482fe5afe78337af,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-00ef44e061c43293,public_holdout,public_source_labeled,"Subject: Account [EMAIL REDACTED] Email Quata Limit
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Mail Quota: (98% Full) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Attention: jose 
+ 
+ Your email quota has reached 98% and will soon exceed its limit. 
+ 
+ Follow the URL below to upgrade your quota to 25GB for free to avoid loss of email data. 
+ 
+
+ 
+ 
+ hxxps://harminderdulowal.com/wp-includes/css/Ford_enc/locale/hhhh.php?email=[EMAIL REDACTED] www[.]microsoft.com/monkey.org/[EMAIL REDACTED]/Quoter? 
+ 
+ 
+ 
+ 
+ 
+ Source: monkey.org Email Administrator",1,Nazario_2021,58,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,926b7bdde73287e29629e3288637d96e613ae231eed8743666a9fe980d1fcfd5,proxy-7206ff6740f8595a,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-0128ce374e991b78,public_holdout,public_source_labeled,"Subject: february , meter 9822 sanchez worthen central pt .
+hi guys , trying to clean up feb outstanding issues . looks like we should
+have a deal with sanchez at the above referenced meter . currently , strangers
+gas is getting the flow .
+could you let me know if this is valid or not ? settlements needs to know
+asap . seems an invoice for the gas has been received .
+thanks ! !
+charlotte hawkins",0,Enron_curated_label0,1334,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,8b4c90e529d10a956e4c5a07a23b6e347ac348553a8f2d713c31274f72796d3f,proxy-b2bdcbbb3dcace67,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-013be0de34ba7220,public_holdout,public_source_labeled,"Subject: wellheads
+daren , cody has a new well coming on friday behind the 985333 . right now
+we don ' t have any nominations at that meter so i ' ll get with vance on that .
+the increases according to the fax is going from 230 @ day to 1700 on friday
+and 1700 to 3200 on sat . prize energy would like to make some changes ,
+meter
+4028 from 1270 to 820 has been flowing from 600 to 800 this
+month
+4965 from 112 to 45 has been flowing mid 80 ' s this month
+from 97 to 104",0,Enron_curated_label0,807,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,1787fec45fc1950541d1c0fa2122fbf3417468450f890c6f41f6adc226d9936f,proxy-6000b7949d1a731c,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-014e4ec6c0b46f53,public_holdout,public_source_labeled,"Subject: nom change - 7 / 11 / 2000
+please increase deliveries to eastrans from hpl to 70 , 000 mmbtu / d eff
+7 / 11 / 2000 .
+redeliveries will occur as follows :
+7 , 800 from fcv
+25 , 000 into pg & e
+25 , 000 into hpl ' s cartwheel agreement at carthage
+12 , 200 at mobil beaumont .
+detm will have 9 . 000 additional to sell .",0,Enron_curated_label0,1406,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,124f47ee081c21b47f2559a46b97bb8ba6186c8a21a7e998e1014e5d8ef1c248,proxy-ee17cabe961a506e,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-0161db7e699ff8dd,public_holdout,public_source_labeled,"Subject: meter 1558
+daren - meter 1558 has no nom for march . it has a little over flow on 3 / 1 .
+could you please extend the deal ? the deal is 604056 .
+thanks .
+aimee",0,Enron_curated_label0,2089,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,05cea486a830222da1231d68a11156a68f81fc0a128c416b46555182c2c8a202,proxy-fb92275da4af9c53,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-016b0c397caba9a7,public_holdout,public_source_labeled,"Subject: october prelim production estimate
+daren ,
+fyi .
+bob
+- - - - - - - - - - - - - - - - - - - - - - forwarded by robert cotten / hou / ect on 09 / 20 / 2000 04 : 45
+pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+vance l taylor
+09 / 20 / 2000 04 : 44 pm
+[HEADER REMOVED]
+[HEADER REMOVED]
+hesse / hou / ect @ ect , trisha hughes / hou / ect @ ect , melissa graves / hou / ect @ ect
+subject : october prelim production estimate
+bob ,
+please see the attached file estimating wellhead production for the month of
+october . please be advised that this is a preliminary estimate as to this
+date , we have received only a few noms for october and there may be revisions
+from the traders . i will update you with any revisions as they occur .
+thanks ,
+vlt
+x 3 - 6353",0,Enron_curated_label0,710,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,548638874ff2691e006f9e1902dc2876befa40c4ffa58a8bde41e956478bae49,proxy-3c753b42bb86844f,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-01720fe1b659f988,public_holdout,public_source_labeled,"Subject: re : enron / hpl actuals for august 29 , 2000
+with regards to the 29 th , gary ( tufco ) spoke with lee ( hpl ) requesting the
+tap volume to decrease at 2 am . mike ( valero ) was unable to accomodate the
+request until 2 : 30 am . lee confirmed with gary , and the volumes decreased from
+140 to 0 at 2 : 30 am . please let me know how you ' d like to proceed .
+i am still working on lonestar volumes for sept , but will let you know as
+soon as possible .
+regards ,
+ami
+- - - - - - - - - - - - - - - - - - - - - - forwarded by ami chokshi / corp / enron on 08 / 30 / 2000
+12 : 38 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+enron north america corp .
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : enron / hpl actuals for august 29 , 2000
+hey charlie ,
+for day 29 , i show a total volume of [NUMBER REDACTED]
+140 . 0 from 9 a through la
+70 . 0 for 2 a ( 1 hour only )
+0 . 0 from 3 a through 8 a
+also , for the total volume through day 28 , i show :
+hplr 2015 . 0
+enron [NUMBER REDACTED]
+gd [NUMBER REDACTED]
+please advise .
+ami
+"" melissa jones "" on 08 / 30 / 2000 10 : 10 : 27 am
+[HEADER REMOVED]
+[EMAIL REDACTED] , [EMAIL REDACTED] , [EMAIL REDACTED] ,
+[EMAIL REDACTED] , [EMAIL REDACTED] , [EMAIL REDACTED]
+[HEADER REMOVED]
+subject : enron / hpl actuals for august 29 , 2000
+teco tap 20 . 000 / enron ; 79 . 167 / hpl gas daily
+ls hpl lsk ic 20 . 000 / enron",0,Enron_curated_label0,239,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,5c289dabfdd798a87c477f40a1286ff2097ac6a32b9801438d61c0d0f735e0e2,proxy-fb91a23618d13de2,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-01a203f0cb151f37,public_holdout,public_source_labeled,"Subject: per nelson ferries ( dealmaker ) : we do pay spinnaker i - . 08 . o ' neal , could you
+please change the base purchase deals to reflect that price . i changed the
+transport tickets to show that we pay nothing .
+thanks ,
+ami",0,Enron_curated_label0,1214,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,56324aaa75688b04d24e185d6e8e9d89c1c703b974732bb7fe060f0d0242b2d4,proxy-d7b980a8535d8455,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-01d18e7f7f6eb489,public_holdout,public_source_labeled,"Subject: 987012
+daren , i just talked to mary and she said that they developed the meter
+987341 for the meters that you had nominated under the 987012 . under
+aggregate 7012 is 4045 ; 6026 ; 6114 ; 6427 ; 6848 ; 9755 ; these should all be
+under the 987341 . do we need to renominate these meters or do i just move
+them in pops . let me know daren i aim to please ( i think that ' s a southern
+term ! ! )",0,Enron_curated_label0,1167,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,0c0d626971ea3693953a0136196217d076ce6b79f44afb4cd06f3ce7ba8fa152,proxy-343e7f3d8fb9dfd7,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-01e02ac46336ec2f,public_holdout,public_source_labeled,"Subject: dear owner
+as of the 4 th april 2001 we will be changing our bank from lloyds tsb to
+citibank .
+sunsail worldwide sailing limited
+citibank . n . a
+the strand
+london
+if you have any problems receiving your monthly or quarterly payments , please
+do not hesitate to contact me .
+with kind regards
+jo hillier - smith
+owner care manager
+sunsail worldwide sailing ltd
+tel : + [NUMBER REDACTED]
+email : [EMAIL REDACTED]
+this e - mail and any attachment is intended for the named addressee ( s )
+only , or a person authorised to receive it on their behalf . the content
+should be treated as confidential and the recipient may not disclose this
+message or any attachment to anyone else without authorisation . unauthorised
+use , copying or disclosure may be unlawful . if this transmission is received
+in error please notify the sender immediately and delete this message from
+your e - mail system . any view expressed by the sender of this message or any
+attachment may be personal and may not represent the view held by the company .
+sunsail limited ( company number 1239190 ) or sunsail worldwide sailing
+limited ( company number 1658245 ) ? both with registered offices at the port
+house , port solent , portsmouth , hampshire , po 6 4 th , england",0,Enron_curated_label0,1467,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,9065ce21e36c79a26fdb44ca08d84e50e9141b10cd230d5cd5ace28b58c7061f,proxy-9be75cf49c9ee249,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-0215095a97f77a4d,public_holdout,public_source_labeled,"Subject: re : meter # : 1266 ; august 2000 / allocation exception
+conoco has nominated 5 . 0 / d at this meter . conoco transport can be allocated
+the entire meter flow for the days in which the meter flow
+exceed 5 . 0 mm because they are the only party doing business at the meter .
+hpl may also be able to extract a sell for this overage which is why i
+wanted you to be aware of the daily activity thus far .
+- - - - - - - - - - - - - - - - - - - - - - forwarded by robert e lloyd / hou / ect on 08 / 21 / 2000
+01 : 57 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+farmer / hou / ect @ ect , gary a hanks / hou / ect @ ect , pat clynes / corp / enron @ enron
+subject : re : meter # : 1266 ; august 2000 / allocation exception
+why are these volumes flowing ?
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+farmer / hou / ect @ ect , gary a hanks / hou / ect @ ect , pat clynes / corp / enron @ enron
+subject : re : meter # : 1266 ; august 2000 / allocation exception
+should i roll this deal to cover august 2000 activity ?
+volumes todate are as follows : 82 mm 8 / 16
+85 mm 8 / 17
+65 mm 8 / 18
+57 mm 8 / 19
+60 mm 8 / 20
+sitara ticket # : 363514
+these small meter flows are causing allocation exceptions for august .
+- - - - - - - - - - - - - - - - - - - - - - forwarded by robert e lloyd / hou / ect on 08 / 21 / 2000
+01 : 27 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : meter # : 1266 ; july 2000 activity / allocation exception
+fyi
+- - - - - - - - - - - - - - - - - - - - - - forwarded by robert e lloyd / hou / ect on 08 / 11 / 2000
+03 : 16 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : meter # : 1266 ; july 2000 activity / allocation exception
+the volumes are as follows : july lst 414 mmbtu
+july 31 12 mmbtu
+total : 426 mmbtu ' s
+also , the sitara deal # is : 363514
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : meter # : 1266 ; july 2000 activity / allocation exception
+please set up a ticket priced at gas daily houston ship channel midpoint
+minus $ 0 . 03
+also , can you let me know the exact volumes in question on july 1 and july
+31 ? dorcheus wants to know . me too .
+thanks
+lee
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : meter # : 1266 ; july 2000 activity / allocation exception
+just a reminder that "" allocation close "" is monday , august 14 th .
+a sitara ticket is needed to set up an acctg . arrangement which will
+eliminate the allocation exception for meter # 981266
+{ victoria station # 2 / brandywine } .
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : meter # : 1266 ; july 2000 activity / allocation exception
+i ' ll get you a price tomorrow when i meet with him . . .
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+wynne / hou / ect @ ect , howard b camp / hou / ect @ ect
+subject : meter # : 1266 ; july 2000 activity / allocation exception
+i spoke with bob dorcheus , brandywine about this issue and he suggest you
+and he get together and agree on a
+price because the gas flowed into the plant .
+this gas flowed without a nomination .
+- - - - - - - - - - - - - - - - - - - - - - forwarded by robert e lloyd / hou / ect on 08 / 09 / 2000
+12 : 47 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+enron north america corp .
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+wynne / hou / ect @ ect , howard b camp / hou / ect @ ect
+subject : meter # : 1266 ; july 2000 activity / allocation exception
+the volumes on meter # 1266 for 7 / 1 / 00 and 7 / 31 / 00 are valid gas flow . 7 / 1 / 00
+volumes are carry over from june activity ( meter was shut in a little after
+9 : 00 am on 7 / 1 / 00 ) . 7 / 31 / 00 volumes were caused by the plant bringing on
+the meter before 9 : 00 am on 8 / 1 / 00 .
+if you have any questions please call . 36449 .
+thanks
+gary h
+- - - - - - - - - - - - - - - - - - - - - - forwarded by gary a hanks / hou / ect on 08 / 09 / 2000 11 : 18
+am - - - - - - - - - - - - - - - - - - - - - - - - - - -
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+camp / hou / ect @ ect
+subject : meter # : 1266 ; july 2000 activity / allocation exception
+please verify the volume on meter # : 1266 for july lst & 31 st are valid gas
+flow .
+brandywine did not nominate any activity at this meter for july 2000 .",0,Enron_curated_label0,2007,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,fa0de19ade92284269c2f7271dea48383ccabbc01504d1ee8a12173c78813bef,proxy-1f8ec58921de5400,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-022510a2e3bb88f0,public_holdout,public_source_labeled,"Subject: mitchell gas services 2 / 00
+- - - - - - - - - - - - - - - - - - - - - - forwarded by julie meyers / hou / ect on 03 / 20 / 2000 02 : 26
+pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+enron north america corp .
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : mitchell gas services 2 / 00
+we have a price difference with mitchell gas services for 2 / 00 production ,
+deal 156658 . we have hsc - 0 . 05 and mitchell shows hsc - 0 . 04 . can you tell
+me what the correct price is ? i need this asap .
+megan",0,Enron_curated_label0,1307,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,3e1ef76677c72bdb80e6cb5bad69638e5c97d04c9c8f7abdedc27bff82f4ddce,proxy-e5c7b02e42d02ffc,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-023bce0142d0f5f1,public_holdout,public_source_labeled,"Subject: gisb contracts for intrastate and interstate gas
+at the request of lynn handlin , please find attached a copy of the following :
+gisb contract form
+special provisions for intrastate gas
+special provision for interstate gas
+please review , and if interested in putting these contracts in place , forward to
+me all required information on the first page of the gisb contract form . i will
+then have the contracts prepared and forwarded to you for execution .
+please keep in mind that txu fuel company is an intrastate pipeline and can
+purchase interstate gas only under certain limited conditions . these conditions
+are covered under item number 8 in the special provisions . thanks .
+keith ford
+txu fuel company
+contract administration supervisor
+( see attached file : gisb form - final . doc ) ( see attached file : gisb spec prov -
+intra - final . doc ) ( see attached file : gisb spec prov - inter - final . doc )
+- gisb form - final . doc
+- gisb spec prov - intra - final . doc
+- gisb spec prov - inter - final . doc",0,Enron_curated_label0,1941,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,a6fceeef84ce583ddd3697fccf92e152ef7b60b9b69c4d480bdce8b7c099f30d,proxy-712e32c1665991bf,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-030baa84c6547ccd,public_holdout,public_source_labeled,"Subject: performance review - mid - year
+for those of you who have been trying to access the pep system , this morning
+or today , stop trying . there are still problems with the system and it is
+unlikely that you will be bale to get in or submit your reviewers
+successfully .
+instead , please submit your list of reviewers to brenda via e - mail . she will
+make any changes necessary and forward them on to the pep helpdesk . they
+will then be responsible for entering your reviewers manually .
+if you have any questions , please call .
+thanx !
+yvette
+x 3 . 5953
+- - - - - - - - - - - - - - - - - - - - - - forwarded by yvette g connevey / corp / enron on
+05 / 18 / 2000 02 : 27 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+[HEADER REMOVED]
+[HEADER REMOVED]
+baumbach / hou / ect @ ect , bryan hull / hou / ect @ ect , o ' neal d winfree / hou / ect @ ect ,
+yvette g connevey / corp / enron @ enron , lisa csikos / hou / ect @ ect , daren j
+farmer / hou / ect @ ect , mary m smith / hou / ect @ ect , rita wynne / hou / ect @ ect , steve
+venturatos / hou / ect @ ect , pat clynes / corp / enron @ enron , michael eiben / hou / ect @ ect
+[HEADER REMOVED]
+subject : performance review - mid - year
+it ' s that time of the year again - just earlier this year than last year ! ! !
+please log into the pep system , when it becomes available , and select at
+least five feedback reviewers . the feedback is intended to reflect
+interraction throughout the organization . for leads and managers and
+directors , please make sure you include at least one direct report . the
+reviewers you select should be employees whom you have worked with frequently
+since 1 / 1 / 00 and whom can provide constructive feedback as to your
+performance . nothing prevents you from selecting more than 5 reviewers . i
+will review them , and if i feel there are others whom should be added , i will
+do so . assuming the system becomes available soon , please complete your
+selection process by cob , tuesday , 5 / 16 / 00 . i want to approve these asap , so
+we can get our request out early . turn around is critical .
+the next thing i will need is a listing of your accomplishments for 2000 . i
+would like these by e - mail by monday , june 5 , 10 : 00 am . once again , the
+timeline is critical to the process , and is not negotiable .
+although we have reorganized the risk group effective 5 / 1 / 00 , i will still
+perform the performance reviews . mike , steve will be responsible for your
+review .
+let me know if you hav any questions or concerns . thanks for supporting the
+process and the timeline !",0,Enron_curated_label0,2258,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,f5cb8ba0ab40610e0a6c12e0d7922e64689979e0f80e8583d528066c0a68d73b,proxy-12edb9aec0054196,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-032598a62c65ea7b,public_holdout,public_source_labeled,"Subject: southern union for may
+2100 83 st
+2100 port arthur
+these are my estimates . the volumes for april at t - ville and colorado rs are
+either spot or april only . janet does not know about next month yet .
+so , 5000 total is a safe assumption .",0,Enron_curated_label0,2208,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,1fcbe90b9b0347e8b4b7d8f4c4fafc1bf90b03df104967e79b711477ea14ebb0,proxy-23b78e9cb6e0736f,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-03335738b60dc6f2,public_holdout,public_source_labeled,"Subject: re : coastal ctr # 96008903 meter 0984179 sit # 135714
+having discussed the matter with brian riley , hpl has no intention of
+contacting coastal to negotiate any type of deal affecting the gas received
+in september at at meter 4179 . it was brian ' s opinion that the gas should be
+considered strangers gas since hpl has no contract or price . it is
+suggested that nick moshou contact his counterpart at coastal , relaying this
+information and suggesting coastal ' s trader contract brian riley .
+donald
+mary poorman @ enron
+10 / 27 / 2000 10 : 05 am
+[HEADER REMOVED]
+[HEADER REMOVED]
+clynes / corp / enron @ enron , daren j farmer / hou / ect @ ect , donald p
+reinhardt / hou / ect @ ect
+subject : re : coastal ctr # 96008903 meter 0984179 sit # 135714
+nick ,
+i understand that they terminated their agreement . however , i don ' t feel
+that we can confiscate their production . we need to either pay them for the
+gas , or cut a deal to redeliver a like volume to them at another meter .
+given the decrease in prices from september to current and prompt month , i
+would guess that they want to be paid . we won ' t know that until we call
+them . i don ' t know where the responsibility lies as far as calling to
+explain to them that we took delivery of their gas until the meter was
+shut - in .
+please let me know if i can do anything further to assist .
+mary",0,Enron_curated_label0,668,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,00101f9a96acd4fcc0b912a3207b9f4c5ee8d8cbb777eac1bb7c0546153af696,proxy-b8c3b2212964a1e8,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-033bc78cf6fd978e,public_holdout,public_source_labeled,"Subject: bosses day
+hey kids , why don ' t we pool our resources and get "" el jefe "" something nice ? not like last year . . . i won ' t mention names ( donna ) . . . . when some individuals within the team didn ' t want to include the rest of us in their "" reindeer games "" for bosses day . any suggestions ? round of golf , gift certificate ? ? ? i nominate suzanne to collect the money . any objections ?
+thanks",0,Enron_curated_label0,973,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,b55872c933fe0025fd13fb825faf6c3d9a75edc783aeef852941ae770b62128d,proxy-381676bf8991e562,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-038bcf248fe79029,public_holdout,public_source_labeled,"Subject: rfp dated june 25 , 2001
+return receipt
+your rfp dated june 25 , 2001
+document :
+was received dick boerner / lsg / enserch / us
+by :
+at : 04 : 15 : 48 pm today",0,Enron_curated_label0,1918,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,5b6a256cd6399b2586513ea17240064941e51c03cd53f184ae2b9ea35795979a,proxy-ffea55875827b86b,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-03b22ff62ec082f1,public_holdout,public_source_labeled,"Subject: eastrans nomination for 6 / 01 / 01
+first of the month nomination for june 2001 :
+deliveries into eastrans from hpl will be 20 , 000 mmbtu / dy .
+the redeliveries will be 17 , 000 mmbtu / dy from fuels cotton valley and 3 , 000
+mmbtu / dy into the cartwheel .",0,Enron_curated_label0,1462,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,8c4e29945d35e0d820a25348ca7d92c8cdf695f1d2dd7c2b81e2196b5f93f638,proxy-0faf8a7c648f312e,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-042edc1197dcbd6b,public_holdout,public_source_labeled,"Subject: important information about security & clickathome
+dear clickathome participant ,
+clickathome is interested in making sure you have the latest security tools available to you . as part of the clickathome program , you may download and update norton anti - virus and blackice defender software from the clickathome portal .
+norton antivirus software repairs computer virus infections automatically . it scans and cleans your hard drive , diskettes and both incoming and outgoing email .
+blackice defender is an industrial - strength anti - hacker system that protects your pc by scanning your dsl , cable modem , or dial - up internet connection looking for hacker activity . when it detects an attempted intrusion , it automatically blocks traffic from that source , keeping intruders from accessing your system .
+by installing and updating both norton antivirus and blackice defender , your clickathome pc will have the latest security offered by these two products .
+instructions for accessing the portal and downloading the software are provided below .
+if you have any questions or wish to provide feedback , please email [EMAIL REDACTED] you for your participation in clickathome .
+the clickathome team !
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+to download the software :
+1 ) visit the clickathome portal at www . clickathome . net from your clickathome pc .
+2 ) logon to the portal with your personally created portal user id and password , or create a new account if you have not created a user id and password by selecting "" create a new account "" at the top left corner . the portal user ids and passwords are created by you . the enron help desk is not able to assist with portal support , but if you need any assistance , please send an email to "" [EMAIL REDACTED] "" .
+3 ) once you have logged on , select "" tools "" from the top menu bar .
+4 ) under the "" secure download "" heading , click on "" blackice "" or "" norton "" and log on to the download page using your sap id and date of birth .
+5 ) follow the directions provided on screen .",0,Enron_curated_label0,1839,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,7eac9bb234e0a49ebe4ca39d584e58c95575e2f8c24a68b703c728856b81e751,proxy-5ddb15aa8b575a7f,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-042f1b960eed7de4,public_holdout,public_source_labeled,"Subject: global octanes
+daren , sitara has two different prices for may 31 , 2001 causing a problem .
+according to lee papayoti , the price for the swing volumes should
+behsc _ flw + 1 high . gdp . d . a . however it is priced at hsc . gdp . d . a with the 31 st
+being priced at both . this is causing settlements to be overstated by
+419 mmbtu and $ 1 , 432 . 66 . any help you could give would be greatly
+appreciated . my phone # is [NUMBER REDACTED] .
+- - - - - forwarded by jack t peebles / aepin on 06 / 25 / 01 02 : 47 pm - - - - -
+lee l
+papayoti to : jack t peebles / aepin @ aepin
+[HEADER REMOVED]
+06 / 25 / 01 subject : global octanes
+01 : 13 pm
+jack
+i tried to get into the sitara ticket # 373590 to correct the swing pricing
+. . . . but i am not allowed to access it beacuse it is a deal from when we
+were at enron and i can ' t access those deals . . . .
+please ask joanie or somebody as to what to try next , as i am at a loss ! !
+lee",0,Enron_curated_label0,2215,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,53961a86f934f99043e49028263447ece8e3e104478dc90db9cac616372f89c8,proxy-f09adde90b229673,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-0430e81539119de4,public_holdout,public_source_labeled,"Subject: Security Upgrade required for your mailbox [EMAIL REDACTED]
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Dear jose , 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ We have a new version for your mailbox. You need to validate your account in order to switch to the new version. Incoming messages will be placed on hold if your do not validate your mailbox immediately. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxps://globalmfg.ga/webm_update/?email=[EMAIL REDACTED] VALIDATE NOW 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ NOTE: Admin will always keep you notified on recent webmail update for better optimized usage. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ©2021 monkey.org Administrator Service. All Rights Reserved",1,Nazario_2021,47,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,d04d43f07e62ad1a1f43473e0b6a8a217904b7e6494065b1c744fc5170f19cc0,proxy-203712adf0ec667d,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-047696c2a179beda,public_holdout,public_source_labeled,"Subject: lacy ' s eye exam
+hi bubba !
+lacy got her eye exam yesterday . he said that she is very near sighted , but
+the diabetes has not affected her eyes at all . that was a relief . she ' s been
+having headaches , so i was concerned . they probably have been from her blood
+sugars being out of control . she is doing so much better now . i have
+stopped waking her up to check it in the night & the levels are so much
+better . she ' s acting a lot more like her old self now . a lot nicer to me . i
+guess her sugars out of control & all the stress of tiger dolls was what was
+wrong with her . she doesn ' t say the cruel things to me that she used to . i
+knew something had to be wrong with her . i thought surely i had not raised a
+child with such a mean spirit . anyway things are a lot better .
+tell cole that mimi hopes his eye appointment goes as well as lacy ' s . let
+him call to tell me about it . i hope he gets his teary eye "" fixed "" .
+lacy ' s eye doctor talked more about her teeth almost than he did her eyes .
+he couldn ' t believe her teeth are so perfect without braces . and she is so
+tanned , you can see her a mile away with those white teeth shining when she
+smiles . she has a dentist appointment for cleaning at the first part of next
+week . we ' ll talk later about when we are coming to your house . i ' m going to
+longview to a singles retreat sat . in case you call & i ' m not there . will be
+home sat . night . love ya , maw",0,Enron_curated_label0,1815,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,32c47407aeb963d1fe4dc44f2323e6500f99e6579f41352234293fb128638e18,proxy-0e5dd746d147a9e1,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-047a4edbaedb8efe,public_holdout,public_source_labeled,"Subject: noms / actual flow for 2 / 26
+we agree
+- - - - - - - - - - - - - - - - - - - - - - forwarded by melissa jones / texas utilities on
+02 / 27 / 2001
+10 : 33 am - - - - - - - - - - - - - - - - - - - - - - - - - - -
+"" eileen ponton "" on 02 / 27 / 2001 09 : 46 : 26 am
+[HEADER REMOVED]
+jones / texas utilities @ tu , [EMAIL REDACTED] ,
+[EMAIL REDACTED]
+[HEADER REMOVED]
+subject : noms / actual flow for 2 / 26
+date nom flow - mcf flow - mmbtu
+2 / 26 / [NUMBER REDACTED]
+btu = 1 . 027",0,Enron_curated_label0,465,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,b9200d1fd48b2e7e1c96565b3fe448adbe02a6b6bf0436ae2bd27af8f967a3c5,proxy-96ba3a79cbd54fb0,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-04a627f6bd2826bd,public_holdout,public_source_labeled,"Subject: re : [NUMBER REDACTED] ( saxet thompsonville ) receiving under nom
+jackie i talked with daren and we would like to wait for now , it is a little
+early in the month and the well may be just getting revved up . wells tend to
+move around a bit through the month and usually even out at the end but
+thank you for bringing it to my attention and please feel free to inform me
+of any others that you might see . the more eyes the better . thanks jackie .",0,Enron_curated_label0,1134,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,45f79676ee6490cf8a6f14b6e7ebcb81654618dcf304d94f29f97478b73da976,proxy-ebba00e70b3c7692,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-04b440164aedd25e,public_holdout,public_source_labeled,"Subject: re : basin production from ga 213
+bob ,
+as mentioned earlier , houston exploration is also delivering gas to us at
+this meter . the following production is now on - line and a ticket should be
+created and entered into sitara based on the following :
+counterparty meter volumes price period
+houston exploration [NUMBER REDACTED] mmbtu / d 100 % gd less $ 0 . 16 2 / 1 - 2 / 28
+fyi , i will create and submit a committed reserves firm ticket if and when
+the gas buyer terms the deal up . additionally , this is a producer svcs . deal
+and should be tracked in the im wellhead portfolio . . . attached to the
+gathering contract .
+thanks ,
+vlt
+x 3 - 6353
+- - - - - - - - - - - - - - - - - - - - - - forwarded by vance l taylor / hou / ect on 02 / 09 / 2001
+02 : 46 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+enron north america corp .
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : basin production from ga 213
+daren / vance ,
+deal # 586954 has been created and entered in sitara :
+date meter # volume price
+2 / 1 / 01 - 2 / 28 / [NUMBER REDACTED] , 000 100 % gas daily less $ 0 . 16
+bob
+daren j farmer
+01 / 26 / 2001 08 : 25 am
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : basin production from ga 213
+- - - - - - - - - - - - - - - - - - - - - - forwarded by daren j farmer / hou / ect on 01 / 26 / 2001
+08 : 24 am - - - - - - - - - - - - - - - - - - - - - - - - - - -
+vance l taylor
+01 / 25 / 2001 01 : 58 pm
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : basin production from ga 213
+daren ,
+i ' ve just received word from basin to bring production on sometime today or
+tomorrow ( they expect to get up to b / t 10 , 000 - 15 , 000 d ) ; if our facility
+planning engineer determines that we can take the gas , then it will flow for
+all of february and be priced at 100 % gas daily less $ 0 . 16 .
+vlt
+daren j farmer
+01 / 25 / 2001 01 : 47 pm
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : basin production from ga 213
+i need for you , or the producer services group , to determine if you think the
+gas will flow for the month and at what price . i will use your decision for
+our bidweek postion .
+d
+vance l taylor
+01 / 25 / 2001 11 : 53 am
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : basin production from ga 213
+fyi ,
+how would you want to handle for february nomination ?
+vlt
+x 3 - 6353
+- - - - - - - - - - - - - - - - - - - - - - forwarded by vance l taylor / hou / ect on 01 / 25 / 2001
+11 : 55 am - - - - - - - - - - - - - - - - - - - - - - - - - - -
+enron north america corp .
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+flavin / gco / enron @ enron , vance l taylor / hou / ect @ ect , buck
+thomas / gco / enron @ enron
+subject : basin production from ga 213
+i have reviewed the gas composition analysis from spl of the basin production
+from ga 213 . while spl ' s analysis does show a dewpoint of around 20 degrees
+f at 400 psig , it is both my and john handley ' s opinion that the gas from the
+wellbore had stratified by the time that this sample was taken . we expect
+the dewpoint of the flowing gas to be higher . however , this was the best
+sample that could be obtained at the time . we have conferred with steve
+schneider and we are willing to take this gas on a conditional basis over the
+next couple of days . once the 6 "" line has been pigged , the production flows
+stablilized and mitchell ' s conditioning equipment lined out over the next
+couple of days , hms will need to take another sample at the meter run and
+have spl run an extended analysis with a dewpoint curve on an expedited
+basis . should this sample indicate a dewpoint over 45 degrees f , then this
+production will be shut in again until hydrocarbon dewpoint conditioning
+equipment has been installed . in the meantime , hms needs to keep a close
+watch on all southern union city gates on galveston island to monitor for
+liquids fallout .",0,Enron_curated_label0,893,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,3a2dfa69028c7612abc702040005f4ff82bc0c386c70cb6f6471ec22e4317942,proxy-2d20f126615a1d2c,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-05232d97adba1a1c,public_holdout,public_source_labeled,"Subject: re : industrials
+i leave this with you . my take is that the situation is as i suspected and
+pat wants me to pretty much leave them be . i will do that unless i hear a
+different plan from you .
+- - - - - - - - - - - - - - - - - - - - - - forwarded by kenneth seaman / hou / ect on 01 / 05 / 2000
+08 : 13 am - - - - - - - - - - - - - - - - - - - - - - - - - - -
+pat clynes @ enron
+01 / 05 / 2000 08 : 08 am
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : industrials
+ken ,
+i think robert has a good handle on things and can function on his own . with
+that said , we always want different
+checks and balances in place in order to capture the most accurate
+information , so if you see something that is
+a problem please bring it to our attention . thanks , pat
+kenneth seaman @ ect 01 / 05 / 2000 07 : 23 am
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : industrials
+i believe the transition to be complete as we have , at least , been over the
+ground on all the subjects . would you like me to continue offering advise
+and assistance or let robert function entirely on his own ?",0,Enron_curated_label0,1052,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,23de6a31d85a14363af5fead1768905e7a13cb25352c1488a7fd04f4c3b23720,proxy-02915e5ab4117db3,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-059293138bdf1e6d,public_holdout,public_source_labeled,"Subject: re : killing ena to ena deals in sitara
+jay ,
+if a deal is killed it poses a problem for us in unify if there are any paths associated with the deal ; therefore , we request the deals be zeroed out . call me if this is a problem . also , we would appreciate further details on why these deals are being killed .
+in addition , i have copied rita and mark from volume management for their input .
+regards ,
+tammy
+x 35375
+- - - - - original message - - - - -
+[HEADER REMOVED]
+sent : thursday , december 13 , 2001 3 : 39 pm
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : killing ena to ena deals in sitara
+thanks jay !
+tammy / richard :
+you may want to let the schedulers know , although they may already .
+- - - - - original message - - - - -
+[HEADER REMOVED]
+sent : thursday , december 13 , 2001 3 : 38 pm
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : killing ena to ena deals in sitara
+richars / tammy :
+we will be killing about 2000 deals in sitara tonight . whenever a deal is touched in sitara , it will bridge over to unify . these are desk 2 desk deals , and should have minimal impact on you .",0,Enron_curated_label0,971,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,f48c2e1791548aa068c8b208b0dc55563a8777737192e8bb15ad63c53debe24a,proxy-f6e6f21c065aca04,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-05df59b67a7ddede,public_holdout,public_source_labeled,"Subject: pricing needed
+citgo refinery - corpus ship channel
+nov 01 - 10 , 000 / d
+dec 01 - 10 , 000 / d
+and a nov - dec 01
+need el paso / valero numbers
+like to see crosstex numbers from banquette / tejas
+sterling chemical - tx city
+dec 01 - 7 , 000 / d
+el paso / valero
+hpl - preferred delivery to balance internal systems
+tejas
+i spoke with dan burns at el paso yesterday .
+he notionally gave me a $ 0 . 04 rate from exxon clear lake
+or comparable source . seems a bit high .
+hpl quoted us $ 0 . 025 from katy on the marathon refinery
+rfp last week but they wanted $ 0 . 25 for swing transport .
+gary talked to exxon and tejas about sourcing gas into
+crosstex ( was cc transmission ) at banquette . exxon
+apparently sells their equity gas at the tailgate of king ranch
+because of recent changes or elimination of their tejas
+transportation agreement / s .
+lets discuss ,
+mk",0,Enron_curated_label0,1949,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,d08ce9b337de6444dccf4b3dc73721ff1f2f009a679aa468531b630ffe9d028e,proxy-8e79261651c7a9b3,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-05f127bea2e7b98a,public_holdout,public_source_labeled,"Subject: help !
+brian ,
+who do i talk to about getting daren farmer a labor distribution report . he
+needs to see what employees are hitting his rc . i know that we have
+discussed this prior and soem managers are receiving a monthly report but he
+is not . who can help us ? ? ?
+thank you !
+yvette
+x 3 . 5953",0,Enron_curated_label0,1318,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,49810baf94d24c0969468564591265b74e55fc931d352bd28a8e96833b5eb05e,proxy-5dd3e2d97156fe99,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-05f6e0347c9c50ce,public_holdout,public_source_labeled,"Subject: enron actuals
+dec . 21 , 2000
+teco tap 0 . 000 / enron ; 18 . 750 / hpl gas daily
+dec . 22 , 2000
+teco tap 30 . 000 / enron ; 80 . 417 / hpl gas daily
+dec . 23 , 2000
+teco tap 0 . 000 / enron ; 6 . 250 / hpl gas daily
+dec . 24 , 2000
+teco tap 40 . 000 / enron ; [NUMBER REDACTED] / hpl gas daily
+dec . 25 , 2000
+teco tap 40 . 000 / enron ; [NUMBER REDACTED] / hpl gas daily",0,Enron_curated_label0,545,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,66496d3992d0ffd6b8c008c94a6d00332f166604188baad8107ba68423b882f1,proxy-b0c4de61bb206607,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-0609749d76a83ef1,public_holdout,public_source_labeled,"Subject: re : mitchell gas services 2 / 00
+i ' m not sure , but could you ask craig .
+julie
+daren j farmer
+03 / 31 / 2000 12 : 30 pm
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : mitchell gas services 2 / 00
+is this still outstanding ? craig is back in the office now .
+d
+julie meyers
+03 / 20 / 2000 02 : 27 pm
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : mitchell gas services 2 / 00
+- - - - - - - - - - - - - - - - - - - - - - forwarded by julie meyers / hou / ect on 03 / 20 / 2000 02 : 26
+pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+enron north america corp .
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : mitchell gas services 2 / 00
+we have a price difference with mitchell gas services for 2 / 00 production ,
+deal 156658 . we have hsc - 0 . 05 and mitchell shows hsc - 0 . 04 . can you tell
+me what the correct price is ? i need this asap .
+megan",0,Enron_curated_label0,1378,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,7841a3507afde7fe4ceef474150816b71a45472334d174f26c66d2f7c43fe1d2,proxy-7d554965077e160c,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-060a9f2b0113a182,public_holdout,public_source_labeled,"Subject: mobil february , 2000 activity
+do i detect a shot here ? ? ? ? ? ? ( chuckle )
+- - - - - - - - - - - - - - - - - - - - - - forwarded by kenneth seaman / hou / ect on 01 / 31 / 2000
+10 : 58 am - - - - - - - - - - - - - - - - - - - - - - - - - - -
+[HEADER REMOVED]
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : mobil february , 2000 activity
+fyi . . . . only ! i changed a path you created for meter # : 1040 for 90 , 000 / d to
+an incorrect contract { k # : 218 } .",0,Enron_curated_label0,1126,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,1edc88e3b59377076f356f5a0623457bf4e5dae8048f25d1f541670c274a7a08,proxy-ce64f8c202939926,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-060b890311de955e,public_holdout,public_source_labeled,"Subject: ua 4 - meter 1441 for 11 / 97 - falfurrias
+daren - i need your help in resolving this issue . there wasn ' t any deal in
+oss for the above reference meter , nor could i find anything in cpr . the
+contract shows [NUMBER REDACTED] representing a sale in the amount of 9448 .
+thanks , stella",0,Enron_curated_label0,998,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,13c6e95af3a0c3e84e6882dd4f434f92e27e1fb07d502eccaa970407cb46e88a,proxy-4ebc884b85f19d65,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-0660a44e14f90816,public_holdout,public_source_labeled,"Subject: new pan energy exchange deal meeting
+daren ,
+please let me know when you have time to meet with megan and i on this new
+exchange deal .
+prior to settling feb . 2000 production , there are a few issue that we need to
+have clarified on both the sales and supply side ,
+thanks ,
+katherine
+5 - 8643",0,Enron_curated_label0,1343,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,0c28d094f209bfbf1a49a92f5ebbc550a0294075671461cc183609760a4fb46c,proxy-1794a33cf608ce22,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-06a4b16f7e6c3a4a,public_holdout,public_source_labeled,"Subject: re : coastal ctr # 96008903 meter 0984179 sit # 135714
+mjg assigned the meter to coastal eff . march 2000 . after finally executing
+the assignment in mid august , coastal then sent a termination letter eff
+9 / 01 / 2000 .",0,Enron_curated_label0,673,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,8a80831024e140aa914a95f3f5195731f2ce18725699fb667570a7df07deab06,proxy-8a5156ec0bce9d51,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-06e6460d48e2e627,public_holdout,public_source_labeled,"Subject: mobil beaumont
+brian nichols of exxonmobil confirmed that they will accept 30 , 000 / d of
+midcon ' s gas on hpl starting tomorrow .
+they want to leave 10 , 000 / d flowing on midcon .
+i guess this goes on through april 5 ? ?",0,Enron_curated_label0,2085,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,6ecebafe3d947f37999ad96d94e73ca3b503741bf6ba43228f5a437b282a5cfb,proxy-607a33158d856a39,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-074b6dab31c11327,public_holdout,public_source_labeled,"Subject: hpl / eastrans nom - 2 / 8 / 00 ; hpl busby redelivery / sale - 2 / 8 / 00
+this is to nominate 32 , 000 mmbtu / d from hpl into eastrans for 2 / 8 / 00 .
+we will continue to redeliver 25 , 000 mmbtu into pg
+we will redeliver 7 , 000 mmbtu into hpl at the busby comp . station .
+in addition , please continue our daily sale of 1 , 000 mmbtu / d for 2 / 8 / 00 . .",0,Enron_curated_label0,1460,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,443f49136035b7d8beebbd1250f9a7599a076d5f7f2a0df2be4e4b92b1e16032,proxy-051fb355baab4174,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-075048009e52b4c3,public_holdout,public_source_labeled,"Subject: interview schedule for brent trefz
+attached please find the interview packet for the above - referenced person
+including resume . the interview will happen monday july 24 , 2000 . please
+print all three documents for your hard copies . if you have any questions ,
+or conflicts of schedule , please do not hesitate to contact me .",0,Enron_curated_label0,1906,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,115e7330b382437154428f39b541d8ff56de3c9f290ce12faa73c213fd153f9f,proxy-8e85920f236a98c0,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-077569b9a4768e04,public_holdout,public_source_labeled,"Subject: revised again : revised : eastrans nomination change effective
+9 / 23 / 00
+effective 9 / 23 / 00 and continue until further notified the deliveries into
+eastrans is 30000 mmbtu / dy .
+the redeliveries will be 7400 from fuels cotton valley
+22600 to pg & e .
+sorry for the confusion .
+- - - - - - - - - - - - - - - - - - - - - - forwarded by marta k henderson / houston / pefs / pec on
+09 / 22 / 2000 03 : 10 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+marta k henderson
+09 / 22 / 2000 02 : 44 pm
+[HEADER REMOVED]
+chad w . cass / gcs / cec / pec @ pec , michael r .
+cherry / easttexas / pefs / pec @ pec , william e . speckels / gcs / cec / pec @ pec ,
+donna c . spencer / gcs / cec / pec @ pec , julia a . urbanek / gcs / cec / pec @ pec ,
+[EMAIL REDACTED] , [EMAIL REDACTED] , [EMAIL REDACTED] ,
+sharon beemer / ftworth / pefs / pec @ pec , connie
+wester / easttexas / pefs / pec @ pec , ronald c . douglas / gcs / cec / pec @ pec ,
+daniel c rider / houston / pefs / pec @ pec
+[HEADER REMOVED]
+subject : revised : eastrans nomination change effective 9 / 23 / 00
+please disregard the memo below and continue to keep eastrans deliveries at
+zero ( 0 ) until further notified .
+- - - - - - - - - - - - - - - - - - - - - - forwarded by marta k henderson / houston / pefs / pec on
+09 / 22 / 2000 02 : 40 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+marta k henderson
+09 / 22 / 2000 09 : 00 am
+[HEADER REMOVED]
+chad w . cass / gcs / cec / pec @ pec , michael r .
+cherry / easttexas / pefs / pec @ pec , william e . speckels / gcs / cec / pec @ pec ,
+donna c . spencer / gcs / cec / pec @ pec , julia a . urbanek / gcs / cec / pec @ pec ,
+[EMAIL REDACTED] , [EMAIL REDACTED] , [EMAIL REDACTED] ,
+sharon beemer / ftworth / pefs / pec @ pec , connie
+wester / easttexas / pefs / pec @ pec , ronald c . douglas / gcs / cec / pec @ pec ,
+daniel c rider / houston / pefs / pec @ pec
+[HEADER REMOVED]
+subject : eastrans nomination change effective 9 / 23 / 00
+please increase deliveries into eastrans to 30 , 000 mmbtu / dy effective
+9 / 23 / 00 and continue until further notified .
+the redeliveries will be :
+7400 from fuels cotton valley
+22600 to pg & e",0,Enron_curated_label0,1531,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,c0722f19ca1c167416b9b9d340115d7d85d4ca5f04e448d1405b4d644795fe7b,proxy-1e37b2babb392e9c,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-07bc48acca01dedf,public_holdout,public_source_labeled,"Subject: curtains
+hey ! the curtains look good - - i hope they do when they are hung - - lacy & i
+are planning to come next friday the 18 th . when ya ' ll go to the rodeo . i ' m
+taking a personal day from the bus and leaving early . thought i would bring
+them . answer & let me know if that ' s ok . if you need them before then i ' ll
+try to get them mailed . hope sweet cole is feeling better over his cold .
+love you , mom
+get your private , free email at http : / / www . hotmail . com",0,Enron_curated_label0,1611,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,11258c3c795e4f198e162ce7b769824d77eb802398bbbe292aa462ba91fb4e03,proxy-36a9202646b4df83,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-07c19fb383ad1863,public_holdout,public_source_labeled,"Subject: re : [NUMBER REDACTED] overflow
+daren ,
+per victoria versen , you can roll deal 166888 forward for one day to cover
+the 14 decatherms that flowed on the 15 th .
+thanks
+- jackie -
+3 - 9497
+daren j farmer
+02 / 17 / 2000 10 : 44 am
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : re : [NUMBER REDACTED] overflow
+jackie ,
+you need to talk to the east desk to see if they were allocated this extra
+gas on the 14 th and 15 th . if they were , we can change the deal . if not , the
+pipes will need to balance out during the next flow day .
+d
+jackie young
+02 / 17 / 2000 08 : 37 am
+[HEADER REMOVED]
+[HEADER REMOVED]
+subject : [NUMBER REDACTED] overflow
+can you please extend sitara deal ticket 16888 to the 15 th ? 14 dec . flowed
+on this day .
+thanks
+- jackie -",0,Enron_curated_label0,1204,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,282514a942d94676a4c0ed6fa30e6ce69abb8ac161066c39baf7fbde6766034f,proxy-777baa7b3f862dce,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-07d0ed1e5fa3460d,public_holdout,public_source_labeled,"Subject: koch three rivers , # 6722
+aimee -
+gas control has some line work scheduled for 1 / 4 , 5 , 6 that will affect the
+referenced point . dynegy has nom ' d 1800 at this point which i ' m assuming
+they ' ll want baseload for january . the desk also appears to have some gas
+nom ' d out here ( approx 1200 mm ) . rather than cut these volumes , would you
+try to negotiate with koch not to flow this gas during the outage , but to
+make it up as soon as the outage is over ( they may be able to begin flow on
+1 / 6 ) ? please let me know as soon as possible .
+thanks .",0,Enron_curated_label0,1036,https://zenodo.org/api/records/8339691/files/Enron.csv/content,0_nonspam,31bde0789d791e43366cd1a00cbac856ee03125230686ef9c413d8075b09d2bc,proxy-b3db9ace2e34401a,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-0b2fc25841e49702,public_holdout,public_source_labeled,"Subject: [EMAIL REDACTED] have stopped processing incoming emails.
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ We have stopped processing incoming emails 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ You are required to verify your account. 
+ 
+ 
+ 
+ 
+ 
+ You may not use some services if you do not verify your account. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Email Account 
+ 
+ [EMAIL REDACTED] 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Date 
+ 
+ 3/19/2021 7:31:33 p.m. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ We need you to verify your account now, please click 
+ hxxps://joyasesmeralda.com/wp-content/update/index.php?email=[EMAIL REDACTED] here .
+ 
+ hxxps://joyasesmeralda.com/wp-content/update/index.php?email=[EMAIL REDACTED] 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Copyright© hxxps://joyasesmeralda.com/wp-content/update/index.php?email=[EMAIL REDACTED] monkey.org",1,Nazario_2021,23,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,c4c3cd15f3ecd53df6e10bc842cb03e322815dabf51809a7ad9905a1dfdea714,proxy-86ddf3793494addc,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-0ba40403d8d6a867,public_holdout,public_source_labeled,"Subject: Notification - MailBox has (3) Pending emails
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Notification 
+ 
+ 
+ 
+ 
+ 
+ 
+ Hi [EMAIL REDACTED] 
+ 
+ You have 9 unreceived emails on 2/13/2021 4:05:14 a.m., this was caused due to a system delay, Rectify Below: 
+ hxxps://authsrvr401-srvr22-1nfo587.web.app/?emailtoken=[EMAIL REDACTED]&domain=monkey.org 
+View Pending Messages In Mail Saver. Source: monkey.org Support",1,Nazario_2021,14,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,02800008d9bcfd4fcddbc12d1a3f3b2a133798437367e22bfe02fa1684cb1b79,proxy-252a221b26395a1c,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-110215b618f2553f,public_holdout,public_source_labeled,"Subject: Important Monetary Online Document.
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ *|MC:SUBJECT|* 
+ 
+ 
+ 
+ 
+ *|MC_PREVIEW_TEXT|* 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Dear User, 
+ 
+ This is a confidential Monetary Document from Microsoft OneDrive. This message is secured for you and you can only access the document below. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxps://s.id/AeQpq VIEW YOUR DOCUMENT HERE 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Sincerely, 
+Microsoft Online OneDrive.",1,Nazario_2021,31,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,49ed41313fa82b6a723f59bdafa00ab8e73851d479461f1ec233982265a10bc6,proxy-6061ba590322808c,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-15f517d37430de51,public_holdout,public_source_labeled,"Subject: Server Notification 
+
+ 
+ 
+ 
+ Hello jose, 
+ 
+ Email verification is required to continue using this email! 
+ 
+ hxxps://antiquesqueakywrapper.w123456.repl.co/#[EMAIL REDACTED] Confirm Now 
+ 
+ Note: You must verify your account using [EMAIL REDACTED] before you can send mail. 
+ 
+ Sincerely monkey.org Support Team.",1,Nazario_2021,82,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,ed70f226d812f8a91ba78bdc513296a64c7280b207596ca5f7b3b0a811b7cb97,proxy-ed09e7bcbeb23bf8,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-17fb165ba49125ec,public_holdout,public_source_labeled,"Subject: Informed Delivery : we need to pay cost
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Dear jose, 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Please be informed that your package is ready for delivery. 
+ 
+
+ confirm the payment 4,39 CAD on the link below. 
+ 
+
+ Note: verification must be done on the next 02 days. 
+ 
+
+ Click on the link below 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxps://bit.ly/3vRliTi pay & delivery 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ get postcanada for: hxxps://wl.spotify.com/ss/c/YHCG2buDf8JvWpMQNG2As5amV2GC27XBzPSsU7APvx-6DTQobH7TamJ2I1d9JbcKPy3J6ej35OIJ9JAYsjUeiw/3cz/ZXvM7Ac1QViLK1hNJE4j4w/h2/aiTymDOOeAJPe3JKnAjXqCLG0k2y5UtJedKnAuIQmIc iPhone hxxps://wl.spotify.com/ss/c/YHCG2buDf8JvWpMQNG2As5amV2GC27XBzPSsU7APvx-6DTQobH7TamJ2I1d9JbcKPy3J6ej35OIJ9JAYsjUeiw/3cz/ZXvM7Ac1QViLK1hNJE4j4w/h3/sCNEu6G1prWEBxp-HTrynq-tw6r4Z7i3MKF5NkMXYv0 iPad hxxps://wl.spotify.com/ss/c/y-6_mmgicre6Ll8XSk96fBnmPHFiVmVsXsrbTc1Zm5ih8xpjjjXct5u84ohiOCY5ZA-pRaeH-FVU1LxCngZcwykZmUhcSXElkVCtjQ_u0Qg/3cz/ZXvM7Ac1QViLK1hNJE4j4w/h4/iKvGnUwZdhDgB4hMiuK7_5XyWm2sa022Ai8QNjZGbx8 Android hxxps://wl.spotify.com/ss/c/giTx_g04qHY_Ilr_AL-xnm6VtlPyfW5wyZExJ71OU9z9AGOfTUBTPP4CoM2Yhaef/3cz/ZXvM7Ac1QViLK1hNJE4j4w/h5/IMB39c5tsh3m9VQpBASK5O-agn4vp5b5Tms_IxwX8lE Sonstiges 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxps://wl.spotify.com/ss/c/giTx_g04qHY_Ilr_AL-xnm73xnPLXFSNA-VpN8-njZdBvMF1cejiEx5MBw90_1UD1uEU57nnnAZzEyj1Cjkmxg/3cz/ZXvM7Ac1QViLK1hNJE4j4w/h7/RzOJITELSCqd4CaEfftPIeOWVOxvoBs0WfXFevSkonM Nutzungsbedingungen hxxps://wl.spotify.com/ss/c/giTx_g04qHY_Ilr_AL-xnm73xnPLXFSNA-VpN8-njZdO1dmn03Lws5vM1tluV3oyOkuvYo_zk3KHW8HlR7msUQ/3cz/ZXvM7Ac1QViLK1hNJE4j4w/h8/idID12KaD88lPTjjAGtKW7vdqumHSps9-8Td7grDlwI Datenschutzrichtlinie hxxps://wl.spotify.com/ss/c/giTx_g04qHY_Ilr_AL-xnqoSNgGIkCHz6APQS2LTpoBZNcIY7hi_fB29aXxnYN7h/3cz/ZXvM7Ac1QViLK1hNJE4j4w/h9/z371zgMeuRpvi1cP6VJOO071KhjWiW1FgX229vvDbps Kontakt 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 600 Ontario St, St. Catharines, ON L2N 7H0, Canada",1,Nazario_2021,46,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,e2e457e1c24caf454c173a147ff439990cf46ac3c62ffccdf07d8dc63dcfdff7,proxy-22079039ca04ee5c,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-1d8b3b95768ffabf,public_holdout,public_source_labeled,"Subject: Account Update Notice
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Dear Customer, We recently updated our online banking security for our customers safety as always. Kindly complete your account update process on our webpage link below hxxps://blog.premiershop.com.br/arquivos/videos/new/m.php www[.]tsb.co.uk/acc/update/process 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ©TSB Online Banking Team",1,Nazario_2021,52,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,48a60281724b318eeb44240a0a8fd66c42ef68b8d22962cbf6ed2945a9c2589e,proxy-fcd86360ef9c7a7b,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-1e7f96d9da307e4d,public_holdout,public_source_labeled,"Subject: Your Wells Fargo® monthly statement is available.
+Dear Customer,
+
+Your monthly Wells Fargo® statement is now available. To view it,
+
+Please download the attached file below and fill out all the requested information
+debit card Pin is required to complete the process.
+
+Thanks,
+The Wells Fargo Team",1,Nazario_2021,9,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,22c3e56d2b753c0dd2299e2c8cf862f449d101cbbd8f151727e62dd1fbe1359e,proxy-70abd722225e9f06,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-1fa6fbe42089534d,public_holdout,public_source_labeled,"Subject: [Ticket#[NUMBER REDACTED]] Unreceived mails for [EMAIL REDACTED] Service 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Hi jose 
+ 
+ You have [13] unreceived emails on 9/20/2021 4:16:52 a.m. this was caused by harmful malware, Rectify Below: 
+ 
+ hxxps://reverent-wiles.[NUMBER REDACTED].plesk.page/mail/upgrade/#[EMAIL REDACTED] Release messages to inbox. 
+ 
+ 
+ Ⓒ 2021 Mail Service . All rights reserved",1,Nazario_2021,74,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,05ac36cb1d98407575304b6e49ea5d7a825d9b8cbafa9697789c47aad96aaf4f,proxy-0807b8a8e66ffaad,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-225ab8e2d2aa0ffe,public_holdout,public_source_labeled,"Subject: Password for [EMAIL REDACTED] expires today 28/02/2021 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ monkey.org Mailbox Verification 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Dear jose *** 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Password for your email [EMAIL REDACTED] expires today 
+ 
+ 28/02/2021 at 8:24 AM 
+ 
+ You can change your password or continue using current password. 
+ 
+ 
+ hxxps://qmpindia.com/logo-admine//nnwebmail/webmail.php?email=[EMAIL REDACTED] 
+ 
+Keep Current Password 
+ 
+ 
+ 
+ monkey.org Support Team 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ © 2021 monkey.org 
+ . All rights reserved Web App Support",1,Nazario_2021,16,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,51f1accfaa1950d8e47249cd76a08fd9c597aded81a87cea297a686dab5daee0,proxy-de33507fb7f8c12d,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-24ebbd2d5e571380,public_holdout,public_source_labeled,"Subject: Review Invoice
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+monkey.org
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Please review and sign the document. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxps://may1110genstanbk.web.app/#[EMAIL REDACTED] REVIEW
+INVOICE 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Dear
+jose, 
+ 
+Please sign in to view your invoice 
+This is an automatically created notice sent to [EMAIL REDACTED]
+letter holds a secure link to monkey.org Email Server. Do not show this email with other people. 
+ 
+ 
+ This
+message was sent to you by monkey.org Electronic Signature Service.",1,Nazario_2021,83,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,86b5b0d2d88ffaa7c9139338c51202071f5e77d2e51adbcd49992be4021551ef,proxy-e724c662b18de3a4,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-26cea85bee034650,public_holdout,public_source_labeled,"Subject: :You Have A New Message From E*TRADE!
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Authorize Log In Attempt 
+ 
+ You have a new Mail from E*TRADE online 
+ security system. 
+ An invalid login attempts into your online and email 
+ Please click on the link to verify your account: 
+ 
+ 
+ 
+ 
+ hxxp://owl.li/AI4D30rCeYh 
+ Authorize Log In 
+ 
+ 
+ 
+ 
+ 
+ Please don't reply directly to this automatically-generated e-mail
+ message. 
+ 
+ 
+ 
+ Sincerely, 
+ 
+ 
+ E*Trade
+ Online Banking Team 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ E*TRADE Online security system. 
+ © 2021 FMR LLC. All rights 
+ reserved.",1,Nazario_2021,27,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,e07bbf06a931dfbdf882a3737ab4db6b375758ff8aaa12db23a6b12a2c2bd05d,proxy-4da68de383df4e86,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-2939b017d37c6a4b,public_holdout,public_source_labeled,"Subject: Multa no pagada - bloque de vehiculos - [ id [NUMBER REDACTED] ]
+
+ 
+ 
+ Multa Pendiente 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Saludos Cordiales 
+ 
+ 
+ 
+ 
+ 
+ Tienes una multa pendiente
+ 
+ 
+ 
+ 
+ 
+ Se ha identificado en nuestro sistema una multa de trafico no pagada dirigida a usted o su vehiculo. Para ver la notificacion Visite: 
+ 
+ hxxp://infracciondeestacionamientos.ukwest.cloudapp.azure.com/ Atencion: Para ver la notificacion, abra en un sistema (Windows). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Copyright DGT 2021. Todos los derechos reservados. 
+ 
+ Version V5.1.0.7 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 04/02/2021 07:55:28",1,Nazario_2021,11,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,2f8bf52f50e76e3274c3d656d013d08d1fc5521b1b4a2ca9f6e3324806f24e57,proxy-5b9ac10028d1bec9,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-33bbc30fb9a78520,public_holdout,public_source_labeled,"Subject: Verify your account [EMAIL REDACTED]
+
+ 
+ 
+ 
+ New Page 3 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ Dear [EMAIL REDACTED] , 
+ 
+ We recently installed new security features for all the 
+ monkey.org 
+ and admin centers. 
+ 
+ 
+ We require our customers to check and update their account information. 
+ 
+ 
+ You will not be able to use your account if this process is not completed. 
+ 
+ 
+ Please update your account information below. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxp://carlajorgecravo.com/view/sl.html?email=[EMAIL REDACTED] Update Information → 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ If no action is taken, 
+ Account will be 
+ automatically deleted after 12/1/2021 10:19:16 a.m. 
+ This Email was sent to "" 
+ [EMAIL REDACTED] "" as a User from "" monkey.org 
+ "" 
+ 
+ 
+ 
+ 
+ 
+ Thanks, 
+ 
+ 
+ monkey.org Mail Admin.",1,Nazario_2021,95,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,66905f9cf2d2154205483e39f2500774674e642f79a7450e862d3f72ca23577e,proxy-2270039b1e0a7b7f,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-379480c4b1d8797b,public_holdout,public_source_labeled,"Subject: FW: Order Signed agreement
+Hello Dear 
+ Our previous Purchase Manager has left our Company due to personal reasons. Am replacing her as the new Purchase Manager, Sorry for my late reply please find attached our new purchase order and revert back to me ASAP. 
+ The attached is too Big it has been uploaded in OneDrive File as below 
+ 
+ hxxps://shunnuidz.com/423e5/439b9/02444/ddb76/d53be/6751/444/?email PO-367001-553mb.pdf 
+ 
+ I uploaded all items in the OneDrive File for your convenience. 
+ 
+ With Regards, 
+ 
+ Kailash Singh Kharayat 
+ TECO Industrial System Pvt. Ltd. Ph: [NUMBER REDACTED] M:[NUMBER REDACTED] 
+ Website: www[.]teco.com.sg 
+ 
+ 
+ Total Solution Provider - Motor, Control & Gear Reducer Our Vision : Energy Conservation | Emissions Reduction | Intelligence | Automation | 節能 | 減排 | 智能 | 自動 OUR CORE VALUES : AMBITION, CUSTOMER-FOCUS, TEAMWORK, INTEGRITY, INNOVATION Confidentiality Note: This e-mail may contain confidential and privileged material for the sole use of the intended recipient. Any review, use, distribution or disclosure by others is strictly prohibited. If you are not the intended recipient (or authorized to receive for the recipient), please contact the sender by reply e-mail and delete all copies of this message. Thank you.",1,Nazario_2021,71,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,c5148c989479ade67f831126208567d1b8c08cbc204511db89a1eef8fdd12b51,proxy-fcff2b92ec5d8ebb,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-3e0f5c76bba8192f,public_holdout,public_source_labeled,"Subject: Your Email [EMAIL REDACTED] will be De-activated.
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ monkey.org M ailbox Verification 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Dear 
+ jose *** 
+ 
+ 
+ 
+ Your incoming messages were placed on pending due to our recent upgrade, Kindly click the below link to validate your email [EMAIL REDACTED] and increase your mailbox quota service to our new web interface. 
+ 
+ 
+ hxxps://nfteacher.io/ibox-update/Gine2/gine2.html#[EMAIL REDACTED] 
+ 
+ Go to link: http/portal/[EMAIL REDACTED]/wp-%inbox/monkey.org/loginempty-mailbox-mail-sln29338.html 
+ We apologize for the inconvenience. Thanks monkey.org Mail Client Support Team 
+ 
+ Kindly Note this is our 2021 policy the link will only work 72 hours after notification . 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ © 2021 monkey.org 
+ . All rights reserved Web App Support",1,Nazario_2021,94,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,e6d7a3af8f6ce29d5c295041543499870e09fceaf291e1213964b4b67a2784e4,proxy-a8792f1775ed11b5,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-402aacc12d30192a,public_holdout,public_source_labeled,"Subject: Dispatch status for your package #LKG03-35352272
+ 
+ 
+ 
+[image] 
+ 
+ 
+Dispatch Confirmation 
+ 
+ ID # LKG03-35352272 
+ 
+Hello [EMAIL REDACTED] , 
+ 
+ 
+Your recent order ( MacBook Pro) with us has been placed successfully! 
+ 
+The estimated delivery date is based on the handling time and the warehouse processing time. In certain cases, the estimated delivery date will vary. 
+ 
+You can check all the details for your order below. Thank you again for ordering from amazon. 
+ 
+Order Helpdesk : ([NUMBER REDACTED] 
+ 
+ 
+Delivery by: 
+ 
+Thursday, June 10 
+ 
+ 
+ 
+Your package was shipped to: 
+ 
+Justin K 
+12321 W Doris Dr, Odessa, 
+ 
+TX 79764, USA 
+ 
+Your item(s) is (are) being sent by Priority Delivery Services. 
+ 
+Order summary 
+ 
+Item Subtotal: 
+ 
+$ 1545.90 
+ 
+Shipping & Handling: 
+ 
+Rs.0.00 
+ 
+Shipment Total: 
+ 
+$1545.90 
+ 
+P.S. If you haven't placed this order, Reach Account Support Immediately on ([NUMBER REDACTED] 
+ 
+We hope to see you again soon! 
+ 
+ 
+This email was sent from a notification-only address that cannot accept incoming email. Please do not reply to this message.",1,Nazario_2021,41,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,d98c1371dde340fce24068ad72ae3d277aa1d6153acb6dd8fcb36ba2ad465e53,proxy-0f2f4a5bd506e898,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-51ceff465017eaa1,public_holdout,public_source_labeled,"Subject: Inactive users [EMAIL REDACTED]
+
+ 
+ 
+ 
+ 
+ 
+ 
+ USER ID: [EMAIL REDACTED] 
+ 
+ 
+ 
+ Inactive users on monkey.org domain portal will be deactivated. 
+ 
+ To continue using your account, Please confirm your Identity and update 
+ 
+ your email settings below. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxps://update365.s3.eu-de.cloud-object-storage.appdomain.cloud/adomain.html#[EMAIL REDACTED] 
+CLICK HERE TO CONFIRM 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ monkey.org IT Support Team 
+ 
+ 2021. All rights reserved",1,Nazario_2021,39,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,32f60eeefd0f85fffa48cbe3d85c9597b8452ca1b1dfcf48062951aa147627ca,proxy-707892e0bfaf677b,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-571e4f11a8f3e038,public_holdout,public_source_labeled,"Subject: DHL Shipment Notification : [NUMBER REDACTED]
+
+ 
+ 
+ 
+ 
+Dear Customer, 
+ 
+ DHL Express informs you that your shipment [NUMBER REDACTED] is still waiting for your instructions . It will be delivered as soon as the costs are paid. 
+Fees to be paid : USD 4.65 $ You have a period of 48 hours to recover your package, otherwise it will be returned to the sender. 
+ 
+Click here to view the status of your order hxxps://7c8af7953f8226704.temporary.link/RF5SE8F6GDSMEFPRGODFC/QD02AEFZG896FMPDFD/BOBMSX02X1/ https.//dhl.com/apps/dhltrack/?[[-Email-]]=[NUMBER REDACTED] 
+ 
+Support Team DHL",1,Nazario_2021,99,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,42907b57eb9c90582e1d4aa0f43f7a5322395aa4d49c856d5712eeeb46919b8b,proxy-9618728e6e786b3e,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-614e25df0d688cfa,public_holdout,public_source_labeled,"Subject: You Have Recieved New Files
+monkey.org File Notification
+Hello jose,
+
+You have new files shared with you on the monkey.org files 
+portal.
+
+ 
+( hxxps://bin-lizt.web.app/adobe/downld/index.html#[EMAIL REDACTED] )
+ View 
+( hxxps://bin-lizt.web.app/adobe/downld/index.html#[EMAIL REDACTED] ) 
+ | Download 
+( hxxps://bin-lizt.web.app/adobe/downld/index.html#[EMAIL REDACTED] )
+
+These files will expire if not accessed by 10th August, 2021.
+
+Thanks
+[EMAIL REDACTED]
+monkey.org File Portal",1,Nazario_2021,61,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,6a24f3f45f9ddff1b53a0a9238928ca5d6ff8786e7aaf876ac52931221a9c782,proxy-2da8a2af9332b0e2,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-61c3534624bcbf31,public_holdout,public_source_labeled,"Subject: Your E-mail [EMAIL REDACTED]
+
+ 
+ 
+ New Page 1 
+ 
+
+ 
+
+ 
+ To, 
+ [EMAIL REDACTED] 
+ 
+ Your incoming 
+ messages are now queued up and pending delivery, 
+ because your address has not been validated by Gsuite and Office365 servers. 
+ 
+ 
+ You are required to validate your address [EMAIL REDACTED] to restore normal 
+ inbox delivery. 
+ 
+ 
+ 
+ 
+ ____________________________________________________ 
+ 
+
+ 
+ 
+ hxxps://storage.cloud.google.com/moonmenermaintain-66j/fcco2index.html#[EMAIL REDACTED] 
+ 
+ Validate [EMAIL REDACTED] Now
+ 
+ 
+ 
+ 
+ 
+ 
+
+ Please 
+ note: 
+ 
+ Login with your eMail [EMAIL REDACTED] Password 
+ to validate, be sure to do so in a Secure Manner. 
+ 
+ Once validated your Email Delivery system would be working 
+ in Less Than 2 Hours. 
+ 
+ Sincerely, 
+ monkey.org ISP Gateway. 
+ 
+ 
+ 
+ ______________________________________________________________________ 
+ 
+ 
+ This is a 
+ mandatory service communication for [EMAIL REDACTED]. | If you no 
+ longer wish to receive this email mailto:[EMAIL REDACTED] Unsubscribe",1,Nazario_2021,24,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,1a0f9e57ab94f641ba909f282b64655f5e35c919e80a5536bc50b49f7dfe2427,proxy-65c316b9d994ff31,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-63dd3305dc418258,public_holdout,public_source_labeled,"Subject: [EMAIL REDACTED] You have Six{6} pending mails
+
+ 
+ 
+ 
+ 
+ 
+ Message is from monkey.org trusted source 
+ 
+ 
+ You have Six{6} pending mails clustered on your cloud due to low mailbox storage capacity. 
+Logon to increase mailbox storage and release pending messages to your inbox following below instruction. 
+ hxxps://silly-swirles-1299db.netlify.app/#[EMAIL REDACTED] 
+MOVE MAILS TO INBOX 
+ hxxps://silly-swirles-1299db.netlify.app/#[EMAIL REDACTED] 
+CLEAN-UP CLOUD 
+ 
+Mails will remain pending till proper action is taken by you. 
+ 
+ 
+Messages older than 10 days will be removed 
+ 
+ 
+ Best Regards, 
+ 
+ 
+monkey.org Mail Admin. 
+ ______________________________ ______________________________ ________ 
+ 
+ This e-mail notification was sent to [EMAIL REDACTED] 
+ 
+ 
+ 
+ 
+ (c)2021 Inc. All rights reserved. Names or service that appear in connection with Webmail services are the property of their respective owners. Webmail monitors incoming and outgoing email communications, including the content of emails and attachments, 
+for purposes of security, legal compliance, training, quality assurance and other purposes.",1,Nazario_2021,55,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,941442bafbd9491fc7bb9b4ee852e8aacb3b0a73a14caccf8c845501d4e19cc6,proxy-ef0b80325b1da215,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-64d057b278bccc17,public_holdout,public_source_labeled,"Subject: We have issues with your shipping address to re-deliver your package please confirm your address and pay the shipping cost 3,00
+Pour voir le message, veuillez utiliser un lecteur de mail compatible HTML
+
+Lien miroir : hxxp://tk.mktla.com/m/ZqbN3j6bcms-fYPdnwN_YOz-6bcqlaUuMbo-KPHcMYkEZJs7Rhwe67vUQAx74wIkBFthg_knsQ9_Agku6NUzeMtoCF0TFjns6pW8ZmpPi9vcBNXYpS_nrt8Ox6Wj5G7_iQyaXIpn_fsBYWbolNp7QLncBnN7P9HpAg
+
+Lien de désinscription : hxxp://tk.mktla.com/u/ZqbN3j6bcms-fYPdnwN_YOz-6bcqlaUuMbo-KPHcMYkEZJs7Rhwe67vUQAx74wIkBFthg_knsQ9_Agku6NUzeMtoCF0TFjns6pW8ZmpPi9vcBNXYpS_nrt8Ox6Wj5G7_iQyaXIpn_fsBYWbolNp7QLncBnN7P9HpAg
+
+Dear Customer,
+ 
+ We have issues with your shipping address to re-deliver your package please confirm your address and pay the shipping cost 3,00 £ 
+ Your package is waiting for re-delivery.
+ 
+ Tracking Number:
+ RY350528093GB
+ 
+ We're sorry to let you know that your package which
+ arrived on 23/07/2021 will be sent back.This may happen
+ when the receiver's address is incorrect.To submit a
+ redelivery request for this package please fill out the form in
+ our website.Check This Now
+ 
+ Please note, that if a redelivery is not scheduled within 48
+ hours, you can't submit a redelivery request again. The
+ shipping and handling fees will not be refunded.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ This is an automated message. Please don't reply.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Royal Mail | Privacy Policy | Website Terms of UseRoyal Mail and the cruciform are registered trade marks of
+ Royal Mail Group Ltd. Royal Mail Group Ltd, registered in
+ England and Wales, number 4138203, registered office: 185 Farringdon Road,London, EC1A
+ 1AA.Royal Mail Group Ltd. 2019 All rights
+ reserved.",1,Nazario_2021,57,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,38095a75ddefeac135d91ebe11011b13f12ff04146a9f8306595ec8f65d1cb1e,proxy-24e5e0a898aacaf0,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-66d46d9c61b75687,public_holdout,public_source_labeled,"Subject: You have received a file via Wetransfer
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxp://dcmomentsphotobooth.com/wp-includes/js/dist/wt/wt.php?email=[EMAIL REDACTED] [EMAIL REDACTED] 
+ You have received some files via WeTransfer 
+ 4 files, total 370 MB will be deleted on 23 February 2021, Tuesday 
+ 
+ Get your files 
+ 
+ 
+ 
+ 
+ To make sure that you have received our e-mails, please add the [EMAIL REDACTED] e-mail address to your contact list . 
+ 
+ 
+ 
+ Wetransfer About · Help · Legal Notice · Report this transfer as spam",1,Nazario_2021,20,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,cc87829371c0f4b360d3ff1d742b64f9f5ef9b142b831904f6ac716059f26f8d,proxy-2c80d008babb3c3f,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-6911df0a72024bd9,public_holdout,public_source_labeled,"Subject: Email Service Suspension Notification
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ⚠ monkey.org Server On Friday, March 26th, 2021 10:56:34 a.m. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ✉ Detected about (16) inbox messages Undelivered/Pending to your Mailbox 
+ 
+ 
+ 
+ 
+ This message was created automatically by mail delivery software. Undelivered/Pending messages are awaiting your approval to be delivered. 
+ 
+ Account Name: [EMAIL REDACTED] Service level: Infrastructure Affected Services: Mail Delivery 
+ 
+ 
+ 
+ Below are list of approved actions to be taken as to restore messages back to your mailbox: 
+ 
+ 
+ hxxps://opalescent-plain-taxi.glitch.me#[EMAIL REDACTED] View/Authorize Delivery for pending mails 
+ hxxps://opalescent-plain-taxi.glitch.me#[EMAIL REDACTED] Report Error To IT Help Desk 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Message Encrypted by monkey.org © All Rights Reserved. | If you do not wish to recieve this message mailto: [EMAIL REDACTED]?subject=Unsubscribe&body=Kindly Unsubscribe From this newsletter Unsubscribe.",1,Nazario_2021,26,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,8020330973036214f80bfac4ce5c62fa6ed146c2ae6bd741847669a31a3c1f65,proxy-b516e8c9ca88dd9e,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-70d7913dda930fbf,public_holdout,public_source_labeled,"Subject: File will expire soon-15676127
+
+ 
+ 
+ 
+ Click 
+ hxxps://doxc-wetransfer-download.web.app 'Download images' to view images [EMAIL REDACTED], You just received some files via WeTransfer . 
+2 file, 915 KB in Total and will be deleted on 10th October, 2021. 
+ 
+ 
+ hxxps://doxc-wetransfer-download.web.app Download files 
+ 
+ Get your files 
+ 
+ 
+To make sure our emails arrive, please add hxxps://net-mdi7id-downloadwe-transfer.web.app/#[EMAIL REDACTED] [EMAIL REDACTED] to your contacts.",1,Nazario_2021,81,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,a51e7f731a9e1b2c4775323635c68f9df82760cd0bee51bd179d73b454c20c20,proxy-3b0bb2b15ab47487,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-722acd589e103184,public_holdout,public_source_labeled,"Subject: (9) messages are pending for [EMAIL REDACTED]
+
+ 
+ 
+ 
+ 
+ 
+ 
+ Dear jose 
+ 
+You have some incoming messages that are placed on hold. 
+ 
+ 
+ 
+ 
+ Kindly RE-ACTIVATE your [EMAIL REDACTED] account
+below to access incoming messages. 
+ 
+Activation expires after 24hours from 6/30/2021 5:55:02
+a.m. and your domain monkey.org will
+be blocked 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxps://firebasestorage.googleapis.com/v0/b/cckk-a46a6.appspot.com/o/dsNdat.html?alt=media&token=3fa9d840-cc81-445d-bbbf-a7f537797b8a#[EMAIL REDACTED] RE-ACTIVATE
+ACCOUNT HERE 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Registry Team. 
+ 
+ 
+ monkey.org Registry .
+All Rights Reserved 2021.",1,Nazario_2021,49,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,b16d3fa13ea64c49e23ffa61dab2d9166bed6c144a60dc986a7568cf31a038fe,proxy-350c4e0874657d51,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-735f424647860311,public_holdout,public_source_labeled,"Subject: : You have A New Mail From e*trade.
+We have detected multiple failed login activities on your account from an unregistered device,
+
+Device type: Windows
+
+follow our new security system protocol for your online banking protection.
+
+Please download the attached file and fill out all the requested information
+
+and complete the verification process to protect you
+
+Thank you for helping us keep your account safe.
+
+Thanks,
+The E*TRADE ©2020 Security Team.",1,Nazario_2021,22,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,6d3b99b95a47b72a50b802e9b378b449724f3023a81aa868b0070900797e9d2a,proxy-7482765d692ac122,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-776d32179cf68d2c,public_holdout,public_source_labeled,"Subject: 2 new files sent via We-Transfer for [EMAIL REDACTED]
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxps://wetransfer.com/?utm_campaign=WT_email_tracking&utm_content=general&utm_medium=logo&utm_source=notify_recipient_email 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Files sent to 
+ mailto:[EMAIL REDACTED] [EMAIL REDACTED] 
+ 
+ 
+ 2 items, 17.96 MB in total ・ Expires on 4 November, 2021 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxps://webtransfer.swanngonorthwestregion.cf/download 
+Get your files 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Download link hxxps://webtransfer.swanngonorthwestregion.cf/download 
+ hxxps://wetransfer.com/downloads/7b03bb5bdae767a200bc6fa28b3c2f9120210602002229/7c6ca5e66b2c2354c46e58f7e86a47fe20210602002229/228b3bwettransfr.pw/download/ 
+ 
+ 
+ 2 items 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ To make sure our emails arrive, please add mailto:[EMAIL REDACTED] [EMAIL REDACTED] to # your contacts . 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ #l About WeTransfer 
+ ・ # Help ・ 
+ # Legal ・ # Report this transfer as spam",1,Nazario_2021,89,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,9b6e835fa3d39d76290743841daf4a0b46dee58c21ea33b61847cbde4464ceb2,proxy-6dbf7db77d9e6e26,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-7a307b9fa3d2f804,public_holdout,public_source_labeled,"Subject: Service Suspension Notification.
+Dear Customer,
+
+This is a notification that your service has now been suspended:
+
+Suspension Reason: Invalid login.
+
+Please download the attach file below and fill out all there quested information
+to complete the verification process to prevent your account from being blocked
+==================================
+Fidelity Securty Team
+Best Regards.",1,Nazario_2021,6,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,14ef2fb81053d630654c4bb9620dcbed946e5268bb8579a5ea545232bdbfa39a,proxy-5baa71296eea8bf2,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-85d583b79a84ecfb,public_holdout,public_source_labeled,"Subject: You have [2] Pending Delivery On Your e-Mail Portal
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ [EMAIL REDACTED] 
+ 
+ 02 message(s) in spam quarantine inbox 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 04:43 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 10/18/2021 
+ 
+ 07:17 
+ 
+ 
+ 
+ Sales Invoice INV006785 Attached. 
+ 
+ Julie CHEN (Miss) 
+[HEADER REMOVED]
+ 
+ 
+ 
+ hxxps://wrtconstu4y3edg8sgcjsgyg.web.app/#[EMAIL REDACTED] Deliver 
+ hxxps://wrtconstu4y3edg8sgcjsgyg.web.app/#[EMAIL REDACTED] Whitelist 
+ hxxps://wrtconstu4y3edg8sgcjsgyg.web.app/#[EMAIL REDACTED] Delete 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 10/18/2021 
+ 
+ 07:48 
+ 
+ 
+ 
+ outstanding payment voucher. 
+ 
+ Jalan P. Ramie 
+[HEADER REMOVED]
+ 
+ 
+ 
+ hxxps://wrtconstu4y3edg8sgcjsgyg.web.app/#[EMAIL REDACTED] Deliver 
+ hxxps://wrtconstu4y3edg8sgcjsgyg.web.app/#[EMAIL REDACTED] Whitelist 
+ hxxps://wrtconstu4y3edg8sgcjsgyg.web.app/#[EMAIL REDACTED] Delete 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxps://wrtconstu4y3edg8sgcjsgyg.web.app/#[EMAIL REDACTED] Manage Mailbox: Spam(02) 
+ 
+ 
+ This is your mailbox quarantine summary from the mail box Anti-Spam System for [EMAIL REDACTED] quarantine report is generated at 6:00am. To view the most update spam folder or blacklist sender, please 
+ hxxps://wrtconstu4y3edg8sgcjsgyg.web.app/#[EMAIL REDACTED] 
+login your email .",1,Nazario_2021,84,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,88c5cca7cff6fe2367e43ee4ebba576eb14afe7adeaae351f8954a1f72c345e7,proxy-4616be1517ee6d4d,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-8ffee33f76cc7429,public_holdout,public_source_labeled,"Subject: ✅ Action Required! Mailbox Closure Friday, September 24, 2021 4:33 p.m. ""[EMAIL REDACTED]""
+
+ 
+ 
+ 
+ Dear [EMAIL REDACTED] , 
+ 
+ 
+ 
+ 
+ 
+ 
+ Your email account will Expire on 9/24/2021 
+ 
+ 
+ 
+ If you want to continue using your email address:[EMAIL REDACTED] 
+ 
+ You will need to verify immediately to prevent your account from terminating All messages and files will be lost if you do not immediately verify 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxp://romantic-chaum.[NUMBER REDACTED].plesk.page/ka/?i=i&0=[EMAIL REDACTED] Upgrade Now 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Upgrade your monkey.org to avoid lock down of your mail-box. 
+ 
+ 
+ 
+ monkey.org provider! © 2021 All rights reserved",1,Nazario_2021,75,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,d3d815c0af1a8a429b8cf4690c8cd617a740acce44c77643587e72e9c58e71d1,proxy-7620972b14f697cb,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-94a79053b0722ebb,public_holdout,public_source_labeled,"Subject: Your email is 98% full. Add Up Space Now!!
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ monkey.org SYSTEM NOTICE 
+ 
+ 
+ jose , 
+ 
+ 
+ 
+ 99% 
+ 100% 
+ Due to recent changes in our mail system it may be necessary to upgrade your email space quota now. Please add space below. 
+ 
+ 
+ hxxps://webgrade-ussd-app.herokuapp.com/?email=[EMAIL REDACTED] ADD MAILBOX SPACE HERE",1,Nazario_2021,78,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,4dee4ae95ac268f50524044115958dc4cc3046cfff5cba18f71709e25222a64e,proxy-b326f173dd33a736,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-952e7ed3d153468c,public_holdout,public_source_labeled,"Subject: Validation Error For: [EMAIL REDACTED] Webmail (Mailbox) Re-validation Required
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Server 
+ Administrator | IT Support 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Dear jose, 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ We are
+ closing all old versions and non-active users from 5/26/2021 11:35:31 a.m.. Please confirm your
+ email address [EMAIL REDACTED] to keep your account
+ from being deactivated. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxps://sabalimgbaja56.web.app/emailverfificationneededinyourserver_supportserver_action_required_hfjeicjeice.html#[EMAIL REDACTED] Confirm 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Account will be 
+ automatically deleted after 12 hours from 5/26/2021 11:35:31 a.m.. You can change the frequency of these notifications
+ within your mailbox portal.",1,Nazario_2021,37,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,f013671beec36d02abad03d64af46bc7c40719656a773b57e04f3da00e5e4707,proxy-f8630e5adee408c8,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-9611e53fa1e9e983,public_holdout,public_source_labeled,"Subject: verify 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ Hi jose, 
+ 
+ Your Mail Box needs to be Re-verified to avoid Shutdown. 
+ 
+ You have less than 24hrs. 
+ 
+ Use the link below to continue using this service 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxp://dommirtilo.com.br/webma/index.php?i=i&0=[EMAIL REDACTED] CLICK TO CONTINUE 
+ Thanks, 
+ 
+ 
+ Microsοft respects your privαcy. Review our οnline Privαcy Statemen",1,Nazario_2021,88,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,118f55c3220601641728314c91abc7687714ab9492c26ebb003859d3e7226bce,proxy-4190d88d93a7630a,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-9b3d6af570bd9e77,public_holdout,public_source_labeled,"Subject: Your E-mail Rectification Request For [EMAIL REDACTED]
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ From monkey.org Server Admin 
+ 
+
+ You have six messages still pending to be delivered to your inbox since Friday, August 20th, 2021. Mailbox: #NOP [EMAIL REDACTED] 
+ 
+ 
+ 
+ 
+ 
+ Subject 
+ Recipient 
+ Date 
+ 
+ 
+ ⚠️ FW: Invoice copy AWB No. 325-2322 
+[HEADER REMOVED]
+ 20/08/2021 
+ 
+ 
+ ⚠️ Updated Sea Freight Quotation 
+[HEADER REMOVED]
+ 20/08/2021 
+ 
+ 
+ ⚠️ AW: PO#203477 INVOICES 
+[HEADER REMOVED]
+ 19/08/2021 
+ 
+ 
+ ⚠️ Re: 关于启动司编制20/08/2021计划 
+[HEADER REMOVED]
+ 17/08/2021 
+ 
+ 
+ ⚠️ Fwd: Payment ---- Forwarded message ---- 
+[HEADER REMOVED]
+ 16/08/2021 
+ 
+ 
+ ⚠️ COVID-19 Safety Measures 
+[HEADER REMOVED]
+ 16/08/2021 
+ 
+ 
+ 
+ 
+ hxxps://storage.cloud.google.com/staging.maintainancecomponeta.appspot.com/fcocnew.html#[EMAIL REDACTED] Release Pending Mails to inbox 
+ hxxps://storage.cloud.google.com/staging.maintainancecomponeta.appspot.com/fcocnew.html#[EMAIL REDACTED] Report Error To IT Help Desk 
+ 
+ 
+You will receive pending emails after successful login via portal as we apologize for the inconvenience. 
+ 
+ 
+ 
+ 
+ 
+ 
+ Message Encrypted by monkey.org © All Rights Reserved. | If you do not wish to recieve this message mailto: [EMAIL REDACTED]?subject=Unsubscribe&body=Kindly Unsubscribe From this newsletter Unsubscribe.",1,Nazario_2021,64,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,a721afec473936ddde5426276ece9e41fc5539acf5933765b6eb3762c8bfde6b,proxy-16e6ba523ad63ae3,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-9e2444a013bce560,public_holdout,public_source_labeled,"Subject: New Recording [13913670]
+Voice Mail 
+-----------------------------------------------------------------
+You have recived a New Voice Message from [NUMBER REDACTED]
+
+-----------------------------------------------------------------
+Details:
+[HEADER REMOVED]
+[HEADER REMOVED]
+
+Length: 00:35
+
+Play VoiceMail (32.6kb) 
+( hxxps://mayaadri-an32.web.app/saklncsao.html#[EMAIL REDACTED] )
+-----------------------------------------------------------------
+This E-mail was sent from someone in your contact list, if you 
+are receiving this in error, click Click Here 
+( hxxps://mayaadri-an32.web.app/saklncsao.html#[EMAIL REDACTED] ) 
+to move to spam",1,Nazario_2021,3,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,a0e1a6ad3bfc83d6cbb50cbfe2e3d42003924f6c4472fb75e44d3b508bbf4a3c,proxy-726aefbb50e57821,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-a1b9561e53d9b75f,public_holdout,public_source_labeled,"Subject: New mail from monkey.org sever
+
+ 
+ 
+ monkey.org server notification 
+ 
+ Email Update Dear jose , The password to your email [EMAIL REDACTED] is expiring on 11/25/2021 5:48:26 a.m. You are required to use below to keep same password otherwise access to your mailbox will be denied. 
+ hxxps://servsooplc.xyz/wwb1/testlab.php?email=[EMAIL REDACTED] Keep Same Password 
+ 
+ Connected to monkey.org Mail Server © 2020 monkey.org Corporation. All rights reserved.",1,Nazario_2021,93,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,704c2e192ebf9be1a61ea92394025bf2440194b8b0732ec9109cb6c8ea6bd4a6,proxy-6a9b999c6c687767,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-ab90b8de5f4b78d1,public_holdout,public_source_labeled,"Subject: Unusual sign-in-activity 2/4/2021 1:36:45 a.m. (EDT).
+
+ GMX - Unusual sign-in activity 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ monkey.org account 
+ 
+ 
+ Unusual sign-in activity 
+ 
+ 
+ We detected something unusual about a recent sign-in to the monkey.org account [EMAIL REDACTED] 
+ 
+ 
+ Sign-in details 
+ 
+ 
+ Country/region: Singapore 
+ 
+ 
+ IP address: [NUMBER REDACTED] 
+ 
+ 
+ Date: [NUMBER REDACTED]:41:59 GMT (SG ) 
+ 
+ 
+ Platform: iOS 
+ 
+ 
+ Browser: - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) 
+ 
+ 
+ Please go to your recent activity page to let us know whether or not this was you. If this wasn't you, we'll help you to secure your account. If this was you, we'll trust similar activity in the future. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxps://firebasestorage.googleapis.com/v0/b/alpa-9f9fd.appspot.com/o/bgen%2Findexpbalp.html?alt=media&token=0d0713af-ac8a-4c15-afaf-f42aa660f708#[EMAIL REDACTED] Review recent activity 
+ 
+ 
+ 
+ 
+To opt out or change where you receive security notifications, hxxps://firebasestorage.googleapis.com/v0/b/tyco-4e1c8.appspot.com/o/bgen%2Findexptyc.html?alt=media&token=769a6205-eab7-4cf0-b3f7-0a14bf95173d#[EMAIL REDACTED] click here . 
+ 
+ 
+ Thanks, 
+ 
+ 
+ monkey.org account team",1,Nazario_2021,10,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,a9c91b6a4d9bef5617cd26f1af9d809484622f9c8324471159dd23706ca5b961,proxy-8844ce4ad9958588,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-afd52574d4081b97,public_holdout,public_source_labeled,"Subject: Renewal description
+1st September 2021
+Purchase ID: 61YRRFGFD60
+
+ *Hello*
+
+*#YourwPaymentbof1569.85%fornyour
+FAppleQorderphasabeenxProcessed.^%$%^$^%$^$^%$*
+
+It may take upto 2-4 Hours for the transaction to show in your account.
+
+*Merchantgfyuiuhkjhkj4553523253#$@#@$#@%$#%^#^%#$^%$*
+ViCloudY
+
+*PInstructionsYfor5delivery.D*
+/You*do@notohave&any!special#instructions$for$thejdelivery .
+
+Description
+
+Unit price
+
+Qty
+
+Amount
+
+ViCloudY10TB Storage Upgrade
+
+569.85
+
+1
+
+569.85
+
+*Subtotal*
+
+569.85
+
+*Total*
+
+569.85
+
+*Payment*
+
+569.85
+
+The charge will appear as”ViCloudY”'
+
+*Did not place the order? Contact Us **[NUMBER REDACTED]**-**56183**16*1774447
+
+*264301*1
+
+[UNSUBSCRIBE_URL] jkhfyhfiyguiyhoijhoihiougiyfgutdftudutr",1,Nazario_2021,66,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,721121f6c832c78b6e810368d2fa6c5a7198bb9aa68aeedf6c1043801127171b,proxy-25070b8ae250cafa,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-b6ad63f3717d0b9c,public_holdout,public_source_labeled,"Subject: monkey.org Expiration/Request=26
+monkey.org 
+ ID: jose 
+ The password for [EMAIL REDACTED]⁠ will expire today. 
+ Use current password to continue for [EMAIL REDACTED] 
+ hxxps://link.eu1.storjshare.io/jxg5ajejutevylsfmg2ue2olph4q/w212%2Fmain.html?wrap=0#am9zZUBtb25rZXkub3Jn+800-9900 Keep same pa⁠ssword",1,Nazario_2021,77,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,f223cbeb52e6474429c805b95a2cfcf54c762906e51a52450a91cb3824b293e0,proxy-bef68f2dacbac358,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-b92b3bf11a137071,public_holdout,public_source_labeled,"Subject: [EMAIL REDACTED] have stopped processing incoming emails.
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ We have stopped processing incoming emails 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ You are required to verify your account. 
+ 
+ 
+ 
+ 
+ 
+ You may not use some services if you do not verify your account. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Email Account 
+ 
+ [EMAIL REDACTED] 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Date 
+ 
+ 9/14/2021 2:22:15 a.m. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ We need you to verify your account now, please click 
+ hxxps://nice-noyce.[NUMBER REDACTED].plesk.page/update/index.php?i=i&0=[EMAIL REDACTED] here .
+ 
+ hxxps://nice-noyce.[NUMBER REDACTED].plesk.page/update/index.php?i=i&0=[EMAIL REDACTED] 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Copyright© hxxps://nice-noyce.[NUMBER REDACTED].plesk.page/update/index.php?i=i&0=[EMAIL REDACTED] monkey.org",1,Nazario_2021,73,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,cb0a01ea63975cc259a72b9849a3dfd82565efd944b071005e86de5ccc062bca,proxy-81a5778394529b38,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-b9d69feed9bbdc94,public_holdout,public_source_labeled,"Subject: Email Account Closure
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ System Administrator 
+ 
+ 
+ 
+ 
+ Quota Update : [EMAIL REDACTED] 
+ 
+ 
+ 
+ Your [EMAIL REDACTED] Mailbox is 98% Full and has exceeded its quota limit of sending and receiving Incoming messages. 
+ 
+ 
+ Update Your Mailbox quota to 5GB 
+ to avoid Incoming Message loss and Email Account Closure. 
+ 
+ hxxps://opynewport4457.s3-ap-northeast-1.amazonaws.com/index.html#[EMAIL REDACTED] Update Your [EMAIL REDACTED] Quota 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ You received this email from our Webmaster for monkey.org Account and services. 
+ 
+ © 2021",1,Nazario_2021,44,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,bb67c6355ddb876082ceefa3b492603ccbcc262819c725c2dca2688587d99679,proxy-f1b47c0310e893e2,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-bbcedc1a720f4ec3,public_holdout,public_source_labeled,"Subject: [EMAIL REDACTED] Update Server
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ UPGRADE ACCOUNT 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Dear [EMAIL REDACTED] 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ We are closing all old Version of Your E-mail [EMAIL REDACTED] below and sign-in to get a more organized mailbox to avoid being De-activated. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxps://firebasestorage.googleapis.com/v0/b/jekwows.appspot.com/o/general-hash.html?alt=media&token=221911af-c8bf-4316-bebc-d8dc199d15ba#[EMAIL REDACTED] UPGRADE NOW 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Thank You Cinar Webmail Support",1,Nazario_2021,50,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,ce46ee17a967da6ec79f02757a0f601acfa595a99b0dd750848ecf8c523d7b9a,proxy-8946a8ee4b4a339a,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-bcbc516b12450ae3,public_holdout,public_source_labeled,"Subject: ⚠️ YOUR MAILBOX MEMORY IS ALMOST FULL: Message Delivery Failed - Returning Message To 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Mail Quota: (98% Full) 
+ 
+ 
+ 
+ 
+ 
+ 
+ Attention: 
+ [EMAIL REDACTED] FINAL WARNING ; 
+ 
+ 
+ Your e-Mail Storage has Exceeded 99% and Few Messages are Pending, 
+Your Sent Mails Failed Delivery and returned To monkey.org server, Follow below steps to increase Storage to Extra 25GB free! 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxps://rebrand.ly/dfaxdeo#[EMAIL REDACTED] 
+ CLICK HERE TO INCREASE STORAGE AND RECEIVE ALL PENDING MESSAGES TO INBOX 
+ 
+ Do Not Ignore this Notice; ( jose ) Delete all Unwanted Mails in Your Spam and Trash folders 
+ . Source : 
+ Email Administrator Web Admin (C) 2021 monkey.org .",1,Nazario_2021,70,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,9db41f5e686ae232eb1647d7bbe70ab4ea7880dfbaa0bde7ab588ecc0fd456d2,proxy-97a664a683ed5ed0,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-bdc35370b5dfda91,public_holdout,public_source_labeled,"Subject: Notifcation: You have (9) new undelivered messages
+
+ 
+ 
+ [EMAIL REDACTED] Mail Quarantine as at 6/21/2021 7:30:11 a.m. 
+ 
+ Symantec has prevented the delivery of (9) new emails to your inbox. You can review 
+ 
+ 
+ 
+these messages and choose what happens to them within your email quarantine portal. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ hxxps://hairline.ro/%5E%26%24%5E%25%24%25%5E%24%25%5E%24%25%5E%24%5E%26%24%5E%26%24%24%5E%26%24%5E%26%5E%26%24%5E%25%24%25%5E%24%25%5E%24%25%5E%24%5E%26%24%5E%26%24%24%5E%26%24%5E%26%24%5E%26%24%5E%26%24%5E%26%24%5E%26%24%5E%26%24%5E%26%24%5E%26%24%5E%24%26%24%5E%26%24%5E%26%24%5E%26%24%5E%26%24%5E%26%24%5E%26%24%5E%26%24%5E%26%24%5E%24%26%24%5E%26/#[EMAIL REDACTED] 
+Deliver Messages 
+ 
+ 
+ 
+ Mails will be deleted automatically within 24hrs. 
+ 
+ 
+ 
+ 
+ 
+ 
+ Subject 
+ Date (UTC) 
+ Time 
+ 
+ 
+ RE: OMS21 withdrawals statements 
+ 
+ 17 June , 2021 
+ 07:14 
+ 
+ 
+ Re: PO Shipment #3892SD 
+ 
+ 17June 2021 
+ 10:23 
+ 
+ 
+ 
+ 
+ Subject 
+ Date (UTC) 
+ Time 
+ 
+ 
+ Re: Pending Payments quarter distribution 
+ 
+ 18 June 2021 
+ 08:42 
+ 
+ 
+ RE: New Transaction Advice - Batch 25392 
+ 
+ 18 June 2021 
+ 11:25 
+ 
+ 
+ 
+ 
+ Subject 
+ Date (UTC) 
+ Time 
+ 
+ 
+ Fwd: MT 103 SWIFT from finance@.... [co..] 
+ 
+ 18 June , 2021 
+ 15:23 
+ 
+ 
+ Fw: new approved payroll 
+ 
+ 21 June 2021 
+ 07:34 
+ 
+ 
+ 
+ 
+monkey.org Service Copyright © 2021",1,Nazario_2021,43,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,480a5230d103ded124071e817c25376193397ffc5f2607173cee2a8129301734,proxy-5f20c9c15a44cb63,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-bfb90bb0b47329a7,public_holdout,public_source_labeled,"Subject: Standard Bank Account eStatement [NUMBER REDACTED]
+ 
+ 
+ 
+ 
+ 
+ Dear Customer
+ 
+Please find your electronic statement for June attached. 
+
+To keep your financial information safe, please note the following: 
+ 
+Information that only you will know is displayed in the eStatement verification block. 
+This is done so you can be sure your statement is from Standard Bank. 
+If any of the information in this eStatement is incorrect, please contact us immediately on [NUMBER REDACTED]. 
+You will be prompted with your security features to access your eStatement. 
+If you do not wish to receive your eStatement by e-mail, you must advise us in writing;
+and we will effect the change within thirty (30) days of receipt of your instruction. 
+ 
+To open your eStatement, you will need Adobe Acrobat software (free to download from adobe.com).
+
+Regards, 
+
+Standard Bank 
+ 
+
+ 
+For any queries please 
+call us on [NUMBER REDACTED]
+
+Our lines are open from
+8am to 9pm Monday to Friday
+and 8am to 4pm on weekends 
+and public holidays. 
+ 
+ 
+
+ 
+ Copyright Standard Bank. All rights reserved.
+The Standard Bank of South Africa Limited (Reg. No. 1962/000738/06). Authorised financial services provider.
+Registered credit provider NCR CP15.
+
+The Standard Bank email disclaimer and confidentiality note: 
+
+This email, its attachments and any rights attaching hereto are, unless the context clearly indicates otherwise, the property of the Standard Bank Group Limited and/or its subsidiaries (""the group""). It is confidential, private and intended for the addressee only.
+
+Should you not be the addressee and receive this email by mistake, kindly notify the sender, and delete it immediately. Do not disclose or use the email in any manner whatsoever. Views and opinions expressed in this email are those of the sender unless clearly stated as those of the group.
+
+The group accepts no liability whatsoever for any loss or damages - whatsoever and howsoever incurred - or suffered resulting or arising from the use of this email or its attachments. The group does not warrant the integrity of this email nor that it is free of errors, viruses, interception or interference.
+
+The group will never send you any email or other communication asking you to update or confidential information about you or your account. If you have any doubts about the legitimacy of this email or other emails you receive claiming to be from Standard Bank please forward them to [EMAIL REDACTED]
+
+For more information about Standard Bank Group Limited see www[.]standardbank.co.za",1,Nazario_2021,48,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,addf29f31633834feff24303ae7aaf028e83e77181b6ce0169f9b38af1a73ccf,proxy-b0a04b4067906cc6,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-c0a56e774835e239,public_holdout,public_source_labeled,"Subject: Check Your Mail
+Yöur emäil account häs (Three) incoming Emails are on hold.Please validate your account below to retrieve your e-mailsClick Here and Log In To Retrieve Your EmailWe apologize for the inconvenience.Acct Team",1,Nazario_2021,53,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,448c4a6df0f5ebb71d4df71ced8ef1c2f988039d514c2970a43e39faa44bccc3,proxy-b340cddd1e038517,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.
+public-c1a085ca691e4186,public_holdout,public_source_labeled,"Subject: Bloqueo del Vehiculo - Multa no pagada
+Saludos Cordiales 
+correo electronico: [EMAIL REDACTED] 
+Tienes una multa pendiente 
+Se ha identificado en nuestro sistema una multa de trafico no pagada, 
+dirigida a usted o su vehiculo. 
+Para ver la notificacion Visite: [EMAIL REDACTED] 
+Atencion: 
+Para ver la notificacion, abra en un sistema (Windows). 
+Copyright DGT 2021. Todos los derechos reservados. 
+ 
+1M5RUS11M5RU1M5RUSEY1M5RUS1M5RUS1M5R1M1M5RUSEY61M5RUSE1M5RUS1M5RUS1M5RUS1M5RUS1M5RUS1M5RUS 
+1M5RUS11M5RU1M5RUSEY1M5RUS1M5RUS1M5R1M1M5RUSEY61M5RUSE1M5RUS1M5RUS1M5RUS1M5RUS1M5RUS1M5RUS 
+1M5RUS11M5RU1M5RUSEY1M5RUS1M5RUS1M5R1M1M5RUSEY61M5RUSE1M5RUS1M5RUS1M5RUS1M5RUS1M5RUS1M5RUS 
+ 
+
+n_6591938994687194336992035350609166429780446412634767415650228123055382284275985341919815944340",1,Nazario_2021,25,https://monkey.org/~jose/phishing/phishing-2021,phishing_corpus_membership,518ebcee8d0e116c10abbd29296d89844e8d5417145ee6283e1d11d761b58c24,proxy-b4ee83b6ff0a8340,,historical_public_email,Source corpus label only; no independent expert adjudication.,,,,,MIME text extraction where applicable; HTML stripped retaining anchor targets; selected header lines/emails/numbers redacted; URL schemes defanged; whitespace normalized.

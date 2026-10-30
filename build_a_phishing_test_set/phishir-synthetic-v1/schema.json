@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PhishIR-Synthetic v1 record",
+  "description": "One synthetic email plus a single endpoint-context snapshot, not an independent real-world incident. Gold fields must not be model inputs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "split", "family_id", "pair_id", "provenance", "email_text", "text", "phishing_label", "endpoint_state", "correlated_compromise", "response_label", "entities", "observable", "annotation_basis"],
+  "properties": {
+    "id": {"type": "string", "description": "Unique record identifier. Metadata only; excludes from model features."},
+    "split": {"enum": ["train", "validation", "test"], "description": "Fixed 800/100/100 split; disjoint lure families and matched pairs."},
+    "family_id": {"type": "string", "description": "Gold scenario-family metadata for leakage checks, not an input."},
+    "pair_id": {"type": "string", "description": "Matched benign/phishing pair; stays in the same split. Not a model input."},
+    "provenance": {"const": "synthetic_template_v1"},
+    "email_text": {"type": "string", "description": "Only permitted input for phishing classification: subject, sender domain and body."},
+    "text": {"type": "string", "description": "Email plus endpoint narrative. Input for extraction and response evaluation. All entity offsets index this field."},
+    "phishing_label": {"type": "integer", "enum": [0, 1], "description": "Gold: 1 = malicious social-engineering request; 0 = authorized benign workflow. Endpoint compromise alone does not make an email phishing."},
+    "endpoint_state": {"enum": ["none", "benign", "correlated", "different_host", "stale"], "description": "Gold scenario metadata, never an input."},
+    "correlated_compromise": {"type": "boolean", "description": "Gold containment eligibility for the EMAIL host, based on malicious endpoint evidence on the same host within 60 minutes. Does not prove email caused compromise."},
+    "response_label": {"enum": ["no_disruptive_action", "purge_email_review", "analyst_review", "contain_host_review_identity"], "description": "Gold benchmark policy, not production authorization. Host isolation and identity handling require organizational approval."},
+    "entities": {
+      "type": "array",
+      "description": "Gold exact non-overlapping observable spans. These are not verdicts of maliciousness. URL contains its domain; no nested DOMAIN span.",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["start", "end", "type", "text"],
+        "properties": {
+          "start": {"type": "integer", "minimum": 0, "description": "Zero-based Unicode character index, inclusive."},
+          "end": {"type": "integer", "minimum": 1, "description": "Exclusive Unicode character index."},
+          "type": {"enum": ["URL", "DOMAIN", "IPV4", "SHA256"]},
+          "text": {"type": "string", "description": "Must equal record.text[start:end]; preserve defanging."}
+        }
+      }
+    },
+    "observable": {
+      "type": "object", "additionalProperties": false,
+      "description": "Permitted response inputs; synthetic event metadata, not gold labels.",
+      "required": ["recipient_id", "email_host", "endpoint_host", "minutes_after_email"],
+      "properties": {
+        "recipient_id": {"type": "string"},
+        "email_host": {"type": "string"},
+        "endpoint_host": {"type": ["string", "null"]},
+        "minutes_after_email": {"type": ["integer", "null"], "minimum": 0, "description": "Relative event time in minutes; null when no endpoint event is available."}
+      }
+    },
+    "annotation_basis": {"type": "string", "description": "Truth originates from scenario construction, not analyst adjudication."}
+  }
+}

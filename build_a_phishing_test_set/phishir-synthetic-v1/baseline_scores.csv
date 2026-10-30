@@ -1,0 +1,9 @@
+task,split,baseline,n,accuracy,precision,recall,f1,false_positive_rate,tn,fp,fn,tp
+phishing,validation,constant_benign,100,0.5,0.0,0.0,0.0,0.0,50,0,50,0
+phishing,validation,tfidf_word_logreg,100,1.0,1.0,1.0,1.0,0.0,50,0,0,50
+phishing,validation,tfidf_char_logreg,100,1.0,1.0,1.0,1.0,0.0,50,0,0,50
+phishing,validation,keyword_rule,100,0.5,0.0,0.0,0.0,0.0,50,0,50,0
+phishing,test,constant_benign,100,0.5,0.0,0.0,0.0,0.0,50,0,50,0
+phishing,test,tfidf_word_logreg,100,0.75,0.6666666666666666,1.0,0.8,0.5,25,25,0,50
+phishing,test,tfidf_char_logreg,100,0.75,0.6666666666666666,1.0,0.8,0.5,25,25,0,50
+phishing,test,keyword_rule,100,0.5,0.0,0.0,0.0,0.0,50,0,50,0

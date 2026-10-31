@@ -1,0 +1,16 @@
+{
+  "input_sha256": "33c50961cd3531187cd26f9d384eac5f713f52025b38d3c4c6c8d98ee39d021e",
+  "model": "distilbert/distilbert-base-uncased",
+  "revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "seed": 172289201,
+  "epochs": 1,
+  "training_selection": "Fixed one epoch chosen from timing pilot, before inspecting trained model predictions. No checkpoint or threshold tuning.",
+  "split_counts": {
+    "train": 800,
+    "validation": 100,
+    "test": 100,
+    "public_holdout": 100,
+    "hard_negative_challenge": 80
+  },
+  "features": "email_text only; all metadata and gold rationale excluded"
+}

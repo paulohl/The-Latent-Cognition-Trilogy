@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "input_sha256": "33c50961cd3531187cd26f9d384eac5f713f52025b38d3c4c6c8d98ee39d021e",
+  "model": "distilbert/distilbert-base-uncased",
+  "revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "seed": 172289201,
+  "device": "cpu",
+  "gpu_name": null,
+  "training_rows": 800,
+  "validation_rows": 100,
+  "test_rows": 100,
+  "public_holdout_rows": 100,
+  "trainable_parameters": 66955010,
+  "method": "Full all-layer fine-tuning, float32; fixed ONE epoch, not paper three epochs; no test selection.",
+  "effective_batch_size": 16,
+  "microbatch": 8,
+  "gradient_accumulation": 2,
+  "max_tokens": 512,
+  "epochs": 1,
+  "learning_rate": 5e-05,
+  "weight_decay": 0.01,
+  "versions": {
+    "python": "3.12.3",
+    "torch": "2.6.0+cpu",
+    "transformers": "4.49.0",
+    "accelerate": "1.4.0",
+    "sklearn": "1.9.1",
+    "numpy": "2.5.4"
+  },
+  "training_seconds": 180.94315886497498,
+  "hard_negative_rows": 80,
+  "threads": 4,
+  "truncation_counts": {
+    "train": 0,
+    "validation": 0,
+    "test": 0,
+    "public_holdout": 11,
+    "hard_negative_challenge": 0
+  }
+}

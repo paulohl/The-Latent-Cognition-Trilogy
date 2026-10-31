@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "prediction_rows": 380,
+  "train_overlap": 0,
+  "input_sha256": "33c50961cd3531187cd26f9d384eac5f713f52025b38d3c4c6c8d98ee39d021e",
+  "label_and_split_match": true,
+  "all_confusion_counts_recomputed": true,
+  "hard_negative_pair_success": 0.6,
+  "full_training_completed": true,
+  "epochs": 1,
+  "trainable_parameters": 66955010
+}

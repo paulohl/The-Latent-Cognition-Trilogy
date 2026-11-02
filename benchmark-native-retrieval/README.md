@@ -1,5 +1,8 @@
 # Public HotpotQA add-on v1
 
+hotpotqa-addon      
+
+
 **100 real HotpotQA development examples**, kept separate from the original 1,200 synthetic episodes. The sample contains 79 bridge and 21 comparison questions, 992 context paragraphs and 243 annotated supporting facts. All 100 have the upstream difficulty label `hard`.
 
 This adds natural questions, Wikipedia passages and human-annotated supporting sentences to the task named in Appendix A of the DLI paper. It does not implement DLI-LLM or evaluate a language model.

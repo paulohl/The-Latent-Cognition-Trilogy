@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "seed": 6821299,
+  "paper_doi": "10.2139/ssrn.6821299",
+  "examples": 1200,
+  "memory_records": 49920,
+  "test_examples": 400,
+  "sha256": {
+    "baseline_scores.csv": "0f48519ddbfa5bf8a25f79aa366622dbdc1acd6c2bade31c0fe8d027e489c0c8",
+    "benchmark.jsonl": "836c967d59e9d704c7815c0215f26043d5d6fb909809ad41cf5e013507e8daaa",
+    "schema.json": "11c51f4141f15851cab7d0bc9328a641b6bdd491bb0d63da369d40e7e8836d48",
+    "validation.json": "1883f46064378c61c9a267decaaf040120ea571845de6a3b5e7738f4faddcc28"
+  }
+}

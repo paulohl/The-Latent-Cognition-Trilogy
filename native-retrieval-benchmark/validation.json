@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "examples": 1200,
+  "split_counts": {
+    "train": 600,
+    "dev": 200,
+    "test": 400
+  },
+  "scenario_counts": {
+    "single_hop": 120,
+    "paraphrase": 120,
+    "two_hop": 120,
+    "redundancy": 120,
+    "poisoning": 120,
+    "update": 120,
+    "unanswerable": 120,
+    "local_only": 120,
+    "saturation": 120,
+    "counterfactual": 120
+  },
+  "counterfactual_pairs": 120,
+  "checks": [
+    "unique example and per-memory IDs",
+    "evidence IDs resolve",
+    "reference solver recovers every gold answer",
+    "reference citations satisfy minimal evidence sets",
+    "world and entity-disjoint splits",
+    "paired query equality, changed answer, and exactly one changed memory text"
+  ],
+  "note": "Schema and rule validation, not independent human annotation or evidence of language-model performance."
+}

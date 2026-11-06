@@ -54,7 +54,9 @@
     \fancyhead[R]{\thepage}
     \renewcommand{\headrulewidth}{0pt}
 }
-
+\fancyfoot[L]{}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{Zinnia Labs Publishing}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{\thepage}
@@ -140,8 +142,12 @@
 % FRONT MATTER METADATA
 % ======================================================
 
-\title{The Latent Cognition Trilogy}
-
+\title{The Latent Cognition Trilogy \\[2.2em]
+  \begin{center}
+    \includegraphics[width=0.58\textwidth,keepaspectratio]{trilogy_main_cover}
+  \end{center}
+  \vspace{-0.5em}
+}
 \author[1]{Paulo Leocadio\,\orcidlink{0000-0002-4992-4541}}
 \affil[1]{Zinnia Labs, Broward County, FL, United States}
 
@@ -169,7 +175,7 @@
 \maketitle
 
 % Structural Cover Elements (Unnumbered Pages)
-\frontchapter{Book Title}
+% \frontchapter{Book Title}
 \input{sections/frontmatter/00_title-page}
 
 \cleardoublepage
@@ -178,11 +184,34 @@
 \listoffigures
 
 \cleardoublepage
+
+\vspace*{2in}
+Zinnia Labs Research Monographs \vspace{\baselineskip}
+
+Volume I  \\
+Memory Fields \vspace{\baselineskip}
+
+Volume II  \\
+Symbol Fields  \vspace{\baselineskip}
+
+Volume III  \\
+Architecture and Completeness \vspace{\baselineskip}
+
+Datasets \vspace{\baselineskip}
+
+\href{https://doi.org/10.6084/m9.figshare.32952458}{Differentiable Latent Indexing inside Large Language Models (DLI-LLM) - Hypothesis 1}  \vspace{\baselineskip}
+
+\href{https://doi.org/10.6084/m9.figshare.32952530}{Curriculum-Induced Symbol Invention for Emergent Reasoning Primitives (CISI) – Hypothesis 2}  \vspace{\baselineskip}
+
+\href{https://doi.org/10.6084/m9.figshare.32952662}{Hierarchical Topic-Conditioned Routing for Mixture-of-Expert Language Models (HTCR) – Hypothesis 3}
 % ======================================================
 % FRONTMATTER: CANONICAL ORIENTATION
 % ======================================================
 
 \pagenumbering{roman} % Enforces Roman numerals starting here (i, ii, iii...)
+
+\frontchapter{Zinnia Labs Publishing Co}
+\input{sections/frontmatter/00_institutional}
 
 \frontchapter{Preface}
 \input{sections/frontmatter/00_series_preface}

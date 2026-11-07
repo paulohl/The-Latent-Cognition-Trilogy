@@ -65,8 +65,7 @@ We emphasize again that this appendix documents convergence signals rather than 
 \clearpage
 \phantomsection
 \section{Transform Domains as Representational Coordinate Systems}
-\label{sec:transform_domains}
-
+\hypertarget{sec:transform_domains}
 If Section X.1 established that spectral organization emerges within large-scale representational systems, the next question concerns tractability: how such organization becomes mathematically accessible. In mathematics and physics, an integral transform does not create structure; it selects a coordinate system in which existing structure becomes analytically visible \cite{bracewell2000fourier, debnath2012integral}.
 
 The choice of representation determines which invariants can be observed directly. Fourier transforms expose frequency structure and diagonalize translation-invariant operators \cite{stein1971introduction}. Laplace transforms convert differential dynamics into algebraic pole structure, making stability and transient behavior tractable \cite{dyke2014introduction}. Mellin transforms exchange multiplicative scaling into additive shift, revealing self-similar and power-law organization \cite{tishby2015deep}. Each transform, therefore, constitutes a statement about representation: the same object viewed in coordinates aligned with its governing symmetries \cite{bochner1959lectures}.
@@ -93,7 +92,7 @@ Transform domains consequently perform three organizational functions:
 \item \textbf{Compression}: Distributed structure often becomes sparse in an appropriate transform basis. Representations that require many coefficients in the native domain may admit compact descriptions after a transformation.
 
 \item \textbf{Stability}: Coordinate systems aligned with system symmetries improve conditioning and generalization by constraining the effect of local perturbations \cite{mallat2012group}. This principle underlies the widespread use of Laplace methods in control theory and spectral methods in physics \cite{oppenheim1996signals}.
-```
+
 \end{enumerate}
 
 The implication for representation learning is significant: the difficulty of a learning problem is not solely intrinsic to the data itself, but relative to the coordinate system through which the learner encounters that data \cite{lecun2022path}. Architectures capable of accessing alternative representational domains, implicitly or explicitly, may therefore inherit the invariants of those domains.
@@ -107,10 +106,10 @@ No claim is made here that transformer architectures implement analytic transfor
 % ==================================
 \clearpage
 \phantomsection
+\hypertarget{sec:operators_dynamics}{}
 \section{Operators and Dynamical Constraints}
-\label{sec:operators_dynamics}
 
-Sections~\ref{appx:token-spectral} and~\ref{sec:transform_domains} established two premises: large-scale representational systems develop latent geometric organization, and transform domains expose that organization by selecting symmetry-aligned coordinates. The remaining question is dynamic: once spaces and coordinates are established, what governs transformation, propagation, and constraint within the representation?
+The sections on token spectral properties and transform domains established two premises: large-scale representational systems develop latent geometric organization, and transform domains expose that organization by selecting symmetry-aligned coordinates. The remaining question is dynamic: once spaces and coordinates are established, what governs transformation, propagation, and constraint within the representation?
 
 In mathematics and physics, the answer is operators. An operator is a map between function spaces that encodes how a system transforms, propagates, filters, or constrains state \cite{reed1980methods}. Differential operators generate dynamics; integral operators perform composition and filtering; projection operators enforce constraints. The operator therefore determines which trajectories are admissible and which invariants are preserved \cite{lax2002functional}.
 
@@ -145,7 +144,7 @@ The architectural progression developed throughout this appendix may therefore b
 The sections that follow continue under explicit disciplinary constraint. The purpose of this appendix is not to claim a unified physics of intelligence, but to document the emerging corridor in which representation theory, spectral geometry, transform analysis, and operator algebra increasingly intersect with large-scale learned systems.
 
 % =====================================
-% -----------------------------------------------
+% ---------------------------------------------
 % X.4 introduces the operator layer of the 
 % framework.
 % 
@@ -154,7 +153,7 @@ The sections that follow continue under explicit disciplinary constraint. The pu
 % and X.3 established operator dynamics, then
 %  X.4 asks a deeper question: which operators 
 % govern % organization across scales?
-% ----------------------------------------------
+% ---------------------------------------------
 % Two operator classes appear repeatedly across 
 % mathematics, physics, and representation 
 % learning:
@@ -175,21 +174,22 @@ The sections that follow continue under explicit disciplinary constraint. The pu
 % representations. Understanding how these 
 % operators compose, interfere, or remain stable % motivates an operator-geometric view of 
 % cognition.
-%  ---------------------------------------------------
+% --------------------------------------------
 % The progression becomes:
 % X.1:  Space
 % X.2:  Coordinates
 % X.3:  Dynamics
 % X.4:  Coupling Geometry
-%===================================
+% ===================================
 % X4
-%===================================
+% ===================================
 \clearpage
 \phantomsection
 \section{Operator Geometry and Coordinated Interfaces}
-\label{sec:operator_geometry}
+\hypertarget{sec:operator_geometry}
+Sections\hyperlink{appx:token-spectral}{From Token Statistics to Spectral Organization} and\hyperlink{sec:transform_domains}{Transform Domains as Representational Coordinate Systems} established two premises
 
-Section~\ref{sec:operators_dynamics} established that bounded operators govern transformation and constraint within latent representations. The next question is structural: operators in large-scale systems do not act independently. They compose, couple, and constrain one another. To understand coordination without instability, we must examine the geometry of their interaction space.
+The \hyperlink{sec:operators_dynamics}{Section on Operators and Dynamical Constraints} established that bounded operators govern transformation and constraint within latent representations. The next question is structural: operators in large-scale systems do not act independently. They compose, couple, and constrain one another. To understand coordination without instability, we must examine the geometry of their interaction space.
 
 If X.1 established the existence of latent structure, X.2 established coordinate systems, and X.3 established operator dynamics, then X.4 asks a deeper question: which operators govern organization across scales, and how do they interact?
 
@@ -274,9 +274,8 @@ The appendix documents that language as it appears across mathematics and physic
 \clearpage
 \phantomsection
 \section{Spectral Constraints and Bounded Emergence}
-\label{sec:spectral_constraints}
-
-Section~\ref{sec:operator_geometry} established that large-scale representational systems require multiple operator classes to act on shared manifolds, and that the interaction geometry among them determines stability. The unresolved question is regulatory: what prevents coupled operators from producing divergent, oscillatory, or mode-collapsed dynamics?
+\hypertarget{sec:spectral_constraints}
+Section\hyperlink{sec:operator_geometry}{Operator Geometry and Coordinated Interfaces} established that large-scale representational systems require multiple operator classes to act on shared manifolds, and that the interaction geometry among them determines stability. The unresolved question is regulatory: what prevents coupled operators from producing divergent, oscillatory, or mode-collapsed dynamics?
 
 In mathematics and physics, the answer is spectral constraint. The spectrum $\sigma(\mathcal{A})$ of a bounded operator $\mathcal{A}$ determines the asymptotic behavior of iterates $\mathcal{A}^n$ and the stability of dynamical systems of the form $\dot{x} = \mathcal{A}x$ \cite{kato1995perturbation,reed1980methods}. When the spectral radius $\rho(\mathcal{A}) < 1$, the system is contractive; when $\mathcal{A}$ is self-adjoint with gaps in its spectrum, modes decouple; when $\mathcal{A}$ is trace-class, total energy remains bounded \cite{lax2002functional}. Constraint is therefore not external to the operator. It is encoded in its spectral measure.
 
@@ -320,15 +319,15 @@ No claim is made that intelligence reduces to spectral theory. The claim is narr
 % X.3 operators
 % X.4 operator geometry
 % X.5 spectral constraints
-%=====================================================
-% SECTION X.6: CONSTRAINTS AND SCIENTIFIC DISCIPLINE
-%=====================================================
+% =============================================
+% SECTION X.6: 
+% CONSTRAINTS AND SCIENTIFIC DISCIPLINE
+% =============================================
 \clearpage
 \phantomsection
 \section{Constraints and Scientific Discipline}
-\label{sec:constraints_discipline}
-
-The structural parallels identified between high-dimensional representation spaces and operator mechanics across Sections~\ref{appx:token-spectral} through~\ref{sec:operator_geometry} must be interpreted within strict epistemic limits. These comparisons are exploratory. They provide qualitative and structural vocabulary for describing complex dynamics observed during the scaling of deep networks, but they do not imply a formal mathematical unification or a foundational identity between physical fields and latent intelligence.
+\hypertarget{sec:constraints_discipline}
+The structural parallels identified between high-dimensional representation spaces and operator mechanics across Sections\hyperlink{appx:token-spectral} through\hyperlink{sec:operator_geometry}{Operator Geometry and Coordinated Interfaces} must be interpreted within strict epistemic limits. These comparisons are exploratory. They provide qualitative and structural vocabulary for describing complex dynamics observed during the scaling of deep networks, but they do not imply a formal mathematical unification or a foundational identity between physical fields and latent intelligence.
 
 In functional analysis and mathematical physics, operators act on well-defined, often infinite-dimensional topological vector spaces subject to rigorous physical invariances, conservation laws, and precise boundary conditions \cite{reed1980methods,kato1995perturbation}. In contrast, representation manifolds in deep networks are finite-dimensional, parameter-dependent, and emerge from statistical optimization over finite datasets \cite{pennington2017nonlinear}. Architectural inspiration drawn from transform domains, spectral geometry, or dynamical systems must never be conflated with mathematical proof.
 
@@ -337,16 +336,16 @@ A disciplined approach to machine intelligence recognizes that certain regularit
 
 Speculative frameworks require empirical grounding. Without validation through measurable system behavior, reproducible experimentation, and predictive capability, structural analogies remain descriptive rather than explanatory. Their value lies in generating hypotheses, identifying useful mathematical tools, and organizing future research directions.
 
-The progression from Section~\ref{appx:token-spectral} to this point therefore establishes a deliberate boundary. The purpose of these adjacent disciplines is not to provide a shortcut to a grand unified theory of intelligence. Rather, they offer a collection of mathematical perspectives through which representation, transformation, and stability may be studied with greater rigor. By maintaining this distinction, future work may benefit from the language of mathematical physics without inheriting assumptions that exceed the available evidence.
+The progression from Section\hyperlink{appx:token-spectral}{From Token Statistics to Spectral Organization} to this point therefore establishes a deliberate boundary. The purpose of these adjacent disciplines is not to provide a shortcut to a grand unified theory of intelligence. Rather, they offer a collection of mathematical perspectives through which representation, transformation, and stability may be studied with greater rigor. By maintaining this distinction, future work may benefit from the language of mathematical physics without inheriting assumptions that exceed the available evidence.
 
-%=====================================================
-% SECTION X.7: TOWARD A PHYSICS OF REPRESENTATION
-%=====================================================
+% ============================================
+% SECTION X.7: 
+% TOWARD A PHYSICS OF REPRESENTATION
+% =============================================
 \clearpage
 \phantomsection
 \section{Toward a Physics of Representation}
-\label{sec:physics_representation}
-
+\hypertarget{sec:physics_representation}
 The exploratory pathways traced throughout this appendix suggest a conceptual framework in which representation can be examined through the lenses of transformation, geometry, and constraint. Rather than viewing machine intelligence solely as a sequence of heuristic matrix operations, this perspective considers whether latent systems may be understood as organized dynamical structures whose behavior emerges from interactions among operators, representations, and stability mechanisms.
 
 Within this perspective, several recurring themes appear across the disciplines surveyed throughout this appendix:
@@ -374,17 +373,16 @@ For Volume I, this appendix serves as a boundary marker rather than a conclusion
 \clearpage
 \phantomsection
 \section{The Boundary Envelope and Unresolved Pathways}
-\label{sec:boundary_envelope}
-
-The structural framework outlined in Sections~\ref{appx:token-spectral}--\ref{sec:spectral_constraints} provides a coordinate system for describing representations, operators, and spectral constraints in large-scale architectures. The aim of this appendix is primarily observational: to highlight the alignment between engineering practice and mathematical structure. It concludes where descriptive insights must give way to derivation. Turning these structural analogies into predictive, testable systems involves addressing several unresolved theoretical challenges. Three of these are especially important.
+\hypertarget{sec:boundary_envelope}
+The structural framework outlined in Sections\hyperlink{appx:token-spectral}{From Token Statistics to Spectral Organization} \hyperlink{sec:spectral_constraints} provides a coordinate system for describing representations, operators, and spectral constraints in large-scale architectures. The aim of this appendix is primarily observational: to highlight the alignment between engineering practice and mathematical structure. It concludes where descriptive insights must give way to derivation. Turning these structural analogies into predictive, testable systems involves addressing several unresolved theoretical challenges. Three of these are especially important.
 
 \subsection{Non-Asymptotic Spectral Dynamics under Stochastic Optimization}
-Section~\ref{appx:token-spectral} characterized token-spectral transitions using operator mechanics and static spectral analysis. In practice, network parameters $\theta$ evolve stochastically on the training manifold $\mathcal{M}_\theta$, and the empirical spectral density $\rho_t(\lambda)$ of layer-wise operators exhibits sharp, non-monotonic shifts during training \cite{martin2017rethinking, jastrzebski2020break}. 
+Section\hyperlink{appx:token-spectral}{From Token Statistics to Spectral Organization} characterized token-spectral transitions using operator mechanics and static spectral analysis. In practice, network parameters $\theta$ evolve stochastically on the training manifold $\mathcal{M}_\theta$, and the empirical spectral density $\rho_t(\lambda)$ of layer-wise operators exhibits sharp, non-monotonic shifts during training \cite{martin2017rethinking, jastrzebski2020break}. 
 
 The assumption that spectral properties vary adiabatically (i.e., that the operator family $\mathcal{K}_\theta$ evolves smoothly under an effective generator) breaks down near loss-surface transitions and gradient plateaus \cite{pennington2017nonlinear}. Consequently, the time evolution of the kernel cannot be written as $\partial_t \mathcal{K}_\theta = \mathcal{L}_{\text{ad}} \mathcal{K}_\theta$ for any fixed operator $\mathcal{L}_{\text{ad}}$ over long horizons. Characterizing the non-equilibrium drift of $\rho_t(\lambda)$ and identifying invariants that remain approximately conserved during optimization remain open problems. Without such characterization, spectral stability guarantees derived from static analysis remain local approximations rather than global bounds \cite{kawaguchi2016deep}.
 
 \subsection{Topological Discontinuities in Dynamic Routing}
-The geometric formulation in Section~\ref{sec:operator_geometry} assumes that information propagates over a smooth manifold whose metric structure is at least piecewise differentiable. Dynamic routing mechanisms, token-skipping, and mixture-of-experts gating introduce discrete decision boundaries into the computational graph \cite{shazeer2017outrageously, fedus2022switch}. At these boundaries, the local tangent space is not well defined, and the notion of parallel transport for semantic vectors becomes ambiguous.
+The geometric formulation in Section\hyperlink{sec:operator_geometry}{Operator Geometry and Coordinated Interfaces} assumes that information propagates over a smooth manifold whose metric structure is at least piecewise differentiable. Dynamic routing mechanisms, token-skipping, and mixture-of-experts gating introduce discrete decision boundaries into the computational graph \cite{shazeer2017outrageously, fedus2022switch}. At these boundaries, the local tangent space is not well defined, and the notion of parallel transport for semantic vectors becomes ambiguous.
 
 Describing information flow across such junctions may require replacing Riemannian assumptions with structures that tolerate singularities, such as piecewise-linear Alexandrov spaces \cite{burago2001course}, stratified spaces, or sheaf-theoretic models of data \cite{curry2014sheaves}. How representational invariants are preserved across discontinuous routing remains unspecified, and whether discrete routing induces effective curvature on the learned manifold is an open question.
 
@@ -414,47 +412,59 @@ The boundary envelope is therefore explicit. The unresolved pathways are named. 
 \clearpage
 \phantomsection
 \section{Epistemic Taxonomy and Research Frontiers}
-\label{sec:synoptic_matrix}
+\hypertarget{sec:synoptic_matrix}
+To ensure that the descriptive insights and unresolved questions developed throughout Sections\hyperlink{appx:token-spectral}{From Token Statistics to Spectral Organization} through\hyperlink{sec:boundary_envelope}{The Boundary Envelope and Unresolved Pathways} remain empirically grounded, this section consolidates the framework into an epistemic taxonomy. The objective is to distinguish observed phenomena from their mathematical interpretations while making explicit the limitations and unresolved questions associated with each perspective.
 
-To ensure that the descriptive insights and unresolved questions developed throughout Sections~\ref{appx:token-spectral} through~\ref{sec:boundary_envelope} remain empirically grounded, this section consolidates the framework into an epistemic taxonomy. The objective is to distinguish observed phenomena from their mathematical interpretations while making explicit the limitations and unresolved questions associated with each perspective.
+Table\hyperlink{tab:epistemic_matrix} organizes the progression of this appendix using a disciplined hierarchy: \textbf{Phenomenological Observation} $\rightarrow$ \textbf{Structural Interpretation} $\rightarrow$ \textbf{Epistemic Limitation} $\rightarrow$ \textbf{Known Unknown}. This format follows the principle that architectural inspiration must precede, and be separable from, mathematical validation \cite{box1976science}.
 
-Table~\ref{tab:epistemic_matrix} organizes the progression of this appendix using a disciplined hierarchy: \textbf{Phenomenological Observation} $\rightarrow$ \textbf{Structural Interpretation} $\rightarrow$ \textbf{Epistemic Limitation} $\rightarrow$ \textbf{Known Unknown}. This format follows the principle that architectural inspiration must precede, and be separable from, mathematical validation \cite{box1976science}.
-
-\begin{table}[!ht]
-\small  % you already have this
-\setlength{\tabcolsep}{4pt} % add this line: tighter columns
-\centering
-\caption{Epistemic Taxonomy of Latent Operator Mechanics}
-\label{tab:epistemic_matrix}
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+\clearpage 
+\small     
+% Using >{\RaggedRight} eliminates the justified spacing gaps and fixes Underfull \hbox
+\begin{longtable}{>{\RaggedRight}p{0.23\linewidth} >{\RaggedRight}p{0.23\linewidth} >{\RaggedRight}p{0.23\linewidth} >{\RaggedRight}p{0.23\linewidth}}
+\caption{Epistemic Taxonomy of Latent Operator Mechanics\label{tab:epistemic_matrix_exploring}} \\
 \toprule
 \textbf{Phenomenological Observation} & 
 \textbf{Structural Interpretation} & 
 \textbf{Epistemic Limitation} & 
 \textbf{Identified Known Unknown} \\ 
 \midrule
+\endfirsthead % Ensures the label is only registered ONCE on the very first page
+
+\toprule
+\textbf{Phenomenological Observation} & 
+\textbf{Structural Interpretation} & 
+\textbf{Epistemic Limitation} & 
+\textbf{Identified Known Unknown} \\ 
+\midrule
+\endhead % Used for sub-pages without triggering the label loop again
+
 Layer-wise scaling produces predictable power-law shifts in empirical singular value spectra \cite{martin2017rethinking, martin2021implicit}. 
-& token-spectral transitions can be described as localized operator bounds in the transform domain, consistent with Section~\ref{appx:token-spectral}. 
+& token-spectral transitions can be described as localized operator bounds in the transform domain, consistent with Section~\hyperlink{appx:token-spectral}{From Token Statistics to Spectral Organization}. 
 & Static spectral analysis does not account for non-equilibrium parameter updates during stochastic gradient descent \cite{pennington2017nonlinear}. 
 & The parameter-dependent generator driving non-asymptotic spectral drift, $\partial_t \mathcal{K}_\theta$, remains unspecified \cite{jastrzebski2020break}. \\ 
 \addlinespace
+
 Representational alignment across deep layers preserves global semantic topology as measured by linear probe or CKA metrics \cite{kornblith2019similarity, raghu2021vision}. 
-& Latent features may organize along continuous, non-Euclidean submanifolds or fiber bundles as suggested in Section~\ref{sec:transform_domains}. 
+& Latent features may organize along continuous, non-Euclidean submanifolds or fiber bundles as suggested in Section~\hyperlink{sec:transform_domains}{Transform Domains as Representational Coordinate Systems}. 
 & Empirical manifolds are finite-dimensional, sampled discretely, and sensitive to tokenization and initialization \cite{anselmi2019intrinsic}. 
 & A coordinate-invariant measure of representational entropy that remains conserved under contractive maps is not known \cite{baez2011category}. \\ 
 \addlinespace
+
 Sparse routing and mixture-of-experts architectures exhibit localized instability at gating boundaries \cite{shazeer2017outrageously, fedus2022switch}. 
-& Discrete decision boundaries may be interpreted as geometric singularities in phase routing space, per Section~\ref{sec:operator_geometry}. 
+& Discrete decision boundaries may be interpreted as geometric singularities in phase routing space, per Section~\hyperlink{sec:operator_geometry}{Operator Geometry and Coordinated Interfaces}. 
 & Classical Riemannian metrics $g_{\mu\nu}$ become ill-defined at routing junctions; parallel transport of semantic vectors lacks a canonical definition. 
 & The applicability of piecewise-linear Alexandrov spaces \cite{burago2001course} or sheaf-theoretic models \cite{curry2014sheaves} to discontinuous transport is untested. \\ 
 \addlinespace
+
 Network compression and distillation preserve downstream performance despite substantial capacity reduction \cite{hinton2015distilling, frankle2018lottery}. 
-& High-dimensional representation systems appear to scale via structural optimization constraints, not parameter count alone, as discussed in Section~\ref{sec:spectral_constraints}. 
-& Analogy-driven frameworks do not constitute mathematical proofs and do not imply physical substrates, per Section~\ref{sec:constraints_discipline}. 
+& High-dimensional representation systems appear to scale via structural optimization constraints, not parameter count alone, as discussed in Section~\hyperlink{sec:spectral_constraints}. 
+& Analogy-driven frameworks do not constitute mathematical proofs and do not imply physical substrates, per Section~\hyperlink{sec:constraints_discipline}. 
 & The mechanism that balances information loss with localized curvature or effective dimension during compression remains unspecified \cite{roy2019effectiveness}. \\ 
 \bottomrule
-\end{tabularx}
-\end{table}
+\end{longtable}
+
+
+
 
 This formal categorization establishes the empirical boundaries of Volume I. By separating observed structural regularities from their speculative mathematical languages, the framework functions as a coordinate system for organizing research questions. Each row maps a documented phenomenon to a bounded interpretation and an explicit limit. 
 

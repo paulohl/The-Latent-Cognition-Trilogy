@@ -1,4 +1,4 @@
-\chapter{The Latent Cognition Trilogy} \footnotemark{}
+\chapter{The Latent Cognition Trilogy}
 %=====================================
 % Leocadio, Paulo, A Transformer-Based Framework % for 
 % Automated Incident Response in Cybersecurity 
@@ -7,43 +7,10 @@
 % https://ssrn.com/abstract=6821299 
 % or %http://dx.doi.org/10.2139/ssrn.6821299
 %=====================================
-% \begin{longtable}[]{@{}
-% >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0727}}
-% >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3570}}
-%  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0727}}
-%  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.4975}}@{}}
-% \caption{}
-% \tabularnewline
-% \toprule()
-% \begin{minipage}[b]{\linewidth}\raggedright
-% \includegraphics[width=0.3in, height=0.3in] {figures/prologue_a.png}
-% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-% 0000-0002-4992-4541
-% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-% \includegraphics[width=0.31304in, height=0.3in] {figures/prologue_b.png}
-% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-% 10.2139/ssrn.6821299
-% \end{minipage} 
-% \endfirsthe% ad
-% \toprule% ()
-% \begin{minipage}[b]{\linewidth}\raggedright
-% \includegraphics[width=0.3in, height=0.3in] {figures/prologue_b.png}
-% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-% 0000-0002-4992-4541
-% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-%\includegraphics[width=0.31304in, height=0.3in]{figures/prologue_b.png}
-% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-% 10.2139/ssrn.6821299
-% \end{minip% age} \\
-% \midrule% ()
-% \endhe% ad
-% \bottomrule()
-% \end{longtable% }
 
 \section{Contextual overview} 
-\footnotetext{Chapter originally released under DOI 10.2139/ssrn.6821299 by ORCID:0000-0002-4992-4541}.
 
-The problem addressed in this work is the persistent separation between parametric memory, encoded within model weights, and non-parametric memory retrieved through external databases or retrieval systems in modern \textbf{Retrieval-Augmented Generation} (\textbf{RAG}) architectures. Although RAG-based systems have improved factual grounding in \textbf{large language models} (\textbf{LLMs}), they introduce architectural fragmentation between the retrieval and generation components, which are often optimized independently and coupled only at inference time.
+The problem addressed in this work is the persistent separation between parametric memory, encoded within model weights, and non-parametric memory retrieved through external databases or retrieval systems in modern \textbf{Retrieval-Augmented Generation} (\textbf{RAG}) architectures. Although RAG-based systems have improved factual grounding in \textbf{large language models} (\textbf{LLMs}), they introduce architectural fragmentation between the retrieval and generation components, which are often optimized independently and coupled only at inference time. \footnote{Chapter originally released under DOI 10.2139/ssrn.6821299 by ORCID:0000-0002-4992-4541}
 
 This separation introduces several limitations, including retrieval latency, semantic drift between the retrieved evidence and the model's context, and restricted end-to-end gradient flow between evidence selection and downstream reasoning. Existing memory-augmented architectures partially address these issues but typically maintain retrieval as an external or weakly integrated process.
 
@@ -82,7 +49,7 @@ This work contributes:
 \label{overview-of-the-paper}
 
 \textbf{Section 2} develops the methodological and \emph{architectural foundation of the DLI-LLM framework}\footnotemark{} by decomposing the originating hypothesis into its principal architectural components. The section formalizes the retrieval mechanism through mathematical definitions, algorithmic specification, and implementation-oriented architectural modeling. It also situates the proposed framework in relation to existing retrieval- and memory-augmented transformer architectures through comparative analysis.
-\footnotetext{This chapter is available on SSRN at 6821299 or via DOI 10.2139/ssrn.6821299}. Originally written as a journal paper, this piece was later included in the book as a prologue because it describes the architectural phenomenon that inspired the broader investigation.
+\footnotetext{This chapter is available on SSRN at 6821299 or via DOI 10.2139/ssrn.6821299} Originally written as a journal paper, this piece was later included in the book as a prologue because it describes the architectural phenomenon that inspired the broader investigation.
 
 \textbf{Section 3} examines the predicted architectural behaviors and limitations of differentiable latent retrieval, including retrieval dynamics, memory-scaling considerations, retrieval coherence, and potential failure modes, in the absence of an empirical implementation.
 \textbf{Section 4} discusses broader implications for the design of retrieval-integrated transformer architectures, internal memory architectures, and future experimental investigations.
@@ -133,7 +100,13 @@ The fused representation is subsequently computed as:
 
 This formulation enables retrieved latent memory vectors to participate directly in transformer-layer computation \cite{Vaswani2017} while preserving differentiable gradient propagation through both the retrieval and attention pathways \cite{Graves2014,Graves2016,Santoro2016}
 
-\includegraphics[width=5.5in,height=3.66667in]{figures/prologue2.png}
+\begin{center}
+    \includegraphics[
+        width=\linewidth,
+        height=0.55\textheight,
+        keepaspectratio
+    ]{figures/prologue2.png}
+\end{center}
 
 \textbf{Figure} 2 illustrates the retrieval-routing and gradient-propagation processes within the proposed framework.
 
@@ -321,11 +294,11 @@ Cross-layer retrieval propagation may introduce retrieval-context misalignment w
 \label{retrieval-poisoning-and-memory-contamination}
 Because latent retrieval pathways participate directly in transformer computation, corrupted or adversarial memory representations may propagate erroneous retrieval signals throughout downstream generation pathways. This introduces potential risks associated with latent memory contamination and retrieval integrity.
 \hypertarget{comparative-architectural-behavior-analysis}{%
-\subsection Comparative Architectural Behavior Analysis}
+\subsection {Comparative Architectural Behavior Analysis}}
 \label{comparative-architectural-behavior-analysis}
-\hypertarget{discussion}{%
-\section{Discussion}}
-\label{discussion}
+% \hypertarget{discussion}{%
+% \section{Discussion}}
+% \label{discussion}
 The \emph{DLI-LLM framework} proposes a retrieval-integrated transformer architecture in which latent memory access is incorporated into the forward-computation pathway rather than into an externally orchestrated retrieval stage. This architectural formulation has implications for how memory coordination, retrieval dynamics, and contextual grounding may be modeled within transformer-based systems.
 \hypertarget{retrieval-integration-and-memory-coordination}{%
 \subsection{Retrieval Integration and Memory Coordination}}
@@ -350,7 +323,15 @@ retrieval-augmented systems. Still, they may become more difficult to isolate wh
 \label{routing-and-architectural-control}
 A central component of the proposed framework is the retrieval-routing gate, which regulates how retrieved latent vectors influence transformer hidden states. This routing process determines the degree to which retrieved memory participates in downstream computation and contextual inference.
 \textbf{Figure 4} presents a conceptual comparison between DLI-LLM and conventional retrieval-augmented architectures across multiple architectural dimensions, including retrieval coordination, grounding stability, memory coherence, and the distribution of retrieval failures.
-\includegraphics[width=5.49073in,height=3.66383in]{figures/prologue1.png}
+\vspace{0.15in}
+\begin{center}
+    \includegraphics[
+        width=\linewidth,
+        height=0.55\textheight,
+        keepaspectratio
+    ]{figures/prologue4.png}
+\end{center}
+\noindent
 \textbf{Figure} 4. Conceptual illustration of retrieval fragmentation and modality separation in conventional retrieval-augmented architectures.
 The figure does not present empirical benchmark data and should instead be interpreted as a theoretical comparative model derived from architectural analysis and prior observations in memory-augmented transformer research.
 \hypertarget{broader-architectural-implications}{%

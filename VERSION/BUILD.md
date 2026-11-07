@@ -1,88 +1,62 @@
-# Build Notes
+# Build and Edition Integrity
 
-Compiler:
-- pdfLaTeX (TeX Live 2025)
+**Project:** The Latent Cognition Trilogy  
+**Source language:** LaTeX + BibTeX  
+**Authoring:** Overleaf / GitHub  
+**Current print target:** 6 × 9-inch hardcover, no-bleed PDF
 
-Build sequence:descriptionFile tree
-searchProject search
-integration_instructionsIntegrations
-rate_reviewReview panel
-forumChat
-help
-settings
+## Build configuration
 
-keyboard_arrow_down
-File tree
+The project has been maintained with **pdfLaTeX** (the existing notes specify TeX Live 2025). The repository entry point is `main.tex`; the bibliography database is `master.bib`.
 
-keyboard_arrow_down
-File outline
+For a local environment with TeX Live and `latexmk`:
 
-keyboard_arrow_down
-The Latent Cognition Trilogy
-Contextual overview
+```sh
+latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+```
 
-keyboard_arrow_down
-Introduction
-Memory-Assisted Generalization
+Alternatively, use the explicit BibTeX sequence:
 
-undo
-Undo
+```sh
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+bibtex main
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -interaction=nonstopmode -halt-on-error main.tex
+```
 
-redo
-Redo
+**Important:** `bibtex main` operates on `main.aux`. `master.bib` is the reference database—not the BibTeX job name. Run from the project root. These commands document the expected build procedure; this documentation refresh does not certify that the checked-in source reproduces the KDP-submitted PDF.
 
-format_bold
-Bold
+## Production targets
 
-format_italic
-Italic
+| Target | Intended process | State as of 2026-11-07 |
+| :-- | :-- | :-- |
+| Hardcover PDF | Overleaf/pdfLaTeX → KDP preview → physical proof | Submitted to KDP; physical proof ordered |
+| Kindle EPUB | Separate LaTeX-derived EPUB build → KDP online preview | Planned; not released |
 
-more_horiz
-Editor mode.
+### Hardcover validation record
 
+The submitted hardcover has ISBN **979-8-234-29378-7** and was priced at **USD 35.99** at submission. The KDP Print Previewer reported no blocking errors after repairs to oversized figures and exclusion of a source-verification manifest; the remaining non-printable-markup notices were review-only. A downloaded PDF proof and a physical proof order exist. **KDP review approval and physical print quality were pending on 2026-11-07.**
 
-edit
-Editing
-keyboard_arrow_down
+## Source-to-edition parity: outstanding
 
-search
-Search file
-▾
-▾
-▾
+The GitHub `main.tex` inspected on 2026-11-07 still contains the line:
 
+```tex
+\include{sections/backmatter/10_hyp1_manifest}
+```
 
-This paper does not present empirical validation or benchmarked implementation results. Instead, it develops a conceptual architectural framework based on the Differentiable Latent Indexing inside Large Language Models (DLI-LLM) hypothesis, as reproduced in Appendix A. The methodology follows a structured process of architectural decomposition, mathematical formalization, comparative analysis, and implementation-oriented modeling to examine how differentiable retrieval mechanisms can be integrated directly into transformer computational pathways.
-\hypertarget{architectural-foundations}{%
-\subsection{Architectural Foundations}}
-��architectural-foundations
-The DLI-LLM framework is derived from four principal architectural assumptions:
- The integration of a differentiable memory module within transformer layers.
- The use of latent key-value memory structures to support scalable retrieval operations.
- The existence of a shared latent vector space for token representations and retrieved document embeddings.
- A learned routing-and-gating mechanism that dynamically controls retrieval activation during inference.
-Together, these components define a retrieval-integrated transformer architecture in which latent memory access is integrated into the forward computation rather than occurring as an external retrieval stage.
-Unlike conventional Retrieval-Augmented Generation (RAG) systems, in which retrieval and generation are often decoupled, DLI-LLM embeds retrieval directly into transformer-layer operations. Retrieval queries are generated from hidden-state representations and used to access latent memory structures through differentiable similarity functions. Retrieved vectors are subsequently fused back into the attention pathway through learned gating mechanisms.
-\includegraphics[width=5in,height=3.33333in]{figures/prologue1.png}
-Figure 1 illustrates the conceptual retrieval pathway and latent memory integration process within the transformer stack.
-\hypertarget{latent-memory-representation}{%
-\subsection{Latent Memory Representation}}
-��latent-memory-representation
-The proposed framework assumes the existence of a latent key-value memory structure:
-The architecture assumes that both token representations and retrieved document embeddings can coexist in a shared latent vector space, enabling retrieval operations to occur in the same representational domain as transformer hidden states.
-To support scalability, the framework optionally incorporates product quantization strategies inspired by large-scale vector retrieval systems and differentiable memory architectures. This enables latent retrieval to remain computationally tractable even when memory capacity grows substantially.
-\hypertarget{retrieval-and-routing-mechanism}{%
-\subsection{Retrieval and Routing Mechanism}}
-��retrieval-and-routing-mechanism
-At each transformer layer, the hidden representation:
+That manifest was excluded from the final hardcover build. Some hardcover-specific front matter also differs from the GitHub working tree. Consequently:
 
+1. Preserve the submitted KDP PDF and proof as a separately identified production artifact.
+2. Synchronize the final Overleaf source into a controlled release branch, **without replacing or silently rewriting historical research records**.
+3. Recompile from the synchronized source and compare page count, identifiers, figure placement, and front/back matter with the submitted proof.
+4. Record a source commit, exact compiler configuration, and SHA-256 of the approved production PDF in a release manifest after parity is verified.
+5. Tag the release only when source-to-PDF parity and publication state are verified; avoid implying KDP approval before it occurs.
 
-pdflatex main
-bibtex master
-pdflatex main
-pdflatex main
+Do not silently treat the June 2026 `main.tex` architecture freeze as proof of final November hardcover reproducibility.
 
-Notes:
-- Pandoc compatibility layer retained intentionally.
-- main.tex should not be structurally modified.
-- New content belongs under /sections only.
+## Source-change policy
+
+`main.tex` is the build orchestrator. Its June 2026 architectural freeze is a version-control milestone, **not** a prohibition on essential publication corrections. Keep new scientific prose in imported `sections/` files; review any necessary orchestrator changes as explicit release-engineering changes. Retain legacy/Pandoc compatibility only where required by the current build.
+
+The hardcover and future eBook should draw from the same reviewed scientific content but use **separate formatting/build targets**. PDF margins, forced page breaks, running headers, and non-reflowable table dimensions must not be blindly copied into EPUB.

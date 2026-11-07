@@ -360,16 +360,14 @@ This formalizes a continuous, uninterrupted backward pass from downstream langua
     \caption{Gradient pathways in Differentiable Latent Indexing. Query projection, similarity computation, sparse retrieval weighting, routed memory integration, and gated fusion remain within the differentiable computation graph, allowing latent memory to co-evolve with Transformer parameters.}
     \label{fig:gradient-pathways}
 \end{figure}
+
 \begin{algorithm}[H] 
     \caption{Differentiable Latent Indexing Loop}
     \label{alg:dli-loop}
-
     \smallskip
     \textbf{Input:} hidden state $h_t^{(\ell)}$, latent memory $M^{(\ell)} = \{(k_i^{(\ell)}, v_i^{(\ell)})\}_{i=1}^{N}$, parameters $W_q^{(\ell)}$, $W_g^{(\ell)}$, top-$k$ value, temperature $\tau$.
-    
     \textbf{Output:} fused representation $\tilde{h}_t^{(\ell)}$.
     \smallskip
-
     \begin{enumerate}
         \item Compute retrieval query: $q_t^{(\ell)} \leftarrow W_q^{(\ell)}h_t^{(\ell)} + b_q^{(\ell)}$.
         \item Compute similarity scores: $s_i^{(\ell)} \leftarrow q_t^{(\ell)} \cdot k_i^{(\ell)} / \sqrt{d_k}$.
@@ -408,36 +406,137 @@ During inference, DLI could operate through frozen or partially updateable memor
 \subsection{Evaluation Plan}
 A future empirical study should compare DLI-augmented models against baseline Transformers, RAG models, kNN-LM variants, and memorizing transformers. Evaluation should include latency overhead, retrieval precision, hallucination rates, long-context coherence, memory saturation, and ablation studies that independently disable routing, memory access, or quantization.
 
-\section{Comparative Literature Analysis}
-\textbf{Table}~\ref{tab:comparative-architectures} summarizes the position of DLI relative to adjacent architectures.
+% ============================================================
+% COMPARATIVE LITERATURE ANALYSIS
+% Dedicated single page — KDP Hardcover Edition
+% ============================================================
 
-\begin{table}[ht!]
+\clearpage
+
+\section{Comparative Literature Analysis}
+
+\vspace{-0.5\baselineskip}
+
+\noindent
+\textbf{Table}~\ref{tab:comparative-architectures}
+summarizes the position of DLI relative to adjacent architectures.
+
+\vspace{0.05in}
+
+\begin{table}[H]
 \centering
-\small
-\begin{tabular}{p{0.26\linewidth}p{0.36\linewidth}p{0.30\linewidth}}
+\footnotesize
+
+% Compact typography for 6 x 9 hardcover
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{0.95}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{0pt}
+
+\begin{tabular}{
+    p{0.26\linewidth}
+    p{0.36\linewidth}
+    p{0.30\linewidth}
+}
 \hline
-\textbf{Architecture} & \textbf{Relation to DLI} & \textbf{Limitation Relative to DLI} \\
+
+\textbf{Architecture}
+&
+\textbf{Relation to DLI}
+&
+\textbf{Limitation Relative to DLI}
+\\
 \hline
-Retrieval-Augmented Generation & Combines parametric generation with non-parametric retrieval \cite{Lewis2021}. & Retrieval is typically external to the Transformer computation graph. \\
+
+Retrieval-Augmented Generation
+&
+Combines parametric generation with non-parametric retrieval
+\cite{Lewis2021}.
+&
+Retrieval is typically external to the Transformer computation graph.
+\\
 \hline
-$k$NN-LM & Interpolates language-model predictions with nearest-neighbor lookup \cite{Khandelwal2020}. & Retrieval is post-hoc and not trained as an internal layer function. \\
+
+$k$NN-LM
+&
+Interpolates language-model predictions with nearest-neighbor lookup
+\cite{Khandelwal2020}.
+&
+Retrieval is post-hoc and not trained as an internal layer function.
+\\
 \hline
-Memorizing Transformers & Store and retrieve recent key--value representations \cite{Wu2022}. & Memory improves context use but remains distinct from document-level latent unification. \\
+
+Memorizing Transformers
+&
+Store and retrieve recent key--value representations
+\cite{Wu2022}.
+&
+Memory improves context use but remains distinct from document-level
+latent unification.
+\\
 \hline
-Neural Turing Machines / DNC & Demonstrate differentiable memory addressing \cite{Graves2014, Graves2016}. & Designed as general memory controllers rather than layer-native LLM retrieval modules. \\
+
+Neural Turing Machines / DNC
+&
+Demonstrate differentiable memory addressing
+\cite{Graves2014, Graves2016}.
+&
+Designed as general memory controllers rather than layer-native
+LLM retrieval modules.
+\\
 \hline
-Memory-Augmented Neural Networks & Support rapid assimilation of new examples \cite{Santoro2016}. & Primarily oriented toward few-shot learning rather than Transformer-internal retrieval. \\
+
+Memory-Augmented Neural Networks
+&
+Support rapid assimilation of new examples
+\cite{Santoro2016}.
+&
+Primarily oriented toward few-shot learning rather than
+Transformer-internal retrieval.
+\\
 \hline
-Recurrent Memory Transformer & Uses memory tokens for long-sequence processing \cite{Bulatov2022}. & Memory persistence is present, but explicit latent key--value retrieval control is limited. \\
+
+Recurrent Memory Transformer
+&
+Uses memory tokens for long-sequence processing
+\cite{Bulatov2022}.
+&
+Memory persistence is present, but explicit latent key--value
+retrieval control is limited.
+\\
 \hline
-Dense Passage Retrieval / RocketQA & Optimizes learned representations for retrieval \cite{Qu2021}. & Retrieval occurs outside the model's internal forward computation. \\
+
+Dense Passage Retrieval / RocketQA
+&
+Optimizes learned representations for retrieval
+\cite{Qu2021}.
+&
+Retrieval occurs outside the model's internal forward computation.
+\\
 \hline
-Product-Quantized Vector Search & Provides scalable approximate search \cite{Jgou2011, Johnson2021}. & Supplies retrieval infrastructure but not a cognitive or Transformer-layer architecture. \\
+
+Product-Quantized Vector Search
+&
+Provides scalable approximate search
+\cite{Jgou2011, Johnson2021}.
+&
+Supplies retrieval infrastructure but not a cognitive or
+Transformer-layer architecture.
+\\
 \hline
+
 \end{tabular}
+
 \caption{Comparative analysis of memory-augmented and retrieval-integrated architectures.}
 \label{tab:comparative-architectures}
+
 \end{table}
+
+% =============================================
+% END OF DEDICATED TABLE PAGE
+% =============================================
+
+\clearpage
 
 \section{Discussion}
 The DLI-LLM architecture reframes how memory is conceptualized in Transformer-based systems. By integrating retrieval into the forward pass, the model collapses the traditional separation between reasoning and recall. This aligns with cognitive architecture research that treats memory, control, learning, and representation as interdependent properties of intelligent systems \cite{Sun2004}.
@@ -456,7 +555,7 @@ A central feature of DLI-LLM is the routing gate. The gate mediates the integrat
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.72\linewidth]{figures/Picture4.png}
+    \includegraphics[width=0.72\linewidth]{figures/prologue5.png}
     \caption{Training flow and gating control in DLI-LLM. Product-quantized key--value lookup, attention fusion, routing gates, and gradient-based memory adaptation interact across Transformer blocks.}
     \label{fig:gating-control}
 \end{figure}

@@ -1,31 +1,34 @@
-\documentclass[11pt,openany]{book}
+\documentclass[11pt,twoside,openright]{book}
 
-% ======================================================
+% =============================================
 % 1. PRE-CORE STRUCTURAL EXTENSIONS (CRITICAL ORDER)
-% ======================================================
+% =============================================
 \usepackage{xr-hyper} 
 
-% ======================================================
-% 2. HYPERREF AND METADATA EXTENSIONS
-% ======================================================
+% =============================================
+% 2. MATH, FONTS & CORE TYPOGRAPHY (Load early!)
+% =============================================
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
 
+% =============================================
+% 3. HYPERREF AND METADATA EXTENSIONS
+% =============================================
 \PassOptionsToPackage{unicode,hidelinks,colorlinks=false}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \usepackage{hyperref}
 \usepackage{bookmark}
 \urlstyle{same} % disable monospaced font for URLs
 
-% ======================================================
-% 3. THE CUSTOM TRILOGY CORE
-% ======================================================
-
+% =============================================
+% 4. THE CUSTOM TRILOGY CORE
+% =============================================
 \usepackage{trilogy_macros} 
-\usepackage{subfiles}       
+\usepackage{subfiles}    
 
-% ======================================================
-% 4. STANDARD SCHOLARLY PACKAGES
-% ======================================================
-
+% =============================================
+% 5. STANDARD SCHOLARLY PACKAGES
+% =============================================
 \usepackage{graphicx}
 \graphicspath{{figures/}}
 
@@ -37,80 +40,87 @@
 \usepackage{algorithm}
 \usepackage{algorithmic}
 
-\usepackage{microtype} 
-\UseMicrotypeSet[protrusion]{basicmath} 
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc}          % for calculating minipage widths
+\usepackage{etoolbox}
 
-\PassOptionsToPackage{document}{ragged2e} 
-\usepackage{ragged2e}
+% =============================================
+%  STANDARD SCHOLARLY PACKAGES
+% =============================================
+% \usepackage{microtype} 
+% \UseMicrotypeSet[protrusion]{basicmath} 
 
-% ======================================================
-% 5. TYPOGRAPHIC AND PAGE LAYOUT CONFIGURATION
-% ======================================================
+% \PassOptionsToPackage{document}{ragged2e} 
+% \usepackage{ragged2e}
 
+
+
+% ============================================================
+% KDP HARDCOVER TRIM / MIRRORED MARGINS / NO INTERIOR BLEED
+% If trilogy_macros.sty already loads geometry, reuse that instance.
+% ============================================================
+\makeatletter
+\@ifpackageloaded{geometry}{}{\RequirePackage{geometry}}
+\makeatother
+\geometry{
+    paperwidth=6in,
+    paperheight=9in,
+    inner=0.75in,
+    outer=0.625in,
+    top=0.80in,
+    bottom=0.80in,
+    headheight=14pt,
+    headsep=0.22in,
+    footskip=0.35in
+}
+
+% =============================================
+% 7. TYPOGRAPHIC AND PAGE LAYOUT CONFIGURATION
+% =============================================
 \usepackage{fancyhdr}
 
 \fancypagestyle{plain}{
     \fancyhf{}
-    \fancyhead[R]{\thepage}
+    \fancyhead[LE,RO]{\thepage}
     \renewcommand{\headrulewidth}{0pt}
 }
-\fancyfoot[L]{}
-\fancyfoot[C]{\thepage}
-\fancyfoot[R]{Zinnia Labs Publishing}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{\thepage}
+\fancyhead[LE,RO]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
-\setlength{\headheight}{13.6pt}
+\setlength{\headheight}{14pt}
 
-% ======================================================
-% 6. PROLOGUE
-% ======================================================
-% Options for packages loaded elsewhere
-
-\usepackage{amsmath,amssymb}
-\usepackage{lmodern}
-
-\usepackage{xcolor}
-\usepackage{longtable,booktabs,array}
-\usepackage{calc}                   % for calculating minipage widths
-% Correct order of tables after \paragraph or \subparagraph
-\usepackage{etoolbox}
-
-% ====================================================== 
+% ============================================ 
 % PANDOC COMPATIBILITY LAYER
-% (retained for Word->LaTeX interoperability)
-% ====================================================== 
-
-\usepackage{iftex}
+% ============================================ 
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
-  \usepackage{textcomp}         % provide euro and other symbols
-\else                           % if luatex or xetex
+  \usepackage{textcomp}         
+\else                           
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 
 \makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
+\@ifundefined{KOMAClassName}{%
   \IfFileExists{parskip.sty}{%
     \usepackage{parskip}
-  }{% else
+  }{%
     \setlength{\parindent}{0pt}
     \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
+}{%
   \KOMAoptions{parskip=half}}
 \makeatother
 
 \makeatletter
 \patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
 \makeatother
-% Allow footnotes in longtable head/foot
-\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
-\usepackage{tabularx}               % <- gives you tabularx environment
 
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\usepackage{tabularx}               
 \makesavenoteenv{longtable}
 
 \makeatletter
@@ -118,30 +128,37 @@
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
 \makeatother
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-% Set default figure placement to htbp
 
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
-\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setlength{\emergencystretch}{3em} 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\setcounter{secnumdepth}{-\maxdimen} 
 \ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
+  \usepackage{selnolig}  
 \fi
 
 % ======================================================
-% 7. TIKZ
+% 8. TIKZ & FLOATS
 % ======================================================
+\usepackage{float} 
+\usepackage{tikz} 
 
-\usepackage{float} % in preamble
-\usepackage{tikz} % if you use tikz later
+% =============================================
+% 6. TEXT ALIGNMENT & TYPOGRAPHIC FINISHING (Safely grouped)
+% =============================================
+% Load ragged2e without the strict global 'document' option to stop table corruption
+\usepackage{ragged2e} 
+
+% Load microtype AFTER font packages to fix \showhyphens warning safely
+\usepackage{microtype} 
+\UseMicrotypeSet[protrusion]{basicmath} 
 
 % ======================================================
 % FRONT MATTER METADATA
 % ======================================================
-
 \title{The Latent Cognition Trilogy \\[2.2em]
   \begin{center}
     \includegraphics[width=0.58\textwidth,keepaspectratio]{trilogy_main_cover}
@@ -156,7 +173,6 @@
 % ======================================================
 % HELPER COMMANDS FOR CANONICAL ALIGNMENT
 % ======================================================
-
 \newcommand{\frontchapter}[1]{%
     \cleardoublepage
     \phantomsection
@@ -165,21 +181,25 @@
     \markboth{#1}{}
 }
 
-% ====================================================== 
+% ============================================ 
 % DOCUMENT EXECUTION ENGINE
-% ====================================================== 
-
+% ============================================ 
 \begin{document}
 
 \frontmatter
-\maketitle
+% \maketitle
 
-% Structural Cover Elements (Unnumbered Pages)
-% \frontchapter{Book Title}
-\input{sections/frontmatter/00_title-page}
+% ============================================================
+% HARDCOVER FRONT MATTER: exact production order
+% Each of these is a separate, easily maintained source file.
+% ============================================================
+\input{sections/frontmatter/00_title_page_kdp}
+\input{sections/frontmatter/00_copyright_kdp}
+\input{sections/frontmatter/00_institutional_kdp}
+\input{sections/frontmatter/00_publication_status_kdp}
+\input{sections/frontmatter/00_dedication_kdp}
 
 \cleardoublepage
-
 \tableofcontents
 \listoffigures
 
@@ -204,14 +224,10 @@ Datasets \vspace{\baselineskip}
 \href{https://doi.org/10.6084/m9.figshare.32952530}{Curriculum-Induced Symbol Invention for Emergent Reasoning Primitives (CISI) – Hypothesis 2}  \vspace{\baselineskip}
 
 \href{https://doi.org/10.6084/m9.figshare.32952662}{Hierarchical Topic-Conditioned Routing for Mixture-of-Expert Language Models (HTCR) – Hypothesis 3}
-% ======================================================
+
+% =============================================
 % FRONTMATTER: CANONICAL ORIENTATION
-% ======================================================
-
-\pagenumbering{roman} % Enforces Roman numerals starting here (i, ii, iii...)
-
-\frontchapter{Zinnia Labs Publishing Co}
-\input{sections/frontmatter/00_institutional}
+% =============================================
 
 \frontchapter{Preface}
 \input{sections/frontmatter/00_series_preface}
@@ -233,10 +249,9 @@ Datasets \vspace{\baselineskip}
 \frontchapter{Introduction to the Trilogy} 
 \input{sections/04_trilogy_overview}
 
-%======================================================
+% =============================================
 % MAIN MATTER: THE TRILOGY CORE VOLUMES
-%======================================================
-
+% =============================================
 \clearpage
 \mainmatter % Properly switches layout and resets counter to Arabic (1, 2, 3...)
 
@@ -246,26 +261,29 @@ Datasets \vspace{\baselineskip}
 
 \include{sections/07_vol3} % Volume III: Latent Routing
 
-% ======================================================
+% =============================================
 % BACK MATTER: EVIDENTIARY SPECIFICATIONS
-% ======================================================
-
+% =============================================
 \backmatter
 
 \include{sections/backmatter/08_conclusion}         % Global Epilogue
 \include{sections/backmatter/09_appendix_manifesto} % Technical Appendix IR
-\include{sections/backmatter/10_hyp1_manifest}      % Technical Manifest
+%\include{sections/backmatter/10_hyp1_manifest}      % Technical Manifest
 \include{sections/backmatter/11_appendix-exploring} % Technical Exploring
 
-% ======================================================
+% =============================================
 % GLOBAL CONSOLIDATED BIBLIOGRAPHY
-% ======================================================
-
+% =============================================
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliography}
 
 \bibliographystyle{plain}
 \bibliography{master}
+
+% ============================================================
+% FINAL PRODUCTION IMPRINT / COLOPHON
+% ============================================================
+\input{sections/backmatter/12_colophon_kdp}
 
 \end{document}

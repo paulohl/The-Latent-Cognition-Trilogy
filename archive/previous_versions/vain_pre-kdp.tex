@@ -1,0 +1,277 @@
+\documentclass[11pt,openany]{book}
+
+% =============================================
+% 1. PRE-CORE STRUCTURAL EXTENSIONS (CRITICAL ORDER)
+% =============================================
+\usepackage{xr-hyper} 
+
+% =============================================
+% 2. MATH, FONTS & CORE TYPOGRAPHY (Load early!)
+% =============================================
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+
+% =============================================
+% 3. HYPERREF AND METADATA EXTENSIONS
+% =============================================
+\PassOptionsToPackage{unicode,hidelinks,colorlinks=false}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\urlstyle{same} % disable monospaced font for URLs
+
+% =============================================
+% 4. THE CUSTOM TRILOGY CORE
+% =============================================
+\usepackage{trilogy_macros} 
+\usepackage{subfiles}    
+
+% =============================================
+% 5. STANDARD SCHOLARLY PACKAGES
+% =============================================
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+\usepackage{orcidlink}
+\usepackage{authblk}
+\usepackage{lipsum}
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc}          % for calculating minipage widths
+\usepackage{etoolbox}
+
+% =============================================
+%  STANDARD SCHOLARLY PACKAGES
+% =============================================
+% \usepackage{microtype} 
+% \UseMicrotypeSet[protrusion]{basicmath} 
+
+% \PassOptionsToPackage{document}{ragged2e} 
+% \usepackage{ragged2e}
+
+
+
+% =============================================
+% 7. TYPOGRAPHIC AND PAGE LAYOUT CONFIGURATION
+% =============================================
+\usepackage{fancyhdr}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[R]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
+\fancyfoot[L]{}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{Zinnia Labs Publishing}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{13.6pt}
+
+% ============================================ 
+% PANDOC COMPATIBILITY LAYER
+% ============================================ 
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp}         
+\else                           
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+
+\makeatletter
+\@ifundefined{KOMAClassName}{%
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{%
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{%
+  \KOMAoptions{parskip=half}}
+\makeatother
+
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\usepackage{tabularx}               
+\makesavenoteenv{longtable}
+
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} 
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} 
+\ifLuaTeX
+  \usepackage{selnolig}  
+\fi
+
+% ======================================================
+% 8. TIKZ & FLOATS
+% ======================================================
+\usepackage{float} 
+\usepackage{tikz} 
+
+% =============================================
+% 6. TEXT ALIGNMENT & TYPOGRAPHIC FINISHING (Safely grouped)
+% =============================================
+% Load ragged2e without the strict global 'document' option to stop table corruption
+\usepackage{ragged2e} 
+
+% Load microtype AFTER font packages to fix \showhyphens warning safely
+\usepackage{microtype} 
+\UseMicrotypeSet[protrusion]{basicmath} 
+
+% ======================================================
+% FRONT MATTER METADATA
+% ======================================================
+\title{The Latent Cognition Trilogy \\[2.2em]
+  \begin{center}
+    \includegraphics[width=0.58\textwidth,keepaspectratio]{trilogy_main_cover}
+  \end{center}
+  \vspace{-0.5em}
+}
+\author[1]{Paulo Leocadio\,\orcidlink{0000-0002-4992-4541}}
+\affil[1]{Zinnia Labs, Broward County, FL, United States}
+
+\date{}
+
+% ======================================================
+% HELPER COMMANDS FOR CANONICAL ALIGNMENT
+% ======================================================
+\newcommand{\frontchapter}[1]{%
+    \cleardoublepage
+    \phantomsection
+    \chapter*{#1}
+    \addcontentsline{toc}{chapter}{#1}
+    \markboth{#1}{}
+}
+
+% ============================================ 
+% DOCUMENT EXECUTION ENGINE
+% ============================================ 
+\begin{document}
+
+\frontmatter
+% \maketitle
+
+% Structural Cover Elements (Unnumbered Pages)
+% \frontchapter{Book Title}
+\input{sections/frontmatter/00_title-page}
+
+\cleardoublepage
+
+\tableofcontents
+\listoffigures
+
+\cleardoublepage
+
+\vspace*{2in}
+Zinnia Labs Research Monographs \vspace{\baselineskip}
+
+Volume I  \\
+Memory Fields \vspace{\baselineskip}
+
+Volume II  \\
+Symbol Fields  \vspace{\baselineskip}
+
+Volume III  \\
+Architecture and Completeness \vspace{\baselineskip}
+
+Datasets \vspace{\baselineskip}
+
+\href{https://doi.org/10.6084/m9.figshare.32952458}{Differentiable Latent Indexing inside Large Language Models (DLI-LLM) - Hypothesis 1}  \vspace{\baselineskip}
+
+\href{https://doi.org/10.6084/m9.figshare.32952530}{Curriculum-Induced Symbol Invention for Emergent Reasoning Primitives (CISI) – Hypothesis 2}  \vspace{\baselineskip}
+
+\href{https://doi.org/10.6084/m9.figshare.32952662}{Hierarchical Topic-Conditioned Routing for Mixture-of-Expert Language Models (HTCR) – Hypothesis 3}
+
+% =============================================
+% PROLOGUE
+% =============================================
+% Options for packages loaded elsewhere
+% \usepackage{xcolor}
+% \usepackage{longtable,booktabs,array}
+% \usepackage{calc}                   % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+% \usepackage{etoolbox}
+
+% =============================================
+% FRONTMATTER: CANONICAL ORIENTATION
+% =============================================
+\pagenumbering{roman} % Enforces Roman numerals starting here (i, ii, iii...)
+
+\frontchapter{Zinnia Labs Publishing Co}
+\input{sections/frontmatter/00_institutional}
+
+\frontchapter{Preface}
+\input{sections/frontmatter/00_series_preface}
+
+\frontchapter{Prologue}
+\input{sections/frontmatter/00_series-prologue}
+
+\frontchapter{Note on the Research Program}
+\input{sections/frontmatter/01_program_note}
+
+\frontchapter{Canonical Structure of the Research Program} 
+\input{sections/frontmatter/02_canonical_structure}
+
+\frontchapter{Conceptual Foundations} 
+\input{sections/frontmatter/03_conceptual_foundations}
+
+% Fix: Force continuity so it does NOT reset to 'i'
+\clearpage 
+\frontchapter{Introduction to the Trilogy} 
+\input{sections/04_trilogy_overview}
+
+% =============================================
+% MAIN MATTER: THE TRILOGY CORE VOLUMES
+% =============================================
+\clearpage
+\mainmatter % Properly switches layout and resets counter to Arabic (1, 2, 3...)
+
+\include{sections/05_vol1} % Volume I: Memory Fields (DLI) -> Starts at Page 1
+
+\include{sections/06_vol2} % Volume II: Symbolic Evolution
+
+\include{sections/07_vol3} % Volume III: Latent Routing
+
+% =============================================
+% BACK MATTER: EVIDENTIARY SPECIFICATIONS
+% =============================================
+\backmatter
+
+\include{sections/backmatter/08_conclusion}         % Global Epilogue
+\include{sections/backmatter/09_appendix_manifesto} % Technical Appendix IR
+\include{sections/backmatter/10_hyp1_manifest}      % Technical Manifest
+\include{sections/backmatter/11_appendix-exploring} % Technical Exploring
+
+% =============================================
+% GLOBAL CONSOLIDATED BIBLIOGRAPHY
+% =============================================
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\bibliographystyle{plain}
+\bibliography{master}
+
+\end{document}

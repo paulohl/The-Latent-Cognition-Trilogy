@@ -1,0 +1,30 @@
+# LaTeX/Overleaf transient build outputs
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.run.xml
+*.bcf
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.dvi
+*.synctex
+
+# Local operating-system/editor temp files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Do NOT ignore all PDFs: scientific figure sources and research PDFs are tracked.
+# Preserve submitted KDP production PDFs in separately controlled release artifacts.
